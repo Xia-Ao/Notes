@@ -10,7 +10,7 @@
 >
 > 在另一部经典的《计算机网络》一书中讲“三次握手”的目的是为了解决“网络中存在延迟的重复分组”的问题。
 
-言归正传，关于TCP三次握手过程![](/assets/816045-20161105220355065-482198403.png)
+言归正传，关于TCP三次握手过程![](/assets/816045-20161105220355065-482198403.png){:class="img-responsive"}
 
 位码即tcp标志位，有6种标示：**SYN**\(synchronous建立联机\) 、**ACK**\(acknowledgement 确认\) 、**PSH**\(push传送\)、** FIN**\(finish结束\) 、**RST**\(reset重置\) 、**URG**\(urgent紧急\)、**Sequence number**\(顺序号码\) 、**Acknowledge number**\(确认号码\)。
 
