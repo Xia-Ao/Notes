@@ -2,15 +2,14 @@
 
 * # 目录
 
+* [CSS](CSS/README.md)
+* [JavaScript\(ES5\)](/JavaScript-5/READAE.md)
 
+* [ES6](/ES6/README.md)
 
-  * [CSS](CSS/README.md)
-  * [JavaScript\(ES5\)](/JavaScript-5/READAE.md)
+* [HTML](/HTML/README.md)
 
-  * [ES6](/ES6/README.md)
-
-  * [HTML](/HTML/README.md)
-  * [Angular JS](/Angular.js/README.md)
+* [Angular JS](/Angular.js/README.md)
 
 
 
