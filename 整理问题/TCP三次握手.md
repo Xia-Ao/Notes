@@ -130,8 +130,6 @@ TCP是一个协议，那这个协议是如何定义的，它的数据格式是�
 
 **这就很明白了，防止了服务器端的一直等待而浪费资源。**
 
-
-
 #### 为什么要四次分手
 
 那四次分手又是为何呢？TCP协议是一种面向连接的、可靠的、基于字节流的运输层通信协议。TCP是全双工模式，这就意味着，当主机1发出FIN报文段时，只是表示主机1已经没有数据要发送了，主机1告诉主机2，它的数据已经全部发送完毕了；但是，这个时候主机1还是可以接受来自主机2的数据；当主机2返回ACK报文段时，表示它已经知道主机1没有数据发送了，但是主机2还是可以发送数据到主机1的；当主机2也发送了FIN报文段时，这个时候就表示主机2也没有数据要发送了，就会告诉主机1，我也没有数据要发送了，之后彼此就会愉快的中断这次TCP连接。如果要正确的理解四次分手的原理，就需要了解四次分手过程中的状态变化。
@@ -143,6 +141,7 @@ TCP是一个协议，那这个协议是如何定义的，它的数据格式是�
 * TIME\_WAIT: 表示收到了对方的FIN报文，并发送出了ACK报文，就等2MSL后即可回到CLOSED可用状态了。如果FINWAIT1状态下，收到了对方同时带FIN标志和ACK标志的报文时，可以直接进入到TIME\_WAIT状态，而无须经过FIN\_WAIT\_2状态。（主动方）
 * CLOSED: 表示连接中断。
 
-参考来源：[http://www.cnblogs.com/wujing-hubei/p/5699773.html](http://www.cnblogs.com/wujing-hubei/p/5699773.html)  
-[https://github.com/jawil/blog/issues/14](https://github.com/jawil/blog/issues/14)
+参考来源：[http://www.cnblogs.com/wujing-hubei/p/5699773.html](http://www.cnblogs.com/wujing-hubei/p/5699773.html)
+
+[通俗大白话来理解TCP协议的三次握手和四次分手](https://github.com/jawil/blog/issues/14)
 
