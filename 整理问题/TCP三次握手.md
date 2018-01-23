@@ -14,3 +14,17 @@
 
 位码即tcp标志位，有6种标示：**SYN**\(synchronous建立联机\) 、**ACK**\(acknowledgement 确认\) 、**PSH**\(push传送\)、** FIN**\(finish结束\) 、**RST**\(reset重置\) 、**URG**\(urgent紧急\)、**Sequence number**\(顺序号码\) 、**Acknowledge number**\(确认号码\)。
 
+**三次握手：**
+
+　　第一次握手：客户端发送syn包（syn=x）的数据包到服务器，并进入SYN\_SEND状态，等待服务器确认；
+
+　　第二次握手：服务器收到syn包，必须确认客户的SYN（ack=x+1），同时自己也发送一个SYN包（syn=y），即SYN+ACK包，此时服务器进入SYN\_RECV状态；
+
+　　第三次握手：客户端收到服务器的SYN＋ACK包，向服务器发送确认包ACK\(ack=y+1\)，此包发送完毕，客户端和服务器进入ESTABLISHED状态，完成三次握手。
+
+　　握手过程中传送的包里不包含数据，三次握手完毕后，客户端与服务器才正式开始传送数据。理想状态下，TCP连接一旦建立，在通信双方中的任何一方主动关闭连接之前，TCP连接都将被一直保持下去。
+
+
+
+
+
