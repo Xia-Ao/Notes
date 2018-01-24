@@ -10,13 +10,15 @@
 function Person() {
 
 }
-var person = new Person();
-Person.name = 'Nicholas';
-Person.age=29;
-Person.job="Software Engineer";
+Person.prototype.name = 'Nicholas';
+Person.prototype.age=29;
+Person.prototype.job="Software Engineer";
 Person.prototype.syaName=function(){
     alert(this.name);
 }
+var person1 = new Person();
+var person2 = new Person();
+
 console.log(person.name) // Kevin
 ```
 
