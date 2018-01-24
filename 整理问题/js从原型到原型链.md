@@ -153,6 +153,25 @@ console.log(instance.getSubValue());
 
 ![](/assets/chain3.png)
 
+关于理解js中原型与原型链，其实主要记住这张图就好了，对象的原型属性指向原型对象，原型对象中又有一个属性constructor又指向这个对象，因为这层关系的存在，所以，才会有原型链，进而有继承，正向来说，因为js语言中要设计继承属性，所以才会设计有这么一层关系，都知道js语言设计参考于C++、java等语言，不知道这些语言中关于继承是怎么设计的，但是js的这种设计一开始我看的很迷糊。
+
+后面再会说一下关于对象原型的一个操作方法
+查看原型
+es5带来了查看对象原型的方法——Object.getPrototypeOf，该方法返回指定对象的原型（也就是该对象内部属性[[Prototype]]的值）。
+
+
+```
+console.log(Object.getPrototypeOf({}))
+//Object.prototype
+```
+es6带来了另一种查看对象原型的方法——Object.prototype.__proto__，一个对象的__proto__ 属性和自己的内部属性[[Prototype]]指向一个相同的值 (通常称这个值为原型),原型的值可以是一个对象值也可以是null(比如说Object.prototype.__proto__的值就是null)。
+
+
+```
+({}).__proto__
+>>> Object.prototype
+```
+创建原型的方式
 
 
 
