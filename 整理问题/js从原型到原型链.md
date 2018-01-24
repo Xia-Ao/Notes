@@ -6,15 +6,17 @@
 
 ![](/assets/prototype.png)
 
-
-
 ```js
 function Person() {
 
 }
 var person = new Person();
 Person.name = 'Nicholas';
-Per
+Person.age=29;
+Person.job="Software Engineer";
+Person.prototype.syaName=function(){
+    alert(this.name);
+}
 console.log(person.name) // Kevin
 ```
 
