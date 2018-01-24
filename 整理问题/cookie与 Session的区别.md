@@ -2,7 +2,14 @@
 
 刚开始看到这个问题的时候，我已开始想到的就是Cookie、SessionStorage、LocalStorage这三者之间的区别，怎么cookie与session难道是另外一个东西，查找资料之后才发现，sessionStorage 方法针对一个 session 进行数据存储。当用户关闭浏览器窗口后，数据会被删除。这里问道cookie与session之间的区别，问的其实是两种机制的区别，而LocalStorage是HTML5提出来的，出现的时间相对较迟，三者都是存储数据的。
 
-先看一下cookie与session机制之间的差别：
+先简单看一下比较明显的区别
+
+* cookie 存储于浏览器端，而 session 存储于服务端
+* cookie 的安全性相比于 session 较弱，别人可以分析存放在本地的COOKIE并进行COOKIE欺骗，考虑到安全应当使用session
+* session 会在一定时间内保存在服务器上。当访问增多时，会占用服务器的资源，所以考虑到服务器性能方面，可以使用cookie
+* cookie 存储容量有限制，单个cookie 保存数据不能超过4k，且很多浏览器限制一个站点最多保存20个cookie。而对于 session ，其默认大小一般是1024k
+
+然后我们就需要深入了解一下，为什么会有浙西而区别，源于cookie与session机制之间的差别：
 
 **Cookie机制**
 
@@ -61,36 +68,4 @@ Cookie是需要客户端浏览器支持的。假如客户端禁用了Cookie，�
 Session是保管在服务器端的，每个用户都会产生一个Session。假如并发访问的用户十分多，会产生十分多的Session，耗费大量的内存。因而像Google、Baidu、Sina这样并发访问量极高的网站，是不太可能运用Session来追踪客户会话的。
 
 而Cookie保管在客户端，不占用服务器资源。假如并发阅读的用户十分多，Cookie是很好的选择。关于Google、Baidu、Sina来说，Cookie或许是唯一的选择。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
