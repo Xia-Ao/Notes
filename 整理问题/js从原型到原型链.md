@@ -155,8 +155,12 @@ console.log(instance.getSubValue());
 
 关于理解js中原型与原型链，其实主要记住这张图就好了，对象的原型属性指向原型对象，原型对象中又有一个属性constructor又指向这个对象，因为这层关系的存在，所以，才会有原型链，进而有继承，正向来说，因为js语言中要设计继承属性，所以才会设计有这么一层关系，都知道js语言设计参考于C++、java等语言，不知道这些语言中关于继承是怎么设计的，但是js的这种设计一开始我看的很迷糊。
 
-后面再会说一下关于对象原型的一个操作方法  
-查看原型  
+后面再会说一下关于对象原型的一个操作方法
+
+## 原型操作
+
+### 查看原型
+
 es5带来了查看对象原型的方法——Object.getPrototypeOf，该方法返回指定对象的原型（也就是该对象内部属性\[\[Prototype\]\]的值）。
 
 ```js
@@ -191,13 +195,14 @@ function f(){}
 ```
 
 这种方法无法让a的\[\[Prototype\]\]指向b。
-#### 使用构造器创建对象 
+
+#### 使用构造器创建对象
+
 构造函数就是一个普通的函数，只不过这次不是直接调用函数，而是在函数前加上new关键字。
 
 每个函数都有一个prototype属性，通过new关键字新建的对象的原型会指向构造函数的prototype属性，所以我们可以修改构造函数的prototype属性从而达到操作对象原型的目的。
 
 为了让b继承a，需要有一个构造函数A
-
 
 ```js
 var b = {};
@@ -211,9 +216,10 @@ Object.getPrototypeOf(a) === b;
 // true
 // a ---> A.prototype === b
 ```
-#### 使用 Object.create 创建对象
-ES5带来了Object.create接口，可以让我们直接设置一个对象原型
 
+#### 使用 Object.create 创建对象
+
+ES5带来了Object.create接口，可以让我们直接设置一个对象原型
 
 ```js
 var b = {};
@@ -223,9 +229,10 @@ Object.getPrototypeOf(a) === b;
 // true
 // a ---> b
 ```
-#### Object.setPrototypeOf
-ES6带来了另一个接口，可以绕过创建对象的过程，直接操作原型
 
+#### Object.setPrototypeOf
+
+ES6带来了另一个接口，可以绕过创建对象的过程，直接操作原型
 
 ```js
 var a = {};
@@ -236,9 +243,10 @@ Object.getPrototypeOf(a) === b;
 // true
 // a ---> b
 ```
-#### proto
-ES6还带来了一个属性，通过这个属性也可以直接操作原型
 
+#### proto
+
+ES6还带来了一个属性，通过这个属性也可以直接操作原型
 
 ```js
 var a = {};
@@ -249,11 +257,12 @@ Object.getPrototypeOf(a) === b;
 // true
 // a ---> b
 ```
+
 注意这个属性在ES6规范的附录中，也就意味着不是所有的环境都会有这个属性。
+
 #### 使用 class 关键字
+
 ES6引入了以class语法糖，通过extends关键字我们也可以实现继承，但是无法直接操作对象的原型，而是要借助“类”，其实就是构造函数和函数的prototype属性。
-
-
 
 ```js
 class B {}
@@ -266,11 +275,6 @@ Object.getPrototypeOf(a) === A.prototype;
 // true
 // a ---> A.prototype === B的实例
 ```
-
-
-
-
-
 
 #### 参考文章：
 
