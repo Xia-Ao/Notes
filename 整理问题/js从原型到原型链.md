@@ -19,7 +19,7 @@ Person.prototype.syaName=function(){
 var person1 = new Person();
 var person2 = new Person();
 
-console.log(person.name) // Kevin
+console.log(person1.name===person2.name) // Kevin
 ```
 
 #### 参考文章：
