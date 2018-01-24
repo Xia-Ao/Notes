@@ -107,6 +107,16 @@ console.log(obj.name) // Kevin
 
 其实原型对象就是通过 Object 构造函数生成的，结合之前所讲，实例的 \_\_proto\_\_ 指向构造函数的 prototype ，所以我们再更新下关系图：
 
+![](https://raw.githubusercontent.com/mqyqingfeng/Blog/master/Images/prototype4.png)
+
+## 原型链
+
+在 ECMAScript 中，每个由构造器创建的对象拥有一个指向构造器 prototype 属性值的 隐式引用（implicit reference），这个引用称之为 原型（prototype）。进一步，每个原型可以拥有指向自己原型的 隐式引用（即该原型的原型），如此下去，这就是所谓的 原型链（prototype chain）
+
+在javaScripts
+
+![](/assets/pro5.png)
+
 #### 参考文章：
 
 [JavaScript深入之从原型到原型链](https://github.com/mqyqingfeng/Blog/issues/2)
