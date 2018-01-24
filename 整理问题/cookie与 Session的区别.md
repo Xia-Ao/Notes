@@ -33,7 +33,7 @@ session是针对每一个用户的，变量的值保存在服务器上，用一�
 
 就安全性来说：当你访问一个使用session 的站点，同时在自己机子上建立一个cookie，建议在服务器端的session机制更安全些，因为它不会任意读取客户存储的信息。
 
-两者的区别总结：
+##### 两者的区别：
 
 **一、存取方式**
 
@@ -68,4 +68,36 @@ Cookie是需要客户端浏览器支持的。假如客户端禁用了Cookie，�
 Session是保管在服务器端的，每个用户都会产生一个Session。假如并发访问的用户十分多，会产生十分多的Session，耗费大量的内存。因而像Google、Baidu、Sina这样并发访问量极高的网站，是不太可能运用Session来追踪客户会话的。
 
 而Cookie保管在客户端，不占用服务器资源。假如并发阅读的用户十分多，Cookie是很好的选择。关于Google、Baidu、Sina来说，Cookie或许是唯一的选择。
+
+
+
+### Cookie、LocalStorage、SessionStorage
+
+#### Cookie {#cookie}
+
+Cookie 是小甜饼的意思。顾名思义，cookie 确实非常小，它的大小限制为4KB左右，是网景公司的前雇员 Lou Montulli 在1993年3月的发明。它的主要用途有保存登录信息，比如你登录某个网站市场可以看到“记住密码”，这通常就是通过在 Cookie 中存入一段辨别用户身份的数据来实现的。
+
+#### localStorage {#localstorage}
+
+localStorage 是 HTML5 标准中新加入的技术，它并不是什么划时代的新东西。早在 IE 6 时代，就有一个叫 userData 的东西用于本地存储，而当时考虑到浏览器兼容性，更通用的方案是使用 Flash。而如今，localStorage 被大多数浏览器所支持，如果你的网站需要支持 IE6+，那以 userData 作为你的 polyfill 的方案是种不错的选择。
+
+
+
+| 特性 | Chrome | Firefox \(Gecko\) | Internet Explorer | Opera | Safari \(WebKit\) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| localStorage | 4 | 3.5 | 8 | 10.50 | 4 |
+| sessionStorage | 5 | 2 | 8 | 10.50 | 4 |
+
+#### sessionStorage {#sessionstorage}
+
+sessionStorage 与 localStorage 的接口类似，但保存数据的生命周期与 localStorage 不同。做过后端开发的同学应该知道 Session 这个词的意思，直译过来是“会话”。而 sessionStorage 是一个前端的概念，它只是可以将一部分数据在当前会话中保存下来，刷新页面数据依旧存在。但当页面关闭后，sessionStorage 中的数据就会被清空。
+
+
+
+| 特性 | Cookie | localStorage | sessionStorage |
+| :--- | :--- | :--- | :--- |
+| 数据的生命期 | 一般由服务器生成，可设置失效时间。如果在浏览器端生成Cookie，默认是关闭浏览器后失效 | 除非被清除，否则永久保存 | 仅在当前会话下有效，关闭页面或浏览器后被清除 |
+|  |  |  |
+
+
 
