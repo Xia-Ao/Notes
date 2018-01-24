@@ -8,7 +8,7 @@
 * [HTML](/HTML/README.md)
 * [Angular JS](/Angular.js/README.md)
 * [Vue.js](/Vue/README.md)
-* [整理问题](/整理问题/README.md)
+* [整理问题](/problem/README.md)
 
 
 
