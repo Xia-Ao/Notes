@@ -21,11 +21,72 @@ var person1 = new Person();
 var person2 = new Person();
 
 console.log(person1.name===person2.name) // true
+//此时执行两次搜索
+person1.sysName();  //"Nicholas"
 ```
+
+我们在读取对象属性的时候，要注意搜索顺序，
+
+![](/assets/proto.png)
+
+```
+function Person() {
+}
+Person.prototype.name = 'Nicholas';
+Person.prototype.age=29;
+Person.prototype.job="Software Engineer";
+Person.prototype.syaName=function(){
+    alert(this.name);
+}
+var person1 = new Person();
+var person2 = new Person();
+
+Person.name='Mack';
+
+console.log(person1.name) // Mack
+console.log(person2.name) // Nicholas
+
+//此时执行两次搜索
+person1.sysName();  //"Mack"
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #### 参考文章：
 
 [JavaScript深入之从原型到原型链](https://github.com/mqyqingfeng/Blog/issues/2)
 
 [详解JavaScript中的原型和继承](http://yanhaijing.com/javascript/2016/07/24/prototype-and-inheritance-of-js/)
+
+
 
