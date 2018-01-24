@@ -29,7 +29,7 @@ person1.sysName();  //"Nicholas"
 
 ![](/assets/proto.png)
 
-```
+```js
 function Person() {
 }
 Person.prototype.name = 'Nicholas';
@@ -41,7 +41,7 @@ Person.prototype.syaName=function(){
 var person1 = new Person();
 var person2 = new Person();
 
-Person.name='Mack';
+person1.name='Mack';
 
 console.log(person1.name) // Mack
 console.log(person2.name) // Nicholas
@@ -50,43 +50,9 @@ console.log(person2.name) // Nicholas
 person1.sysName();  //"Mack"
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #### 参考文章：
 
 [JavaScript深入之从原型到原型链](https://github.com/mqyqingfeng/Blog/issues/2)
 
 [详解JavaScript中的原型和继承](http://yanhaijing.com/javascript/2016/07/24/prototype-and-inheritance-of-js/)
-
-
 
