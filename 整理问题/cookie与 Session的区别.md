@@ -94,3 +94,13 @@ sessionStorage 与 localStorage 的接口类似，但保存数据的生命周期
 
 ![](/assets/cookie.png)
 
+参考文章：
+
+[Cookie与Session的区别](https://www.jianshu.com/p/a2fe1d6441a7)
+
+[详说 Cookie, LocalStorage 与 SessionStorage](http://jerryzou.com/posts/cookie-and-web-storage/)
+
+[cookie、session、sessionStorage、localStorage区别](https://www.jianshu.com/p/bdbae99a3871)
+
+
+
