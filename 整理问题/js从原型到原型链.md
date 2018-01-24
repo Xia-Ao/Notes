@@ -113,9 +113,42 @@ console.log(obj.name) // Kevin
 
 在 ECMAScript 中，每个由构造器创建的对象拥有一个指向构造器 prototype 属性值的 隐式引用（implicit reference），这个引用称之为 原型（prototype）。进一步，每个原型可以拥有指向自己原型的 隐式引用（即该原型的原型），如此下去，这就是所谓的 原型链（prototype chain）
 
-在javaScripts
+在javaScripts高级程序设计中，关于原型链是这么定义的：
+
 
 ![](/assets/pro5.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #### 参考文章：
 
