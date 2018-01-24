@@ -6,9 +6,12 @@
 * [JavaScript\(ES5\)](/JS/READAE.md)
 * [ES6](/ES6/README.md)
 * [HTML](/HTML/README.md)
+* [HTTP](/HTTP/README.md)
 * [Angular JS](/Angular.js/README.md)
-* [Vue.js](/Vue/README.md)
-* [整理问题](/problem/README.md)
+* [整理问题合集](/problem/README.md)
+
+
+
 
 
 
