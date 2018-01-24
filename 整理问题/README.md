@@ -4,6 +4,9 @@
 ## 分为[JS](#js)、[CSS](#css)、[HTML](#html)、[node](#node)、[HTTP](#http)、[Java](#java)
 
 ## <span id="js">JS</span>
+[JavaScript原型到原型链](/整理问题/js从原型到原型链.md)
+
+
 
 
 
@@ -28,7 +31,7 @@
 [TCP和UDP的区别](/整理问题/TCP和UDP.md)
 [TCP三次握手的过程](/整理问题/TCP三次握手.md)
 [cookie与Session机制区别以及Cookie SessionStorage LocalStorage异同](/整理问题/cookie与Session的区别.md)
-[JavaScript原型到原型链](/整理问题/js从原型到原型链.md)
+
 
 
 
