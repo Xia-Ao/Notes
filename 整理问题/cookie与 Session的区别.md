@@ -71,7 +71,7 @@ Session是保管在服务器端的，每个用户都会产生一个Session。假
 
 ### Cookie、LocalStorage、SessionStorage
 
-LocalStorage，SessionStorage，都是属于HTML5中webStorage，保存在浏览器端，并且三者是同源的。
+LocalStorage，SessionStorage，都是属于HTML5中Web Storage。
 
 Web Storage的概念和cookie相似，区别是它是为了更大容量存储设计的。Cookie的大小是受限的，并且每次你请求一个新的页面的时候Cookie都会被发送过去，这样无形中浪费了带宽。
 
