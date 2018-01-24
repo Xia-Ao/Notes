@@ -5,7 +5,7 @@
 
 ## <span id="js">JS</span>
 [JavaScript原型到原型链](/JavaScript-5/js从原型到原型链.md)
-
+JS继承的实现
 
 
 
