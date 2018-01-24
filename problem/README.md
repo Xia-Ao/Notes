@@ -28,9 +28,9 @@
 
 ## <span id="http">HTTP</span>
 
-[TCP和UDP的区别](/problem/TCP和UDP.md)
-[TCP三次握手的过程](/problem/TCP三次握手.md)
-[cookie与Session机制区别以及Cookie SessionStorage LocalStorage异同](/problem/cookie与Session的区别.md)
+[TCP和UDP的区别](/HTTP/TCP和UDP.md)
+[TCP三次握手的过程](/HTTP/TCP三次握手.md)
+[cookie与Session机制区别以及Cookie SessionStorage LocalStorage异同](/HTTP/cookie与Session的区别.md)
 
 
 
