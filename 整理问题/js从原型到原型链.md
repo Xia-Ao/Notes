@@ -112,6 +112,7 @@ console.log(obj.name) // Kevin
 ## 原型链
 
 在 ECMAScript 中，每个由构造器创建的对象拥有一个指向构造器 prototype 属性值的 隐式引用（implicit reference），这个引用称之为 原型（prototype）。进一步，每个原型可以拥有指向自己原型的 隐式引用（即该原型的原型），如此下去，这就是所谓的 原型链（prototype chain）
+可以在浏览器控制台下一直打印自己的原型，返回的都是一样的。
 
 在javaScripts高级程序设计中，关于原型链是这么定义的：
 
@@ -150,10 +151,10 @@ console.log(instance.getSubValue());
 ![](/assets/chain2.png)
 实际上，所有的引用类型默认都继承了Object，这个继承也是通过原型链实现的。记住，所有函数的默认原型都是Object的实例，因此默认原型都会包含一个内部指针，指向Object.peototype。所以完整的关系如下所示：
 
-
 ![](/assets/chain3.png)
 
-![](/assets/pro5.png)
+
+
 
 #### 参考文章：
 
