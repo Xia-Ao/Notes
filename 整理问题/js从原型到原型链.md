@@ -282,3 +282,9 @@ Object.getPrototypeOf(a) === A.prototype;
 
 [详解JavaScript中的原型和继承](http://yanhaijing.com/javascript/2016/07/24/prototype-and-inheritance-of-js/)
 
+[全面理解面向对象的 JavaScript](https://www.ibm.com/developerworks/cn/web/1304_zengyz_jsoo/)
+
+《高程》
+
+
+
