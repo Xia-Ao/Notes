@@ -6,6 +6,8 @@
 
 ![](/assets/prototype.png)
 
+上述 图述的代码如下所示，创建一个构造函数，为此构造函数添加prototype属性，person1,person2对象是Person的实例，Person上面的属性和方法共享。
+
 ```js
 function Person() {
 }
