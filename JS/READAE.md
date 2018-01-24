@@ -4,7 +4,6 @@
 
 * [AJAX使用详细介绍1](/JS/AJAX使用详细介绍.md)
 * [Array操作方法](/JS/Array操作方法.md)
-* [http请求相关内容](/JS/http.md)
 * [JavaScript编程风格](/JS/Javascript编程风格.md)
 * [Math对象](/JS/Math对象.md)
 * [Number对象](/JS/Number对象.md)
