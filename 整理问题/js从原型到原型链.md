@@ -115,40 +115,45 @@ console.log(obj.name) // Kevin
 
 在javaScripts高级程序设计中，关于原型链是这么定义的：
 
+![](/assets/chain1.png)
+
+下面我们看一下书上实现原型链的一个例子
+
+```js
+function SuperType() {
+    this.property = true;
+}
+
+SuperType.prototype.getSuperValue = function () {
+    return this.property;
+}
+
+function SubType() {
+    this.subproperty = false;
+}
+
+//继承了SuperType
+SubType.prototype = new SuperType();
+
+SuperType.prototype.getSubValue = function () {
+    return this.subproperty;
+};
+var instance = new SubType();
+console.log(instance.getSuperValue());
+console.log(instance.getSubValue());
+```
+
+例子定义了两个类型：SuperType和SubType，每个类型分别有一个属性和一个方法。它们的主要区别是 SubType 继承了 SuperType ，而继承是通过创建 SuperType 的实例，并将该实例赋给SubType.prototype 实现的。实现的本质是重写原型对象，代之以一个新类型的实例。换句话说，原来存在于 SuperType 的实例中的所有属性和方法，现在也存在于 SubType.prototype 中了。在确立了继承关系之后，我们给 SubType.prototype 添加了一个方法，这样就在继承了 SuperType 的属性和方法的基础上又添加了一个新方法。
+
+关系图如下所示：
+
+![](/assets/chain2.png)
+实际上，所有的引用类型默认都继承了Object，这个继承也是通过原型链实现的。记住，所有函数的默认原型都是Object的实例，因此默认原型都会包含一个内部指针，指向Object.peototype。所以完整的关系如下所示：
+
+
+![](/assets/chain3.png)
 
 ![](/assets/pro5.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #### 参考文章：
 
