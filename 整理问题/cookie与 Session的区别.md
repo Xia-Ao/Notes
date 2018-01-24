@@ -71,6 +71,10 @@ Session是保管在服务器端的，每个用户都会产生一个Session。假
 
 ### Cookie、LocalStorage、SessionStorage
 
+LocalStorage，SessionStorage，都是属于HTML5中webStorage，保存在浏览器端，并且三者是同源的。
+
+Web Storage的概念和cookie相似，区别是它是为了更大容量存储设计的。Cookie的大小是受限的，并且每次你请求一个新的页面的时候Cookie都会被发送过去，这样无形中浪费了带宽。
+
 #### Cookie {#cookie}
 
 Cookie 是小甜饼的意思。顾名思义，cookie 确实非常小，它的大小限制为4KB左右，是网景公司的前雇员 Lou Montulli 在1993年3月的发明。它的主要用途有保存登录信息，比如你登录某个网站市场可以看到“记住密码”，这通常就是通过在 Cookie 中存入一段辨别用户身份的数据来实现的。
