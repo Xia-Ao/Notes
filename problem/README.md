@@ -4,7 +4,8 @@
 ## 分为[JS](#js)、[CSS](#css)、[HTML](#html)、[node](#node)、[HTTP](#http)、[Java](#java)
 
 ## <span id="js">JS</span>
-[[JavaScript原型到原型链](/整理问题/js从原型到原型链.md)](/JavaScript-5/js从原型到原型链.md)
+[JavaScript原型到原型链](/JavaScript-5/js从原型到原型链.md)
+
 
 
 
