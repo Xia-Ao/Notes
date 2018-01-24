@@ -2,7 +2,21 @@
 
 说到原型，肯定离不开对象，在JS中，关于原型对象，javaScript高级程序设计中写道：
 
-> 我们创建
+> 我们创建的每一个函数都有一个prototype属性，这个属性是一个指针，指向一个对象，而这个对象的用途是包含可以由特定类型的所有实例共享的属性和方法。
+
+![](/assets/prototype.png)
+
+
+
+```js
+function Person() {
+
+}
+var person = new Person();
+Person.name = 'Nicholas';
+Per
+console.log(person.name) // Kevin
+```
 
 #### 参考文章：
 
