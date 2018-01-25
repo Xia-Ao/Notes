@@ -81,3 +81,10 @@ pattern 属性规定用于验证 `<input> `元素的值的正则表达式。
 **注意**：pattern 属性适用于下面的 input 类型：text、search、url、tel、email 和 password。
 ## alt
 alt 属性只能与 <input type="image"> 配合使用。
+
+## checked
+checked 是一个布尔值。
+checked 属性适用于 `<input type="checkbox"> `和` <input type="radio">`。
+checked 属性也可以在页面加载后，通过 JavaScript 代码进行设置。
+
+
