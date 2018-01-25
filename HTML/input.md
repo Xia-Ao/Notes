@@ -87,4 +87,7 @@ checked 是一个布尔值。
 checked 属性适用于 `<input type="checkbox"> `和` <input type="radio">`。
 checked 属性也可以在页面加载后，通过 JavaScript 代码进行设置。
 
+## autocomplete
+autocomplete 属性规定输入字段是否应该启用自动完成功能。
 
+自动完成允许浏览器预测对字段的输入。当用户在字段开始键入时，浏览器基于之前键入过的值，应该显示出在字段中填写的选项。
