@@ -78,5 +78,6 @@ pattern 属性规定用于验证 `<input> `元素的值的正则表达式。
 </form>
 ```
 
-
 **注意**：pattern 属性适用于下面的 input 类型：text、search、url、tel、email 和 password。
+## alt
+alt 属性只能与 <input type="image"> 配合使用。
