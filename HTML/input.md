@@ -91,3 +91,10 @@ checked 属性也可以在页面加载后，通过 JavaScript 代码进行设置
 autocomplete 属性规定输入字段是否应该启用自动完成功能。
 
 自动完成允许浏览器预测对字段的输入。当用户在字段开始键入时，浏览器基于之前键入过的值，应该显示出在字段中填写的选项。
+
+## disabled
+被禁用的 input 元素是无法使用和无法点击的。
+
+disabled 属性进行设置，使用户在满足某些条件时（比如选中复选框，等等）才能使用 <input> 元素。然后，可使用 JavaScript 来删除 disabled 值，使该<input> 元素变为可用的状态。
+## form
+如果不在一个同一个<from>标签中，input定义一个属性form=formId也会和form表单一起提交。
