@@ -92,6 +92,10 @@ autocomplete 属性规定输入字段是否应该启用自动完成功能。
 
 自动完成允许浏览器预测对字段的输入。当用户在字段开始键入时，浏览器基于之前键入过的值，应该显示出在字段中填写的选项。
 
+## required
+required 属性规定必需在提交表单之前填写输入字段。
+
+注意：required 属性适用于下面的 input 类型：text、search、url、tel、email、password、date pickers、number、checkbox、radio 和 file。
 ## disabled
 被禁用的 input 元素是无法使用和无法点击的。
 disabled 属性进行设置，使用户在满足某些条件时（比如选中复选框，等等）才能使用 <input> 元素。然后，可使用 JavaScript 来删除 disabled 值，使该<input> 元素变为可用的状态。
@@ -140,3 +144,4 @@ formtarget 属性覆盖 `<form> `元素的 target 属性。
 规定` <input>` 元素的最小值、最大值。
 max 和 min 属性适用于以下 input 类型：number、range、date、datetime、datetime-local、month、time 和 week。
 ## minlength maxlength
+规定 `<input>` 元素中允许的最大字符数。
