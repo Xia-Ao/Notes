@@ -97,4 +97,29 @@ autocomplete 属性规定输入字段是否应该启用自动完成功能。
 
 disabled 属性进行设置，使用户在满足某些条件时（比如选中复选框，等等）才能使用 <input> 元素。然后，可使用 JavaScript 来删除 disabled 值，使该<input> 元素变为可用的状态。
 ## form
-如果不在一个同一个<from>标签中，input定义一个属性form=formId也会和form表单一起提交。
+如果不在一个同一个`<from>`标签中，`<input>`定义一个属性form=formId也会和form表单一起提交。
+
+
+```html
+<form action="demo-form.php" id="form1">
+First name: <input type="text" name="fname"><br>
+<input type="submit" value="提交">
+</form>
+
+<p> "Last name" 字段没有在 form 表单之内，但它也是 form 表单的一部分。</p>
+Last name: <input type="text" name="lname" form="form1">
+```
+## formaction
+formaction 属性规定当表单提交时处理输入控件的文件的 URL。
+
+formaction 属性覆盖 `<form> `元素的 action 属性。
+## formenctype 
+属性规定当表单数据提交到服务器时如何编码
+## formmethod 
+formmethod 属性覆盖 `<form> `元素的 method 属性。
+属性值为get/post
+## formnovalidate
+formnovalidate 属性覆盖 <form> 元素的 novalidate 属性。
+## formtarget
+formtarget 属性覆盖 <form> 元素的 target 属性。
+**注释**：以上关于input中的form相关属性适用于 type="submit" 和 type="image"。
