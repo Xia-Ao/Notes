@@ -13,9 +13,9 @@ input标签平时使用的频率非常高，但是对于其他属性并不是很
 * **checkbox**——定义复选框。
 * **password** ——定义密码字段（字段中的字符会被遮蔽）。
 * **radio** ——定义单选按钮。
-* **submit **——定义提交按钮。
+* **submit **——定义提交按钮。      
 * **file** ——定义文件选择字段和 "浏览..." 按钮，供文件上传，可以配合accept属性使用。
-* email ——定义用于 e-mail 地址的字段。
+* email ——定义用于 e-mail 地址的字段，当提交表单时会自动对 email 字段的值进行验证，检查@以及 地址。
 
 HTML5新定义
 
@@ -39,16 +39,14 @@ value值为颜色的6位十六进制表示法的值
 hidden定义隐藏输入字段。  
 image定义图像作为提交按钮。  
 monthNew定义 month 和 year 控件（不带时区）。  
-numberNew定义用于输入数字的字段。  
-  
+numberNew定义用于输入数字的字段。
+
 rangeNew定义用于精确值不重要的输入数字的控件（比如 slider 控件）。  
 reset定义重置按钮（重置所有的表单值为默认值）。  
-searchNew定义用于输入搜索字符串的文本字段。  
-  
+searchNew定义用于输入搜索字符串的文本字段。
+
 telNew定义用于输入电话号码的字段。  
 timeNew定义用于输入时间的控件（不带时区）。  
 urlNew定义用于输入 URL 的字段。  
 weekNew定义 week 和 year 控件（不带时区）。
-
-
 
