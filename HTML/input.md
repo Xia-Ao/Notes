@@ -156,3 +156,5 @@ multiple 属性规定允许用户输入到 `<input>` 元素的多个值。
 注意：multiple 属性适用于以下 input 类型：email 和 file。
 ## size
 规定以字符数计的 `<input>` 元素的可见宽度。设置input框的宽度。
+## accept
+规定通过文件上传来提交的文件的类型。 (只针对type="file")
