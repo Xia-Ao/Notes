@@ -134,3 +134,5 @@ formtarget 属性规定表示提交表单后在哪里显示接收到响应的名
 formtarget 属性覆盖 `<form> `元素的 target 属性。
 **注释**：以上关于`<input>`中的form相关属性适用于 type="submit" 和 type="image"。
 
+## height width
+规定 `<input> `元素的高度。只适用于 <input type="image">。
