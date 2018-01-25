@@ -102,7 +102,7 @@ required 属性规定必需在提交表单之前填写输入字段。
 注意：required 属性适用于下面的 input 类型：text、search、url、tel、email、password、date pickers、number、checkbox、radio 和 file。
 ## disabled
 被禁用的 input 元素是无法使用和无法点击的。
-disabled 属性进行设置，使用户在满足某些条件时（比如选中复选框，等等）才能使用 <input> 元素。然后，可使用 JavaScript 来删除 disabled 值，使该<input> 元素变为可用的状态。
+disabled 属性进行设置，使用户在满足某些条件时（比如选中复选框，等等）才能使用 `<input>` 元素。然后，可使用 JavaScript 来删除 disabled 值，使该`<input>` 元素变为可用的状态。
 
 ## readonly 
 readonly 属性规定输入字段是只读的。
