@@ -94,8 +94,16 @@ autocomplete 属性规定输入字段是否应该启用自动完成功能。
 
 ## disabled
 被禁用的 input 元素是无法使用和无法点击的。
-
 disabled 属性进行设置，使用户在满足某些条件时（比如选中复选框，等等）才能使用 <input> 元素。然后，可使用 JavaScript 来删除 disabled 值，使该<input> 元素变为可用的状态。
+
+## readonly 
+readonly 属性规定输入字段是只读的。
+
+只读字段是不能修改的。不过，用户仍然可以使用 tab 键切换到该字段，还可以选中或拷贝其文本。
+
+readonly 属性可以防止用户对值进行修改，直到满足某些条件为止（比如选中了一个复选框）。然后，需要使用 JavaScript 消除 readonly 值，将输入字段切换到可编辑状态。
+
+
 ## form
 如果不在一个同一个`<from>`标签中，`<input>`定义一个属性form=formId也会和form表单一起提交。
 
@@ -119,7 +127,10 @@ formaction 属性覆盖 `<form> `元素的 action 属性。
 formmethod 属性覆盖 `<form> `元素的 method 属性。
 属性值为get/post
 ## formnovalidate
-formnovalidate 属性覆盖 <form> 元素的 novalidate 属性。
+novalidate 属性规定当表单提交时 `<input>` 元素不进行验证。
+formnovalidate 属性覆盖 `<form>` 元素的 novalidate 属性。
 ## formtarget
-formtarget 属性覆盖 <form> 元素的 target 属性。
-**注释**：以上关于input中的form相关属性适用于 type="submit" 和 type="image"。
+formtarget 属性规定表示提交表单后在哪里显示接收到响应的名称或关键词
+formtarget 属性覆盖 `<form> `元素的 target 属性。
+**注释**：以上关于`<input>`中的form相关属性适用于 type="submit" 和 type="image"。
+
