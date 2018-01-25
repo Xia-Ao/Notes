@@ -15,11 +15,11 @@ input标签平时使用的频率非常高，但是对于其他属性并不是很
 * **radio** ——定义单选按钮。
 * **submit **——定义提交按钮。      
 * **file** ——定义文件选择字段和 "浏览..." 按钮，供文件上传，可以配合accept属性使用。
-* email ——定义用于 e-mail 地址的字段，当提交表单时会自动对 email 字段的值进行验证，检查@以及 地址。
+* **email** ——定义用于 e-mail 地址的字段，当提交表单时会自动对 email 字段的值进行验证，检查@以及 地址。
 
 HTML5新定义
 
-* colorNew定义拾色器。
+* **colorNew** ——定义拾色器。
 
 ```html
 选择你喜欢的颜色: <input type="color" name="favcolor"><br>
@@ -27,26 +27,27 @@ HTML5新定义
 
 value值为颜色的6位十六进制表示法的值
 
-* date ——定义 date 控件（包括年、月、日，不包括时间）,就相当于一个时间插件，功能很强大。
-* datetime ——定义 date 和 time 控件（包括年、月、日、时、分、秒、几分之一秒，基于 UTC 时区）。
-* datetime-local ——定义 date 和 time 控件（包括年、月、日、时、分、秒、几分之一秒，不带时区）。
+* **date** ——定义 date 控件（包括年、月、日，不包括时间）,就相当于一个时间插件，功能很强大。
+* **datetime** ——定义 date 和 time 控件（包括年、月、日、时、分、秒、几分之一秒，基于 UTC 时区）。
+* **datetime-local** ——定义 date 和 time 控件（包括年、月、日、时、分、秒、几分之一秒，不带时区）。
 
-```
+```html
 生日: <input type="date" name="bday">
 ```
 
-![](/assets/type1.png)  
-hidden定义隐藏输入字段。  
-image定义图像作为提交按钮。  
-monthNew定义 month 和 year 控件（不带时区）。  
-numberNew定义用于输入数字的字段。
+![](/assets/type1.png)
 
-rangeNew定义用于精确值不重要的输入数字的控件（比如 slider 控件）。  
-reset定义重置按钮（重置所有的表单值为默认值）。  
-searchNew定义用于输入搜索字符串的文本字段。
+* hidden ——定义隐藏输入字段。
+* image——定义图像作为提交按钮。
+* month ——定义 month 和 year 控件（不带时区）。
+* number ——定义用于输入数字的字段。
+* range ——定义用于精确值不重要的输入数字的控件（比如 slider 控件）。
+* reset ——定义重置按钮（重置所有的表单值为默认值）。
+* search ——定义用于输入搜索字符串的文本字段。
+* tel——定义用于输入电话号码的字段。
+* time ——定义用于输入时间的控件（不带时区）。
+* url ——定义用于输入 URL 的字段。
+* week——定义 week 和 year 控件（不带时区）。
 
-telNew定义用于输入电话号码的字段。  
-timeNew定义用于输入时间的控件（不带时区）。  
-urlNew定义用于输入 URL 的字段。  
-weekNew定义 week 和 year 控件（不带时区）。
+
 
