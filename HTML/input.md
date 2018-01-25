@@ -51,5 +51,32 @@ value值为颜色的6位十六进制表示法的值
 * **url** ——定义用于输入 URL 的字段。
 * **week**——定义 week 和 year 控件（不带时区）。
 
+## value
+value 属性规定 `<input>` 元素的值。
+value 属性对于不同 input 类型，用法也不同：
+
+对于 "button"、"reset"、"submit" 类型 - 定义按钮上的文本
+对于 "text"、"password"、"hidden" 类型 - 定义输入字段的初始（默认）值
+对于 "checkbox"、"radio"、"image" 类型 - 定义与 input 元素相关的值，当提交表单时该值会发送到表单的 action URL。
+**注意**：value 属性对于 `<input type="checkbox">` 和 `<input type="radio">` 是必需的。
+
+**注意**：value 属性不适用于 `<input type="file">`。
+
+## placeholder
+placeholder 属性规定可描述输入字段预期值的简短的提示信息（比如：一个样本值或者预期格式的短描述）。
+该提示会在用户输入值之前显示在输入字段中。
+
+**注意**：placeholder 属性适用于下面的 input 类型：text、search、url、tel、email 和 password。
+## pattern 
+pattern 属性规定用于验证 `<input> `元素的值的正则表达式。
 
 
+```html
+<form action="demo-form.php">
+  Country code: <input type="text" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code">
+  <input type="submit">
+</form>
+```
+
+
+**注意**：pattern 属性适用于下面的 input 类型：text、search、url、tel、email 和 password。
