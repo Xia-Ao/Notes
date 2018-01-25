@@ -135,4 +135,8 @@ formtarget 属性覆盖 `<form> `元素的 target 属性。
 **注释**：以上关于`<input>`中的form相关属性适用于 type="submit" 和 type="image"。
 
 ## height width
-规定 `<input> `元素的高度。只适用于 <input type="image">。
+规定 `<input> `元素的高度。只适用于 `<input type="image">`。
+## min max
+规定` <input>` 元素的最小值、最大值。
+max 和 min 属性适用于以下 input 类型：number、range、date、datetime、datetime-local、month、time 和 week。
+## minlength maxlength
