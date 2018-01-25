@@ -61,6 +61,10 @@ value 属性对于不同 input 类型，用法也不同：
 **注意**：value 属性对于 `<input type="checkbox">` 和 `<input type="radio">` 是必需的。
 
 **注意**：value 属性不适用于 `<input type="file">`。
+## name 
+name 属性用于在 JavaScript 中引用元素，或者在表单提交后引用表单数据。
+
+注意：只有设置了 name 属性的表单元素才能在提交表单时传递它们的值。
 
 ## placeholder
 placeholder 属性规定可描述输入字段预期值的简短的提示信息（比如：一个样本值或者预期格式的短描述）。
@@ -145,3 +149,10 @@ formtarget 属性覆盖 `<form> `元素的 target 属性。
 max 和 min 属性适用于以下 input 类型：number、range、date、datetime、datetime-local、month、time 和 week。
 ## minlength maxlength
 规定 `<input>` 元素中允许的最大字符数。
+
+## multiple
+multiple 属性规定允许用户输入到 `<input>` 元素的多个值。
+
+注意：multiple 属性适用于以下 input 类型：email 和 file。
+## size
+规定以字符数计的 `<input>` 元素的可见宽度。设置input框的宽度。
