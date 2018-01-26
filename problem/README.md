@@ -6,6 +6,7 @@
 ## <span id="js">JS</span>
 [JavaScript原型到原型链](/JS/js从原型到原型链.md)
 [JS继承的实现](/JS/继承.md)
+[JS闭包](/JS/闭包.md)
 
 
 
