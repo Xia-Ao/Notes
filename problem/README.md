@@ -33,7 +33,7 @@
 [TCP和UDP的区别](/HTTP/TCP和UDP.md)
 [TCP三次握手的过程](/HTTP/TCP三次握手.md)
 [cookie与Session机制区别以及Cookie SessionStorage LocalStorage异同](/HTTP/cookie与Session的区别.md)
-[从输入URL到页面加载发生了什么](https://mp.weixin.qq.com/s?__biz=MzAwNjI5MTYyMw==&mid=2651495598&idx=1&sn=b12176416840d98e6f219bae04bab881&chksm=80f19566b7861c70e649cb04e32cb5364b900c1d77956bc0d71635e4a792b5862d3a51f455a5&scene=0#rd)
+[从输入URL到页面加载发生了什么](https://segmentfault.com/a/1190000006879700)
 
 
 
