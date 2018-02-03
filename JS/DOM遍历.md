@@ -20,6 +20,8 @@ DOM的遍历分为先序遍历，中序遍历， 后序遍历，是三种不同�
 
 ## NodeIterator
 
+![](/assets/traversal1.png)
+
 ```js
 /**
  * 使用DOM2的"Traversal"模块提供的NodeIterator先序遍历DOM树
@@ -38,6 +40,8 @@ function traversalUsingNodeIterator(node){
 ## TreeWalker
 
 NodeIterator更高级的一个版本，主要使用的`nextNode()`方法
+
+![](/assets/traversal2.png)
 
 ```js
 /**
