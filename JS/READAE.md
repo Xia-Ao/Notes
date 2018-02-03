@@ -16,7 +16,7 @@
 * [日期格式化](/JS/日期格式化.md)
 * [一些常用的JS方法](/JS/一些常用的JS方法.md)
 * [数组排序方法](http://www.cnblogs.com/dong-xu/p/7088447.html)
-* DOM遍历
+* [DOM遍历](/JS/DOM遍历.md)
 
 
 
