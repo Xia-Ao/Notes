@@ -16,7 +16,7 @@ DOM的遍历分为先序遍历，中序遍历， 后序遍历，是三种不同�
 
 这里只说一下用来遍历的方法：这篇[博文](http://www.cnblogs.com/tracylin/p/5220867.html)写了五种先序遍历的方法，优先使用DOM中提供的两个专门用来遍历的方法。
 
-这两个方法在《JavaScript高程》中有详细的介绍：
+这两个方法在《JavaScript高程》中有详细的介绍：可以参考第12章12.3
 
 ## NodeIterator
 
@@ -36,6 +36,8 @@ function traversalUsingNodeIterator(node){
 ```
 
 ## TreeWalker
+
+NodeIterator更高级的一个版本，主要使用的`nextNode()`方法
 
 ```js
 /**
