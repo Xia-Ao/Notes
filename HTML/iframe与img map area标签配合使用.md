@@ -18,7 +18,7 @@
 
 &lt;area&gt;元素始终嵌套在 &lt;map&gt;标签内部。
 
-示例：
+### 示例：
 
 ```html
 <body>
