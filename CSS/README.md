@@ -9,6 +9,6 @@
 
 * [垂直居中](/CSS/垂直居中.md)
 * [position不同值定位](/CSS/position.md)
-* 水平居中的方法（margin/text-algin区别）
+* [水平居中的方法（margin/text-algin区别）](/CSS/水平居中.md)
 
 
