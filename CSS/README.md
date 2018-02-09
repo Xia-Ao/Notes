@@ -8,7 +8,7 @@
 ## CSS常见布局方法
 
 * [垂直居中](/CSS/垂直居中.md)
-* position不同值定位
-* 
+* [position不同值定位](/CSS/position.md)
+* 水平居中的方法（margin/text-algin）
 
 
