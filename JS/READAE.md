@@ -2,7 +2,7 @@
 
 ## 目录
 
-* [AJAX使用详细介绍1](/JS/AJAX使用详细介绍.md)
+* [AJAX过程以及跨越](/JS/AJAX使用详细介绍.md)
 * [Array操作方法](/JS/Array操作方法.md)
 * [JavaScript编程风格](/JS/Javascript编程风格.md)
 * [Math对象](/JS/Math对象.md)
