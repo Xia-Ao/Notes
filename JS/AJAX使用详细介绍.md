@@ -31,3 +31,12 @@ xhr << XMLHttpRequest.prototype << XMLHttpRequestEventTarget.prototype << EventT
 **onload**
 **onloadend**
 **timeout**
+**ontimeout**
+#### 4、jquery封装ajax方法
+$.ajax是jquery对原生ajax的一次封装. 通过封装ajax, jquery抹平了不同版本浏览器异步http的差异性, 取而代之的是高度统一的api. jquery作为js类库时代的先驱, 对前端发展有着深远的影响. 了解并熟悉其ajax方法, 不可谓不重要.
+
+#### 5、Axios
+- Axios支持node, jquery并不支持.
+- Axios基于promise语法, jq3.0才开始全面支持.
+- Axios短小精悍, 更加适合http场景, jquery大而全, 加载较慢.
+- vue作者尤大放弃推荐vue-resource, 转向推荐Axios. 
