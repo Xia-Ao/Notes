@@ -11,5 +11,11 @@
 * BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。反之也如此。
 * 计算BFC的高度时，浮动元素也参与计算
 
+简书上也有一篇介绍BFC作用的文章，写的也不错，[https://www.jianshu.com/p/682ae6476a14](https://www.jianshu.com/p/682ae6476a14)
+
+#### 建立一个BFC最好的方法使用`overflow:hidden`
+
+#### 
+
 
 
