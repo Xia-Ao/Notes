@@ -37,8 +37,6 @@ HTTP连接最显著的特点是**客户端发送的每次请求都需要服务�
 而HTTP连接使用的是“请求—响应”的方式，不仅在请求时需要先建立连接，而且需要客户端向服务器发出请求后，服务器端才能回复数据。  
 很多情况下，**需要服务器端主动向客户端推送数据**，保持客户端与服务器数据的实时与同步。此时若双方建立的是Socket连接，服务器就可以直接将数 据传送给客户端；若双方建立的是HTTP连接，则服务器需要等到客户端发送一次请求后才能将数据传回给客户端，因此，客户端定时向服务器端发送连接请求， 不仅可以保持在线，同时也是在“询问”服务器是否有新的数据，如果有就将数据传给客户端。
 
-
-
 ### TCP\(Transmission Control Protocol\)　传输控制协议
 
 TCP是主机对主机层的传输控制协议，提供可靠的连接服务，采用三次握手确认建立一个连接:
@@ -157,7 +155,9 @@ TCP是一个协议，那这个协议是如何定义的，它的数据格式是�
 * TIME\_WAIT: 表示收到了对方的FIN报文，并发送出了ACK报文，就等2MSL后即可回到CLOSED可用状态了。如果FINWAIT1状态下，收到了对方同时带FIN标志和ACK标志的报文时，可以直接进入到TIME\_WAIT状态，而无须经过FIN\_WAIT\_2状态。（主动方）
 * CLOSED: 表示连接中断。
 
-参考来源：[http://www.cnblogs.com/wujing-hubei/p/5699773.html](http://www.cnblogs.com/wujing-hubei/p/5699773.html)
+参考来源：
+
+[http://www.cnblogs.com/wujing-hubei/p/5699773.html](http://www.cnblogs.com/wujing-hubei/p/5699773.html)
 
 [通俗大白话来理解TCP协议的三次握手和四次分手](https://github.com/jawil/blog/issues/14)
 
