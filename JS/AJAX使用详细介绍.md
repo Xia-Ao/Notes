@@ -8,5 +8,13 @@
 
 ![](/assets/import.png)![](/assets/import2.png)
 
-这个 过程跨越了解一下js
+这个过程跨越了解一下浏览器[重绘和回流](http://www.cnblogs.com/luleixia/p/6306061.html)
 
+#### 2、XMLHttpRequest属性来源于继承
+
+```
+xhr << XMLHttpRequest.prototype << XMLHttpRequestEventTarget.prototype << EventTarget.prototype << Object.prototype
+```
+#### 3、XMLHttpRequest属性内容
+
+一个xhr实例对象拥有10个普通属性+9个方法.
