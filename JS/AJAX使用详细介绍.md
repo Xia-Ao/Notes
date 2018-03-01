@@ -15,6 +15,10 @@
 ```
 xhr << XMLHttpRequest.prototype << XMLHttpRequestEventTarget.prototype << EventTarget.prototype << Object.prototype
 ```
+
 #### 3、XMLHttpRequest属性内容
 
 一个xhr实例对象拥有10个普通属性+9个方法.
+
+![](/assets/ajax1.png)
+
