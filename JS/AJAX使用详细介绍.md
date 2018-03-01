@@ -19,6 +19,13 @@ xhr << XMLHttpRequest.prototype << XMLHttpRequestEventTarget.prototype << EventT
 #### 3、XMLHttpRequest属性内容
 
 一个xhr实例对象拥有10个普通属性+9个方法.
+**readyState** 
 
 ![](/assets/ajax1.png)
 
+**onreadystatechange**
+**status**
+**statusText**
+**onloadstart**
+**onprogress**
+**onload**
