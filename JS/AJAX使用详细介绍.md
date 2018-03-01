@@ -29,3 +29,5 @@ xhr << XMLHttpRequest.prototype << XMLHttpRequestEventTarget.prototype << EventT
 **onloadstart**
 **onprogress**
 **onload**
+**onloadend**
+**timeout**
