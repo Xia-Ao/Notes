@@ -40,3 +40,5 @@ $.ajax是jquery对原生ajax的一次封装. 通过封装ajax, jquery抹平了�
 - Axios基于promise语法, jq3.0才开始全面支持.
 - Axios短小精悍, 更加适合http场景, jquery大而全, 加载较慢.
 - vue作者尤大放弃推荐vue-resource, 转向推荐Axios. 
+#### 6、 ajax跨域
+CORS是一个W3C(World Wide Web)标准, 全称是跨域资源共享(Cross-origin resource sharing).它允许浏览器向跨域服务器, 发出异步http请求, 从而克服了ajax受同源策略的限制. 实际上, **浏览器不会拦截不合法的跨域请求, 而是拦截了他们的响应,** 因此即使请求不合法, 很多时候, 服务器依然收到了请求.(Chrome和Firefox下https网站不允许发送http异步请求除外)
