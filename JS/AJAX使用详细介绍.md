@@ -51,16 +51,14 @@ $.ajax是jquery对原生ajax的一次封装. 通过封装ajax, jquery抹平了�
 满足如下两个条件便是简单请求, 反之则为非简单请求.\(CORS请求部分摘自阮一峰老师博客\)
 
 1\) 请求是以下三种之一:
-
-* HEAD
-* GET
-* POST
+- HEAD
+- GET
+- POST
 
 2\) http头域不超出以下几种字段:
-
-Accept  
-Accept-Language  
-Content-Language  
-Last-Event-ID  
-Content-Type字段限三个值 application/x-www-form-urlencoded、multipart/form-data、text/plain
+- Accept  
+- Accept-Language  
+- Content-Language  
+- Last-Event-ID  
+- Content-Type字段限三个值 application/x-www-form-urlencoded、multipart/form-data、text/plain
 
