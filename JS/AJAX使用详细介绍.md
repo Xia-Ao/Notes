@@ -5,8 +5,8 @@
 个人总结几个知识点
 
 #### 1、ajax请求，浏览器线程处理过程。
-
-![](/assets/import.png%29![]%28/assets/import2.png)
+![](/assets/import.png)
+![](/assets/import2.png)
 
 这个过程跨越了解一下浏览器[重绘和回流](http://www.cnblogs.com/luleixia/p/6306061.html)
 
