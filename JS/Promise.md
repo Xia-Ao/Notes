@@ -86,8 +86,8 @@ new Promise((resolve, reject) => {
 // 2
 // 1
 ```
-### promise方法链
 
+### promise方法链
 
 ```js
 var promise = Promise.resolve();
@@ -97,11 +97,13 @@ promise
     .catch(onRejected)
     .then(finalTask);
 ```
-上面代码中的promise chain的执行流程，如果用一张图来描述一下的话，像下面的图那样。
-![](/assets/promise-then-catch-flow.png)
-如果Task A 处理中发生异常的话，会按照TaskA → onRejected → FinalTask 这个流程来进行处理。
-![](/assets/promise-taska-rejected-flow.png)
 
+上面代码中的promise chain的执行流程，如果用一张图来描述一下的话，像下面的图那样。  
+![](/assets/promise-then-catch-flow.png)  
+
+
+如果Task A 处理中发生异常的话，会按照TaskA → onRejected → FinalTask 这个流程来进行处理。  
+![](/assets/promise-taska-rejected-flow.png)
 
 ### Promise.prototype.finally\(\)
 
@@ -160,11 +162,11 @@ const p = Promise.race([p1, p2, p3]);
 
 如果参数是 Promise 实例，那么`Promise.resolve`将不做任何修改、原封不动地返回这个实例。
 
-**（2）参数是一个`thenable`对象**
+**（2）参数是一个**`thenable`**对象**
 
 `thenable`对象指的是具有`then`方法的对象，`Promise.resolve`方法会将这个对象转为 Promise 对象，然后就立即执行`thenable`对象的`then`方法。
 
-**（3）参数不是具有`then`方法的对象，或根本就不是对象**
+**（3）参数不是具有**`then`**方法的对象，或根本就不是对象**
 
 如果参数是一个原始值，或者是一个不具有`then`方法的对象，则`Promise.resolve`方法返回一个新的 Promise 对象，状态为`resolved`。
 
@@ -221,7 +223,7 @@ console.log('next');
 // next
 ```
 
-第二种写法是使用new Promise()。
+第二种写法是使用new Promise\(\)。
 
 ```js
 const f = () => console.log('now');
@@ -234,8 +236,8 @@ console.log('next');
 // now
 // next
 ```
-所以提出一个提案，`Promise.try()`
 
+所以提出一个提案，`Promise.try()`
 
 ```js
 const f = () => console.log('now');
@@ -244,10 +246,6 @@ console.log('next');
 // now
 // next
 ```
-
-
-
-
 
 
 
