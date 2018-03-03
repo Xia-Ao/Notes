@@ -136,7 +136,9 @@ const p = Promise.race([p1, p2, p3]);
 
 > 有时候设定了一个时间限制，如果规定时间内`p1 p2 p3`都没有改变状态，那p的状态变成`reject`
 
+### Promise.resolve\(\)
 
+`Promise.resolve`方法可以将现有对象转为 Promise 对象 
 
 ### 2.6. 专栏: 每次调用then都会返回一个新创建的promise对象 {#then-return-new-promise}
 
