@@ -74,7 +74,7 @@ const p2 = new Promise(function (resolve, reject) {
 
 对于这种情况，promise的解决方案是：这时`p1`的状态就会传递给`p2`，也就是说，`p1`的状态决定了`p2`的状态。如果`p1`的状态是`pending`，那么`p2`的回调函数就会等待`p1`的状态改变；如果`p1`的状态已经是`resolved`或者`rejected`，那么`p2`的回调函数将会立刻执行。阮老师Promise对象里面有关于这种情况的一个例子。
 
-#### **调用`resolve`或`reject`并不会终结 Promise 的参数函数的执行。**
+#### **调用**`resolve`**或**`reject`**并不会终结 Promise 的参数函数的执行。**
 
 ```js
 new Promise((resolve, reject) => {
@@ -88,6 +88,51 @@ new Promise((resolve, reject) => {
 ```
 
 promisepromise.then\(\).then\(\)是一种链式使用方法。
+
+### Promise.prototype.finally\(\)
+
+`finally`方法用于指定不管 Promise 对象最后状态如何，都会执行的操作。
+
+```js
+promise
+.then(result => {···})
+.catch(error => {···})
+.finally(() => {···});
+```
+
+`finally`方法里面的操作，应该是与状态无关的，不依赖于 Promise 的执行结果。
+
+### Promise.all\(\)
+
+`Promise.all`方法用于将多个 Promise 实例，包装成一个新的 Promise 实例。
+
+```js
+const p = Promise.all([p1, p2, p3]);
+```
+
+上面代码中，`Promise.all`方法接受一个数组作为参数，`p1`、`p2`、`p3`都是 Promise 实例，如果不是，就会先调用下面讲到的`Promise.resolve`方法，将参数转为 Promise 实例，再进一步处理。（`Promise.all`方法的参数可以不是数组，但必须具有 Iterator 接口，且返回的每个成员都是 Promise 实例。）
+
+`p`的状态由`p1`、`p2`、`p3`决定，分成两种情况。
+
+（1）只有`p1`、`p2`、`p3`的状态都变成`fulfilled`，`p`的状态才会变成`fulfilled`，此时`p1`、`p2`、`p3`的返回值组成一个数组，传递给`p`的回调函数。
+
+（2）只要`p1`、`p2`、`p3`之中有一个被`rejected`，`p`的状态就变成`rejected`，此时第一个被`reject`的实例的返回值，会传递给`p`的回调函数。
+
+> 注意事项：
+>
+> 1、如果作为参数的 Promise 实例，自己定义了`catch`方法，那么它一旦被`rejected`，并不会触发`Promise.all()`的`catch`方法。
+>
+> 2、如果其中的某一个promise实例`p1或p2或p3 `没有自己的`catch`方法，就会调用`Promise.all()`的`catch`方法。
+
+### Promise.race\(\)
+
+`Promise.race`方法同样是将多个 Promise 实例，包装成一个新的 Promise 实例。
+
+```js
+const p = Promise.race([p1, p2, p3]);
+```
+
+上面代码中，只`p1`、`p2`、`p3`之中有一个实例率先改变状态，`p`的状态就跟着改变。那个率先改变的 Promise 实例的返回值，就传递给`p`的回调函数。
 
 ### 2.6. 专栏: 每次调用then都会返回一个新创建的promise对象 {#then-return-new-promise}
 
