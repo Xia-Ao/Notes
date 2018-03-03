@@ -5,7 +5,8 @@
 个人总结几个知识点
 
 #### 1、ajax请求，浏览器线程处理过程。
-![](/assets/import.png)
+
+![](/assets/import.png)  
 ![](/assets/import2.png)
 
 这个过程跨越了解一下浏览器[重绘和回流](http://www.cnblogs.com/luleixia/p/6306061.html)
@@ -72,4 +73,44 @@ CORS请求分为两种, ① 简单请求; ② 非简单请求.
 
 跨域解决方案可以参考另一篇有关[同源策略到前端跨域](/JS/同源策略到前端跨域.md)。  
 ajax的跨域主要有CROS、 使用代理、JSONP、webSocket这几种方案，具体的都在上面[同源策略到前端跨域](/JS/同源策略到前端跨域.md)。
+
+#### 5、ajax文件上传
+
+#### 6、ajax请求二进制文件
+####7、ajax缓存处理
+js中的http缓存没有开关, 受制于浏览器http缓存策略. 原生xhr请求中, 可通过如下设置关闭缓存.
+
+```js
+xhr.setRequestHeader("If-Modified-Since","0");
+xhr.setRequestHeader("Cache-Control","no-cache");
+//或者 URL 参数后加上  "?timestamp=" + new Date().getTime()
+```
+jquery的http缓存是否开启可通过在settings中指定cache.
+
+
+```js
+$.ajax({
+  url : 'url',
+  dataType : "xml",
+  cache: true,//true表示缓存开启, false表示缓存不开启
+  success : function(xml, status){    
+  }
+});
+```
+
+
+```
+$.ajaxSetup({cache:false}); //全局关闭ajax缓存.
+```
+除此之外, 调试过程中出现的浏览器缓存尤为可恶. 建议开启隐私浏览器或者勾选☑️控制台的 Disable cache 选项.
+![](/assets/ajax22.png)
+####8、 ajax错误处理
+前面已经提过, 通常只要是ajax请求收到了http状态码, 便不会进入到错误捕获里.(Chrome中407响应头除外)
+
+实际上, $.ajax 方法略有区别, jquery的ajax方法还会在类型解析出错时触发error回调. 最常见的便是: dataType设置为json, 但是返回的data并非json格式, 此时 $.ajax 的error回调便会触发.
+####9、ajax调试技巧
+使用node-server配置服务器调试。如何搭建node-server参考他的另一篇[node-server](https://github.com/Louiszhai/node-webserver)
+
+
+
 
