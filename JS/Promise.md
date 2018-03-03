@@ -16,6 +16,48 @@ Promise 是异步编程的一种解决方案，比传统的解决方案——回
 
 也有一些缺点。首先，无法取消`Promise`，一旦新建它就会立即执行，无法中途取消。其次，如果不设置回调函数，`Promise`内部抛出的错误，不会反应到外部。第三，当处于`pending`状态时，无法得知目前进展到哪一个阶段（刚刚开始还是即将完成）。
 
+## promise基本实例
+
+创建promise对象的流程如下所示。
+
+1. `new Promise(fn)`返回一个promise对象
+
+2. 在`fn`中指定异步等处理
+
+   * 处理结果正常的话，调用`resolve(处理结果值)`
+
+   * 处理结果错误的话，调用`reject(Error对象)`
+
+
+```js
+function getURL(URL) {
+    return new Promise(function (resolve, reject) {
+        var req = new XMLHttpRequest();
+        req.open('GET', URL, true);
+        req.onload = function () {
+            if (req.status === 200) {
+                resolve(req.responseText);
+            } else {
+                reject(new Error(req.statusText));
+            }
+        };
+        req.onerror = function () {
+            reject(new Error(req.statusText));
+        };
+        req.send();
+    });
+}
+// 运行示例
+var URL = "http://httpbin.org/get";
+getURL(URL).then(function onFulfilled(value){
+    console.log(value);
+}).catch(function onRejected(error){
+    console.error(error);
+});
+```
+
+
+
 ### 2.6. 专栏: 每次调用then都会返回一个新创建的promise对象 {#then-return-new-promise}
 
 从代码上乍一看，`aPromise.then(...).catch(...)`像是针对最初的`aPromise`对象进行了一连串的方法链调用。
