@@ -2,7 +2,7 @@
 
 ## 目录
 
-* [AJAX过程以及知识体系](/JS/AJAX使用详细介绍.md)[JS/Promise.md](/JS/Promise.md)
+* [AJAX过程以及知识体系](/JS/AJAX使用详细介绍.md)
 * [**同源策略到前端跨域**](/JS/同源策略到前端跨域.md)
 * [Array操作方法](/JS/Array操作方法.md)
 * [JavaScript编程风格](/JS/Javascript编程风格.md)
