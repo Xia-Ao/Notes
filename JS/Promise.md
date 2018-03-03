@@ -138,7 +138,25 @@ const p = Promise.race([p1, p2, p3]);
 
 ### Promise.resolve\(\)
 
-`Promise.resolve`方法可以将现有对象转为 Promise 对象 
+`Promise.resolve`方法可以将现有对象转为 Promise 对象。
+
+`Promise.resolve`方法的参数分成四种情况。
+
+**（1）参数是一个 Promise 实例**
+
+如果参数是 Promise 实例，那么`Promise.resolve`将不做任何修改、原封不动地返回这个实例。
+
+**（2）参数是一个`thenable`对象**
+
+`thenable`对象指的是具有`then`方法的对象，`Promise.resolve`方法会将这个对象转为 Promise 对象，然后就立即执行`thenable`对象的`then`方法。
+
+**（3）参数不是具有`then`方法的对象，或根本就不是对象**
+
+如果参数是一个原始值，或者是一个不具有`then`方法的对象，则`Promise.resolve`方法返回一个新的 Promise 对象，状态为`resolved`。
+
+**4）不带有任何参数**
+
+`Promise.resolve`方法允许调用时不带参数，直接返回一个`resolved`状态的 Promise 对象。
 
 ### 2.6. 专栏: 每次调用then都会返回一个新创建的promise对象 {#then-return-new-promise}
 
@@ -175,6 +193,36 @@ bPromise.then(function (value) {
     console.log("2: " + value); // => 100 * 2 * 2
 });
 ```
+
+### Promise.try\(\)
+
+对于不知道或者不想区分的通过或者异步操作，但是想用promise处理，以前常用的方法有两种，一种是使用`async`函数，
+
+```js
+const f = () => console.log('now');
+(async () => f())();  //同步
+// (async () => f())().then(...)  //异步
+console.log('next');
+// now
+// next
+```
+
+第二种写法是使用new Promise()。
+
+
+```js
+const f = () => console.log('now');
+(
+  () => new Promise(
+    resolve => resolve(f())
+  )
+)();
+console.log('next');
+// now
+// next
+```
+
+
 
 
 
