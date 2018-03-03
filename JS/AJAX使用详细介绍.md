@@ -77,7 +77,7 @@ ajax的跨域主要有CROS、 使用代理、JSONP、webSocket这几种方案，
 #### 5、ajax文件上传
 
 #### 6、ajax请求二进制文件
-####7、ajax缓存处理
+#### 7、ajax缓存处理
 js中的http缓存没有开关, 受制于浏览器http缓存策略. 原生xhr请求中, 可通过如下设置关闭缓存.
 
 ```js
@@ -104,11 +104,11 @@ $.ajaxSetup({cache:false}); //全局关闭ajax缓存.
 ```
 除此之外, 调试过程中出现的浏览器缓存尤为可恶. 建议开启隐私浏览器或者勾选☑️控制台的 Disable cache 选项.
 ![](/assets/ajax22.png)
-####8、 ajax错误处理
+#### 8、 ajax错误处理
 前面已经提过, 通常只要是ajax请求收到了http状态码, 便不会进入到错误捕获里.(Chrome中407响应头除外)
 
 实际上, $.ajax 方法略有区别, jquery的ajax方法还会在类型解析出错时触发error回调. 最常见的便是: dataType设置为json, 但是返回的data并非json格式, 此时 $.ajax 的error回调便会触发.
-####9、ajax调试技巧
+#### 9、ajax调试技巧
 使用node-server配置服务器调试。如何搭建node-server参考他的另一篇[node-server](https://github.com/Louiszhai/node-webserver)
 
 
