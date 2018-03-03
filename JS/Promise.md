@@ -86,8 +86,22 @@ new Promise((resolve, reject) => {
 // 2
 // 1
 ```
+### promise方法链
 
-promisepromise.then\(\).then\(\)是一种链式使用方法。
+
+```js
+var promise = Promise.resolve();
+promise
+    .then(taskA)
+    .then(taskB)
+    .catch(onRejected)
+    .then(finalTask);
+```
+上面代码中的promise chain的执行流程，如果用一张图来描述一下的话，像下面的图那样。
+![](/assets/promise-then-catch-flow.png)
+如果Task A 处理中发生异常的话，会按照TaskA → onRejected → FinalTask 这个流程来进行处理。
+![](/assets/promise-taska-rejected-flow.png)
+
 
 ### Promise.prototype.finally\(\)
 
