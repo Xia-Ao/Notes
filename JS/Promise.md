@@ -28,7 +28,6 @@ Promise 是异步编程的一种解决方案，比传统的解决方案——回
 
    * 处理结果错误的话，调用`reject(Error对象)`
 
-
 ```js
 function getURL(URL) {
     return new Promise(function (resolve, reject) {
@@ -56,7 +55,26 @@ getURL(URL).then(function onFulfilled(value){
 });
 ```
 
+promise对象的处理过程只有两种情况， resolve和reject
 
+![](/assets/promise-onFulfilled_onRejected.png)
+
+有一种情况：p1和p2都是 Promise 的实例，但是p2的resolve方法将p1作为参数，即一个异步操作的结果是返回另一个异步操作。
+
+代码如下：
+
+```js
+const p1 = new Promise(function (resolve, reject) {
+  // ...
+});
+
+const p2 = new Promise(function (resolve, reject) {
+  // ...
+  resolve(p1);
+})
+```
+
+对于这种情况，promise的解决方案是：这时`p1`的状态就会传递给`p2`，也就是说，`p1`的状态决定了`p2`的状态。如果`p1`的状态是`pending`，那么`p2`的回调函数就会等待`p1`的状态改变；如果`p1`的状态已经是`resolved`或者`rejected`，那么`p2`的回调函数将会立刻执行。
 
 ### 2.6. 专栏: 每次调用then都会返回一个新创建的promise对象 {#then-return-new-promise}
 
