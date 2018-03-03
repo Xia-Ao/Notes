@@ -6,7 +6,7 @@
 # 目录
 
 * [CSS](CSS/README.md)
-* [JavaScript\(ES5\)](/JS/READAE.md)
+* [JavaScript\(ES5\)](/JS/README.md)
 * [ES6](/ES6/README.md)
 * [HTML](/HTML/README.md)
 * [HTTP](/HTTP/README.md)
