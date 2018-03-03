@@ -209,7 +209,6 @@ console.log('next');
 
 第二种写法是使用new Promise()。
 
-
 ```js
 const f = () => console.log('now');
 (
@@ -221,6 +220,18 @@ console.log('next');
 // now
 // next
 ```
+所以提出一个提案，`Promise.try()`
+
+
+```js
+const f = () => console.log('now');
+Promise.try(f);
+console.log('next');
+// now
+// next
+```
+
+
 
 
 
