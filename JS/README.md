@@ -18,6 +18,11 @@
 * [一些常用的JS方法](/JS/一些常用的JS方法.md)
 * [数组排序方法](http://www.cnblogs.com/dong-xu/p/7088447.html)
 * [DOM遍历](/JS/DOM遍历.md)
+* [用Javascript获取页面元素的位置（client scroll offset等宽度）](http://www.ruanyifeng.com/blog/2009/09/find_element_s_position_using_javascript.html)
+
+
+
+
 
 
 
