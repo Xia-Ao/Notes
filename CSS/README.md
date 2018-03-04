@@ -13,6 +13,7 @@
 * [BFC神奇背后的原理-文摘](/CSS/BFC神奇背后的原理-文摘.md)
 * [区别px、em、rem](https://segmentfault.com/a/1190000005936910)
 * [前端优化---回流 （reflow）与 重绘（repaint）](http://www.cnblogs.com/luleixia/p/6306061.html)
+* [用Javascript获取页面元素的位置](http://www.ruanyifeng.com/blog/2009/09/find_element_s_position_using_javascript.html)
 
 
 
