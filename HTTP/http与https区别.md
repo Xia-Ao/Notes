@@ -10,5 +10,5 @@
 
 5、https占用更多的服务器资源。HTTP使用TCP三次握手建立连接，客户端和服务器需要交换3个包，HTTPS除了TCP的三个包，还要加上ssl握手需要的9个包，所以一共是12个包。与http相比，https占用资源主要来源于SSL/TLS本身消耗多少服务器资源。
 
-
+详细来源：[https://juejin.im/entry/58d7635e5c497d0057fae036](https://juejin.im/entry/58d7635e5c497d0057fae036)
 
