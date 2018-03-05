@@ -5,10 +5,20 @@
 ![](/assets/select1.png)
 
 * 关系选择符
+
+![](/assets/select2.png)
+
 * 属性选择符
 
+![](/assets/select3.png)
+
 * 伪类选择符
+
+![](/assets/select4.png)
+
 * 伪对象选择符
+
+![](/assets/select5.png)
 
 
 
