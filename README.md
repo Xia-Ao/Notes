@@ -2,6 +2,7 @@
 - 分类：[JS](#js)、[ES6](#es6)、[CSS](#css)、[HTML](#html)、[node](#node)、[HTTP](#http)、[Java](#java)
 -  [AngularJS](#AngularJS)
 - [目录](mu-lu.md)
+
 - <span id="js">[JS](/JS/README.md)</span>
   - [AJAX过程以及知识体系](/JS/AJAX使用详细介绍.md)
   - [**同源策略到前端跨域**](/JS/同源策略到前端跨域.md)
@@ -24,7 +25,11 @@
   - [JavaScript原型到原型链](/JS/js从原型到原型链.md)
   - [JS继承的实现](/JS/继承.md)
   - [JS闭包](/JS/闭包.md)
+  
+  
 - <span id="es6">[ES6](/ES6/README.md)</span>
+
+
 - <span id="http">[HTTP](/HTTP/README.md)</span>
   - [TCP和UDP的区别](/HTTP/TCP和UDP.md)
   - [TCP三次握手的过程](/HTTP/TCP三次握手.md)
@@ -34,8 +39,11 @@
   - [互联网协议入门（一）](http://www.ruanyifeng.com/blog/2012/05/internet_protocol_suite_part_i.html) - 阮一峰
   - [互联网协议入门（二）](http://www.ruanyifeng.com/blog/2012/06/internet_protocol_suite_part_ii.html)- 阮一峰
   - [DNS原理入门](http://www.ruanyifeng.com/blog/2016/06/dns.html) - 阮一峰 
+  
+  
 -  <span id="css">[CSS](CSS/README.md)</span>
    * [CSS选择器](/CSS/图解CSS3/README.md)
+   * CSS优先级
    * [垂直居中](/CSS/垂直居中.md)
    * [position不同值定位](/CSS/position.md)
    * [水平居中的方法（margin/text-algin区别）](/CSS/水平居中.md)
@@ -44,7 +52,11 @@
    * [前端优化---回流 （reflow）与 重绘（repaint）](http://www.cnblogs.com/luleixia/p/6306061.html)
    * [transition的属性值和应用](http://www.runoob.com/css3/css3-transitions.html)
    * [transform的属性和应用](https://www.w3cplus.com/content/css3-transform)
+ 
+   
 -  <span id="html">[HTML](/HTML/README.md)</span>
+
+
 -  <span id="AngularJS">[AngularJS](Angular.js/README.md)</span>
    - [`$http`请求数据]($http请求数据.md)
 
