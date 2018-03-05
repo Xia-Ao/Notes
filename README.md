@@ -2,6 +2,7 @@
 
 前端笔记  
 ## 分类：[JS](#js)、[ES6](#es6)、[CSS](#css)、[HTML](#html)、[node](#node)、[HTTP](#http)、[Java](#java)
+## [AngularJS](#AngularJS)
 
 
 
@@ -31,9 +32,6 @@
 * [JS继承的实现](/JS/继承.md)
 * [JS闭包](/JS/闭包.md)
 
-* [ES6](/ES6/README.md)
-* [HTML](/HTML/README.md)
-* [HTTP](/HTTP/README.md)
 * [Angular JS](/Angular.js/README.md)
 * [整理问题合集](/problem/README.md)
 
@@ -61,7 +59,7 @@
 
 
 
-## <span id="node">node</span>
+## <span id="AngularJS">[AngularJS](Angular.js/README.md)</span>
 
 
 
