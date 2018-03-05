@@ -1,7 +1,7 @@
 # Notes
 
 前端笔记  
-## 分类：[JS](#js)、[CSS](#css)、[HTML](#html)、[node](#node)、[HTTP](#http)、[Java](#java)
+## 分类：[JS](#js)、[ES6](#es6)、[CSS](#css)、[HTML](#html)、[node](#node)、[HTTP](#http)、[Java](#java)
 
 
 
@@ -39,6 +39,8 @@
 
 
 
+## <span id="es6">[ES6](/ES6/README.md)</span>
+
 
 
 
@@ -56,7 +58,7 @@
 
 
 
-## <span id="html">HTML</span>
+## <span id="html">[HTML](/HTML/README.md)</span>
 
 
 
