@@ -1,3 +1,41 @@
 {
-
+  "title": "前端知识体系",
+  "description": "有关前端知识总结以及面试题目",
+  "language": "zh",
+  "plugins": [
+    "duoshuo",
+    "github",
+    "editlink",
+    "prism",
+    "-highlight",
+    "baidu",
+    "splitter",
+    "sitemap",
+    "latex-codecogs",
+    "-fontsettings"
+  ],
+  "pluginsConfig": {
+    "duoshuo": {
+      "short_name": "zhengjl",
+      "theme": "default"
+    },
+    "github": {
+      "url": "https://github.com/Xia-Ao"
+    },
+    "editlink": {
+      "base": "https://www.gitbook.com/book/xia-ao/notes/contentgi",
+      "label": "编辑本页"
+    },
+    "baidu": {
+      "token": "35d9061f8db12b29ed7072cdf69667f4"
+    },
+    "sitemap": {
+      "hostname": "http://zhengjianglong.leanote.com"
+    },
+    "fontsettings": {
+      "theme": "white",
+      "family": "sans",
+      "size": 3
+    }
+  }
 }
