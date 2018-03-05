@@ -2,23 +2,21 @@
 
 * 元素选择符
 
-![](/assets/select1.png)
+![](/assets/select6.png)
 
 * 关系选择符
 
-![](/assets/select2.png)
+![](/assets/select7.png)
 
 * 属性选择符
 
-![](/assets/select3.png)
+![](/assets/select8.png)
 
 * 伪类选择符
 
-![](/assets/select4.png)
+![](/assets/select9.png)![](/assets/select10.png)
 
 * 伪对象选择符
 
-![](/assets/select5.png)
-
-
+![](/assets/select11.png)
 
