@@ -3,7 +3,7 @@
 
 ## CSS基础知识
 
-[CSS选择器](/CSS/图解CSS3/README.md)
+[CSS选择器](/CSS/CSS-selecor.md)
 
 ## CSS常见布局方法
 
