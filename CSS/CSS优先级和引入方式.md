@@ -74,7 +74,7 @@
 ```
 
 
-3. 链接样式
+3. 链接方式
 ```html
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
