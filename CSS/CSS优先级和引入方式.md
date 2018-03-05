@@ -40,7 +40,7 @@
     </style>
   </head>
   ```
-  *  **外部样式**
+  *  **外部样式** 外部样式分两种引用方式，一种是`link` 一种的`@import` ，后面有介绍
   ```html
   <head>
     <link rel="stylesheet" type="text/css" href="style.css">
