@@ -42,14 +42,13 @@
 ## <span id="es6">[ES6](/ES6/README.md)</span>
 
 
+## <span id="http">[HTTP](/HTTP/README.md)</span>
 
-
-
-
-
-
-
-
+- [TCP和UDP的区别](/HTTP/TCP和UDP.md)
+- [TCP三次握手的过程](/HTTP/TCP三次握手.md)
+- [cookie与Session机制区别以及Cookie SessionStorage LocalStorage异同](/HTTP/cookie与Session的区别.md)
+- [从输入URL到页面加载发生了什么](https://segmentfault.com/a/1190000006879700)
+* [从点击到呈现 — 详解一次HTTP请求（转载）](http://www.zyy1217.com/2017/03/01/%E4%BB%8E%E7%82%B9%E5%87%BB%E5%88%B0%E5%91%88%E7%8E%B0%20%E2%80%94%20%E8%AF%A6%E8%A7%A3%E4%B8%80%E6%AC%A1HTTP%E8%AF%B7%E6%B1%82/)
 
 
 ## <span id="css">[CSS](CSS/README.md)</span>
@@ -65,13 +64,7 @@
 ## <span id="node">node</span>
 
 
-## <span id="http">HTTP</span>
 
-- [TCP和UDP的区别](/HTTP/TCP和UDP.md)
-- [TCP三次握手的过程](/HTTP/TCP三次握手.md)
-- [cookie与Session机制区别以及Cookie SessionStorage LocalStorage异同](/HTTP/cookie与Session的区别.md)
-- [从输入URL到页面加载发生了什么](https://segmentfault.com/a/1190000006879700)
-* [从点击到呈现 — 详解一次HTTP请求（转载）](http://www.zyy1217.com/2017/03/01/%E4%BB%8E%E7%82%B9%E5%87%BB%E5%88%B0%E5%91%88%E7%8E%B0%20%E2%80%94%20%E8%AF%A6%E8%A7%A3%E4%B8%80%E6%AC%A1HTTP%E8%AF%B7%E6%B1%82/)
 
 
 
