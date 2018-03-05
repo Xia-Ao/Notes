@@ -20,34 +20,33 @@
   - [数组排序方法](http://www.cnblogs.com/dong-xu/p/7088447.html)
   - [DOM遍历](/JS/DOM遍历.md)
   - [用Javascript获取页面元素的位置（client scroll offset等宽度）（转载）](http://www.ruanyifeng.com/blog/2009/09/find_element_s_position_using_javascript.html)
- - [Javascript 严格模式详解(转载)](http://www.zyy1217.com/2017/04/20/Javascript%20%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F%E8%AF%A6%E8%A7%A3/)
- - [JavaScript原型到原型链](/JS/js从原型到原型链.md)
- - [JS继承的实现](/JS/继承.md)
- - [JS闭包](/JS/闭包.md)
+  - [Javascript 严格模式详解(转载)](http://www.zyy1217.com/2017/04/20/Javascript%20%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F%E8%AF%A6%E8%A7%A3/)
+  - [JavaScript原型到原型链](/JS/js从原型到原型链.md)
+  - [JS继承的实现](/JS/继承.md)
+  - [JS闭包](/JS/闭包.md)
 - <span id="es6">[ES6](/ES6/README.md)</span>
 - <span id="http">[HTTP](/HTTP/README.md)</span>
- - [TCP和UDP的区别](/HTTP/TCP和UDP.md)
- - [TCP三次握手的过程](/HTTP/TCP三次握手.md)
- - [cookie与Session机制区别以及Cookie SessionStorage LocalStorage异同](/HTTP/cookie与Session的区别.md)
- - [从点击到呈现 — 详解一次HTTP请求（转载）](http://www.zyy1217.com/2017/03/01/%E4%BB%8E%E7%82%B9%E5%87%BB%E5%88%B0%E5%91%88%E7%8E%B0%20%E2%80%94%20%E8%AF%A6%E8%A7%A3%E4%B8%80%E6%AC%A1HTTP%E8%AF%B7%E6%B1%82/)
+  - [TCP和UDP的区别](/HTTP/TCP和UDP.md)
+  - [TCP三次握手的过程](/HTTP/TCP三次握手.md)
+  - [cookie与Session机制区别以及Cookie SessionStorage LocalStorage异同](/HTTP/cookie与Session的区别.md)
+  - [从点击到呈现 — 详解一次HTTP请求（转载）](http://www.zyy1217.com/2017/03/01/%E4%BB%8E%E7%82%B9%E5%87%BB%E5%88%B0%E5%91%88%E7%8E%B0%20%E2%80%94%20%E8%AF%A6%E8%A7%A3%E4%B8%80%E6%AC%A1HTTP%E8%AF%B7%E6%B1%82/)
 关于互联网协议，还可以详细了解阮一峰老师的互联网协议入门，里面详细讲到网络传输。
- - [互联网协议入门（一）](http://www.ruanyifeng.com/blog/2012/05/internet_protocol_suite_part_i.html) - 阮一峰
- - [互联网协议入门（二）](http://www.ruanyifeng.com/blog/2012/06/internet_protocol_suite_part_ii.html)- 阮一峰
- - [DNS原理入门](http://www.ruanyifeng.com/blog/2016/06/dns.html) - 阮一峰 
+  - [互联网协议入门（一）](http://www.ruanyifeng.com/blog/2012/05/internet_protocol_suite_part_i.html) - 阮一峰
+  - [互联网协议入门（二）](http://www.ruanyifeng.com/blog/2012/06/internet_protocol_suite_part_ii.html)- 阮一峰
+  - [DNS原理入门](http://www.ruanyifeng.com/blog/2016/06/dns.html) - 阮一峰 
 -  <span id="css">[CSS](CSS/README.md)</span>
- * [CSS选择器](/CSS/图解CSS3/README.md)
- * [垂直居中](/CSS/垂直居中.md)
- * [position不同值定位](/CSS/position.md)
- * [水平居中的方法（margin/text-algin区别）](/CSS/水平居中.md)
- * [BFC神奇背后的原理-文摘](/CSS/BFC神奇背后的原理-文摘.md)
- * [区别px、em、rem](https://segmentfault.com/a/1190000005936910)
- * [前端优化---回流 （reflow）与 重绘（repaint）](http://www.cnblogs.com/luleixia/p/6306061.html)
+  * [CSS选择器](/CSS/图解CSS3/README.md)
+  * [垂直居中](/CSS/垂直居中.md)
+  * [position不同值定位](/CSS/position.md)
+  * [水平居中的方法（margin/text-algin区别）](/CSS/水平居中.md)
+  * [BFC神奇背后的原理-文摘](/CSS/BFC神奇背后的原理-文摘.md)
+  * [区别px、em、rem](https://segmentfault.com/a/1190000005936910)
+  * [前端优化---回流 （reflow）与 重绘（repaint）](http://www.cnblogs.com/luleixia/p/6306061.html)
  * [transition的属性值和应用](http://www.runoob.com/css3/css3-transitions.html)
  * [transform的属性和应用](https://www.w3cplus.com/content/css3-transform)
-
 -  <span id="html">[HTML](/HTML/README.md)</span>
 -  <span id="AngularJS">[AngularJS](Angular.js/README.md)</span>
- - [`$http`请求数据]($http请求数据.md)
+  - [`$http`请求数据]($http请求数据.md)
 
 
 
