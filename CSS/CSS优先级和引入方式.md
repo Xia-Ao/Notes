@@ -32,11 +32,9 @@
       ```html
       <head>
         <style>
-      
         .content {
             background: red;
         }
-      
         </style>
       </head>
       ```
