@@ -29,7 +29,7 @@
 内联样式 > 
 1. 按照引用顺序，最后的会覆盖之前的样式
   *  **嵌入样式**
-  ```
+  ```html
   <head>
     <style>
 
@@ -41,6 +41,11 @@
   </head>
   ```
   *  **外部样式**
+  ```html
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  ```
 
 3. 最高优先级
   * **内联样式** (例如, style="font-weight:bold") 总会覆盖外部样式表的任何样式 ，因此可看作是具有最高的优先级。.
