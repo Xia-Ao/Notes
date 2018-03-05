@@ -11,12 +11,12 @@
 **序号越大，优先级越高**
 
 1. 低优先级
-  * **类型选择器**（type selectors）（例如, h1）
-  * **伪元素**（pseudo-elements）（例如, ::before）
+  * **类型选择器**（type selectors）（例如, `h1`）
+  * **伪元素**（pseudo-elements）（例如, `::before`）
 2. 中优先级
   * **类选择器**（class selectors） \(例如,`.example`\)
   * **属性选择器**（attributes selectors）（例如, `[type="radio"]`）
-  * **伪类**（pseudo-classes）（例如, :hover）
+  * **伪类**（pseudo-classes）（例如, `:hover`）
 3. 高优先级
   * **ID选择器**（例如, `#example`）
 
