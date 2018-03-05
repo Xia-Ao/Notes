@@ -45,15 +45,19 @@
    * [CSS选择器](/CSS/图解CSS3/README.md)
    * [CSS优先级](/CSS/CSS优先级和引入方式.md)
    * [CSS引入方式](/CSS/CSS优先级和引入方式.md)
-   * [垂直居中](/CSS/垂直居中.md)
    * [position不同值定位](/CSS/position.md)
-   * [水平居中的方法（margin/text-algin区别）](/CSS/水平居中.md)
    * [BFC神奇背后的原理-文摘](/CSS/BFC神奇背后的原理-文摘.md)
    * [区别px、em、rem](https://segmentfault.com/a/1190000005936910)
    * [前端优化---回流 （reflow）与 重绘（repaint）](http://www.cnblogs.com/luleixia/p/6306061.html)
    * [transition的属性值和应用](http://www.runoob.com/css3/css3-transitions.html)
    * [transform的属性和应用](https://www.w3cplus.com/content/css3-transform)
- 
+   * [布局知识](/CSS/布局.md)
+   * [三栏式布局](/CSS/三栏式布局.md)
+   * [垂直居中](/CSS/垂直居中.md)
+   * [水平居中的方法（margin/text-algin区别）](/CSS/水平居中.md)
+
+   * [行内元素与块级元素](/CSS/行内元素与块级元素.md)
+   * [长度单位、字体单位以及各种高度等易混淆的区别](/CSS/长度单位、字体单位、各种高度等易混淆属性.md)
    
 -  <span id="html">[HTML](/HTML/README.md)</span>
 
