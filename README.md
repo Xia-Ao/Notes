@@ -32,8 +32,6 @@
 * [JS继承的实现](/JS/继承.md)
 * [JS闭包](/JS/闭包.md)
 
-* [Angular JS](/Angular.js/README.md)
-* [整理问题合集](/problem/README.md)
 
 
 
@@ -48,6 +46,9 @@
 - [从输入URL到页面加载发生了什么](https://segmentfault.com/a/1190000006879700)
 * [从点击到呈现 — 详解一次HTTP请求（转载）](http://www.zyy1217.com/2017/03/01/%E4%BB%8E%E7%82%B9%E5%87%BB%E5%88%B0%E5%91%88%E7%8E%B0%20%E2%80%94%20%E8%AF%A6%E8%A7%A3%E4%B8%80%E6%AC%A1HTTP%E8%AF%B7%E6%B1%82/)
 
+关于互联网协议，还可以详细了解阮一峰老师的互联网协议入门，里面详细讲到网络传输。
+- [互联网协议入门（一）](http://www.ruanyifeng.com/blog/2012/05/internet_protocol_suite_part_i.html)
+- [互联网协议入门（二）](http://www.ruanyifeng.com/blog/2012/06/internet_protocol_suite_part_ii.html)
 
 ## <span id="css">[CSS](CSS/README.md)</span>
 
