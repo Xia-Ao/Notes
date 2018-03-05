@@ -35,6 +35,16 @@
  - [互联网协议入门（二）](http://www.ruanyifeng.com/blog/2012/06/internet_protocol_suite_part_ii.html)- 阮一峰
  - [DNS原理入门](http://www.ruanyifeng.com/blog/2016/06/dns.html) - 阮一峰 
 -  <span id="css">[CSS](CSS/README.md)</span>
+ * [CSS选择器](/CSS/图解CSS3/README.md)
+ * [垂直居中](/CSS/垂直居中.md)
+ * [position不同值定位](/CSS/position.md)
+ * [水平居中的方法（margin/text-algin区别）](/CSS/水平居中.md)
+ * [BFC神奇背后的原理-文摘](/CSS/BFC神奇背后的原理-文摘.md)
+ * [区别px、em、rem](https://segmentfault.com/a/1190000005936910)
+ * [前端优化---回流 （reflow）与 重绘（repaint）](http://www.cnblogs.com/luleixia/p/6306061.html)
+ * [transition的属性值和应用](http://www.runoob.com/css3/css3-transitions.html)
+ * [transform的属性和应用](https://www.w3cplus.com/content/css3-transform)
+
 -  <span id="html">[HTML](/HTML/README.md)</span>
 -  <span id="AngularJS">[AngularJS](Angular.js/README.md)</span>
  - [`$http`请求数据]($http请求数据.md)
