@@ -1,12 +1,12 @@
-# Notes
+- # Notes
 
 前端笔记  
-## 分类：[JS](#js)、[ES6](#es6)、[CSS](#css)、[HTML](#html)、[node](#node)、[HTTP](#http)、[Java](#java)
-## [AngularJS](#AngularJS)
+- ## 分类：[JS](#js)、[ES6](#es6)、[CSS](#css)、[HTML](#html)、[node](#node)、[HTTP](#http)、[Java](#java)
+- ## [AngularJS](#AngularJS)
 
 
 
-# 目录
+- # 目录
 
 - ## <span id="js">[JS](/JS/README.md)</span>
 
