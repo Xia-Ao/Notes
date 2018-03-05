@@ -88,7 +88,7 @@
     @import url(style.css);
 </style>
 ```
-
+### `link`链接方式和`@import`导入方式区别
 
 
 
