@@ -11,16 +11,16 @@
 **序号越大，优先级越高**
 
 1. 低优先级
-  * **类型选择器**（type selectors）（例如, `h1`）
-  * **伪元素**（pseudo-elements）（例如, `::before`）
+    * **类型选择器**（type selectors）（例如, `h1`）
+    * **伪元素**（pseudo-elements）（例如, `::before`）
 2. 中优先级
-  * **类选择器**（class selectors） \(例如,`.example`\)
-  * **属性选择器**（attributes selectors）（例如, `[type="radio"]`）
-  * **伪类**（pseudo-classes）（例如, `:hover`）
+    * **类选择器**（class selectors） \(例如,`.example`\)
+    * **属性选择器**（attributes selectors）（例如, `[type="radio"]`）
+    * **伪类**（pseudo-classes）（例如, `:hover`）
 3. 高优先级
-  * **ID选择器**（例如, `#example`）
+    * **ID选择器**（例如, `#example`）
 4. 例外的最高优先级
-  *  **!important**此声明将覆盖任何其他声明。虽然技术上!important与优先级无关，但它与它直接相关。
+    *  **!important**此声明将覆盖任何其他声明。虽然技术上!important与优先级无关，但它与它直接相关。
   
 通配选择符（universal selector）(*), 关系选择符（combinators） (`+, >, ~, ' '`)  和 否定伪类（negation pseudo-class）(`:not()`) 对优先级没有影响。（但是，在 `:not()` 内部声明的选择器是会影响优先级）。
 
