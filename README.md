@@ -43,8 +43,8 @@
   
 -  <span id="css">[CSS](CSS/README.md)</span>
    * [CSS选择器](/CSS/图解CSS3/README.md)
-   * [CSS优先级](/CSS/CSS优先级.md)
-   * [CSS引入方式](/CSS/CSS优先级.md)
+   * [CSS优先级](/CSS/CSS优先级和引入方式.md)
+   * [CSS引入方式](/CSS/CSS优先级和引入方式.md)
    * [垂直居中](/CSS/垂直居中.md)
    * [position不同值定位](/CSS/position.md)
    * [水平居中的方法（margin/text-algin区别）](/CSS/水平居中.md)
