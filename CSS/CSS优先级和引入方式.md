@@ -49,8 +49,7 @@
    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   ```
-
-1. 最高优先级
+2. 最高优先级
    * **内联样式** \(例如, style="font-weight:bold"\) 总会覆盖外部样式表的任何样式 ，因此可看作是具有最高的优先级。.
 
 ### HTML 中引入 CSS 的方式
