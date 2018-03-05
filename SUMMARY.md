@@ -5,7 +5,6 @@
 - ## [AngularJS](#AngularJS)
 - # 目录
 - ## <span id="js">[JS](/JS/README.md)</span>
-
  - [AJAX过程以及知识体系](/JS/AJAX使用详细介绍.md)
  - [**同源策略到前端跨域**](/JS/同源策略到前端跨域.md)
  - [Array操作方法](/JS/Array操作方法.md)
