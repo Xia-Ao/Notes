@@ -29,23 +29,24 @@
 内联样式 > 
 1. 按照引用顺序，最后的会覆盖之前的样式
     *  **嵌入样式**
-  ```html
-  <head>
-    <style>
-
-    .content {
-        background: red;
-    }
-
-    </style>
-  </head>
-  ```
+      ```html
+      <head>
+        <style>
+      
+        .content {
+            background: red;
+        }
+      
+        </style>
+      </head>
+      ```
+  
     *  **外部样式** 外部样式分两种引用方式，一种是`link` 一种的`@import` ，后面有介绍
-  ```html
-  <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  ```
+      ```html
+      <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+      </head>
+      ```
 
 2. 最高优先级
   * **内联样式** (例如, style="font-weight:bold") 总会覆盖外部样式表的任何样式 ，因此可看作是具有最高的优先级。.
