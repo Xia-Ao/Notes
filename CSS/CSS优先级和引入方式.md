@@ -55,9 +55,41 @@
 ### HTML 中引入 CSS 的方式
 
 1. 内联样式
+
+
+```html
+<div style="background: red"></div>
+```
+
+
 2. 嵌入样式
+```html
+  <head>
+   <style>
+   .content {
+       background: red;
+   }
+   </style>
+  </head>
+```
+
+
 3. 链接样式
+```html
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+```
 4. 导入样式
+
+
+```html
+<style>
+    @import url(style.css);
+</style>
+```
+
+
 
 
 
