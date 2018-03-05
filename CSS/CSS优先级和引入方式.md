@@ -54,7 +54,7 @@
 
 ### HTML 中引入 CSS 的方式
 
-1. 内联样式
+1. **内联样式**
 
 
 ```html
@@ -62,7 +62,7 @@
 ```
 
 
-2. 嵌入样式
+2.** 嵌入样式**
 ```html
   <head>
    <style>
@@ -74,13 +74,13 @@
 ```
 
 
-3. 链接方式
+3. **链接方式**
 ```html
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 ```
-4. 导入样式
+4. **导入样式**
 
 
 ```html
