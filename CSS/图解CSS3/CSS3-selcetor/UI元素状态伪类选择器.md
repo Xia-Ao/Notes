@@ -6,6 +6,7 @@
 |E:disabled|不可用状态伪类选择器|匹配所有禁用的表单元素|
 
 ####示例：
+
 ```html
 
 <!DOCTYPE HTML>
