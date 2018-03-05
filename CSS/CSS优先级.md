@@ -19,7 +19,11 @@
   * **伪类**（pseudo-classes）（例如, `:hover`）
 3. 高优先级
   * **ID选择器**（例如, `#example`）
-
+4. 较高优先级
+  * **内联样式** (例如, style="font-weight:bold") 总会覆盖外部样式表的任何样式 ，因此可看作是具有最高的优先级。.
+5. 例外的最高优先级
+  *  **!important**此声明将覆盖任何其他声明。虽然技术上!important与优先级无关，但它与它直接相关。
+  
 通配选择符（universal selector）(*), 关系选择符（combinators） (`+, >, ~, ' '`)  和 否定伪类（negation pseudo-class）(`:not()`) 对优先级没有影响。（但是，在 `:not()` 内部声明的选择器是会影响优先级）。
 
 
