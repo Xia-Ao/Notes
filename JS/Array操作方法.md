@@ -81,7 +81,9 @@ Array(8.0); // [undefined × 8]
 ```
 #### Array.from
 只要一个对象有迭代器，Array.from就能把它变成一个数组（当然，是返回新的数组，不改变原对象）。
-
+语法：`Array.from(arrayLike[, processingFn[, thisArg]])`
+Array.from拥有3个形参，第一个为类似数组的对象，必选。第二个为加工函数，新生成的数组会经过该函数的加工再返回。第三个为this作用域，表示加工函数执行时this的值。后两个参数都是可选的。
+**注意**:一旦使用加工函数，必须明确指定返回值，否则将隐式返回undefined，最终生成的数组也会变成一个只包含若干个undefined元素的空数组。
 
 
 典型问题：
