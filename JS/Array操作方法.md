@@ -10,6 +10,8 @@
 
 ### Array 对象属性
 
+改变自身值的方法一共有9个，分别为pop、push、reverse、shift、sort、splice、unshift，以及两个ES6新增的方法copyWithin 和 fill
+
 ##### 添加修改删除等操作
 
 [`concat()`](http://www.runoob.com/jsref/jsref-concat-array.html) 连接两个或更多的数组，并返回结果。
@@ -85,6 +87,23 @@ Array(8.0); // [undefined × 8]
 Array.from拥有3个形参，第一个为类似数组的对象，必选。第二个为加工函数，新生成的数组会经过该函数的加工再返回。第三个为this作用域，表示加工函数执行时this的值。后两个参数都是可选的。
 **注意**:一旦使用加工函数，必须明确指定返回值，否则将隐式返回undefined，最终生成的数组也会变成一个只包含若干个undefined元素的空数组。
 
+#### Array.isArray()
+判定一个对象是数组的五种方法，前四种都不保险，如果将某个对象的对象的`__proto__`属性为`Array.prototype`，便导致了该对象继承了Array对象，前四种方法就会判定为true.
+
+```js
+var a = [];
+// 1.基于instanceof
+a instanceof Array;
+// 2.基于constructor
+a.constructor === Array;
+// 3.基于Object.prototype.isPrototypeOf
+Array.prototype.isPrototypeOf(a);
+// 4.基于getPrototypeOf
+Object.getPrototypeOf(a) === Array.prototype;
+// 5.基于Object.prototype.toString
+Object.prototype.toString.apply(a) === '[object Array]';
+```
+所以严格意义上判定一个对象是否是数组，推荐使用第五种方法，再说到`Array.isArray()`，实际上就是推荐使用的第五种toString方法。
 
 典型问题：
 
