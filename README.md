@@ -25,6 +25,7 @@
   - [JavaScript原型到原型链](/JS/js从原型到原型链.md)
   - [JS继承的实现](/JS/继承.md)
   - [JS闭包](/JS/闭包.md)
+  - [JS中数据类型、运算符、严格相等](/JS/运算符.md)
   
   
 - <span id="es6">[ES6](/ES6/README.md)</span>
