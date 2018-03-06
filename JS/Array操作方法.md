@@ -12,27 +12,35 @@
 
 改变自身值的方法一共有9个，分别为pop、push、reverse、shift、sort、splice、unshift，以及两个ES6新增的方法copyWithin 和 fill
 
-##### 添加修改删除等操作
+不会改变自身的方法一共有9个，分别为concat、join、slice、toString、toLocateString、indexOf、lastIndexOf、未标准的toSource以及ES7新增的方法includes。
 
-[`concat()`](http://www.runoob.com/jsref/jsref-concat-array.html) 连接两个或更多的数组，并返回结果。
+##### 添加修改删除等操作
+**浅复制** 是指当对象的被复制时，只是复制了对象的引用，指向的依然是同一个对象
+[`concat()`](http://www.runoob.com/jsref/jsref-concat-array.html) 连接两个或更多的数组，组成一个新的数组并返回。
 
 [`copyWithin( )`](http://www.runoob.com/jsref/jsref-copywithin.html)` `从数组的指定位置拷贝元素到数组的另一个指定位置中。
 
-[`slice( start, end )`](#)选取数组的的一部分，并返回一个新数组。即克隆部分数组
+[`slice( start, end )`](#)将数组中一部分元素浅复制存入新的数组对象，并且返回这个数组对象。
 
 [`fill()`](#)使用一个固定值来填充数组。
 
-[`join()`](#)` `把数组的所有元素放入一个字符串。
+[`join()`](#)` `把数组的所有元素放入一个字符串并返回这个字符串。
 
 [`push()`](http://www.runoob.com/jsref/jsref-push.html) 向数组的末尾添加一个或更多元素，并返回新的长度，**改变了原数组**。
 
-[`unshift()`](http://www.runoob.com/jsref/jsref-unshift.html)` `向数组的开头添加一个或更多元素，并返回新的长度。
+[`unshift()`](http://www.runoob.com/jsref/jsref-unshift.html)` `向数组的开头添加一个或更多元素，并返回新的长度。**改变了原数组**
 
 [`shift()`](http://www.runoob.com/jsref/jsref-shift.html) 删除数组第一个元素，并返回数组的第一个元素，会**改变原数组**。
 
-[`splice()`](http://www.runoob.com/jsref/jsref-splice.html) 从数组中添加或删除元素。
+[`splice()`](http://www.runoob.com/jsref/jsref-splice.html) 从数组中添加或删除元素。会**改变原数组**
 
 [`pop()`](#)删除数组的最后一个元素并返回删除后的元素，**改变了原数组**。
+
+##### 替换数组
+ `copyWithin(ES6)`用于数组内元素之间的替换，即替换元素和被替换元素均是数组内的元素。**改变了原数组**
+ `arr.copyWithin(target, start[, end = this.length])`
+
+ `fill(ES6)`它同样用于数组元素替换，但与copyWithin略有不同，它主要用于将数组指定区间内的元素替换为某个值。**改变了原数组**
 
 ##### 查询数组
 
@@ -67,11 +75,12 @@
 [`valueOf()`](http://www.runoob.com/jsref/jsref-valueof-array.html)` `返回数组对象的原始值。
 
 ##### 排序
+[`reverse()`](#)反转数组的元素顺序，该方法返回对数组的引用，会**改变原数组**。
 
 [`sort( )`](http://www.runoob.com/jsref/jsref-sort.html)` `对数组的元素进行排序。使用数字排序，你必须通过一个函数作为参数来调用。
+语法：`arr.sort([comparefn])`
 
-
-[`reverse()`](#)反转数组的元素顺序，该方法返回对数组的引用，会**改变原数组**。
+comparefn是可选的，如果省略，数组元素将按照各自转换为字符串的Unicode(万国码)位点顺序排序，
 
 #### Array.of
 
