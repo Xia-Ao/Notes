@@ -71,7 +71,7 @@
 [`sort( )`](http://www.runoob.com/jsref/jsref-sort.html)` `对数组的元素进行排序。使用数字排序，你必须通过一个函数作为参数来调用。
 
 
-[`reverse()`](#)` `反转数组的元素顺序。
+[`reverse()`](#)` `反转数组的元素顺序，该方法返回对数组的引用，会改变原数组。
 
 #### Array.of
 
