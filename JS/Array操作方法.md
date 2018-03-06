@@ -68,7 +68,6 @@
 
 [`sort( )`](http://www.runoob.com/jsref/jsref-sort.html)` `对数组的元素进行排序。使用数字排序，你必须通过一个函数作为参数来调用。它基本上与Array构造器功能一致，唯一的区别就在单个数字参数的处理上.
 
-
 ```js
 Array.of(8.0); // [8]
 Array(8.0); // [undefined × 8]
