@@ -66,11 +66,22 @@
 
 ##### 排序
 
-[`sort( )`](http://www.runoob.com/jsref/jsref-sort.html)` `对数组的元素进行排序。使用数字排序，你必须通过一个函数作为参数来调用。
+[`sort( )`](http://www.runoob.com/jsref/jsref-sort.html)` `对数组的元素进行排序。使用数字排序，你必须通过一个函数作为参数来调用。它基本上与Array构造器功能一致，唯一的区别就在单个数字参数的处理上.
+
+
+```js
+Array.of(8.0); // [8]
+Array(8.0); // [undefined × 8]
+
+```
+
+
 
 [`reverse()`](#)` `反转数组的元素顺序。
 
 #### Array.of
+
+`Array.of`用于将参数依次转化为数组中的一项，然后返回这个新数组，而不管这个参数是数字还是其它
 
 典型问题：
 
