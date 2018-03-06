@@ -24,7 +24,7 @@
 
 [`join()`](#)` `把数组的所有元素放入一个字符串。
 
-[`push()`](http://www.runoob.com/jsref/jsref-push.html) 向数组的末尾添加一个或更多元素，并返回新的长度。
+[`push()`](http://www.runoob.com/jsref/jsref-push.html) 向数组的末尾添加一个或更多元素，并返回新的长度，改变了原数组。
 
 [`unshift()`](http://www.runoob.com/jsref/jsref-unshift.html)` `向数组的开头添加一个或更多元素，并返回新的长度。
 
@@ -32,7 +32,7 @@
 
 [`splice()`](http://www.runoob.com/jsref/jsref-splice.html) 从数组中添加或删除元素。
 
-[`pop()`](#)删除数组的最后一个元素并返回删除后的元素。
+[`pop()`](#)删除数组的最后一个元素并返回删除后的元素，改变了原数组。
 
 ##### 查询数组
 
