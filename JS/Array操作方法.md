@@ -70,6 +70,80 @@
 
 [`reverse()`](#)` `反转数组的元素顺序。
 
+典型问题：
+
+### 数组去重
+实际上有很多种方法，其实都大同小异，只要熟悉数组操作的API方法，你就可以写出很多种，但是本质都是一样的。优先推荐使用ES6中Set属性不重复的特征去重。
+
+ 1. 两层for循环，一层遍历数组，一层循环对比，对相同的元素从数组中删除，或者新建一个res数组，将不同的元素push到新数组中，返回新数组。效率低，当数组比较长时不合适。
+ ```js
+ let arr = [0, 3, 4, 3, 4, 6, 2, 4];
+ for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] === arr[j]) {
+                arr.splice(j, 1);
+                console.log(arr)
+            }
+        }
+    }
+    
+    // [0, 2, 3, 4, 6]
+ ```
+ 2. 使用IndexOf或者includes检查是否重复，其实跟第一种方法比较就是将第二层循环使用了IndexOf这种有遍历接口的API操作，这个操作的本质是不是跟第一种方法一样使用循环遍历，这个就是要看源码了。
+ ```js
+ let arr = [0, 3, 4, 3, 4, 6, 2, 4];
+ let res = [];
+ for (let i = 0, len = arr.length; i < len; i++) {
+       let current= arr[i];
+       if(res.indexOf(current)===-1){
+           res.push(current)
+       }
+       
+       //或者使用includes
+       if(!res.includes(current)){
+           res.push(current)
+       }
+    
+    }
+    
+    // [0, 2, 3, 4, 6]
+ ```
+ 3. 先用`sort`排序，后比较相邻两个是否相等。
+ ```js
+    let arr = [0, 3, 4, 3, 4, 6, 2, 4];
+    arr.sort();
+    let temp;
+    let res=[]
+    console.log(temp)
+    for (let i = 0, len = arr.length; i < len; i++) {
+        if (!i || temp !== arr[i]) {
+            res.push(arr[i])
+        }
+        temp=arr[i]
+    }
+    console.log(res);
+    
+    // [0, 2, 3, 4, 6]
+ ```
+ 4. ES6中Set属性
+ ```js
+ // 去除数组的重复成员
+  [...new Set(array)]
+  
+  let arr = [0, 3, 4, 3, 4, 6, 2, 4];
+  let res=[...new Set(arr)]
+
+  // [0, 2, 3, 4, 6]
+ ```
+**注意**：
+1、以上去重只对数组中同一种数据类型进行比较去重，如果有不同的数据类型，要区别对待
+2、向 Set 加入值的时候，不会发生类型转换，Set 内部判断两个值是否不同，使用的算法叫做“Same-value-zero equality”，它类似于精确相等运算符（===），主要的区别是NaN等于自身，在 Set 内部，它认为两个NaN是相等。
+3、indexOf内部使用的精确相等运算符（===），`NaN===NaN 的结果是 false`
+4、includes内部也是使用的类似精确相等运算符（===），`NaN===NaN 的结果是 true`
+
+
+
+
 ### 1、单数组操作
 
 ### 2、数组遍历方法
