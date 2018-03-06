@@ -3,16 +3,7 @@
   "description": "有关前端知识总结以及面试题目",
   "language": "zh",
   "plugins": [
-    "duoshuo",
-    "github",
-    "editlink",
-    "prism",
-    "-highlight",
-    "baidu",
-    "splitter",
-    "sitemap",
-    "latex-codecogs",
-    "-fontsettings"
+  
   ],
   "pluginsConfig": {
     "duoshuo": {
