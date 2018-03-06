@@ -72,7 +72,6 @@
 ```js
 Array.of(8.0); // [8]
 Array(8.0); // [undefined × 8]
-
 ```
 
 
