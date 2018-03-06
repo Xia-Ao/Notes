@@ -28,7 +28,7 @@
 
 [`unshift()`](http://www.runoob.com/jsref/jsref-unshift.html)` `向数组的开头添加一个或更多元素，并返回新的长度。
 
-[`shift()`](http://www.runoob.com/jsref/jsref-shift.html) 删除数组第一个元素，并返回数组的第一个元素。
+[`shift()`](http://www.runoob.com/jsref/jsref-shift.html) 删除数组第一个元素，并返回数组的第一个元素，会改变原数组。
 
 [`splice()`](http://www.runoob.com/jsref/jsref-splice.html) 从数组中添加或删除元素。
 
