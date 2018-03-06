@@ -24,15 +24,15 @@
 
 [`join()`](#)` `把数组的所有元素放入一个字符串。
 
-[`push()`](http://www.runoob.com/jsref/jsref-push.html) 向数组的末尾添加一个或更多元素，并返回新的长度，改变了原数组。
+[`push()`](http://www.runoob.com/jsref/jsref-push.html) 向数组的末尾添加一个或更多元素，并返回新的长度，**改变了原数组**。
 
 [`unshift()`](http://www.runoob.com/jsref/jsref-unshift.html)` `向数组的开头添加一个或更多元素，并返回新的长度。
 
-[`shift()`](http://www.runoob.com/jsref/jsref-shift.html) 删除数组第一个元素，并返回数组的第一个元素，会改变原数组。
+[`shift()`](http://www.runoob.com/jsref/jsref-shift.html) 删除数组第一个元素，并返回数组的第一个元素，会**改变原数组**。
 
 [`splice()`](http://www.runoob.com/jsref/jsref-splice.html) 从数组中添加或删除元素。
 
-[`pop()`](#)删除数组的最后一个元素并返回删除后的元素，改变了原数组。
+[`pop()`](#)删除数组的最后一个元素并返回删除后的元素，**改变了原数组**。
 
 ##### 查询数组
 
@@ -71,7 +71,7 @@
 [`sort( )`](http://www.runoob.com/jsref/jsref-sort.html)` `对数组的元素进行排序。使用数字排序，你必须通过一个函数作为参数来调用。
 
 
-[`reverse()`](#)反转数组的元素顺序，该方法返回对数组的引用，会改变原数组。
+[`reverse()`](#)反转数组的元素顺序，该方法返回对数组的引用，会**改变原数组**。
 
 #### Array.of
 
