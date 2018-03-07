@@ -90,22 +90,27 @@
 * thisArg 可选，用来当做fn函数内的this对象。
 
 2、**every**
+
 使用传入的函数测试所有元素，只要其中有一个函数返回值为 false，那么该方法的结果为 false；如果全部返回 true，那么该方法的结果才为 true。
 
 3、**some**
+
 some 测试数组元素时，只要有一个函数返回值为 true，则该方法返回 true，若全部返回 false，则该方法返回 false。
 
 4、**filter**
+
 filter() 方法使用传入的函数测试所有元素，并**返回所有通过测试的元素组成的新数组**。它就好比一个过滤器，筛掉不符合条件的元素。
 
 语法：`arr.filter(fn, thisArg)`
 
 5、**map**
+
 [`map()`](#)通过指定函数处理数组的每个元素，并返回处理后的**新数组**。
 
 语法：`arr.map(fn, thisArg)`
 
 6、**reduce**
+
 reduce() 方法接收一个方法作为累加器，数组中的每个值(从左至右) 开始合并，最终为一个值。
 
 语法：`arr.reduce(fn, initialValue)`fn 表示在数组每一项上执行的函数，接受四个参数：
@@ -122,9 +127,11 @@ reduce() 方法接收一个方法作为累加器，数组中的每个值(从左�
 * 如果数组仅有一个元素，并且没有提供 initialValue，或提供了 initialValue 但数组为空，那么fn不会被执行，数组的唯一值将被返回。
 
 7、**reduceRight**
+
 数组中的每个值（从右至左）开始合并，最终为一个值
 
 8、**entries(ES6)**
+
 返回一个数组迭代器对象，该对象包含数组中每个索引的键值对。
 
 9、**find&findIndex(ES6)**
@@ -136,9 +143,11 @@ findIndex() 方法也基于ECMAScript 2015（ES6）规范，它返回数组中�
 语法：`arr.find(fn, thisArg)`，`arr.findIndex(fn, thisArg)`
 
 10、**keys(ES6)**
+
 返回一个数组索引的迭代器。
 
 11、**values(ES6)**
+
 返回一个数组迭代器对象，该对象包含数组中每个索引的值。
 
 12、**Symbol.iterator(ES6)**
