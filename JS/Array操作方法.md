@@ -74,7 +74,7 @@
 
 [`toString()`](http://www.runoob.com/jsref/jsref-tostring-array.html)` `把数组转换为字符串，并返回结果。
 
-[`toLocaleString()`](https://www.gitbook.com/book/xia-ao/notes/edit#)把数组转换为字符串，并返回结果。
+[`toLocaleString()`](https://www.gitbook.com/book/xia-ao/notes/edit#)把数组使用头LocaleString方法转换为字符串，并返回结果。
 
 [`valueOf()`](http://www.runoob.com/jsref/jsref-valueof-array.html)` `返回数组对象的原始值。
 
