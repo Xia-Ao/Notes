@@ -105,7 +105,19 @@ filter() 方法使用传入的函数测试所有元素，并**返回所有通过
 
 6、**reduce**
 reduce() 方法接收一个方法作为累加器，数组中的每个值(从左至右) 开始合并，最终为一个值。
+语法：`arr.reduce(fn, initialValue)`
+fn 表示在数组每一项上执行的函数，接受四个参数：
+`previousValue` 上一次调用回调返回的值，或者是提供的初始值
+`value` 数组中当前被处理元素的值
+`index` 当前元素在数组中的索引
+`array` 数组自身
 
+`initialValue` 指定第一次调用 fn 的第一个参数。
+当 fn 第一次执行时：
+
+* 如果 initialValue 在调用 reduce 时被提供，那么第一个 previousValue 将等于 initialValue，此时 item 等于数组中的第一个值；
+* 如果 initialValue 未被提供，那么 previousVaule 等于数组中的第一个值，item 等于数组中的第二个值。此时如果数组为空，那么将抛出 TypeError。
+* 如果数组仅有一个元素，并且没有提供 initialValue，或提供了 initialValue 但数组为空，那么fn不会被执行，数组的唯一值将被返回。
 #### Array.of
 
 `Array.of`用于将参数依次转化为数组中的一项，然后返回这个新数组，而不管这个参数是数字还是其它，它基本上与Array构造器功能一致，唯一的区别就在单个数字参数的处理上.
