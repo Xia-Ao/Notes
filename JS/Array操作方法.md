@@ -56,7 +56,7 @@
 
 [`findIndex()`](http://www.runoob.com/jsref/jsref-findindex.html) 返回符合传入测试（函数）条件的数组元素索引。同样，检测到第一个的时候，然后返回，不在执行后面的。
 
-[`indexOf(item,start)`](#)搜索数组中的元素，并返回它所在的位置。
+[`indexOf(item,start)`](#)搜索数组中的元素，并返回它所在的位置，如果没有，返回-1，但是不区分NaN。
 
 [`lastIndexOf()`](#)返回一个指定的字符串值最后出现的位置，在一个字符串中的指定位置从后向前搜索。
 
