@@ -15,17 +15,17 @@
   - [**Promise**](/JS/Promise.md)
   - [**正则表达式**](/JS/正则表达式.md)
   - [**递归**](/JS/递归.md)
-  - [**闭包**](/JS/闭包.md)
+  - [**JavaScript原型到原型链**](/JS/js从原型到原型链.md)
+  - [**JS继承的实现**](/JS/继承.md)
+  - [**JS闭包**](/JS/闭包.md)
   - [日期格式化](/JS/日期格式化.md)
   - [一些常用的JS方法](/JS/一些常用的JS方法.md)
   - [数组排序方法](http://www.cnblogs.com/dong-xu/p/7088447.html)
   - [DOM遍历](/JS/DOM遍历.md)
   - [用Javascript获取页面元素的位置（client scroll offset等宽度）（转载）](http://www.ruanyifeng.com/blog/2009/09/find_element_s_position_using_javascript.html)
   - [Javascript 严格模式详解(转载)](http://www.zyy1217.com/2017/04/20/Javascript%20%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F%E8%AF%A6%E8%A7%A3/)
-  - [JavaScript原型到原型链](/JS/js从原型到原型链.md)
-  - [JS继承的实现](/JS/继承.md)
-  - [JS闭包](/JS/闭包.md)
   - [JS中数据类型、运算符、严格相等](/JS/运算符.md)
+  - [JS引擎](/JS/JS引擎.md)
   
   
 - <span id="es6">[ES6](/ES6/README.md)</span>
