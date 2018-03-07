@@ -60,12 +60,6 @@
 
 [`lastIndexOf()`](#)返回一个指定的字符串值最后出现的位置，在一个字符串中的指定位置从后向前搜索。
 
-##### 遍历
-
-[`forEach(function(currentValue,index,arr),thisValue)`](http://www.runoob.com/jsref/jsref-foreach.html)  数组每个元素都执行一次回调函数。
-
-[`map()`](#)通过指定函数处理数组的每个元素，并返回处理后的数组。
-
 **计算转换**
 
 [`reduce()`](http://www.runoob.com/jsref/jsref-reduce.html)` `将数组元素计算为一个值（从左到右）。如遇到字符串，执行字符串拼接。
@@ -85,6 +79,15 @@
 [`sort( )`](http://www.runoob.com/jsref/jsref-sort.html)```对数组的元素进行排序。使用数字排序，你必须通过一个函数作为参数来调用。``
 
 语法：`arr.sort([comparefn])`comparefn是可选的，如果省略，数组元素将按照各自转换为字符串的Unicode\(万国码\)位点顺序排序。
+
+##### 遍历方法12个
+
+1、[`forEach(function(currentValue,index,arr),thisArg)`](http://www.runoob.com/jsref/jsref-foreach.html)  数组每个元素都执行一次回调函数。
+
+* value 当前正在被处理的元素的值，index 当前元素的数组索引，array 数组本身
+* thisArg 可选，用来当做fn函数内的this对象。
+
+[`map()`](#)通过指定函数处理数组的每个元素，并返回处理后的数组。
 
 #### Array.of
 
