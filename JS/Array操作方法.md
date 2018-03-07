@@ -143,8 +143,12 @@ findIndex() 方法也基于ECMAScript 2015（ES6）规范，它返回数组中�
 
 12、**Symbol.iterator(ES6)**
 
-
-
+###小结：
+1. Array.prototype本身就是一个数组，并且它的长度为0。
+2. 所有插入元素的方法, 比如 push、unshift，一律返回数组新的长度；
+3. 所有删除元素的方法，比如 pop、shift、splice 一律返回删除的元素，或者返回删除的多个元素组成的数组；
+4. 部分遍历方法，比如 forEach、every、some、filter、map、find、findIndex，它们都包含function(value,index,array){} 和 thisArg 这样两个形参。
+5. Array.prototype 的所有方法均具有鸭式辨型这种神奇的特性。它们不止可以用来处理数组对象，还可以处理类数组对象。
 
 
 
