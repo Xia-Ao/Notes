@@ -82,12 +82,26 @@
 
 ##### 遍历方法12个
 
-1、[`forEach(function(currentValue,index,arr),thisArg)`](http://www.runoob.com/jsref/jsref-foreach.html)  数组每个元素都执行一次回调函数。
+1、**forEach**
+
+[`forEach(function(currentValue,index,arr),thisArg)`](http://www.runoob.com/jsref/jsref-foreach.html)  数组每个元素都执行一次回调函数。
 
 * value 当前正在被处理的元素的值，index 当前元素的数组索引，array 数组本身
 * thisArg 可选，用来当做fn函数内的this对象。
 
-[`map()`](#)通过指定函数处理数组的每个元素，并返回处理后的数组。
+2、**every**
+使用传入的函数测试所有元素，只要其中有一个函数返回值为 false，那么该方法的结果为 false；如果全部返回 true，那么该方法的结果才为 true。
+
+3、**some**
+some 测试数组元素时，只要有一个函数返回值为 true，则该方法返回 true，若全部返回 false，则该方法返回 false。
+
+4、**filter**
+filter() 方法使用传入的函数测试所有元素，并**返回所有通过测试的元素组成的新数组**。它就好比一个过滤器，筛掉不符合条件的元素。
+语法：`arr.filter(fn, thisArg)`
+
+5、**map**
+[`map()`](#)通过指定函数处理数组的每个元素，并返回处理后的**新数组**。
+语法：`arr.map(fn, thisArg)`
 
 #### Array.of
 
