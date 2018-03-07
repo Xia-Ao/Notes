@@ -105,12 +105,12 @@ filter() 方法使用传入的函数测试所有元素，并**返回所有通过
 
 6、**reduce**
 reduce() 方法接收一个方法作为累加器，数组中的每个值(从左至右) 开始合并，最终为一个值。
-语法：`arr.reduce(fn, initialValue)`
-fn 表示在数组每一项上执行的函数，接受四个参数：
-`previousValue` 上一次调用回调返回的值，或者是提供的初始值
-`value` 数组中当前被处理元素的值
-`index` 当前元素在数组中的索引
-`array` 数组自身
+
+语法：`arr.reduce(fn, initialValue)`fn 表示在数组每一项上执行的函数，接受四个参数：
+* `previousValue` 上一次调用回调返回的值，或者是提供的初始值
+* `value` 数组中当前被处理元素的值
+* `index` 当前元素在数组中的索引
+* `array` 数组自身
 
 `initialValue` 指定第一次调用 fn 的第一个参数。
 当 fn 第一次执行时：
