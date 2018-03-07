@@ -21,11 +21,11 @@
 
 [`copyWithin( )`](http://www.runoob.com/jsref/jsref-copywithin.html)` `从数组的指定位置拷贝元素到数组的另一个指定位置中。
 
-[`slice( start, end )`](#)将数组中一部分元素浅复制存入新的数组对象，并且返回这个数组对象。
+[`slice( start, end )`](#)将数组中一部分元素**浅复制**存入新的数组对象，并且返回这个数组对象。
 
 [`fill()`](#)使用一个固定值来填充数组。
 
-[`join()`](#)` `将数组中的所有元素连接成一个字符串,并返回这个字符串。
+[`join()`](#)` `将数组中的所有元素连接成一个字符串，并返回这个字符串。
 
 [`push()`](http://www.runoob.com/jsref/jsref-push.html) 向数组的末尾添加一个或更多元素，并返回新的长度，**改变了原数组**。
 
@@ -46,7 +46,7 @@
 
 ##### 查询数组
 
-[`every()`](http://www.runoob.com/jsref/jsref-every.html)` ` 检测数值元素的每个元素是否都符合条件。返回Boolean值。
+[`every()`](http://www.runoob.com/jsref/jsref-every.html) 检测数值元素的每个元素是否都符合条件。返回Boolean值。
 
 [`filter()`](http://www.runoob.com/jsref/jsref-filter.html) 检测数值元素，并返回符合条件所有元素的数组。
 
@@ -73,6 +73,8 @@
 [`reduceRight()`](http://www.runoob.com/jsref/jsref-reduceright.html)` `将数组元素计算为一个值（从右到左）。
 
 [`toString()`](http://www.runoob.com/jsref/jsref-tostring-array.html)` `把数组转换为字符串，并返回结果。
+
+[`toLocaleString()`](https://www.gitbook.com/book/xia-ao/notes/edit#)把数组转换为字符串，并返回结果。
 
 [`valueOf()`](http://www.runoob.com/jsref/jsref-valueof-array.html)` `返回数组对象的原始值。
 
