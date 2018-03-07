@@ -25,7 +25,7 @@
 
 [`fill()`](#)使用一个固定值来填充数组。
 
-[`join()`](#)` `把数组的所有元素放入一个字符串并返回这个字符串。
+[`join()`](#)` `将数组中的所有元素连接成一个字符串,并返回这个字符串。
 
 [`push()`](http://www.runoob.com/jsref/jsref-push.html) 向数组的末尾添加一个或更多元素，并返回新的长度，**改变了原数组**。
 
@@ -82,9 +82,7 @@
 
 [`sort( )`](http://www.runoob.com/jsref/jsref-sort.html)```对数组的元素进行排序。使用数字排序，你必须通过一个函数作为参数来调用。``
 
-语法：`arr.sort([comparefn])`
-
-comparefn是可选的，如果省略，数组元素将按照各自转换为字符串的Unicode\(万国码\)位点顺序排序，
+语法：`arr.sort([comparefn])`comparefn是可选的，如果省略，数组元素将按照各自转换为字符串的Unicode\(万国码\)位点顺序排序。
 
 #### Array.of
 
