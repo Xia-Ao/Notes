@@ -149,7 +149,7 @@ findIndex() 方法也基于ECMAScript 2015（ES6）规范，它返回数组中�
 
 
 
-#### Array.of
+#### Array.of （构造函数）
 
 `Array.of`用于将参数依次转化为数组中的一项，然后返回这个新数组，而不管这个参数是数字还是其它，它基本上与Array构造器功能一致，唯一的区别就在单个数字参数的处理上.
 
@@ -158,7 +158,8 @@ Array.of(8.0); // [8]
 Array(8.0); // [undefined × 8]
 ```
 
-#### Array.from
+#### Array.from （构造函数）
+
 
 只要一个对象有迭代器，Array.from就能把它变成一个数组（当然，是返回新的数组，不改变原对象）。  
 语法：`Array.from(arrayLike[, processingFn[, thisArg]])`  
