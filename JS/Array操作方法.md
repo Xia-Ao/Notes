@@ -127,6 +127,27 @@ reduce() 方法接收一个方法作为累加器，数组中的每个值(从左�
 8、**entries(ES6)**
 返回一个数组迭代器对象，该对象包含数组中每个索引的键值对。
 
+9、**find&findIndex(ES6)**
+
+find() 方法基于ECMAScript 2015（ES6）规范，返回数组中第一个满足条件的元素（如果有的话）， 如果没有，则返回undefined。
+
+findIndex() 方法也基于ECMAScript 2015（ES6）规范，它返回数组中第一个满足条件的元素的索引（如果有的话）否则返回-1。
+
+语法：`arr.find(fn, thisArg)`，`arr.findIndex(fn, thisArg)`
+
+10、**keys(ES6)**
+返回一个数组索引的迭代器。
+
+11、**values(ES6)**
+返回一个数组迭代器对象，该对象包含数组中每个索引的值。
+
+12、**Symbol.iterator(ES6)**
+
+
+
+
+
+
 
 #### Array.of
 
