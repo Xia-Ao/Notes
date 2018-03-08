@@ -128,5 +128,27 @@ indexA、indexB 表示字符串索引，其中 indexB 可选，如果省略，�
 * 若 省略 indexB，则提取字符一直到字符串末尾；
 * 若 任一参数小于 0 或 NaN，则被当作 0；
 * 若 任一参数大于 length，则被当作 length。
+* 如果 indexA > indexB，则 substring 的执行效果就像是两个参数调换一般
 
+#### toLocaleLowerCase、toLocaleUpperCase 
+toLocaleLowerCase() 方法返回调用该方法的字符串被转换成小写的值，转换规则根据本地化的大小写映射。而toLocaleUpperCase() 方法则是转换成大写的值。
+
+
+#### toLowerCase 、toUpperCase
+这两个方法分别表示将字符串转换为相应的小写，大写形式，并返回
+
+#### trim
+trim() 方法清除字符串首尾的空白并返回。
+
+#### includes(ES6)
+includes() 方法基于ECMAScript 2015（ES6）规范，它用来判断一个字符串是否属于另一个字符。如果是，则返回true，否则返回false。
+语法：`str.includes(subString [, position])`
+
+
+
+#### endsWith(ES6) 、startsWith(ES6)
+endsWith() 方法基于ECMAScript 2015（ES6）规范，它基本与 contains() 功能相同，不同的是，它用来判断一个字符串是否是原字符串的结尾。若是则返回true，否则返回false。
+
+#### 
+#### 
 #### 
