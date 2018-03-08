@@ -6,22 +6,12 @@
   
   ],
   "pluginsConfig": {
-    "duoshuo": {
-      "short_name": "zhengjl",
-      "theme": "default"
-    },
     "github": {
       "url": "https://github.com/Xia-Ao"
     },
     "editlink": {
       "base": "https://www.gitbook.com/book/xia-ao/notes/contentgi",
       "label": "编辑本页"
-    },
-    "baidu": {
-      "token": "35d9061f8db12b29ed7072cdf69667f4"
-    },
-    "sitemap": {
-      "hostname": "http://zhengjianglong.leanote.com"
     },
     "fontsettings": {
       "theme": "white",
