@@ -54,18 +54,33 @@
 
 #### charAt
 charAt() 方法返回字符串中指定位置的字符。
+
 语法：`str.charAt(index)` index 为字符串索引（取值从0至length-1），如果超出该范围，则返回空串。
 
 #### charCodeAt
 charCodeAt() 返回指定索引处字符的 Unicode 数值。
+
 语法：`str.charCodeAt(index)`。index 为一个从0至length-1的整数。如果不是一个数值，则默认为 0，如果小于0或者大于字符串长度，则返回 NaN。
 
 #### concat
+concat() 方法将一个或多个字符串拼接在一起，组成新的字符串并返回。
+
+语法：`str.concat(string2, string3, …)`. concat 的性能表现不佳，强烈推荐使用赋值操作符（+或+=）代替 concat
 
 
-#### 
-#### 
-#### 
+#### indexOf / lastIndexOf
+indexOf() 方法用于查找子字符串在字符串中首次出现的位置，没有则返回 -1。lastIndexOf 则从右往左查找，其它与前者一致
+
+语法：`str.indexOf(searchValue [, fromIndex=0])，str.lastIndexOf(searchValue [, fromIndex=0])`
+
+#### localeCompare
+localeCompare() 方法用来比较字符串，如果指定字符串在原字符串的前面则返回负数，否则返回正数或0，其中0 表示两个字符串相同
+
+#### match
+match() 方法用于测试字符串是否支持指定正则表达式的规则，即使传入的是非正则表达式对象，它也会隐式地使用new RegExp(obj)将其转换为正则表达式对象。
+
+语法：`str.match(regexp)`.该方法返回包含匹配结果的数组，如果没有匹配项，则返回 null。
+
 #### 
 #### 
 #### 
