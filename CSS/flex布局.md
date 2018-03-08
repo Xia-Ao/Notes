@@ -31,29 +31,55 @@ display: inline-flex;
 容器默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（cross axis）。主轴的开始位置（与边框的交叉点）叫做main start，结束位置叫做main end；交叉轴的开始位置叫做cross start，结束位置叫做cross end。
 项目默认沿主轴排列。单个项目占据的主轴空间叫做main size，占据的交叉轴空间叫做cross size。
 ##  基本语法
-容器的六个基本属性：
+#### 容器的六个基本属性：
 
-* [flex-direction ](#flex-direction) 决定主轴的方向
+* [**flex-direction** ](#flex-direction) 决定主轴的方向
 
       flex-direction: row | row-reverse | column | column-reverse;
-* [flex-wrap ](#flex-wrap)  定义，如果一条轴线排不下，如何换行。
+* [**flex-wrap** ](#flex-wrap)  定义，如果一条轴线排不下，如何换行。
 
         flex-wrap: nowrap | wrap | wrap-reverse;
-* [flex-flow ](#flex-flow) flex-direction属性和flex-wrap属性的简写形式
+* [**flex-flow**](#flex-flow) flex-direction属性和flex-wrap属性的简写形式
 
       flex-flow: <flex-direction> || <flex-wrap>;
-* [justify-content ](#justify-content)
+* [**justify-content** ](#justify-content)
  定义了项目在主轴上的对齐方式。
  
        justify-content: flex-start | flex-end | center | space-between | space-around;
-* [align-items ](#align-items) 
+* [**align-items** ](#align-items) 
 定义项目在交叉轴上如何对齐。
 
       align-items: flex-start | flex-end | center | baseline | stretch;
-* [align-content ](#align-content) 定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。
+* [**align-content** ](#align-content) 定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。
 
       align-content: flex-start | flex-end | center | space-between | space-around | stretch;
 
+#### 项目的六个基本属性：
+* **order**
+定义项目的排列顺序。数值越小，排列越靠前，默认为0。
+
+```html
+.item {
+  order: <integer>;
+}
+```
+
+
+* flex-grow
+定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大
+
+
+```html
+.item {
+  flex-grow: <number>; /* default 0 */
+}
+```
+
+
+* flex-shrink
+* flex-basis
+* flex
+* align-self
 
 
 
