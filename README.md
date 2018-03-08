@@ -54,6 +54,7 @@
    * [transform的属性和应用](https://www.w3cplus.com/content/css3-transform)
    * [布局知识](/CSS/布局.md)
    * [三栏式布局](/CSS/三栏式布局.md)
+   * [flex布局](/CSS/flex布局.md)
    * [垂直居中](/CSS/垂直居中.md)
    * [水平居中的方法（margin/text-algin区别）](/CSS/水平居中.md)
    * [行内元素与块级元素](/CSS/行内元素与块级元素.md)
