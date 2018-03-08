@@ -95,10 +95,38 @@ match() 方法用于测试字符串是否支持指定正则表达式的规则，
 * newSubStr: 替换掉第一个参数在原字符串中的匹配部分. 该字符串中可以内插一些特殊的变量名.
 * function: 一个用来创建新子字符串的函数, 该函数的返回值将替换掉第一个参数匹配到的结果. 该函数的参数描述请参考 指定一个函数作为参数 小节.
 * flags: 注意：flags 参数在 v8 内核（Chrome and NodeJs）中不起作用. 方法中使用 flags 参数不是符合标准的并且不赞成这样做.
-#### 
-#### 
-#### 
-#### 
-#### 
+
+#### search
+search() 方法用于测试字符串对象是否包含某个正则匹配，相当于正则表达式的 test 方法，且该方法比 match() 方法更快。如果匹配成功，search() 返回正则表达式在字符串中首次匹配项的索引，否则返回-1。
+
+语法：`str.search(regexp)`
+
+
+#### slice
+slice() 方法提取字符串的一部分，并返回新的字符串。该方法有些类似 Array.prototype.slice 方法。
+
+语法：`str.slice(start, end)`
+
+#### split
+split() 方法把原字符串分割成子字符串组成数组，并返回该**数组**。
+
+语法：`str.split(separator, limit)`
+
+两个参数均是可选的，其中 separator 表示分隔符，它可以是字符串也可以是正则表达式。如果忽略 separator，则返回的数组包含一个由原字符串组成的元素。如果 separator 是一个空串，则 str 将会被分割成一个由原字符串中字符组成的数组。limit 表示从返回的数组中截取前 limit 个元素，从而限定返回的数组长度。
+
+#### substr
+substr() 方法返回字符串指定位置开始的指定数量的字符。
+
+语法：`str.substr(start[, length])`
+
+#### subString
+substring() 方法返回字符串两个索引之间的子串。
+
+语法：`str.substring(indexA[, indexB])`
+indexA、indexB 表示字符串索引，其中 indexB 可选，如果省略，则表示返回从 indexA 到字符串末尾的子串。
+* 若 indexA == indexB，则返回一个空字符串；
+* 若 省略 indexB，则提取字符一直到字符串末尾；
+* 若 任一参数小于 0 或 NaN，则被当作 0；
+* 若 任一参数大于 length，则被当作 length。
 
 #### 
