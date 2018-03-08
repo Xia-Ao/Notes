@@ -26,6 +26,7 @@
   - [Javascript 严格模式详解(转载)](http://www.zyy1217.com/2017/04/20/Javascript%20%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F%E8%AF%A6%E8%A7%A3/)
   - [JS中数据类型、运算符、严格相等](/JS/运算符.md)
   - [JS引擎](/JS/JS引擎.md)
+  - [前端算法面试题汇总](http://www.zyy1217.com/2017/04/26/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/) - 转载
   
   
 - <span id="es6">[ES6](/ES6/README.md)</span>
