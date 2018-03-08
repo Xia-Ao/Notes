@@ -56,7 +56,38 @@ display: inline-flex;
 
 
 
-<h3 id=flex-direction>flex-direction<h3>
+
+
+### flex水平垂直居中
+父元素设定高度，将子元素水平、垂直居中
+父元素`justify-content`设置为center,`align-items`设置为center
+
+
+```html
+<head>
+    <meta charset="UTF-8">
+    <title>flex</title>
+    <style>
+        .par{
+            height:500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .son{
+            width: 200px;
+            height: 200px;
+            background: #cc7680;
+        }
+    </style>
+</head>
+<body>
+<div class="par">
+    <div class="son"></div>
+</div>
+</body>
+```
+
 
 
 
