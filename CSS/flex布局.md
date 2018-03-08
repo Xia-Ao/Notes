@@ -56,6 +56,7 @@ display: inline-flex;
 
 #### 项目的六个基本属性：
 * **order**
+
 定义项目的排列顺序。数值越小，排列越靠前，默认为0。
 
 ```html
@@ -66,6 +67,7 @@ display: inline-flex;
 
 
 * **flex-grow**
+
 定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大
 
 
@@ -77,6 +79,7 @@ display: inline-flex;
 
 
 * **flex-shrink**
+
 定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。
 
 
@@ -88,6 +91,7 @@ display: inline-flex;
 
 
 * **flex-basis**
+
 定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。length可以向width/height一样设置px、%等。
 
 
@@ -99,6 +103,7 @@ display: inline-flex;
 
 
 * **flex**
+
 flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。
 
 
