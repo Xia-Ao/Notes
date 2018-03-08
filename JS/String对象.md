@@ -56,4 +56,6 @@
 charAt() 方法返回字符串中指定位置的字符。
 语法：`str.charAt(index)` index 为字符串索引（取值从0至length-1），如果超出该范围，则返回空串。
 
-
+#### charCodeAt
+charCodeAt() 返回指定索引处字符的 Unicode 数值。
+语法：`str.charCodeAt(index)`。index 为一个从0至length-1的整数。如果不是一个数值，则默认为 0，如果小于0或者大于字符串长度，则返回 NaN。
