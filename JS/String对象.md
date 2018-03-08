@@ -1,6 +1,7 @@
 # JavaScript  String对象
-
-## String 对象属性
+###参考：
+[JavaScript字符串所有API全解密](http://louiszhai.github.io/2016/01/12/js.String/)
+### String 对象属性
 
 
 
@@ -10,7 +11,7 @@
 | [length](http://www.runoob.com/jsref/jsref-length-string.html) | 字符串的长度 |
 | [prototype](http://www.runoob.com/jsref/jsref-prototype-string.html) | 允许您向对象添加属性和方法 |
 
-## String 对象方法
+### String 对象方法
 
 | 方法 | 描述 |
 | :--- | :--- |
@@ -32,7 +33,7 @@
 | [substring\(from , to\)](http://www.runoob.com/jsref/jsref-substring.html) | 提取字符串中两个指定的索引号之间的字符。 |
 | [valueOf\(\)](http://www.runoob.com/jsref/jsref-valueof-string.html) | 返回某个字符串对象的原始值。 |
 
-## String HTML 包装方法
+### String HTML 包装方法
 
 
 | 方法 | 描述 |
@@ -51,5 +52,8 @@
 | [sub\(\)](http://www.runoob.com/jsref/jsref-sub.html) | 把字符串显示为下标。 |
 | [sup\(\)](http://www.runoob.com/jsref/jsref-sup.html) | 把字符串显示为上标。 |
 
+#### charAt
+charAt() 方法返回字符串中指定位置的字符。
+语法：`str.charAt(index)` index 为字符串索引（取值从0至length-1），如果超出该范围，则返回空串。
 
 
