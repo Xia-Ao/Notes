@@ -27,7 +27,7 @@
   - [JS中数据类型、运算符、严格相等](/JS/运算符.md)
   - [JS引擎](/JS/JS引擎.md)
   - [前端算法面试题汇总](http://www.zyy1217.com/2017/04/26/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/) - 转载
-  - [js实现一个图片懒加载插件](http://www.zyy1217.com/2017/03/20/js%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD%E6%8F%92%E4%BB%B6/)
+  - [js实现一个图片懒加载插件](http://www.zyy1217.com/2017/03/20/js%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD%E6%8F%92%E4%BB%B6/) - 转载
   
   
 - <span id="es6">[ES6](/ES6/README.md)</span>
