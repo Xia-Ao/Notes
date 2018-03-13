@@ -102,6 +102,9 @@ console.log(a.user); //追梦子
 #### 3、使用apply\(\) call\(\) bind\(\) 改变this指向
 
 掌握三种方法的用法，了解三种方法的区别即可
+call传递的是单个参数：`call(this,arg1,arg2,arg3...)`
+apply可以传递的是一个数组: `apply(this,arguments[])`
+bind只传递一个对象:`bind(this)`
 
 ## 几种特殊的情况
 
