@@ -171,17 +171,5 @@ endsWith\(\) 方法基于ECMAScript 2015（ES6）规范，它基本与 contains\
 
 ### 字符串对象遍历
 
-1、for循环
-
-因为String对象具有length属性，所以可以直接使用String.length进行遍历
-
-2、for in 
-
-```js
-for(变量 in对象){ 在此执行代码}
-```
-
-数组、字符串、对象都可以
-
-
+参照[各种遍历方法以及使用对象](/JS/遍历.md)
 
