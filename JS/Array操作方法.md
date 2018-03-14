@@ -220,7 +220,9 @@ Object.prototype.toString.apply(a) === '[object Array]';
 
    // [0, 2, 3, 4, 6]
    ```
+时间复杂度：O(n^2)
 
+  
 2. 使用IndexOf或者includes检查是否重复，其实跟第一种方法比较就是将第二层循环使用了IndexOf这种有遍历接口的API操作，这个操作的本质是不是跟第一种方法一样使用循环遍历，这个就是要看源码了。
 
    ```js
@@ -241,8 +243,12 @@ Object.prototype.toString.apply(a) === '[object Array]';
 
    // [0, 2, 3, 4, 6]
    ```
+  时间复杂度：
 
-3. 先用`sort`排序，后比较相邻两个是否相等。
+
+   
+
+3. 先用`sort`排序，或者已知数组是有序的，后比较相邻两个是否相等。
 
    ```js
    let arr = [0, 3, 4, 3, 4, 6, 2, 4];
@@ -260,6 +266,9 @@ Object.prototype.toString.apply(a) === '[object Array]';
 
    // [0, 2, 3, 4, 6]
    ```
+时间复杂度：有序数组O(n)
+
+
 
 4. ES6中Set属性
 
