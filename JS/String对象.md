@@ -173,3 +173,13 @@ endsWith\(\) 方法基于ECMAScript 2015（ES6）规范，它基本与 contains\
 
 参照[各种遍历方法以及使用对象](/JS/遍历.md)
 
+
+
+### 字符串回文
+
+```js
+str.split('').reverse().join('');
+```
+
+
+
