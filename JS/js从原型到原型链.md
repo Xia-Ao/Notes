@@ -180,7 +180,7 @@ console.log(Object.getPrototypeOf({}))
 //Object.prototype
 ```
 
-es6带来了另一种查看对象原型的方法——Object.prototype.**proto**，一个对象的**proto** 属性和自己的内部属性\[\[Prototype\]\]指向一个相同的值 \(通常称这个值为原型\),原型的值可以是一个对象值也可以是null\(比如说Object.prototype.**proto**的值就是null\)。
+es6带来了另一种查看对象原型的方法——Object.prototype.\_\_proto\_\_，一个对象的\_\_proto\_\_ 属性和自己的内部属性\[\[Prototype\]\]指向一个相同的值 \(通常称这个值为原型\),原型的值可以是一个对象值也可以是null\(比如说Object.prototype.**proto**的值就是null\)。
 
 ```js
 ({}).__proto__
