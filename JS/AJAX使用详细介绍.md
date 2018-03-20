@@ -19,35 +19,31 @@ xhr << XMLHttpRequest.prototype << XMLHttpRequestEventTarget.prototype << EventT
 
 #### ajax实例
 
-
 ```js
 function loadXMLDoc()
 {
-	var xml;
-	if (window.XMLHttpRequest)
-	{
-		//  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
-		xml=new XMLHttpRequest();
-	}
-	else
-	{
-		// IE6, IE5 浏览器执行代码
-		xml=new ActiveXObject("Microsoft.XMLHTTP");
-	}
-	xml.onreadystatechange=function()
-	{
-		if (xml.readyState==4 && xml.status==200)
-		{
-			document.getElementById("myDiv").innerHTML=xml.responseText;
-		}
-	}
-	xml.open("GET","/try/ajax/ajax_info.txt",true);
-	xml.send();
+    var xml;
+    if (window.XMLHttpRequest)
+    {
+        //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+        xml=new XMLHttpRequest();
+    }
+    else
+    {
+        // IE6, IE5 浏览器执行代码
+        xml=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xml.onreadystatechange=function()
+    {
+        if ((xml.readyState==4 && xml.status==200) || xml.status==304)
+        {
+            document.getElementById("myDiv").innerHTML=xml.responseText;
+        }
+    }
+    xml.open("GET","/try/ajax/ajax_info.txt",true);
+    xml.send();
 }
-
 ```
-
-
 
 #### 3、XMLHttpRequest属性内容
 

@@ -22,5 +22,11 @@
 
 当按百分比设定一个元素的宽度时，它是相对于父容器的宽度计算的，但是，对于一些表示竖向距离的属性，例如 padding-top , padding-bottom , margin-top , margin-bottom 等，当按百分比设定它们时，依据的也是父容器的宽度，而不是高度。
 
+#### **怎么让Chrome支持小于12px 的文字？**
+
+```html
+p{font-size:10px;-webkit-transform:scale(0.8);} //0.8是缩放比例
+```
+
 
 
