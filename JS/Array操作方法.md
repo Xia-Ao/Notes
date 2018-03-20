@@ -213,6 +213,7 @@ Object.prototype.toString.apply(a) === '[object Array]';
        for (let j = i + 1; j < arr.length; j++) {
            if (arr[i] === arr[j]) {
                arr.splice(j, 1);
+               j--;  //要将值重新向前递进
                console.log(arr)
            }
        }
