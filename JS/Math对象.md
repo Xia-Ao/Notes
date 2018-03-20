@@ -40,7 +40,7 @@ Math.Attributes
 | [random\(\)](http://www.runoob.com/jsref/jsref-random.html) | 返回 0 ~ 1 之间的随机数。 |
 | [round\(x\)](http://www.runoob.com/jsref/jsref-round.html) | 把数四舍五入为最接近的整数。 |
 | [abs\(x\)](http://www.runoob.com/jsref/jsref-abs.html) | 返回 x 的绝对值。 |
-| [exp\(x\)](http://www.runoob.com/jsref/jsref-exp.html) | 返回 Ex的指数。 |
+| [exp\(x\)](http://www.runoob.com/jsref/jsref-exp.html) | 返回 E的x次幂指数。 |
 | [log\(x\)](http://www.runoob.com/jsref/jsref-log.html) | 返回数的自然对数（底为e）。 |
 | [pow\(x,y\)](http://www.runoob.com/jsref/jsref-pow.html) | 返回 x 的 y 次幂。 |
 | [sqrt\(x\)](http://www.runoob.com/jsref/jsref-sqrt.html) | 返回数的平方根。 |
