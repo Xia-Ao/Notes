@@ -51,11 +51,12 @@
   - [互联网协议入门（二）](http://www.ruanyifeng.com/blog/2012/06/internet_protocol_suite_part_ii.html)- 阮一峰
   - [DNS原理入门](http://www.ruanyifeng.com/blog/2016/06/dns.html) - 阮一峰 
   - [《HTTP权威指南》之缓存详解](http://www.zyy1217.com/2017/05/14/HTTP%E7%BC%93%E5%AD%98%E8%AF%A6%E8%A7%A3/) - 转载
-  - [九种浏览器端缓存机制概览](http://www.zyy1217.com/2017/05/13/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%AB%AF%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/) - 转载
   - [status状态码](/HTTP/status状态码.md) 
   
 - <span id="browser">[Brower](/Browser/README.md)</span>
   - [浏览器内核、JS 引擎、页面呈现原理及其优化](https://www.zybuluo.com/yangfch3/note/671516) - 转载
+  - [九种浏览器端缓存机制概览](http://www.zyy1217.com/2017/05/13/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%AB%AF%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/) - 转载
+
   
   
   
