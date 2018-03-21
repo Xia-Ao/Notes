@@ -77,10 +77,10 @@
    * [清除浮动的方法](/CSS/清除浮动.md)
    
 -  <span id="html">[HTML](/HTML/README.md)</span>
-   - `<meta> `- 转载
+   - [`<meta>`](https://segmentfault.com/a/1190000004279791)- 转载
    - `<input>`
    - `<iframe>`与 `<img><map><area>`组合使用示例
-   - `<!DOCTYPE >`
+   - [`<!DOCTYPE >`](/HTML/doctype.md)
 
 
 
