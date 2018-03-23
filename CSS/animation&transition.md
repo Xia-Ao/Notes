@@ -36,7 +36,6 @@ transition： [ none | <single-transition-property> ] || <time> || <single-trans
 <div class="test"></div>
 </body>
 </html>
-
 ```
 
 #### 使用注意点
@@ -60,8 +59,6 @@ transition： [ none | <single-transition-property> ] || <time> || <single-trans
 因为这些局限性的存在，所以才会有animation来解决优化这些问题。
 
 ss
-
-
 
 ### animation
 
@@ -158,5 +155,14 @@ animation： <single-animation-name> || <time> || <single-animation-timing-funct
 
 ![](http://www.ruanyifeng.com/blogimg/asset/201402/bg2014021401.png)
 
+**animation-iteration-count**
+
+> * infinite：无限循环
+> * [number](http://css.doyoe.com/values/numeric/number.htm)：指定对象动画的具体循环次数
+
 目前，IE 10和Firefox（&gt;= 16）支持没有前缀的animation，而chrome不支持，所以必须使用webkit前缀。
+
+关于transition和animation同一时刻共同操作同一css样式，会有不一样的情况，不要这么用
+
+参考：[CSS动画简介-阮一峰](http://www.ruanyifeng.com/blog/2014/02/css_transition_and_animation.html)
 
