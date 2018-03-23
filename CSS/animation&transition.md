@@ -39,7 +39,7 @@ animation： <single-animation-name> || <time> || <single-animation-timing-funct
             border: 1px solid ;
         }
         .test:hover{
-            animation:5s  showColor linear;
+            animation: 5s  showColor linear;
         }
         @keyframes showColor {
             0% {background-color: red}
