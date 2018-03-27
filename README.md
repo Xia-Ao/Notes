@@ -13,6 +13,7 @@
   - [String对象](/JS/String对象.md)
   - [Object对象](/JS/Object对象.md)
   - [数组、字符串中查找最大重复次数最高元素的多种方法](/JS/数组、字符串中最大、重复元素查找.md)
+  - [JS常用数据结构](/JS/data-structure.md)
   - [**this对象**](/JS/this对象.md)
   - [**Promise**](/JS/Promise.md)
   - [**正则表达式**](/JS/正则表达式.md)
