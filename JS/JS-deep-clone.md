@@ -76,7 +76,7 @@ person2.name = "Kai";
 console.log(person1.name);  //'Jack'
 console.log(person2.name);  //'Kai'
 console.log(person2.fn);    //undefined
-console.log(person2.reg);   //Object
+console.log(person2.reg);   //Object 
 
 ```
 
