@@ -59,6 +59,31 @@ console.log(person2.name);  //'Kai'
 
 
 
+```js
+/** 深复制 **/
+let person1 = {
+    'name': 'Jack',
+    'age': 29,
+    'fn':function (){
+       console.log('fn')
+    },
+    'reg':new RegExp('e')
+};
+
+let person2 = JSON.parse(JSON.stringify(person1));
+person2.name = "Kai";
+
+console.log(person1.name);  //'Jack'
+console.log(person2.name);  //'Kai'
+console.log(person2.fn);    //undefined
+console.log(person2.reg);   //Object
+
+```
+
+
+
+
+
 
 
 
