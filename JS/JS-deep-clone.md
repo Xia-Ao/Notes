@@ -80,6 +80,11 @@ console.log(person2.reg);   //Object
 
 ```
 
+#### jQuery Underscored lodash第三方插件实现
+
+现在不做介绍，以后用的的时候再补充进来
+
+#### 邹润阳--拥抱未来的深复制方法
 
 
 
