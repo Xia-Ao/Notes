@@ -28,6 +28,7 @@
 阮老师有讲到过SSL加密的过程以及SSL协议：
 [SSL/TLS协议运行机制的概述](http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html)
 [图解SSL/TLS协议](http://www.ruanyifeng.com/blog/2014/09/illustration-ssl.html)
+[SSL延迟有多大](http://www.ruanyifeng.com/blog/2014/09/ssl-latency.html)
 
 握手过程：
 
@@ -44,3 +45,5 @@
 握手成功之后使用对话密钥（对称密钥）加密数据，客户端使用对话密钥解密数据。
 
 整个握手阶段都不加密（也没法加密），都是明文的。因此，如果有人窃听通信，他可以知道双方选择的加密方法，以及三个随机数中的两个。整个通话的安全，只取决于第三个随机数（Premaster secret）能不能被破解。
+
+
