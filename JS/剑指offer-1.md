@@ -1,4 +1,4 @@
-指offer实战-JavaScript版
+``指offer实战-JavaScript版
 
 前言：以前刚学JS的时候，一直觉得前端不怎么需要算法，就是单纯的实现业务功能，现在想想那时候的想法多少天真，可以说用幼稚来形容了。作为一个合格的程序猿，怎么可能不搞算法，前端的算法不会太复杂，一般都是一些比较简单的算法，对照剑指offer，将里面的算法重新实战一遍，代码位置在另一个仓库[Offer](https://github.com/Xia-Ao/Offer)
 
@@ -63,6 +63,19 @@
 **思路**：其实剑指Offer中想要表达的是一种寻找数组最小值的二分查找方法，旋转之后原数组分为两个部分，[3,4,5,1,2],前面的部分最小的数肯定大于或等于后面部分最大的数，通过这一点可以节省遍历，典型的二分法。
 
 **代码**：Github
+
+
+```js
+function rotate(arr) {
+    return arr.sort(function (a, b) {
+        if (a < b)
+            return -1;
+        else return 1
+    })[0];
+//        return Math.min.apply(arr, arr);
+}
+```
+
 
 
 ---
@@ -135,6 +148,9 @@ function fibonacci(n) {
 **思路**：
 
 **代码**：Github
+```js
+
+```
 
 ---
 ###
