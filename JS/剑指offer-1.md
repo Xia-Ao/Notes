@@ -10,6 +10,24 @@
 
 **代码**：[github](https://github.com/Xia-Ao/Offer/tree/master/offer)
 
+
+```js
+function find(array, target) {
+    let row = array.length - 1;
+    for (let i = row, j = 0; i >= 0 && j < array[i].length;) {
+        if (target === array[i][j]) {
+            return true
+        } else if (target > array[i][j]) { //目标大于，则下移一行
+            j++;  //向下移动一行
+        } else {
+            i--;  //向左一动一行
+        }
+    }
+    return false
+}
+```
+
+
 ---
 
 ### 2、替换空格
@@ -19,6 +37,15 @@
 **思路**：当然是直接用正则匹配然后使用replace替换就好了。
 
 **代码**：
+
+
+```js
+function replaceSpace(str) {
+    let reg = new RegExp(/\s/g);
+    return str.replace(reg, '--')
+}
+```
+
 
 ---
 
@@ -31,6 +58,19 @@
 **思路**：先将链表每个结点的值存入数组中，然后通过数组的reverse方法，即可从尾到头打印
 
 代码：Github
+
+
+```js
+function printLinkedList(head) {
+    let arr = [];
+    while (head !== null) {
+        arr.push(head);
+        head = head.next();
+    }
+    return arr.reverse();
+}
+```
+
 
 
 
@@ -53,6 +93,28 @@
 **思路**：栈的操作是后入先出（LIFO），队列的操作是先入先出（FIFO）
 
 **代码**：Github
+
+
+```js
+let arr1 = [], arr2 = [], result = [];
+
+function push(head) {
+    arr2.push(head);
+    return arr
+}
+
+function shift() {
+    if (arr1.length) {
+        arr1.shift()
+    } else if (arr2.length) {
+        arr2.shift()
+    } else {
+        return null
+    }
+    return arr
+}
+```
+
 
 
 ---
