@@ -252,7 +252,7 @@ function rectCover(number) {
 }
 ```
 ---
-###
+### 11、二进制中1的个数
 
 **题目**：
 
