@@ -26,7 +26,7 @@ padding和border被包含在定义的width和height之内。对象的实际宽�
 
 ### resize
 
-- 适用于：所有 ' overflow ' 设置为非visible的元素
+- 适用于：所有 ' overflow ' 设置为**非visible**的元素
 
 取值：
 - none：不允许用户调整元素大小。
