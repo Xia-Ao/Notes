@@ -76,13 +76,35 @@
 
 
 ---
-###
+### 8、跳台阶
 
-**题目**：
+**题目**：一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。
 
-**思路**：
+**思路**：其实就是斐波那契函数的应用，如果n=1则只有一种，如果n=2则有两种,如果n=3，则有前两种之和，记一个函数f(n),则跳法为f(n-1)+f(n-2)
 
-**代码**：Github
+**代码**：
+
+
+```js
+function fibonacci(n) {
+        if (n === 1 || n === 2)
+            return n;
+        else {
+            var one = 0;
+            var two = 1;
+            var result = 0;
+            for (var i = 3; i <= n; i++) {
+                result = one + two;
+                one = two;
+                two = result
+            }
+            return result;
+        }
+
+    }
+```
+
+
 
 ---
 ###
