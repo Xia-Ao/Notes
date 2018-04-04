@@ -198,26 +198,59 @@ function fibonacci(n) {
 ```
 
 ---
-###
+### 9、变态跳台阶
 
-**题目**：
+**题目**：一只青蛙一次可以跳上1级台阶，也可以跳上2级……它也可以跳上n级。求该青蛙跳上一个n级的台阶总共有多少种跳法。
 
-**思路**：
+**思路**：其实就是斐波那契函数的应用，如果n=1则只有一种，如果n=2则有两种,如果n=3，则有前两种之和在加上自己跳n阶的一种，记一个函数f(n),则跳法为f(n-1)+f(n-2)+...+f(1)+1
 
 **代码**：Github
 ```js
+function fibonacci(n) {
+    var arr = [1, 2];
+    if (n === 1 || n === 2)
+        return arr[n - 1];
+    else {
+        var result = 0;
+        for (var i = 3; i <= n; i++) {
+            result = 1 + arr.reduce(function (total, currentValue) {
+                return total + currentValue;
+            });
+            arr.push(result);
+        }
+        return result;
+    }
 
+}
 ```
 
 ---
-###
+### 10、矩形覆盖
 
-**题目**：
+**题目**：我们可以用2*1的小矩形横着或者竖着去覆盖更大的矩形。请问用n个2*1的小矩形无重叠地覆盖一个2*n的大矩形，总共有多少种方法？
 
-**思路**：
+**思路**：其实就是斐波那契函数的应用，注意题目中是无重叠，如果n=1则只有一种，n=2时则有2种，
+           n=3时，左上角可以横着放也可以竖着放，竖着放的话，右边剩下两列，刚好是f(2)的情况，当横着放的时候，左下角必须横放一个，右边就剩下一列，f(1)，则有f(2)+f(1)种,
+           因此推导f(n)= f(n-1)+f(n-2)
 
 **代码**：Github
-
+```js
+function rectCover(number) {
+    // write code here
+    var n = number;
+    var arr = [1, 2];
+    var result = 0;
+    if (n === 1 || n === 2)
+        return arr[n - 1];
+    else {
+        for (var i = 3; i <= n; i++) {
+            result = arr[arr.length - 1] + arr[arr.length - 2];
+            arr.push(result);
+        }
+        return result
+    }
+}
+```
 ---
 ###
 
