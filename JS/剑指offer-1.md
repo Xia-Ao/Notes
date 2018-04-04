@@ -169,9 +169,6 @@ function fibonacci(n) {
     }
 ```
 
-
-
-
 ---
 ### 8、跳台阶
 
@@ -199,8 +196,6 @@ function fibonacci(n) {
 
     }
 ```
-
-
 
 ---
 ###
