@@ -4,9 +4,6 @@ date: 2018-04-05 20:05:40
 tags: JS
 ---
 
-```
-this对象
-```
 
 参考：阮一峰[《Javascript的this用法》](http://www.ruanyifeng.com/blog/archives.html)
 
