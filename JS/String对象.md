@@ -1,3 +1,9 @@
+---
+title: String对象.md
+date: 2018-01-05 20:08:40
+tags: JS
+---
+
 # JavaScript  String对象
 
 ### 参考：

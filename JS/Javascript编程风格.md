@@ -1,3 +1,9 @@
+---
+title: Javascript编程风格.md
+date: 2018-03-05 01:15:40
+tags: JS
+---
+
 ### 来源：[《Javascript编程风格》](http://www.ruanyifeng.com/blog/archives.html)
 
 ### 大括号

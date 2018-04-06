@@ -1,3 +1,9 @@
+---
+title: Array操作方法.md
+date: 2017-10-05 20:05:40
+tags: JS
+---
+
 ## Array对象
 
 ### 数组属性

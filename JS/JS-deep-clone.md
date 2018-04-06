@@ -1,3 +1,9 @@
+---
+title: JS实现深度复制.md
+date: 2018-03-05 12:05:40
+tags: JS
+---
+
 JS深复制是在阿里一面的过程中遇到的，以前都不知道，所以当时一脸懵逼，回来赶紧google，发现邹大大以前写过关于深复制的实现，这里参考他的文章：[深入剖析 JavaScript 的深复制](http://jerryzou.com/posts/dive-into-deep-clone-in-javascript/)
 
 ### 浅复制

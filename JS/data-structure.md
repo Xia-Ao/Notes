@@ -1,3 +1,9 @@
+---
+title: 数据结构之神奇的树.md
+date: 2018-04-05 10:15:40
+tags: JS
+---
+
 ## 树
 
 ![](/assets/tree.png)基础的就不说了，可以参考JavaScript数据结构与算法。

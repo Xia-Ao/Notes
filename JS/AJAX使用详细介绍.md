@@ -1,3 +1,9 @@
+---
+title: Ajax介绍.md
+date: 2018-04-05 20:05:40
+tags: JS
+---
+
 关于Ajax请求这部分内容，有一篇博文江讲解的十分详细
 
 # 原文地址：[路易斯-Ajax知识体系大梳理](http://louiszhai.github.io/2016/11/02/ajax/#ajax)

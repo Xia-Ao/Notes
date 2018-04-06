@@ -1,3 +1,9 @@
+---
+title: Math对象属性及对象方法.md
+date: 2018-01-05 15:05:40
+tags: JS
+---
+
 ## Math对象属性及对象方法
 
 [API参考菜鸟教程](http://www.runoob.com/jsref/jsref-obj-math.html)
