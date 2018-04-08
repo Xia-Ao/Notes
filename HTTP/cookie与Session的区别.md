@@ -94,6 +94,19 @@ sessionStorage 与 localStorage 的接口类似，但保存数据的生命周期
 
 ![](/assets/cookie.png)
 
+
+### cookie的常见属性
+
+**expires属性**： cookie的生命周期，目前已经被max-age替换
+**max-age**： 用秒来设置生命周期
+**domain**：使多个web服务器共享cookie
+**path**：与cookie关联在一起的网页
+**secure**：boolean，指定cookie需要通过安全的socket层连接
+**value**：cookie值
+**haskeys**：一个cookie是否是一个多值cookie
+**secuce**：boolean ,cookie传输协议，true的话是https
+详细的cookie属性介绍请看 [这里](https://blog.csdn.net/helloliuhai/article/details/18351439)
+
 参考文章：
 
 [Cookie与Session的区别](https://www.jianshu.com/p/a2fe1d6441a7)
