@@ -72,7 +72,7 @@
 
 - 引入了持久连接（persistent connection），即TCP连接默认不关闭，可以被多个请求复用，不用声明`Connection: keep-alive`
 - 使用`connection: close`关闭TCP连接
-- 引入了管道机制（pipelining），即在同一个TCP连接里面，客户端可以同时发送多个请求。这样就进一步改进了HTTP协议的效率。但是服务器还是要按照顺序来来回应请求。
+- 引入了管道机制（pipelining），即在同一个TCP连接里面，客户端可以同时发送多个请求。这样就进一步改进了HTTP协议的效率。但是服务器还是要按照顺序来回应请求。
 - 可以使用分块传输编码。
 - 新增了许多动词方法：`PUT`、`PATCH`、 `OPTIONS`、`DELETE`。
 - 客户端请求的头信息新增了`Host`字段，用来指定服务器的域名。
