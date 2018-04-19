@@ -60,6 +60,20 @@ template: `
 }).$mount('#app')
 
 ```
+### 动态路由
+带参数的路由，使用`$router.params.id`的方法获取
+
+### 嵌套路由
+菜单下面还有子菜单，多级菜单的情况，使用方法一样
+
+### 编程式路由
+```js
+$router.push("name")
+$router.push({path:"name"})
+$router.push({path:"name?id=3"})或者使用$router.push({path:"name",query:{id=3}})
+```
+获取的时候使用`$router.query.id`获取到传递到的参数。
+### 命名式路由
 
 ### 深入剖析一下
 
