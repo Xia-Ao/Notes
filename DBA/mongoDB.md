@@ -121,10 +121,22 @@ port = 27017
 
 开启用户权限参考博文。
 
+#### 推荐使用mongoDB compress可视化工具
+
 ## mongo语法
 
-```cmd
-show dbs  //查看所有 数据库
-use databasename  //新建数据
-db  creatCollection('user')
-```
+
+`show dbs`  :查看所有 数据库  
+`show users`:显示所有用户  
+`use store`：切换当前数据库至store  
+`db.help()` ：显示数据库操作命令   
+`db.yourCollection.help()` ：显示集合操作命令，yourCollection是集合名  
+`db.creatCollection('users')` : 创建一个集合，即table表  
+`db.users.insert({"userName": "admin"})` : 向users表中插入一条数据  
+`db.users.find()`: 查询users表中的所有数据
+`db.users.update({"userName": "admin"}, {$set: {"cartList": "fhk", false, true)`: 修改更新数据，匹配到userName,然后再更新cartList
+
+命令行下导入数据
+`$  mongoimport -d store -c users --file filePath --type json` -d 数据库 ， -c table表 --file 要导入的文件 --type 文件类型
+
+
