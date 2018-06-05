@@ -38,7 +38,8 @@
   - [剑指offer第一部分](/JS/剑指offer-1.md)
   - [事件机制](/JS/事件机制.md)
   - [JS实现深复制](/JS/JS-deep-clone.md)
-  
+  - [canvas绘制序列帧动画](/JS/canvas绘制序列帧.md)
+
   
   
 - <span id="es6">[ES6](/ES6/README.md)</span>
@@ -89,6 +90,10 @@
    * [行内元素与块级元素](/CSS/行内元素与块级元素.md)
    * [长度单位、字体单位以及各种高度等易混淆的区别](/CSS/长度单位、字体单位、各种高度等易混淆属性.md)
    * [清除浮动的方法](/CSS/清除浮动.md)
+   * [scroll滚动隐藏](/CSS/滚动隐藏.md)
+   * [rem移动端适配](/CSS/rem移动端适配.md)
+   * [纯css斜切角实现](/CSS/斜切角实现.md)
+
    
 -  <span id="html">[HTML](/HTML/README.md)</span>
    - [`<meta>`](https://segmentfault.com/a/1190000004279791)- 转载
