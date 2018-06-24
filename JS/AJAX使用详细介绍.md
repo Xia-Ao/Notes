@@ -150,4 +150,3 @@ $.ajaxSetup({cache:false}); //全局关闭ajax缓存.
 #### 9、ajax调试技巧
 
 使用node-server配置服务器调试。如何搭建node-server参考他的另一篇[node-server](https://github.com/Louiszhai/node-webserver)
-

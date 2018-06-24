@@ -300,6 +300,3 @@ Object.prototype.toString.apply(a) === '[object Array]';
 ### 2、数组遍历方法
 
 ### 3、多数组操作
-
-
-
