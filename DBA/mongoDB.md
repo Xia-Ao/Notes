@@ -4,7 +4,7 @@
 参考：[windows32位系统 安装MongoDB](http://www.imooc.com/article/18438)
 
 **1、下载**
-![](..\assets\mongodb-download.png)
+![](../assets/mongodb-download.png)
 
 **2、安装**
 将msi文件点击安装，过程中会让你选择安装mongodb的可是或操作工具mongodb compress软件，自己决定是否安装。
@@ -59,7 +59,7 @@ storageEngine=mmapv1
 mongod --config c:\MongoDB\etc\mongo.conf --install --serviceName "MongoDB"  
 ```
 然后可以在window服务中看到对应名称为MongoDB的服务。每次开机的时候可以自动启动。
-![](..\assets\mongodb-start.png)
+![](../assets/mongodb-start.png)
 
 ### linux下安装
 
