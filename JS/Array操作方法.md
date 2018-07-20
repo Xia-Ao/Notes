@@ -6,6 +6,8 @@ tags: JS
 
 ## Array对象
 
+[官方API文档](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/length)
+
 ### 数组属性
 
 [`constructor`](http://www.runoob.com/jsref/jsref-constructor-array.html) 返回创建数组对象的原型函数。

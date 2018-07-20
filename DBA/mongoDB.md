@@ -84,7 +84,7 @@ service mongodb stop
 ```
 sudo netstat -apn|grep mongo
 ```
-![](..\assets\mongodb-i.png)
+![](../assets/mongodb-i.png)
 
 5、卸载mongodb
 ```
