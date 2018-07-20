@@ -126,17 +126,20 @@ port = 27017
 ## mongo语法
 
 
-`show dbs`  :查看所有 数据库  
-`show users`:显示所有用户  
-`use store`：切换当前数据库至store  
-`db.help()` ：显示数据库操作命令   
-`db.yourCollection.help()` ：显示集合操作命令，yourCollection是集合名  
-`db.creatCollection('users')` : 创建一个集合，即table表  
-`db.users.insert({"userName": "admin"})` : 向users表中插入一条数据  
-`db.users.find()`: 查询users表中的所有数据
-`db.users.update({"userName": "admin"}, {$set: {"cartList": "fhk", false, true)`: 修改更新数据，匹配到userName,然后再更新cartList
+* 命令行下`$ mongo`  :进入mongodb命令行
+* `show dbs`  :查看所有 数据库
+* `show users`:显示所有用户
+* `use store`：切换当前数据库至store
+* `db.help()` ：显示数据库操作命令
+* `db.yourCollection.help()` ：显示集合操作命令，yourCollection是集合名
+* `db.creatCollection('users')` : 创建一个集合，即table表
+* `db.users.insert({"userName": "admin"})` : 向users表中插入一条数据
+* `db.users.find()`: 查询users表中的所有数据
+* `db.users.update({"userName": "admin"}, {$set: {"cartList": "fhk", false, true)`: 修改更新数据，匹配到userName,然后再更新cartList
 
-命令行下导入数据
-`$  mongoimport -d store -c users --file filePath --type json` -d 数据库 ， -c table表 --file 要导入的文件 --type 文件类型
+导入数据：**linux命令行**下输入
+* `$  mongoimport -d store -c users --file filePath --type json`
+
+-d 数据库名 ， -c table表名 --file 要导入的文件 --type 文件类型
 
 
