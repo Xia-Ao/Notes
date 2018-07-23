@@ -1,7 +1,5 @@
-- [Introduction](README.md)
-- 分类：[JS](#js)
-- [AngularJS](#AngularJS)
-- [目录](mu-lu.md)
+- <span id="js">[Readme](README.md)
+- <span id="js">[目录](README.md)
 - <span id="js">[JS](/JS/README.md)</span>
   - [AJAX过程以及知识体系](/JS/AJAX使用详细介绍.md)
   - [**同源策略到前端跨域**](/JS/同源策略到前端跨域.md)
