@@ -1,6 +1,6 @@
-- <span id="js">[Readme](README.md)
-- <span id="js">[目录](README.md)
-- <span id="js">[JS](/JS/README.md)</span>
+- [README](README.md)
+- [目录](README.md)
+- [JS](/JS/README.md)</span>
   - [AJAX过程以及知识体系](/JS/AJAX使用详细介绍.md)
   - [**同源策略到前端跨域**](/JS/同源策略到前端跨域.md)
   - [Array操作方法](/JS/Array操作方法.md)
@@ -39,11 +39,11 @@
 
 
 
-- <span id="es6">[ES6](/ES6/README.md)</span>
+- [ES6](/ES6/README.md)</span>
   - [class继承](/ES6/class继承.md)
 
 
-- <span id="http">[HTTP](/HTTP/README.md)</span>
+- [HTTP](/HTTP/README.md)</span>
   - [TCP和UDP的区别](/HTTP/TCP和UDP.md)
   - [TCP三次握手的过程](/HTTP/TCP三次握手与四次分手.md)
   - [cookie与Session机制区别以及Cookie SessionStorage LocalStorage异同](/HTTP/cookie与Session的区别.md)
@@ -61,7 +61,7 @@
  - HTTP总结摘录
 
 
-- <span id="browser">[Brower](/Browser/README.md)</span>
+- [Brower](/Browser/README.md)</span>
   - [浏览器内核、JS 引擎、页面呈现原理及其优化](https://www.zybuluo.com/yangfch3/note/671516) - 转载
   - [九种浏览器端缓存机制概览](http://www.zyy1217.com/2017/05/13/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%AB%AF%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/) - 转载
 
@@ -69,7 +69,7 @@
 
 
 
--  <span id="css">[CSS](CSS/README.md)</span>
+-  [CSS](CSS/README.md)</span>
    * [CSS选择器](/CSS/图解CSS3/README.md)
    * [CSS优先级](/CSS/CSS优先级和引入方式.md)
    * [CSS引入方式](/CSS/CSS优先级和引入方式.md)
@@ -92,7 +92,7 @@
    * [纯css斜切角实现](/CSS/斜切角实现.md)
 
 
--  <span id="html">[HTML](/HTML/README.md)</span>
+-  [HTML](/HTML/README.md)</span>
    - [`<meta>`](https://segmentfault.com/a/1190000004279791)- 转载
    - `<input>`
    - `<iframe>`与 `<img><map><area>`组合使用示例
@@ -100,11 +100,11 @@
 
 
 
--  <span id="AngularJS">[AngularJS](Angular.js/README.md)</span>
+-  [AngularJS](Angular.js/README.md)</span>
    - [`$http`请求数据]($http请求数据.md)
 
 
--  <span id="Vue.js">[VUE.js](Vue/README.md)</span>
+-  [VUE.js](Vue/README.md)</span>
   - [Vue双向数据绑定原理](/Vue/data-bind.md)
   - [Vue-Router原理及实现](/Vue/vue-router.md)
 
