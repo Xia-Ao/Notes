@@ -1,4 +1,6 @@
 - [Introduction](README.md)
+- 分类：[JS](#js)
+- [AngularJS](#AngularJS)
 - [目录](mu-lu.md)
 - <span id="js">[JS](/JS/README.md)</span>
   - [AJAX过程以及知识体系](/JS/AJAX使用详细介绍.md)
