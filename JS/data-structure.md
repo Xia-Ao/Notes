@@ -6,7 +6,9 @@ tags: JS
 
 ## 树
 
-![](../assets/tree.png)基础的就不说了，可以参考JavaScript数据结构与算法。
+![](../assets/tree.png)
+
+基础的就不说了，可以参考JavaScript数据结构与算法。
 
 树的几个操作几点，**`root`，`node.key`，`node.left`， `node.right`**， 树的操作一般都会用到递归调用。
 
@@ -23,6 +25,7 @@ tags: JS
 
 
 ![](../assets/tree4.png)
+
 
 ![](../assets/tree5.png)
 
