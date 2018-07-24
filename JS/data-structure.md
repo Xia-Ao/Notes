@@ -29,10 +29,9 @@ tags: JS
 
 ![](../assets/tree5.png)
 
+![](../assets/tree6.png)
 
-#### ![](../assets/tree6.png)
-
-后序遍历
+#### 后序遍历
 
 
 #### ![](../assets/tree7.png)
