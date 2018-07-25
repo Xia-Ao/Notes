@@ -41,6 +41,17 @@
 
 - [ES6](/ES6/README.md)</span>
   - [class继承](/ES6/class继承.md)
+  - [1、let&const变量解构赋值](/ES6/1、let%26const变量解构赋值.md)
+  - [2、变量解构赋值](https://github.com/Xia-Ao/Notes/blob/master/ES6/2、变量解构赋值.md)
+  - [3、字符串的扩展](https://github.com/Xia-Ao/Notes/blob/master/ES6/3、字符串的扩展.md)
+  - [4、数值扩展](https://github.com/Xia-Ao/Notes/blob/master/ES6/4、数值扩展.md)
+  - [5、数组扩展](https://github.com/Xia-Ao/Notes/blob/master/ES6/5、数组扩展.md)
+  - [6、函数扩展](https://github.com/Xia-Ao/Notes/blob/master/ES6/6、函数扩展.md)
+  - [7、对象扩展](https://github.com/Xia-Ao/Notes/blob/master/ES6/7、对象扩展.md)
+  - [9、数据结构](https://github.com/Xia-Ao/Notes/blob/master/ES6/9、数据结构.md)
+  - [10、Proxy&Reflect](/ES6/10、Proxy%26Reflect.md)
+  - [Module模块](https://github.com/Xia-Ao/Notes/blob/master/ES6/Module.md)
+  - [symbol对象](https://github.com/Xia-Ao/Notes/blob/master/ES6/symbol.md)
 
 
 - [HTTP](/HTTP/README.md)</span>

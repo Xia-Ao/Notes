@@ -34,7 +34,7 @@ tags: JS
 #### 后序遍历
 
 
-#### ![](../assets/tree7.png)
+![](../assets/tree7.png)
 
 
 ![](../assets/tree8.png)
