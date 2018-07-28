@@ -4,6 +4,7 @@
 - [目录](README.md)
 
 - <span id="js">[JS](/JS/README.md)</span>
+  - [DOM基础](/JS/Dom扩展API.md)
   - [AJAX过程以及知识体系](/JS/AJAX使用详细介绍.md)
   - [**同源策略到前端跨域**](/JS/同源策略到前端跨域.md)
   - [Array操作方法](/JS/Array操作方法.md)
@@ -55,6 +56,7 @@
   - [10、Proxy&Reflect](/ES6/10、Proxy&Reflect.md)
   - [Module模块](/ES6/Module.md)
   - [symbol对象](/ES6/symbol.md)
+  - [16、Generator函数](/ES6/16、Generator函数.md)
 
 - <span id="http">[HTTP](/HTTP/README.md)</span>
   - [TCP和UDP的区别](/HTTP/TCP和UDP.md)

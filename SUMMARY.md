@@ -1,6 +1,7 @@
 - [前端笔记](README.md)
 - [目录](README.md)
 - [JS](/JS/README.md)</span>
+  - [DOM基础](https://github.com/Xia-Ao/Notes/blob/master/JS/Dom扩展API.md)
   - [AJAX过程以及知识体系](/JS/AJAX使用详细介绍.md)
   - [**同源策略到前端跨域**](/JS/同源策略到前端跨域.md)
   - [Array操作方法](/JS/Array操作方法.md)
@@ -52,6 +53,8 @@
   - [10、Proxy&Reflect](/ES6/10、Proxy%26Reflect.md)
   - [Module模块](https://github.com/Xia-Ao/Notes/blob/master/ES6/Module.md)
   - [symbol对象](https://github.com/Xia-Ao/Notes/blob/master/ES6/symbol.md)
+  - [16、Generator函数](https://github.com/Xia-Ao/Notes/blob/master/ES6/16、Generator函数.md)
+
 
 
 - [HTTP](/HTTP/README.md)</span>
