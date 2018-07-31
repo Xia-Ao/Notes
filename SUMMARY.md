@@ -55,6 +55,8 @@
   - [Module模块](/ES6/Module.md)
   - [symbol对象](/ES6/symbol.md)
   - [16、Generator函数](/ES6/16、Generator函数.md)
+  - [17、Generator异步操作](/ES6/17、Generator异步操作.md)
+  - [16、Generator函数](/ES6/18、async异步函数.md)
 
 - <span id="http">[HTTP](/HTTP/README.md)</span>
   - [TCP和UDP的区别](/HTTP/TCP和UDP.md)
