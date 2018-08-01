@@ -36,7 +36,7 @@ person1.sysName();  //"Nicholas"
 
 函数的 prototype 属性指向了一个对象，这个对象正是调用该构造函数而创建的**实例**的原型，也就是这个例子中的 person1 和 person2 的原型。
 
-#### ![](https://raw.githubusercontent.com/mqyqingfeng/Blog/master/Images/prototype1.png)
+![](https://raw.githubusercontent.com/mqyqingfeng/Blog/master/Images/prototype1.png)
 
 ## \_\_proto\_\_
 
@@ -54,7 +54,7 @@ console.log(person.__proto__ === Person.prototype); // true
 
 于是我们更新下关系图：
 
-#### ![](https://raw.githubusercontent.com/mqyqingfeng/Blog/master/Images/prototype2.png)
+![](https://raw.githubusercontent.com/mqyqingfeng/Blog/master/Images/prototype2.png)
 
 既然实例对象和构造函数都可以指向原型，那么原型是否有属性指向构造函数或者实例呢？
 
@@ -73,7 +73,7 @@ console.log(Person === Person.prototype.constructor); // true
 
 此时我们更新关系图：
 
-#### ![](https://raw.githubusercontent.com/mqyqingfeng/Blog/master/Images/prototype3.png)
+![](https://raw.githubusercontent.com/mqyqingfeng/Blog/master/Images/prototype3.png)
 
 ## 实例与原型
 
