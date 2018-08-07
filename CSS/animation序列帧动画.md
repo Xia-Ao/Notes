@@ -1,3 +1,9 @@
+---
+title: animation实现序列帧动画.md
+date: 2018-06-02 12:05:40
+tags: CSS
+---
+
 ## PC端常规序列帧动画
 
 代码[github](https://github.com/Xia-Ao/FrontendDemo/blob/master/30-CSS/03-animation/%E5%BA%8F%E5%88%97%E5%B8%A7%E5%8A%A8%E7%94%BB.html)

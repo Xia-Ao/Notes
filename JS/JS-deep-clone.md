@@ -61,7 +61,7 @@ console.log(person1.name);  //'Jack'
 console.log(person2.name);  //'Kai'
 ```
 
-上面这种方法好处是非常简单易用,，对于**Number, String,Array,Obejct**等来说基本实现。但是坏处也显而易见,对于正则表达式类型、函数类型等无法进行深拷贝(而且会直接丢失相应的值)。还有一点不好的地方是它会抛弃对象的constructor，也就是深复制之后，无论这个对象原本的构造函数是什么，在深复制之后都会变成Object。
+上面这种方法好处是非常简单易用,，对于**Number, String,Obejct**等来说基本实现。但是坏处也显而易见,对于**正则表达式类型、函数类型等无法进行深拷贝(而且会直接丢失相应的值)**。还有一点不好的地方是它会抛弃对象的constructor，也就是深复制之后，无论这个对象原本的构造函数是什么，在深复制之后都会变成Object。
 
 
 
@@ -90,7 +90,7 @@ console.log(person2.reg);   //Object
 
 现在不做介绍，以后用的的时候再补充进来
 
-#### 邹润阳--拥抱未来的深复制方法
+#### [邹润阳--拥抱未来的深复制方法](http://jerryzou.com/posts/dive-into-deep-clone-in-javascript/)
 
 
 
