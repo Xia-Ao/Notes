@@ -40,6 +40,16 @@ tags: JS
 | [substring\(from , to\)](http://www.runoob.com/jsref/jsref-substring.html) | 提取字符串中两个指定的索引号之间的字符。 |
 | [valueOf\(\)](http://www.runoob.com/jsref/jsref-valueof-string.html) | 返回某个字符串对象的原始值。 |
 
+### 新添加的方法
+
+| 方法 | 描述 |
+| :--- | :--- |
+| [**`repeat(count)`**](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/repeat) | 构造并返回一个新字符串，该字符串包含被连接在一起的指定数量的字符串的副本。|
+| [**`startsWith(searchString [, position])`**](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith) |  判断当前字符串是否是以另外一个给定的子字符串"开头"的，根据判断结果返回 `true` 或 `false`。|
+| [**`endsWith(searchString [, position])`**](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith) | 用来判断当前字符串是否是以另外一个给定的子字符串"结尾"的，根据判断结果返回 `true` 或 `false`。 |
+| [`String.prototype.padStart()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/padStart) | padStart() 方法用另一个字符串填充当前字符串(重复，如果需要的话)，以便产生的字符串达到给定的长度。填充从当前字符串的开始(左侧)应用的。 |
+| [`String.prototype.padEnd()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd ) | padEnd()  方法会用一个字符串填充当前字符串（如果需要的话则重复填充），返回填充后达到指定长度的字符串。从当前字符串的末尾（右侧）开始填充。 |
+
 ### String HTML 包装方法
 
 | 方法 | 描述 |

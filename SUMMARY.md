@@ -86,8 +86,7 @@
 
 -  <span id="css">[CSS](CSS/README.md)</span>
    * [CSS选择器](/CSS/图解CSS3/README.md)
-   * [CSS优先级](/CSS/CSS优先级和引入方式.md)
-   * [CSS引入方式](/CSS/CSS优先级和引入方式.md)
+   * [CSS优先级以及引入方式](/CSS/CSS优先级和引入方式.md)
    * [position不同值定位](/CSS/position.md)
    * [BFC神奇背后的原理-文摘](/CSS/BFC神奇背后的原理-文摘.md)
    * [区别px、em、rem](https://segmentfault.com/a/1190000005936910)
