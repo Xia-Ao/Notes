@@ -111,8 +111,8 @@
    
 -  <span id="html">[HTML](/HTML/README.md)</span>
    - [`<meta>`](https://segmentfault.com/a/1190000004279791)- 转载
-   - `<input>`
-   - `<iframe>`与 `<img><map><area>`组合使用示例
+   - [`<input>`](/HTML/input.md)
+   - [`<iframe>`与 `<img><map><area>`组合使用示例](/HTML/iframe与img、map、area标签配合使用.md)
    - [`<!DOCTYPE >`](/HTML/doctype.md)
 
 
