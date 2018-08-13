@@ -130,6 +130,11 @@ ES6在类里面不提供私有属性，因此通过变通方法 模拟实现，�
 ### Class的get set方法
 在"类"的内部可以使用`get`和`set`关键字，对某个属性设置存值函数和取值函数，拦截该属性的存取行为。
 
+1. 可以只编写【get】方法，但是方法名和属性名不能同名，否则在设置这个属性的值时会报"没有【set】方法"的错误。
+2. 可以只编写【set】方法，但是方法名和属性名不能同名，否则会报"栈溢出"的错误。
+3. 同时编写【get】和【set】方法时，两个方法名必须要同时满足同名且不和属性名同名的条件。
+
+
 ### Class的静态方法
 如果在一个方法前，加上`static`关键字，就表示该方法不会被实例继承，而是直接通过类来调用，这就称为"静态方法"。
 ```javascript
@@ -230,7 +235,7 @@ Foo.prop // 1
 
 
 
-
+<hr/>
 
 
 
@@ -285,6 +290,8 @@ class ColorPoint extends Point {
   }
 }
 ```
+
+![](https://upload-images.jianshu.io/upload_images/1959053-5e1363db5a125d1f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)
 
 **ES5 的继承，实质是先创造子类的实例对象**`this`**，然后再将父类的方法添加到**`this`**上面（**`Parent.apply(this)`**）。**
 
