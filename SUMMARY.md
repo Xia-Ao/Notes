@@ -42,7 +42,7 @@
 
 
 - <span id="es6">[ES6](/ES6/README.md)</span>
-  - [class继承](/ES6/class继承.md)
+  - [class继承](/ES6/19、class继承.md)
   - [1、let&const变量解构赋值](/ES6/1、let&const变量解构赋值.md)
   - [2、变量解构赋值](/ES6/2、变量解构赋值.md)
   - [3、字符串的扩展](/ES6/3、字符串的扩展.md)
@@ -123,7 +123,20 @@
   - [Vue-Router原理及实现](/Vue/vue-router.md)
 
 
+-  <span id="Node">[Node.JS]()</span>
 
+
+-  <span id="Linux">[Linux](/Linux/README.md)</span>
+  - [Linux下常用命令](/Linux/Linux下常用命令.md)
+  - [SSH连接](/Linux/SSH连接.md)
+
+
+-  <span id="mianshi">[Linux](/problem/README.md)</span>
+  - [html](/problem/01-html.md)
+  - [css](/problem/02-css.md)
+  - [javascript](/problem/03-javascript.md)
+  - [综合问题](/problem/4.综合.md)
+  - [其他问题](/problem/5.其他.md)
 
 
 

@@ -44,7 +44,7 @@
   
   
 - <span id="es6">[ES6](/ES6/README.md)</span>
-  - [class继承](/ES6/class继承.md)
+  - [class继承](/ES6/19、class继承.md)
   - [1、let&const变量解构赋值](/ES6/1、let&const变量解构赋值.md)
   - [2、变量解构赋值](/ES6/2、变量解构赋值.md)
   - [3、字符串的扩展](/ES6/3、字符串的扩展.md)

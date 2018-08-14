@@ -43,7 +43,7 @@
   
   
 - <span id="es6">[ES6](/ES6/README.md)</span>
-  - [class继承](/ES6/class继承.md)
+  - [class继承](/ES6/19、class继承.md)
 
 
 - <span id="http">[HTTP](/HTTP/README.md)</span>
