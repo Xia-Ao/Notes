@@ -125,7 +125,7 @@
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 <hr/>
 
-1. **同源策略及跨域请求的方法和原理（比较JSONP和document.domain的不同及优劣，以及HTML5的跨域方案）**  
+1. **同源策略及跨域请求的方法和原理（比较JSONP和document.domain的不同及优劣，以及HTML5的跨域方案）**
    答案：同源策略是客户端脚本（尤其是Javascript）的重要的安全度量标准。它最早出自Netscape Navigator2.0，其目的是防止某个文档或脚本从多个不同源装载。这里的同源指的是：**同协议，同域名和同端口**。这里说的js跨域是指通过js在不同的域之间进行数据传输或通信，比如用ajax向一个不同的域请求数据，或者通过js获取页面中不同域的框架中(iframe)的数据。只要协议、域名、端口有任何一个不同，都被当作是不同的域。
    浏览器的同源策略，其限制之一就是第一种方法中我们说的不能通过ajax的方法去请求不同源中的文档。 它的第二个限制是浏览器中不同域的框架之间是不能进行js的交互操作的。有一点需要说明，不同的框架之间（父子或同辈），是能够获取到彼此的window对象的，但头疼的是你却不能使用获取到的window对象的属性和方法(html5中的postMessage方法是一个例外，还有些浏览器比如ie6也可以使用top、parent等少数几个属性)，总之，你可以当做是只能获取到一个几乎无用的window对象。
 
@@ -136,13 +136,13 @@
    **CORS（跨域资源共享）**：HTML5引入的新的跨域的方法，不过需要在请求头和相应头设置相应的Access-Control-属性。**缺点**：兼容性问题，适合一些新的浏览器。
 
    参考:
-   [**同源策略到前端跨域**](https://github.com/Xia-Ao/Notes/blob/master/JS/同源策略到前端跨域.md)  
-   [说说JSON和JSONP](http://www.cnblogs.com/dowinning/archive/2012/04/19/json-jsonp-jquery.html)  
-   [js中几种实用的跨域方法原理详解](http://www.cnblogs.com/2050/p/3191744.html)  
-   [The Same Origin Policy: JSONP vs The document.domain Property](http://adam.kahtava.com/journal/2010/03/18/the-same-origin-policy-jsonp-vs-the-documentdomain-property/)  
+   [**同源策略到前端跨域**](https://github.com/Xia-Ao/Notes/blob/master/JS/同源策略到前端跨域.md)
+   [说说JSON和JSONP](http://www.cnblogs.com/dowinning/archive/2012/04/19/json-jsonp-jquery.html)
+   [js中几种实用的跨域方法原理详解](http://www.cnblogs.com/2050/p/3191744.html)
+   [The Same Origin Policy: JSONP vs The document.domain Property](http://adam.kahtava.com/journal/2010/03/18/the-same-origin-policy-jsonp-vs-the-documentdomain-property/)
    [HTTP访问控制(CORS)](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS)
 
-2. **js的数据类型有哪些？引用类型有哪些？null和undefined的区别。**  
+2. **js的数据类型有哪些？引用类型有哪些？null和undefined的区别。**
    答案： JavaScript中有6种简单数据类型（也称为基本数据类型）：Undefined、Null、Boolean、Number和String以及ES6中新增的Symbol。还用一种复杂数据类型Object.
 
  引用类型有`Object 类型`、`Array 类型`、`Date 类型`、`RegExp 类型`、`Function 类型` 等。
@@ -150,12 +150,12 @@
 null是一个表示"无"的对象，转为数值时为0；undefined是一个表示"无"的原始值，转为数值时为NaN
 
 1. **JavaScript字符串转化**
-   答案：熟悉基本的字符串操作函数，参考  
+   答案：熟悉基本的字符串操作函数，参考
    [JavaScript中常见的字符串操作函数及用法](http://www.cnblogs.com/front-Thinking/p/4398447.html)
 
 2. **JSONP原理及优缺点**
-   答案：具体JSONP的原理可参考1，说白了就是插入一个script标签，其src指向跨域接口，返回对应的callback(data)，其中data是json格式，callback是页面已存在的function。  
-   **优点**：它不像XMLHttpRequest对象实现的Ajax请求那样受到同源策略的限制；它的兼容性更好，在更加古老的浏览器中都可以运行，不需要XMLHttpRequest或ActiveX的支持；并且在请求完毕后可以通过调用callback的方式回传结果。  
+   答案：具体JSONP的原理可参考1，说白了就是插入一个script标签，其src指向跨域接口，返回对应的callback(data)，其中data是json格式，callback是页面已存在的function。
+   **优点**：它不像XMLHttpRequest对象实现的Ajax请求那样受到同源策略的限制；它的兼容性更好，在更加古老的浏览器中都可以运行，不需要XMLHttpRequest或ActiveX的支持；并且在请求完毕后可以通过调用callback的方式回传结果。
    **缺点**：它只支持GET请求而不支持POST等其它类型的HTTP请求；它只支持跨域HTTP请求这种情况，不能解决不同域的两个页面之间如何进行JavaScript调用的问题。
 
 3. **XMLHttpRequest**
@@ -227,12 +227,12 @@ null是一个表示"无"的对象，转为数值时为0；undefined是一个表�
     3.命名冲突（封装一层define，所有的都成为了局部变量，并通过exports暴漏出去）。
 
 9. **this问题**
-    答案：  
+    答案：
     [**this对象**](/JS/this对象.md)
-10. **JavaScript动画算法**  
+10. **JavaScript动画算法**
     答案：[JavaScript基于时间的动画算法](https://github.com/livoras/blog/issues/8)
 
-11. **拖拽的实现**  
+11. **拖拽的实现**
     答案：使用 JavaScript 实现拖拽的步骤：
    * 让元素捕获事件（mousedown, mousemove & mouseup）
    * 单击并不释放，触发 mousedown，标记开始拖拽，并获取元素和鼠标的位置
@@ -242,16 +242,16 @@ null是一个表示"无"的对象，转为数值时为0；undefined是一个表�
 
 
 12. **JavaScript原型链及JavaScript如何实现继承、类的**
-    答案：**原型链**：就是每个构造函数都有一个原型对象，原型对象包含一个指向构造函数的指针（prototype），而实例则包含一个指向原型对象的内部指针（__proto__），通过将子构造函数的原型指向父构造函数的实例。  
+    答案：**原型链**：就是每个构造函数都有一个原型对象，原型对象包含一个指向构造函数的指针（prototype），而实例则包含一个指向原型对象的内部指针（__proto__），通过将子构造函数的原型指向父构造函数的实例。
     参考：
-    [**JS继承的实现**](https://github.com/Xia-Ao/Notes/blob/master/JS/继承.md)  
-    [JS 面向对象之继承 -- 原型链](http://www.cnblogs.com/yangjinjin/archive/2013/02/01/2889368.html)  
+    [**JS继承的实现**](https://github.com/Xia-Ao/Notes/blob/master/JS/继承.md)
+    [JS 面向对象之继承 -- 原型链](http://www.cnblogs.com/yangjinjin/archive/2013/02/01/2889368.html)
     [js 基于原型的类实现详解](http://blog.csdn.net/lihongxun945/article/details/8061311)
 
 13. **闭包及闭包的用处，以及闭包可能造成的不良后果**
-    答案：**好处**：能够实现封装和缓存等；**坏处**：就是消耗内存、不正当使用会造成内存溢出的问题。  
-    [**JS闭包**](https://github.com/Xia-Ao/Notes/blob/master/JS/闭包.md)  
-    [聊一下JS中的作用域scope和闭包closure](http://www.cnblogs.com/front-Thinking/p/4317020.html)  
+    答案：**好处**：能够实现封装和缓存等；**坏处**：就是消耗内存、不正当使用会造成内存溢出的问题。
+    [**JS闭包**](https://github.com/Xia-Ao/Notes/blob/master/JS/闭包.md)
+    [聊一下JS中的作用域scope和闭包closure](http://www.cnblogs.com/front-Thinking/p/4317020.html)
     [javascript 闭包的好处及坏处](http://blog.csdn.net/vuturn/article/details/43055279)
 
 14. **常见算法的JS实现（如快排、冒泡等）**
@@ -262,9 +262,9 @@ null是一个表示"无"的对象，转为数值时为0；undefined是一个表�
     和[排序算法](http://javascript.ruanyifeng.com/library/sorting.html). 还有如《五大常用算法》等。
 
 15. **事件冒泡和事件捕获**
-    答案：W3C中定义事件的发生经历三个阶段：捕获阶段（capturing）、目标阶段（targeting）、冒泡阶段（bubbling）。  
+    答案：W3C中定义事件的发生经历三个阶段：捕获阶段（capturing）、目标阶段（targeting）、冒泡阶段（bubbling）。
     阻止事件传播的方法：ie下：window.event.cancelBubble = true; 其他浏览器:e.stopPropagation()。
-    **参考**：  
+    **参考**：
     [事件冒泡和事件捕获](http://www.quirksmode.org/js/events_order.html#link4)
 
 16. **浏览器检测（能力检测、怪癖检测等）**
@@ -276,7 +276,7 @@ null是一个表示"无"的对象，转为数值时为0；undefined是一个表�
     答案：作用是绑定this指针，设定函数中this的上下文环境。第二个参数不同，apply是类数组，而call是一些列参数。
 
 19. **bind的用法，以及如何实现bind的函数和需要注意的点**
-    答案：bind的作用与call和apply相同，区别是call和apply是立即调用函数，而bind是返回了一个函数，需要调用的时候再执行。  
+    答案：bind的作用与call和apply相同，区别是call和apply是立即调用函数，而bind是返回了一个函数，需要调用的时候再执行。
     一个简单的bind函数实现如下：
 
     ```javascript
@@ -297,7 +297,7 @@ null是一个表示"无"的对象，转为数值时为0；undefined是一个表�
 [JS中数据类型、运算符、严格相等](https://github.com/Xia-Ao/Notes/blob/master/JS/运算符.md)
 
 22. **"use strict"作用**
-    答案：作用是为了规范js代码，消除一些不合理、不严谨的地方；提高效率；为以后新版本js做铺垫。  
+    答案：作用是为了规范js代码，消除一些不合理、不严谨的地方；提高效率；为以后新版本js做铺垫。
     主要限制：
     1. 全局变量显式声明；
     2. 禁止使用with，不推荐使用eval；
@@ -316,12 +316,12 @@ null是一个表示"无"的对象，转为数值时为0；undefined是一个表�
     答案：原生的细节也需要重点研究，其实是[jQuery ajax](http://www.w3school.com.cn/jquery/ajax_ajax.asp)
 
 24. **函数柯里化（Currying）**
-    答案： 柯里化（Currying），是把接受多个参数的函数变换为接受单一参数（最初函数的第一个参数）的函数，并且返回接受余下的参数而且返回结果的新函数的技术。  
-    **作用**:  
+    答案： 柯里化（Currying），是把接受多个参数的函数变换为接受单一参数（最初函数的第一个参数）的函数，并且返回接受余下的参数而且返回结果的新函数的技术。
+    **作用**:
     1.参数复用；在柯里化的外围函数中添加复用的参数即可。
     2.提前返回；参看“参考”中绑定事件的例子。
     3.延迟计算/运行；其实Function.prototype.bind的方法中延迟计算就是运用的柯里化。
-    **参考**：  
+    **参考**：
     [JS中的柯里化(currying)](http://www.zhangxinxu.com/wordpress/2013/02/js-currying/)
 
 25. NodeJS健壮性方面的实践（子进程等）
@@ -345,13 +345,13 @@ null是一个表示"无"的对象，转为数值时为0；undefined是一个表�
 30. JS中random的概率问题
 
 31. **客户端存储及他们的异同（例如：cookie, sessionStorage和localStorage等）**
-    共同点：都是保存在浏览器端，且同源的。  
+    共同点：都是保存在浏览器端，且同源的。
     区别：
-    1.cookie数据始终在同源的http请求中携带（即使不需要），即cookie在浏览器和服务器间来回传递。而sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存。  
-    2.cookie数据还有路径（path）的概念，可以限制cookie只属于某个路径下。  
-    3.存储大小限制也不同，cookie数据不能超过4k，同时因为每次http请求都会携带cookie，所以cookie只适合保存很小的数据，如会话标识。sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，一般为5M左右。  
-    4.数据有效期不同，sessionStorage仅在当前浏览器窗口关闭前有效，自然也就不可能持久保持；localStorage始终有效（除非清除），窗口或浏览器关闭也一直保存，因此用作持久数据；cookie只在设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭。  
-    5.作用域不同，sessionStorage不在不同的浏览器窗口中共享，即使是同一个页面；localStorage 在所有同源窗口中都是共享的；cookie也是在所有同源窗口中都是共享的。  
+    1.cookie数据始终在同源的http请求中携带（即使不需要），即cookie在浏览器和服务器间来回传递。而sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存。
+    2.cookie数据还有路径（path）的概念，可以限制cookie只属于某个路径下。
+    3.存储大小限制也不同，cookie数据不能超过4k，同时因为每次http请求都会携带cookie，所以cookie只适合保存很小的数据，如会话标识。sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，一般为5M左右。
+    4.数据有效期不同，sessionStorage仅在当前浏览器窗口关闭前有效，自然也就不可能持久保持；localStorage始终有效（除非清除），窗口或浏览器关闭也一直保存，因此用作持久数据；cookie只在设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭。
+    5.作用域不同，sessionStorage不在不同的浏览器窗口中共享，即使是同一个页面；localStorage 在所有同源窗口中都是共享的；cookie也是在所有同源窗口中都是共享的。
     6.Web Storage 支持事件通知机制（storage事件），可以将数据更新的通知发送给监听者。Web Storage 的 api 接口使用更方便。
 
 
@@ -411,7 +411,7 @@ null是一个表示"无"的对象，转为数值时为0；undefined是一个表�
     	var dateStr = xmlhttp.getResponseHeader('Date');
     	var serverTimeMillisGMT = Date.parse(new Date(Date.parse(dateStr)).toUTCString());
     	var localMillisUTC = Date.parse(new Date().toUTCString());
-    	offset = serverTimeMillisGMT -  localMillisUTC;  
+    	offset = serverTimeMillisGMT -  localMillisUTC;
     }
     function getServerTime() {
     	var date = new Date();
@@ -508,7 +508,7 @@ null是一个表示"无"的对象，转为数值时为0；undefined是一个表�
         sortable.sort(function(a, b) {return b[1] - a[1]});
 
         return sortable.splice(0,3);
-     }     
+     }
     ```
 
 57. JS内存泄露及解决方法
