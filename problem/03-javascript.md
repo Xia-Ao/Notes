@@ -313,7 +313,11 @@ null是一个表示"无"的对象，转为数值时为0；undefined是一个表�
     [Javascript 严格模式详解](http://www.ruanyifeng.com/blog/2013/01/javascript_strict_mode.html)
 
 23. **AJAX请求的细节和原理**
-    答案：原生的细节也需要重点研究，其实是[jQuery ajax](http://www.w3school.com.cn/jquery/ajax_ajax.asp)
+ 答案：
+1、创建一个xmlHttpRequest对象  
+2、使用open建立对服务器的调用，包括methods，url等
+3、使用send向服务器发送请求
+4、使用onreadystatechange来监听响应并对响应进行处理
 
 24. **函数柯里化（Currying）**
     答案： 柯里化（Currying），是把接受多个参数的函数变换为接受单一参数（最初函数的第一个参数）的函数，并且返回接受余下的参数而且返回结果的新函数的技术。
@@ -324,29 +328,27 @@ null是一个表示"无"的对象，转为数值时为0；undefined是一个表�
     **参考**：
     [JS中的柯里化(currying)](http://www.zhangxinxu.com/wordpress/2013/02/js-currying/)
 
-25. NodeJS健壮性方面的实践（子进程等）
 
-    答案：同29。
+25. **jQuery链式调用的原理**
+答案：原理很简单：就是jQuery节点在调用api后都会返回节点自身
 
-26. NodeJS能否用利用多核实现在计算性能上的劣势等
 
-    答案：[《解读Nodejs多核处理模块cluster》](http://blog.fens.me/nodejs-core-cluster/)
+26. **ES6及jQuery新引进的Promise有什么用处、Promise的原理**
 
-27. jQuery链式调用的原理
+    [**Promise**](https://github.com/Xia-Ao/Notes/blob/master/JS/Promise.md)
+    [JavaScript Promise](http://www.html5rocks.com/zh/tutorials/es6/promises/)
+    [JavaScript Promise Mini Book](http://liubin.github.io/promises-book/)
 
-28. ES6及jQuery新引进的Promise有什么用处、Promise的原理
 
-    答案：[JavaScript Promise](http://www.html5rocks.com/zh/tutorials/es6/promises/)和[JavaScript Promise Mini Book](http://liubin.github.io/promises-book/)
 
-29. NodeJS的优缺点及使用场景
+27. **JS中random的概率问题**  
+参考：[淘宝前端团队FED-Math.random() 二三事](http://taobaofed.org/blog/2015/12/07/some-thing-about-random/)
 
-    答案：[NodeJS优缺点及适用场景讨论](http://blog.csdn.net/xiaemperor/article/details/38234979)
-
-30. JS中random的概率问题
 
 31. **客户端存储及他们的异同（例如：cookie, sessionStorage和localStorage等）**
+    参考：[cookie与Session机制区别以及Cookie SessionStorage LocalStorage异同](https://github.com/Xia-Ao/Notes/blob/master/HTTP/cookie与Session的区别.md)  
     共同点：都是保存在浏览器端，且同源的。
-    区别：
+    区别：  
     1.cookie数据始终在同源的http请求中携带（即使不需要），即cookie在浏览器和服务器间来回传递。而sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存。
     2.cookie数据还有路径（path）的概念，可以限制cookie只属于某个路径下。
     3.存储大小限制也不同，cookie数据不能超过4k，同时因为每次http请求都会携带cookie，所以cookie只适合保存很小的数据，如会话标识。sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，一般为5M左右。
@@ -355,49 +357,47 @@ null是一个表示"无"的对象，转为数值时为0；undefined是一个表�
     6.Web Storage 支持事件通知机制（storage事件），可以将数据更新的通知发送给监听者。Web Storage 的 api 接口使用更方便。
 
 
-32. AngularJS的文件管理及打包（包括模板打包及请求、JS的打包和请求等）
 
-33. AngularJS的JS模块管理及实践
-
-    答案：[AngularJS —— 使用模块组织你的代码](http://www.oschina.net/translate/angularjs-organizing-your-code-with-modules)
-
-34. 在你的Angular App页面里随意加一个JS文件，会有什么影响
-
-    答案：这个啥问题XX。
-
-35. AngularJS directive及自己如何定义directive
-
-    答案：[AngularJS之directive](http://www.cnblogs.com/front-Thinking/p/4802035.html)
-
-36. AngularJS双向绑定的原理及实现
-
-    答案：AngularJS数据绑定及AngularJS的工作机制，参考《AngularJS up and running》第203页，十三章第一节。简单说检查数据有无更新，仅在以下事件发生时，即：XHR请求、页面加载、用户交互事件等。
-
-37. 你如何测试你的JS代码
+32. 你如何测试你的JS代码
 
     答案：平时在测试方面做的比较少，一般用JSlint检查一些常见的错误。对于功能性的可能会使用基于karma的Jasmine测试框架来做。
 
-38. DOM1\DOM2\DOM3都有什么不同
+33. ** DOM1\DOM2\DOM3都有什么不同**
+DOM0：不是W3C规范。
 
-39. XSS
+DOM1：开始是W3C规范。专注于HTML文档和XML文档，DOM1级由两个模块组成：DOM核心（DOM Core）和DOM HTML。
 
-    答案：1. [《浅谈javascript函数劫持》](http://www.xfocus.net/articles/200712/963.html) 2. [《xss零碎指南》](http://www.cnblogs.com/hustskyking/p/xss-snippets.html)
+DOM2：对DOM1增加了 **样式表对象模型**，新增以下内容
 
-40. 常用数组方法和数组算法（如数组去重、求交集、并集等）
+    DOM视图（DOM Views）：定义了跟踪不同文档（例如，应用CSS之前和之后的文档）视图的接口；  
+    DOM事件（DOM Events）：定义了事件和事件处理的接口；  
+    DOM样式（DOM Style）：定义了基于CSS为元素应用样式的接口；
 
-    答案：[javascript常用数组算法总结](http://www.cnblogs.com/front-Thinking/p/4797440.html)和[Merge/flatten an Array of Arrays in JavaScript](http://stackoverflow.com/questions/10865025/merge-flatten-an-array-of-arrays-in-javascript)
 
-41. js数组去重复项
+DOM3：对DOM2增加了 **内容模型** (DTD 、Schemas) 和 **文档验证** 。
+
+
+34. **常用数组方法和数组算法（如数组去重、求交集、并集等）**
+
+[Array操作方法](https://github.com/Xia-Ao/Notes/blob/master/JS/Array操作方法.md)
+[javascript常用数组算法总结](http://www.cnblogs.com/front-Thinking/p/4797440.html)和[Merge/flatten an Array of Arrays in JavaScript](http://stackoverflow.com/questions/10865025/merge-flatten-an-array-of-arrays-in-javascript)
+
+35. **js数组去重复项**
 
     答案：[js数组去重复项的四种方法](http://www.cnblogs.com/novus/archive/2011/06/30/1921132.html)
 
-42. js中的垃圾回收机制
+36. **js中的垃圾回收机制**
 
-    答案：[JavaScript垃圾回收机制](http://www.cnblogs.com/hustskyking/archive/2013/04/27/garbage-collection.html)
+    答案：一般使用**标记清除**，**引用计数** 。  
+    [JavaScript垃圾回收机制](http://www.cnblogs.com/hustskyking/archive/2013/04/27/garbage-collection.html)
 
-43. 常见的JS设计模式
+37. **常见的JS设计模式**
 
-44. js获取服务器精准时间（客户端如何与服务器时间同步）
+JS设计模式：单例模式，策略模式，代理模式，迭代器模式，发布-订阅模式，命令模式，组合模式，模板方法模式，享元模式，职责链模式，中介者模式，装饰者模式，状态模式，适配器模式
+具体参考：**《javaScript设计模式与实践》**一书
+
+
+38. **js获取服务器精准时间（客户端如何与服务器时间同步）**
 
     答案：思路：简而言之就是发送一个ajax请求，然后获取对应的HTTP Header中的time，由于时延等问题造成时间在JS客户端获取后当前时间已经不再是服务器此时的时间，然后用本地的时间减去获取的服务器的时间，这应该就是时间偏移量。再新建一个时间，加上此偏移量应该就是此时此刻服务器的时间。代码如下：
 
@@ -439,51 +439,29 @@ null是一个表示"无"的对象，转为数值时为0；undefined是一个表�
     }）
     ```
 
-45. 什么是js中的类数组对象
-
-    答案：1、它们都有一个合法的 length 属性(0 到 2**32 - 1 之间的正整数)。2、length 属性的值大于它们的最大索引(index)。
-
-46. Node中exports和module.exports的区别
-
-    答案：[exports 和 module.exports 的区别](https://cnodejs.org/topic/5231a630101e574521e45ef8#554db35aed6f7db13c84919e)
-
-47. 异步编程的了解
+39. **什么是js中的类数组对象**
 
     答案：
+    1、它们都有一个合法的 length 属性(0 到 2**32 - 1 之间的正整数)。  
+    2、length 属性的值大于它们的最大索引(index)。
 
-48. Grunt和Gulp的区别
 
-    答案：[Gulp vs Grunt](http://www.benben.cc/blog/?p=407)
 
-49. AngularJS中service\factory\provider的区别
+40. **JavaScript中异步编程的几种方式**
 
-    答案:讲的非常不错，可以看看。[Differences Between Providers In AngularJS](http://blog.xebia.com/2013/09/01/differences-between-providers-in-angularjs/)和stackoverflow上的回答[Service vs provider vs factory](http://stackoverflow.com/questions/15666048/service-vs-provider-vs-factory)。如果英文看的不爽，这里有一篇中文的，还不错[那伤不起的provider们啊](http://hellobug.github.io/blog/angularjs-providers/)。
+   1. 回调函数
+   2. 事件监听
+   3. 发布/订阅
+   4. promise
+    参加阮一峰前辈写的[Javascript异步编程的4种方法](http://www.ruanyifeng.com/blog/2012/12/asynchronous%EF%BC%BFjavascript.html)，
 
-50. JavaScript中异步编程的几种方式
 
-    答案：参加阮一峰前辈写的[Javascript异步编程的4种方法](http://www.ruanyifeng.com/blog/2012/12/asynchronous%EF%BC%BFjavascript.html)，简单说就是1回调函数2事件监听3发布/订阅4promise
-
-51. Nodejs开发踩过的坑
-
-    答案：[那些年，在nodejs上踩过的坑](http://www.cnblogs.com/lengyuhong/archive/2012/05/31/2527016.html)
-
-52. AngularJS中依赖注入的理解
-
-    答案：[Understanding Dependency Injection](https://github.com/angular/angular.js/wiki/Understanding-Dependency-Injection)
-
-53. JS中判断是否为数组
+41. JS中判断是否为数组
 
     答案：isArray/typeof/instanceof,还有toString方法返回的字符串（数组返回'[Object Array]'）。
 
-54. Nodejs内存溢出
 
-    答案：[如何自己检查NodeJS的代码是否存在内存泄漏](http://www.w3ctech.com/topic/842)
-
-55. 关于BFC和hasLayout
-
-    答案：[关于Block Formatting Context－－BFC和IE的hasLayout](http://www.cnblogs.com/pigtail/archive/2013/01/23/2871627.html)
-
-56. 统计页面中使用最多的三个标签
+42. **统计页面中使用最多的三个标签**
 
     答案：思路大致是首先获取页面中所有用到的标签数组，然后依次遍历，将用到的标签放置新的hash表里，每次检测到相同标签对应的key的value值加1.最后转为数组，排序，取前三个。实现方法如下：
 
@@ -511,31 +489,26 @@ null是一个表示"无"的对象，转为数值时为0；undefined是一个表�
      }
     ```
 
-57. JS内存泄露及解决方法
+43. **JS内存泄露及解决方法**
 
-    答案：[JS内存泄露及解决方法](http://www.cnblogs.com/carekee/articles/1733847.html)
+    答案：
+    [阮一峰-内存泄露机制](http://www.ruanyifeng.com/blog/2017/04/memory-leak.html)
+    [JS内存泄露及解决方法](http://www.cnblogs.com/carekee/articles/1733847.html)
 
-58. 在浏览器地址栏按回车、F5、Ctrl+F5刷新网页的区别
+44. **在浏览器地址栏按回车、F5、Ctrl+F5刷新网页的区别**
 
     答案：[在浏览器地址栏按回车、F5、Ctrl+F5刷新网页的区别](http://blog.csdn.net/yui/article/details/6584401)
 
-59. 判断两个对象的相等
+45. **判断两个对象的相等**
 
     答案: [How to determine equality for two JavaScript objects?](http://stackoverflow.com/questions/201183/how-to-determine-equality-for-two-javascript-objects)
 
-60. 选取两个数的最大公约数
+46. **选取两个数的最大公约数**
 
     答案：[JS how to find the greatest common divisor](http://stackoverflow.com/questions/17445231/js-how-to-find-the-greatest-common-divisor)
 
-61. Node模块是如何寻址的
 
-    答案：《NodeJS深入浅出》模块开发那一章有详解。
-
-62. ES6新增的特性
-
-    答案：
-
-63. `escape()`, `decodeURIComponent()`, `decodeURI`之间的区别是什么？
+47. **`escape()`, `decodeURIComponent()`, `decodeURI`之间的区别是什么？**
     答案：
     * 传递参数时需要使用encodeURIComponent，这样组合的url才不会被#等特殊字符截断。
     *  进行url跳转时可以整体使用encodeURI
