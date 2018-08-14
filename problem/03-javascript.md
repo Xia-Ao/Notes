@@ -346,7 +346,7 @@ null是一个表示"无"的对象，转为数值时为0；undefined是一个表�
 
 
 31. **客户端存储及他们的异同（例如：cookie, sessionStorage和localStorage等）**
-    参考：[cookie与Session机制区别以及Cookie SessionStorage LocalStorage异同](https://github.com/Xia-Ao/Notes/blob/master/HTTP/cookie与Session的区别.md)  
+    参考：[cookie与Session机制区别以及Cookie SessionStorage LocalStorage异同](https://github.com/Xia-Ao/Notes/blob/master/HTTP/cookie与Session的区别.md)
     共同点：都是保存在浏览器端，且同源的。
     区别：  
     1.cookie数据始终在同源的http请求中携带（即使不需要），即cookie在浏览器和服务器间来回传递。而sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存。
@@ -375,8 +375,9 @@ null是一个表示"无"的对象，转为数值时为0；undefined是一个表�
 
 34. **常用数组方法和数组算法（如数组去重、求交集、并集等）**
 
-[Array操作方法](https://github.com/Xia-Ao/Notes/blob/master/JS/Array操作方法.md)
-[javascript常用数组算法总结](http://www.cnblogs.com/front-Thinking/p/4797440.html)和[Merge/flatten an Array of Arrays in JavaScript](http://stackoverflow.com/questions/10865025/merge-flatten-an-array-of-arrays-in-javascript)
+    [Array操作方法](https://github.com/Xia-Ao/Notes/blob/master/JS/Array操作方法.md)
+    [javascript常用数组算法总结](http://www.cnblogs.com/front-Thinking/p/4797440.html)
+    [Merge/flatten an Array of Arrays in JavaScript](http://stackoverflow.com/questions/10865025/merge-flatten-an-array-of-arrays-in-javascript)
 
 35. **js数组去重复项**
 
