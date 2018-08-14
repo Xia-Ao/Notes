@@ -3,127 +3,104 @@
 
 1. **同源策略及跨域请求的方法和原理（比较JSONP和document.domain的不同及优劣，以及HTML5的跨域方案）**
 2. **js的基本类型有哪些？引用类型有哪些？null和undefined的区别**
-3. **JavaScript字符串转化**
-4. **JSONP原理及优缺点**
-5. **XMLHttpRequest**
-6. **事件委托**
-7. **前端模块化（AMD和CommonJS的原理及异同，seajs和requirejs的异同和用法）**
-8. **session**
-9. **Cookie**
-10. **this问题**
-11. **JavaScript动画算法**
-12. **拖拽的实现**
-13. **JavaScript原型链及JavaScript如何实现继承、类的**
-14. **闭包及闭包的用处，以及闭包可能造成的不良后果。**
-15. **常见算法的JS实现（如快排、冒泡等）**
-16. **事件冒泡和事件捕获**
-17. **浏览器检测（能力检测、怪癖检测等）**
-18. **JavaScript代码测试**
-19. **call与apply的作用及不同**
-20. **bind的用法，以及如何实现bind的函数和需要注意的点**
-21. **变量名提升**
-22. **== 与 ===**
-23. **"use strict"作用**
-24. **AJAX请求的细节和原理**
-25. **函数柯里化（Currying）**
-26. **NodeJS健壮性方面的实践（子进程等）**
-27. **NodeJS能否用利用多核实现在计算性能上的劣势等**
-28. **jQuery链式调用的原理**
-29. **ES6及jQuery新引进的Promise有什么用处、Promise的原理**
-30. **NodeJS的优缺点及使用场景**
-31. **JS中random的概率问题**
-32. **客户端存储及他们的异同（例如：cookie, sessionStorage和localStorage等）**
-33. **AngularJS的文件管理及打包（包括模板打包及请求、JS的打包和请求等）**
-34. **AngularJS的JS模块管理及实践**
-35. **在你的Angular App页面里随意加一个JS文件，会有什么影响**
-36. **AngularJS directive及自己如何定义directive**
-37. **AngularJS双向绑定的原理及实现**
-38. **你如何测试你的JS代码**
-39. **DOM1\DOM2\DOM3都有什么不同**
-40. **XSS**
-41. **常用数组方法和数组算法（如数组去重、求交集、并集等）**
-42. **js数组去重复项**
-43. **js中的垃圾回收机制**
-44. **常见的JS设计模式**
-45. **js获取服务器精准时间（客户端如何与服务器时间同步）**
-46. **什么是js中的类数组对象**
-47. **Node中exports和module.exports的区别**
-48. **异步编程的了解**
-49. **Grunt和Gulp的区别**
-50. **AngularJS中service\factory\provider的区别**
-51. **JavaScript中异步编程的几种方式**
-52. **Nodejs开发踩过的坑**
-53. **AngularJS中依赖注入的理解**
-54. **JS中判断是否为数组**
-55. **Nodejs内存溢出**
-56. **关于BFC和hasLayout**
-57. **统计页面中使用最多的三个标签**
-58. **JS内存泄露及解决方法**
-59. **在浏览器地址栏按回车、F5、Ctrl+F5刷新网页的区别**
-60. **判断两个对象的相等**
-61. **选取两个数的最大公约数**
-62. **Node模块是如何寻址的**
-63. **ES6新增的特性**
-64. **`escape()`, `decodeURIComponent()`, `decodeURI`之间的区别是什么？**
+3. **JSONP原理及优缺点**
+4. **XMLHttpRequest**
+5. **事件委托**
+6. **前端模块化（AMD和CommonJS的原理及异同，seajs和requirejs的异同和用法）**
+7. **session**
+8. **Cookie**
+9. **this问题**
+10. **JavaScript动画算法**
+11. **拖拽的实现**
+12. **JavaScript原型链及JavaScript如何实现继承、类的**
+13. **闭包及闭包的用处，以及闭包可能造成的不良后果。**
+14. **常见算法的JS实现（如快排、冒泡等）**
+15. **事件冒泡和事件捕获**
+16. **JavaScript代码测试**
+17. **call与apply的作用及不同**
+18. **bind的用法，以及如何实现bind的函数和需要注意的点**
+19. **变量名提升**
+20. **== 与 ===**
+21. **"use strict"作用**
+22. **AJAX请求的细节和原理**
+23. **函数柯里化（Currying）**
+24. **jQuery链式调用的原理**
+25. **ES6及jQuery新引进的Promise有什么用处、Promise的原理**
+26. **JS中random的概率问题**
+27. **客户端存储及他们的异同（例如：cookie, sessionStorage和localStorage等）**
+28. **在你的Angular App页面里随意加一个JS文件，会有什么影响**
+29. **你如何测试你的JS代码**
+30. **DOM1\DOM2\DOM3都有什么不同**
+31. **常用数组方法和数组算法（如数组去重、求交集、并集等）**
+32. **js数组去重复项**
+33. **js中的垃圾回收机制**
+34. **常见的JS设计模式**
+35. **js获取服务器精准时间（客户端如何与服务器时间同步）**
+36. **什么是js中的类数组对象**
+37. **JavaScript中异步编程的几种方式**
+38. **JS中判断是否为数组**
+39. **统计页面中使用最多的三个标签**
+40. **JS内存泄露及解决方法**
+41. **在浏览器地址栏按回车、F5、Ctrl+F5刷新网页的区别**
+42. **判断两个对象的相等**
+43. **选取两个数的最大公约数**
+44. **`escape()`, `decodeURIComponent()`, `decodeURI`之间的区别是什么？**
 
 ## 新增
 2018-08-14
 
-* js的基本类型有哪些？引用类型有哪些？null和undefined的区别。
-* 如何判断一个变量是Array类型？如何判断一个变量是Number类型？（都不止一种）
-* Object是引用类型嘛？引用类型和基本类型有什么区别？哪个是存在堆哪一个是存在栈上面的？
-* JS常见的dom操作api
-* 解释一下事件冒泡和事件捕获
-* 事件委托（手写例子），事件冒泡和捕获，如何阻止冒泡？如何组织默认事件？
-* 对闭包的理解？什么时候构成闭包？闭包的实现方法？闭包的优缺点？
-* this有哪些使用场景？跟C,Java中的this有什么区别？如何改变this的值？
-* call，apply，bind
-* 显示原型和隐式原型，手绘原型链，原型链是什么？为什么要有原型链
-* 创建对象的多种方式
-* 实现继承的多种方式和优缺点
-* new 一个对象具体做了什么
-* 手写Ajax，XMLHttpRequest
-* 变量提升
-* 举例说明一个匿名函数的典型用例
-* 指出JS的宿主对象和原生对象的区别，为什么扩展JS内置对象不是好的做法？有哪些内置对象和内置函数？
-* attribute和property的区别
-* document load和document DOMContentLoaded两个事件的区别
-* === 和 == , [] === [], undefined === undefined,[] == [], undefined == undefined
-* typeof能够得到哪些值
-* 什么是"use strict",好处和坏处
-* 函数的作用域是什么？js 的作用域有几种？
-* JS如何实现重载和多态
-* 常用的数组api，字符串api
-* 原生事件绑定（跨浏览器），dom0和dom2的区别？
-* 给定一个元素获取它相对于视图窗口的坐标
-* 如何实现图片滚动懒加载
-* js 的字符串类型有哪些方法？ 正则表达式的函数怎么使用？
-* 深拷贝
-* 编写一个通用的事件监听函数
-* web端cookie的设置和获取
-* setTimeout和promise的执行顺序
-* JavaScript 的事件流模型都有什么？
-* navigator对象，location和history
-* js的垃圾回收机制
-* 内存泄漏的原因和场景
-* DOM事件的绑定的几种方式
-* DOM事件中target和currentTarget的区别
-* typeof 和 instanceof 区别，instanceof原理
-* js动画和css3动画比较
-* JavaScript 倒计时（setTimeout）
-* js处理异常
-* js的设计模式知道那些
-* 轮播图的实现，以及轮播图组件开发，轮播10000张图片过程
-* websocket的工作原理和机制。
-* 手指点击可以触控的屏幕时，是什么事件？
-* 什么是函数柯里化？以及说一下JS的API有哪些应用到了函数柯里化的实现？(函数柯里化一些了解，以及在函数式编程的应用，最后说了一下JS中bind函数和数组的reduce方法用到了函数柯里化。)
-* JS代码调试
+1. 如何判断一个变量是Array类型？如何判断一个变量是Number类型？（都不止一种）
+2. Object是引用类型嘛？引用类型和基本类型有什么区别？哪个是存在堆哪一个是存在栈上面的？
+3. JS常见的dom操作api
+4. 解释一下事件冒泡和事件捕获
+5. 事件委托（手写例子），事件冒泡和捕获，如何阻止冒泡？如何组织默认事件？
+6. 对闭包的理解？什么时候构成闭包？闭包的实现方法？闭包的优缺点？
+7. this有哪些使用场景？跟C,Java中的this有什么区别？如何改变this的值？
+8. call，apply，bind
+9. 显示原型和隐式原型，手绘原型链，原型链是什么？为什么要有原型链
+10. 创建对象的多种方式
+11. 实现继承的多种方式和优缺点
+12. new 一个对象具体做了什么
+13. 手写Ajax，XMLHttpRequest
+14. 变量提升
+15. 举例说明一个匿名函数的典型用例
+16. 指出JS的宿主对象和原生对象的区别，为什么扩展JS内置对象不是好的做法？有哪些内置对象和内置函数？
+17. attribute和property的区别
+18. document load和document DOMContentLoaded两个事件的区别
+19. === 和 == , [] === [], undefined === undefined,[] == [], undefined == undefined
+20. typeof能够得到哪些值
+21. 函数的作用域是什么？js 的作用域有几种？
+22. JS如何实现重载和多态
+23. 常用的数组api，字符串api
+24. 原生事件绑定（跨浏览器）？
+25. 给定一个元素获取它相对于视图窗口的坐标
+26. 如何实现图片滚动懒加载
+27. js 的字符串类型有哪些方法？ 正则表达式的函数怎么使用？
+28. 深拷贝
+29. 编写一个通用的事件监听函数
+30. web端cookie的设置和获取
+31. setTimeout和promise的执行顺序
+32. JavaScript 的事件流模型都有什么？
+33. navigator对象，location和history
+34. 内存泄漏的原因和场景
+35. DOM事件的绑定的几种方式
+36. DOM事件中target和currentTarget的区别
+37. typeof 和 instanceof 区别，instanceof原理
+38. js动画和css3动画比较
+39. JavaScript 倒计时（setTimeout）
+40. js处理异常
+41. 轮播图的实现，以及轮播图组件开发，轮播10000张图片过程
+42. websocket的工作原理和机制。
+43. 手指点击可以触控的屏幕时，是什么事件？
+44. 什么是函数柯里化？以及说一下JS的API有哪些应用到了函数柯里化的实现？(函数柯里化一些了解，以及在函数式编程的应用，最后说了一下JS中bind函数和数组的reduce方法用到了函数柯里化。)
+45. JS代码调试
 
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 <hr/>
 
 1. **同源策略及跨域请求的方法和原理（比较JSONP和document.domain的不同及优劣，以及HTML5的跨域方案）**
+
    答案：同源策略是客户端脚本（尤其是Javascript）的重要的安全度量标准。它最早出自Netscape Navigator2.0，其目的是防止某个文档或脚本从多个不同源装载。这里的同源指的是：**同协议，同域名和同端口**。这里说的js跨域是指通过js在不同的域之间进行数据传输或通信，比如用ajax向一个不同的域请求数据，或者通过js获取页面中不同域的框架中(iframe)的数据。只要协议、域名、端口有任何一个不同，都被当作是不同的域。
    浏览器的同源策略，其限制之一就是第一种方法中我们说的不能通过ajax的方法去请求不同源中的文档。 它的第二个限制是浏览器中不同域的框架之间是不能进行js的交互操作的。有一点需要说明，不同的框架之间（父子或同辈），是能够获取到彼此的window对象的，但头疼的是你却不能使用获取到的window对象的属性和方法(html5中的postMessage方法是一个例外，还有些浏览器比如ie6也可以使用top、parent等少数几个属性)，总之，你可以当做是只能获取到一个几乎无用的window对象。
 
@@ -141,29 +118,24 @@
    [HTTP访问控制(CORS)](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS)
 
 2. **js的数据类型有哪些？引用类型有哪些？null和undefined的区别。**
+
    答案： JavaScript中有6种简单数据类型（也称为基本数据类型）：Undefined、Null、Boolean、Number和String以及ES6中新增的Symbol。还用一种复杂数据类型Object.
-
     引用类型有`Object 类型`、`Array 类型`、`Date 类型`、`RegExp 类型`、`Function 类型` 等。
-
     null是一个表示"无"的对象，转为数值时为0；undefined是一个表示"无"的原始值，转为数值时为NaN
 
-1. **JavaScript字符串转化**
-   答案：熟悉基本的字符串操作函数，参考
-   [JavaScript中常见的字符串操作函数及用法](http://www.cnblogs.com/front-Thinking/p/4398447.html)
-
-2. **JSONP原理及优缺点**
+3. **JSONP原理及优缺点**
    答案：具体JSONP的原理可参考1，说白了就是插入一个script标签，其src指向跨域接口，返回对应的callback(data)，其中data是json格式，callback是页面已存在的function。
    **优点**：它不像XMLHttpRequest对象实现的Ajax请求那样受到同源策略的限制；它的兼容性更好，在更加古老的浏览器中都可以运行，不需要XMLHttpRequest或ActiveX的支持；并且在请求完毕后可以通过调用callback的方式回传结果。
    **缺点**：它只支持GET请求而不支持POST等其它类型的HTTP请求；它只支持跨域HTTP请求这种情况，不能解决不同域的两个页面之间如何进行JavaScript调用的问题。
 
-3. **XMLHttpRequest**
+4. **XMLHttpRequest**
    答案：XmlHttp是一套可以在Javascript、VbScript、Jscript等脚本语言中通过http协议传送或从接收XML及其他数据的一套API。XmlHttp最大的用处是可以更新网页的部分内容而不需要刷新整个页面。
 [轻松掌握XMLHttpRequest对象](http://www.cnblogs.com/beniao/archive/2008/03/29/1128914.html)
 
-4. **事件委托**
+5. **事件委托**
    答案：使用事件委托技术能让你避免对特定的每个节点添加事件监听器；相反，事件监听器是被添加到它们的父元素上。事件监听器会分析从子元素冒泡上来的事件，找到是哪个子元素的事件。
 
-5. **前端模块化（AMD和CommonJS的原理及异同，seajs和requirejs的异同和用法**
+6. **前端模块化（AMD和CommonJS的原理及异同，seajs和requirejs的异同和用法**
    答案：
    [使用AMD\CommonJS\ES Harmony编写模块化的JavaScript](http://justineo.github.io/singles/writing-modular-js/)
    [RequireJS中文网](http://www.requirejs.cn/)
@@ -171,9 +143,9 @@
    SeaJS对模块的态度是懒执行,SeaJS只会在真正需要使用(依赖)模块时才执行该模块；而RequireJS对模块的态度是预执行；会先尽早地执行(依赖)模块, 相当于所有的require都被提前了, 而且模块执行的顺序也不一定
    [SeaJS和RequireJS最大的不同](http://www.douban.com/note/283566440/)，其中AMD和CMD的区别可以看[玉伯在知乎上的回答](http://www.zhihu.com/question/20351507/answer/14859415)
 
-6. **session**
+7. **session**
     答案： [cookie与Session机制区别以及Cookie SessionStorage LocalStorage异同](/HTTP/cookie与Session的区别.md)
-7. **Cookie**
+8. **Cookie**
    答案：8与9的知识可以参考：[参考1](http://www.cnblogs.com/shiyangxt/archive/2008/10/07/1305506.html)和[参考2](http://www.cnblogs.com/Darren_code/archive/2011/11/24/Cookie.html)
 
    常见的cookie操作包括创建cookie、添加cookie、删除cookie等，相应函数参考：
@@ -218,19 +190,19 @@
     }
    ```
 
-8. **seaJS的用法及原理，依赖加载的原理、初始化、实现等**
+9. **seaJS的用法及原理，依赖加载的原理、初始化、实现等**
     答案：[模块化开发之sea.js实现原理总结](http://www.lxway.com/85146452.htm)，简言之就是要解决三个问题，分别为：
     1.模块加载（插入script标签来加载模块。你在页面看不到标签是因为模块被加载完后删除了对应的script标签）；
     2.模块依赖（按依赖顺序依赖）；
     3.命名冲突（封装一层define，所有的都成为了局部变量，并通过exports暴漏出去）。
 
-9. **this问题**
+10. **this问题**
     答案：
     [**this对象**](/JS/this对象.md)
-10. **JavaScript动画算法**
+11. **JavaScript动画算法**
     答案：[JavaScript基于时间的动画算法](https://github.com/livoras/blog/issues/8)
 
-11. **拖拽的实现**
+12. **拖拽的实现**
     答案：使用 JavaScript 实现拖拽的步骤：
    * 让元素捕获事件（mousedown, mousemove & mouseup）
    * 单击并不释放，触发 mousedown，标记开始拖拽，并获取元素和鼠标的位置
@@ -513,3 +485,8 @@
     * escape不编码字符有69个：*，+，-，.，/，@，_，0-9，a-z，A-Z
     * encodeURI不编码字符有82个：!，#，$，&，'，(，)，*，+，,，-，.，/，:，;，=，?，@，_，~，0-9，a-z，A-Z
     * encodeURIComponent不编码字符有71个：!， '，(，)，*，-，.，_，~，0-9，a-z，A-Z
+
+
+
+--------------------------------------------------------------------------------
+<hr/>
