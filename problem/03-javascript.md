@@ -362,19 +362,15 @@ null是一个表示"无"的对象，转为数值时为0；undefined是一个表�
 
     答案：平时在测试方面做的比较少，一般用JSlint检查一些常见的错误。对于功能性的可能会使用基于karma的Jasmine测试框架来做。
 
-33. ** DOM1\DOM2\DOM3都有什么不同**
-DOM0：不是W3C规范。
+33. **DOM1\DOM2\DOM3都有什么不同**
 
-DOM1：开始是W3C规范。专注于HTML文档和XML文档，DOM1级由两个模块组成：DOM核心（DOM Core）和DOM HTML。
-
-DOM2：对DOM1增加了 **样式表对象模型**，新增以下内容
-
-    DOM视图（DOM Views）：定义了跟踪不同文档（例如，应用CSS之前和之后的文档）视图的接口；  
-    DOM事件（DOM Events）：定义了事件和事件处理的接口；  
-    DOM样式（DOM Style）：定义了基于CSS为元素应用样式的接口；
-
-
-DOM3：对DOM2增加了 **内容模型** (DTD 、Schemas) 和 **文档验证** 。
+    * DOM0：不是W3C规范。
+    * DOM1：开始是W3C规范。专注于HTML文档和XML文档，DOM1级由两个模块组成：DOM核心（DOM Core）和DOM HTML。
+    * DOM2：对DOM1增加了 **样式表对象模型**，新增以下内容
+        * DOM视图（DOM Views）：定义了跟踪不同文档（例如，应用CSS之前和之后的文档）视图的接口；
+        * DOM事件（DOM Events）：定义了事件和事件处理的接口；
+        * DOM样式（DOM Style）：定义了基于CSS为元素应用样式的接口；
+    * DOM3：对DOM2增加了 **内容模型** (DTD 、Schemas) 和 **文档验证** 。
 
 
 34. **常用数组方法和数组算法（如数组去重、求交集、并集等）**
