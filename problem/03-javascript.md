@@ -547,45 +547,127 @@
 
 5. **事件委托（手写例子），事件冒泡和捕获，如何阻止冒泡？如何组织默认事件？**
 
+    事件委托优点：1、减少内存消耗； 2、动态 绑定事件
+    ```html
+    <ul id="list">
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+      ......
+      <li>item n</li>
+    </ul>
+    // ...... 代表中间还有未知数个 li
+    ```
+    ```js
+    // 给父层元素绑定事件
+    document.getElementById('list').addEventListener('click', function (e) {
+      // 兼容性处理
+      var event = e || window.event;
+      var target = event.target || event.srcElement;  //后者为IE下
+      // 判断是否匹配目标元素
+      if (target.nodeName.toLocaleLowerCase === 'li') {
+        console.log('the content is: ', target.innerHTML);
+      }
+    });
+    ```
 
+    阻止默认行为： `preventDefault()`;  IE下 `returnValue`设置为false；  
+    阻止事件捕获冒泡： `stopPropagation()`  , IE下 `cancelBubble`设置为true
 
 6. **对闭包的理解？什么时候构成闭包？闭包的实现方法？闭包的优缺点？**
 
+    **闭包是指有权访问另一个函数作用域中的变量的函数**， 字啊一个函数里面创建另一个函数科生成一个闭包，
+    闭包十分消耗内存，其次闭包可以在父函数外部改变父函数内部的变量的值，如果你把父函数当作对象（object）使用，把闭包当作它的公用方法（Public Method），把内部变量当作它的私有属性（private value），这时一定要小心，不要随便改变父函数内部变量的值。  
+    [JS闭包详解](https://xia-ao.gitbook.io/notes/js/bi-bao)
 
 
 7. **this有哪些使用场景？跟C,Java中的this有什么区别？如何改变this的值？**
-
-
+    this的使用场景其实就是指this的取值，谁调用的函数或者方法，里面的this就指向谁。  
+    可以使用 `apply`， `call` ， `bind`改变this指向。  
+    以下几种特殊情况：  
+    1、闭包中的this指向全局；  
+    2、如果一个函数的返回值是一个对象的话，那么this指向的就是这个对象，如果返回值不知一个对象，this指向的还是函数的实例。（其中null也是一个对象，如果返回是null，this指向的还是函数的实例）  
+    参考：  
+    [this指向详解](https://xia-ao.gitbook.io/notes/js/this-dui-xiang)  
+    [this使用场景](https://blog.csdn.net/weixin_40387601/article/details/80313884)
 
 8. **call，apply，bind**
-
+    用于改变函数运行时this指向，因为在js函数中，定义时上下文，运行时上下文，是可以被改变的。  
+    call和apply的作用是一样的，不同在于call传递参数需要一个一个传入，apply可以将多个参数转换为数组传入，最典型的应用就是 `Math.max.apply(this,arr)`  
+    bind 是返回对应函数，便于稍后调用；apply 、call 则是立即调用 。
 
 9. **显示原型和隐式原型，手绘原型链，原型链是什么？为什么要有原型链**
-
+    答案：构造函数的prototype指显示原型，实例对象的 `__proto__`指隐式原型  
+    [显示原型，隐式原型等](https://blog.csdn.net/weixin_40387601/article/details/80327955)  
+    [从原型到原型链](https://xia-ao.gitbook.io/notes/js/js-cong-yuan-xing-dao-yuan-xing-lian)
 
 10. **创建对象的多种方式**
-
+    这一部分在《高程》第六章 6.2节创建对象上面有详细的讲解，具体可以参考，下面是一篇别人根据高程上面的内容整理的手记。  
+    具体分为工厂模式，构造函数模式，原型模式，原型模式优化，组合模式，寄生构造函数模式，稳妥模式；  
+    [JavaScript深入之创建对象的多种方式以及优缺点](https://github.com/mqyqingfeng/Blog/issues/15)
 
 
 11. **实现继承的多种方式和优缺点**
-
+    《高程》6.3节继承的内容，熟读熟记理解
+    一种有7种方式可以实现继承，优先推荐extends继承  
+    原型链继承，构造函数继承，实例继承，拷贝继承，组合继承， 寄生组合继承， extends继承
+    [继承的实现以及优缺点](https://xia-ao.gitbook.io/notes/js/ji-cheng)
 
 
 12. **new 一个对象具体做了什么**
-
-
+    代码 `new` *`Foo`* `(...)` 执行时，会发生以下事情：
+    1. 一个继承自 *`Foo`* `.prototype` 的新对象被创建。
+    2. 使用指定的参数调用构造函数 `Foo` ，并将 [this](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 绑定到新创建的对象。`new` *Foo* 等同于 `new ` *`Foo`* `()`，也就是没有指定参数列表， *`Foo`* 不带任何参数调用的情况。
+    3. 由构造函数返回的对象就是 `new` 表达式的结果。如果构造函数没有显式返回一个对象，则使用步骤1创建的对象。（一般情况下，构造函数不返回值，但是用户可以选择主动返回对象，来覆盖正常的对象创建步骤）
+    详细MDN上介绍： [new运算符](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/new)
 
 13. **手写Ajax，XMLHttpRequest**
-
+    ```js
+    // step1： 创建一xhr对象
+    let xhr = new XMLHttpRequest();
+    // step2: 使用open规定请求方法，url，是否异步
+    xhr.open('GET', url, asyncFlag);
+    // step3: 使用send发送请求
+    xhr.send();
+    // step4：绑定请求返回处理函数
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && (xhr.status === 200 || xhr.status === 304)) {
+            let res = xhr.responseText
+        }
+    }
+    ```
 
 14. **变量提升**
-
+    使用var定义的变量和函数的声明会被提升到代码执行的最前面。变量提升带来了关于作用域等诸多问题  
+    ES6改用let const 声明变量，不存在变量提升，
 
 15. **举例说明一个匿名函数的典型用例**
+    匿名函数： 没有 函数名称的函数。
+    匿名函数的作用是用于闭包和避免全局变量的污染以及函数名的冲突
+    ```js
+    //通过闭包可以 返回局部变量
+    function box() {
+        var user = 'Lee';
+        return function () {//通过匿名函数返回box()局部变量
+            return user;
+    };
+    }
+    alert(box()());//通过box()()来直接调用匿名函数返回值
+     
+    var b = box();
+    alert(b());//另一种调用匿名函数返回值
+    ```
+    参考： [匿名函数的典型用例](https://blog.csdn.net/weixin_40387601/article/details/80424956)
 
 
 16. **指出JS的宿主对象和原生对象的区别，为什么扩展JS内置对象不是好的做法？有哪些内置对象和内置函数？**
+    原生对象：Object、Function、Array、String、Boolean、Number、Date、RegExp、Error、EvalError、RangeError、ReferenceError、SyntaxError、TypeError、URIError、Global
 
+    内置对象：Global（全局对象）、Math
+
+    宿主对象：有宿主提供的对象，在浏览器中window对象以及其下边所有的子对象(如bom、dom等等)，在node中是globla及其子对象，也包含自定义的类对象。【何为"宿主对象"？ 在web中，ECMAScript中的"宿主"当然就是我们网页的运行环境，即"操作系统"和"浏览器"。所有非本地对象都是宿主对象（host object），即由 ECMAScript 实现的宿主环境提供的对象。】
+
+    详细参考： [原生、内置、宿主对象详解](https://blog.csdn.net/weixin_40387601/article/details/80431670)
 
 17. **attribute和property的区别**
 
