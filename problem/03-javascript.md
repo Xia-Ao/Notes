@@ -499,7 +499,6 @@
 1. **如何判断一个变量是Array类型？如何判断一个变量是Number类型？（都不止一种）**
 
    Array判断：
-
    1. `Array.isArray(arr)`返回一个Boolean值， **推荐**
    2. `arr instanceof Array` 判断原型链是否指向构造函数的原型对象，返回Boolean
    3. `arr.constructor === Array` 判断构造函数是否为Array
@@ -507,7 +506,6 @@
    5. jquery中的 `$.type(arr)` 返回array
 
    Number判断：
-
    1. `typeof num` 返回类型`'number'`
    2. `num.constructor === Number`
    3. `Object.prototype.toString.call(num) === '[object Number]'`
@@ -516,8 +514,8 @@
 
 2. **Object是引用类型嘛？引用类型和基本类型有什么区别？哪个是存在堆哪一个是存在栈上面的？**
    Object肯定是引用类型
-   基本类型：
 
+    基本类型：
    1. 基本数据类型的值是不可变的， 不可能通过方法改变
    2. 基本数据类型不可以添加属性和方法
    3. 基本类型的赋值是简单赋值
@@ -525,7 +523,6 @@
    5. 基本类型的值是**存放在栈区**的
 
     引用类型：
-
    1. 引用类型的值是可以改变的
    2. 引用类型可以添加属性和方法
    3. 引用类型的的赋值是对象引用
@@ -534,6 +531,7 @@
 
 
 3. **JS常见的dom操作api**
+
     * 获取：`document.getElementById`,`document.getElementsByClassName`,`document.getElementsByTagName`,`document.getElementsByName`,`document.querySelector`,`document.querySelectorAll`
     * 新建： `document.createElement(div)`,`createTextNode`等等
     * 插入： `Node.appendChild`,`Node.insertBefore`,
