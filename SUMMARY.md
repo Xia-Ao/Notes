@@ -56,7 +56,10 @@
   - [symbol对象](/ES6/symbol.md)
   - [16、Generator函数](/ES6/16、Generator函数.md)
   - [17、Generator异步操作](/ES6/17、Generator异步操作.md)
-  - [16、Generator函数](/ES6/18、async异步函数.md)
+  - [18、async异步函数](/ES6/18、async异步函数.md)
+  - [19、class继承](/ES6/19、class继承.md)
+  - [20、Decorator装饰器](/ES6/20、Decorator装饰器.md)
+  - [ES6编程风格](/ES6/ES6编程风格.md)
 
 - <span id="http">[HTTP](/HTTP/README.md)</span>
   - [TCP和UDP的区别](/HTTP/TCP和UDP.md)
