@@ -53,7 +53,7 @@
   - [6、函数扩展](/ES6/6、函数扩展.md)
   - [7、对象扩展](/ES6/7、对象扩展.md)
   - [9、数据结构](/ES6/9、数据结构.md)
-  - [10、Proxy&Reflect](/ES6/10、Proxy&Reflect.md)
+  - [10、Proxy&Reflect](/ES6/12、Proxy%26Reflect.md)
   - [Module模块](/ES6/Module.md)
   - [symbol对象](/ES6/symbol.md)
   - [16、Generator函数](/ES6/16、Generator函数.md)
