@@ -123,7 +123,7 @@
     引用类型有`Object 类型`、`Array 类型`、`Date 类型`、`RegExp 类型`、`Function 类型` 等。
     null是一个表示"无"的对象，转为数值时为0；undefined是一个表示"无"的原始值，转为数值时为NaN
 
-3. **JSONP原理及优缺点**
+3. **JSONP原理及优缺点**  
    答案：具体JSONP的原理可参考1，说白了就是插入一个script标签，其src指向跨域接口，返回对应的callback(data)，其中data是json格式，callback是页面已存在的function。
    **优点**：它不像XMLHttpRequest对象实现的Ajax请求那样受到同源策略的限制；它的兼容性更好，在更加古老的浏览器中都可以运行，不需要XMLHttpRequest或ActiveX的支持；并且在请求完毕后可以通过调用callback的方式回传结果。
    **缺点**：它只支持GET请求而不支持POST等其它类型的HTTP请求；它只支持跨域HTTP请求这种情况，不能解决不同域的两个页面之间如何进行JavaScript调用的问题。
@@ -144,7 +144,9 @@
    [SeaJS和RequireJS最大的不同](http://www.douban.com/note/283566440/)，其中AMD和CMD的区别可以看[玉伯在知乎上的回答](http://www.zhihu.com/question/20351507/answer/14859415)
 
 7. **session**
+
     答案： [cookie与Session机制区别以及Cookie SessionStorage LocalStorage异同](/HTTP/cookie与Session的区别.md)
+
 8. **Cookie**
    答案：8与9的知识可以参考：[参考1](http://www.cnblogs.com/shiyangxt/archive/2008/10/07/1305506.html)和[参考2](http://www.cnblogs.com/Darren_code/archive/2011/11/24/Cookie.html)
 
@@ -283,11 +285,11 @@
     [Javascript 严格模式详解](http://www.ruanyifeng.com/blog/2013/01/javascript_strict_mode.html)
 
 23. **AJAX请求的细节和原理**
- 答案：
-1、创建一个xmlHttpRequest对象  
-2、使用open建立对服务器的调用，包括methods，url等
-3、使用send向服务器发送请求
-4、使用onreadystatechange来监听响应并对响应进行处理
+    答案：
+    1、创建一个xmlHttpRequest对象
+    2、使用open建立对服务器的调用，包括methods，url等
+    3、使用send向服务器发送请求
+    4、使用onreadystatechange来监听响应并对响应进行处理
 
 24. **函数柯里化（Currying）**
     答案： 柯里化（Currying），是把接受多个参数的函数变换为接受单一参数（最初函数的第一个参数）的函数，并且返回接受余下的参数而且返回结果的新函数的技术。
@@ -300,7 +302,7 @@
 
 
 25. **jQuery链式调用的原理**
-答案：原理很简单：就是jQuery节点在调用api后都会返回节点自身
+    答案：原理很简单：就是jQuery节点在调用api后都会返回节点自身
 
 
 26. **ES6及jQuery新引进的Promise有什么用处、Promise的原理**
@@ -312,19 +314,19 @@
 
 
 27. **JS中random的概率问题**  
-参考：[淘宝前端团队FED-Math.random() 二三事](http://taobaofed.org/blog/2015/12/07/some-thing-about-random/)
+    参考：[淘宝前端团队FED-Math.random() 二三事](http://taobaofed.org/blog/2015/12/07/some-thing-about-random/)
 
 
 31. **客户端存储及他们的异同（例如：cookie, sessionStorage和localStorage等）**
     参考：[cookie与Session机制区别以及Cookie SessionStorage LocalStorage异同](https://github.com/Xia-Ao/Notes/blob/master/HTTP/cookie与Session的区别.md)
     共同点：都是保存在浏览器端，且同源的。
     区别：  
-    1.cookie数据始终在同源的http请求中携带（即使不需要），即cookie在浏览器和服务器间来回传递。而sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存。
-    2.cookie数据还有路径（path）的概念，可以限制cookie只属于某个路径下。
-    3.存储大小限制也不同，cookie数据不能超过4k，同时因为每次http请求都会携带cookie，所以cookie只适合保存很小的数据，如会话标识。sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，一般为5M左右。
-    4.数据有效期不同，sessionStorage仅在当前浏览器窗口关闭前有效，自然也就不可能持久保持；localStorage始终有效（除非清除），窗口或浏览器关闭也一直保存，因此用作持久数据；cookie只在设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭。
-    5.作用域不同，sessionStorage不在不同的浏览器窗口中共享，即使是同一个页面；localStorage 在所有同源窗口中都是共享的；cookie也是在所有同源窗口中都是共享的。
-    6.Web Storage 支持事件通知机制（storage事件），可以将数据更新的通知发送给监听者。Web Storage 的 api 接口使用更方便。
+    1. cookie数据始终在同源的http请求中携带（即使不需要），即cookie在浏览器和服务器间来回传递。而sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存。
+    2. cookie数据还有路径（path）的概念，可以限制cookie只属于某个路径下。
+    3. 存储大小限制也不同，cookie数据不能超过4k，同时因为每次http请求都会携带cookie，所以cookie只适合保存很小的数据，如会话标识。sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，一般为5M左右。
+    4. 数据有效期不同，sessionStorage仅在当前浏览器窗口关闭前有效，自然也就不可能持久保持；localStorage始终有效（除非清除），窗口或浏览器关闭也一直保存，因此用作持久数据；cookie只在设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭。
+    5. 作用域不同，sessionStorage不在不同的浏览器窗口中共享，即使是同一个页面；localStorage 在所有同源窗口中都是共享的；cookie也是在所有同源窗口中都是共享的。
+    6. Web Storage 支持事件通知机制（storage事件），可以将数据更新的通知发送给监听者。Web Storage 的 api 接口使用更方便。
 
 
 
@@ -879,7 +881,7 @@
 41. **轮播图的实现，以及轮播图组件开发，轮播10000张图片过程**
 
 
-42. **websocket的工作原理和机制。**
+42. **websocket的工作原理和机制。**  
     长轮询机制类似，采用的阻塞模式，需要很高的并发  
     [WebSocket 是什么原理？为什么可以实现持久连接？](https://www.zhihu.com/question/20215561)
 
@@ -890,7 +892,7 @@
     * touchcancel  当系统停止跟踪时触发，系统什么时候取消，文档没有明确的说明。
 
 
-44. **什么是函数柯里化？以及说一下JS的API有哪些应用到了函数柯里化的实现？(函数柯里化一些了解，以及在函数式编程的应用，最后说了一下JS中bind函数和数组的reduce方法用到了函数柯里化。)**
+44. **什么是函数柯里化？以及说一下JS的API有哪些应用到了函数柯里化的实现？(函数柯里化一些了解，以及在函数式编程的应用，最后说了一下JS中bind函数和数组的reduce方法用到了函数柯里化。)**  
     柯里化是一种将使用多个参数的一个函数转换成一系列使用一个参数的函数的技术。  
     [函数柯里化](https://github.com/mqyqingfeng/Blog/issues/42)
 
