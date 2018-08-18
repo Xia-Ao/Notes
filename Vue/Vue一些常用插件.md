@@ -7,7 +7,7 @@
 
 [better-scroll Github地址](https://github.com/ustbhuangyi/better-scroll)
 
-####使用方法
+#### 使用方法
 
 
 

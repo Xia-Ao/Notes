@@ -670,102 +670,232 @@
     详细参考： [原生、内置、宿主对象详解](https://blog.csdn.net/weixin_40387601/article/details/80431670)
 
 17. **attribute和property的区别**
-
+    attribute是特性，是HTML中的，prototype是属性，这两个不是同一个东西，并且操作，获取都不太一样，有时候值也会存在不一样的情况。  
+    [attribute和property的区别](http://stylechen.com/attribute-property.html)
 
 
 18. **document load和document DOMContentLoaded两个事件的区别**
-
+    * DOMContentLoaded: DOM解析完成即触发此事件，不等待styles, images等资源的加载
+    * load：依赖的资源也已加载完成
+    * DOMContentLoaded绑定到document，load绑定到window
+    [详细区别](https://blog.csdn.net/weixin_40387601/article/details/80500235)
 
 19. **`===` 和 `==` , `[]` === `[]`, undefined === undefined,`[]` ==` []`, undefined == undefined**
-
+    `===`严格相等， `==`在类型不一样的情况下，会做类型转换或者隐式转换。  
+    `[]` === `[]` //false
+    undefined === undefined //true  
+    `[]` ==` []`  //false  
+    undefined == undefined //true
 
 20. **typeof能够得到哪些值**
-
+    "number"、"string"、"boolean"、"object"、"function" 和 "undefined" ，"Symbol"。返回的一定是基本类型
 
 
 21. **函数的作用域是什么？js 的作用域有几种？**
-
+    JavaScript的函数作用域是指在函数内声明的所有变量在函数体内始终是可见的，可以在整个函数的范围内使用及复用，也就是说在函数体内变量声明之前就已经可用了(事实上在嵌套的作用域中也可以使用)。
+    ES5具有全局作用域和块级作用域  
+    [答案详解](https://blog.csdn.net/weixin_40387601/article/details/80515665)
 
 22. **JS如何实现重载和多态**
+    **重载：**  
+    重载可认为是静态的多态，静态联编，发生在编译阶段；  
+    重载就是一组具有相同名字、不同参数列表的函数（方法）。  
+    重载，函数特征之一，表现为在一个类中同名不同参的方法分别被调用会产生不同的结果。
+
+    **多态：**  
+    多态是动态的，动态联编，发生在运行阶段；  
+    多态，面向对象特征之一，表现为不同对象调用相同方法会产生不同的结果。可以理解一个方法被不同实现后 展现不同的效果及状态。  
+    静态的比动态的效率高，但动态的最大优点是多态性，提高代码复用性。
+
+    [如何实现](https://blog.csdn.net/weixin_40387601/article/details/80529351)
 
 
 23. **常用的数组api，字符串api**
+    **不改变原数组**
+    1. contact
+    2. slice
+    3. indexOf
+    4. lastIndexOf
+    5. includes
+    6. toString
 
+    **改变原数组**
+    1. push
+    2. pop
+    3. shift
+    4. unshift
+    5. sort
+    6. join
+    7. fill
+    8. copyWithin
+    9. reverse
+    10. splice
+
+    **迭代方法及其他**
+    * is.Array
+    * Array.from
+    * Array.map
+    * Array.forEach
+    * Array.entries
+    * Array.keys
+    * Array.values
+    * Array.find
+    * Array.findIndex
+    * Array.every
+    * Array.some
+    * Array.filter
+    * Array.reduce
+    * Array.reduceRight
+
+
+    **字符串方法**
+    1. charCodeAt, charAt, charPointAt
+    2. contact
+    3. indexOf, lastIndexOf
+    4. split
+    5. replace
+    6. search
+    7. slice
+    8. repeat
+    9. trim
+    10. induces
+    11. match
+    12. substr, sub , substring ,
+    13. padStart, padEnd
+    14. startsWith, endsWith
+    15. toLocalLowerCase, toLocalUpCase
 
 24. **原生事件绑定（跨浏览器）？**
-
+    ```js
+    /** DOM2级事件处理程序  浏览器兼容
+     * IE-attachEvent()  detachEvent()
+     * 其他-addEventListener()  removeEventListener()
+     * EventUtil: 全局对象
+     * 使用：EventUtil.addHandler(ele,type,handler)
+     * **/
+    let EventUtil = {
+        addHandler: (element, type, handler) => {
+            if (element.addEventListener) {
+                element.addEventListener(type, handler, false)
+            } else if (element.attachEvent) {
+                element.attachEvent('on' + type, handler)
+            } else {
+                element['on' + type] = handler;
+            }
+        },
+        removeHandler: (element, type, handler) => {
+            if (element.removeEventListener) {
+                element.removeEventListener(type, handler, false)
+            } else if (element.detachEvent()) {
+                element.detachEvent('on' + type, handler)
+            } else {
+                element['on' + type] = null;
+            }
+        }
+    }
+    ```
 
 25. **给定一个元素获取它相对于视图窗口的坐标**
+    * **innerHeight/innerWidth** 表示DOM视口的大小，包括滚动条。也就是浏览器页面显示内容大小
+    * **outerHeight/outerWidth** 表示整个浏览器窗口的大小，包括窗口标题、工具栏、状态栏等
+    * **clientHeight/clientWidth** 表示元素的内容部分再加上padding的所占据的视觉面积，不包括border和滚动条占用的空间。
+    * **scrollHeight/scrollWidth** 表示元素包含滚动条在内的该元素的视觉面积。如果有滚动条的话，就是`clientHight`再加上滚动条的高度。
+    * **offsetHeight/offsetWidth** 表示元素除了margin之外的所有，包括padding、border、水平滚动条，但不包括margin的元素的高度
+    * **scrollTop、scrollLeft** 表示有滚动条时，滚动条向下或者向右滚动的距离，没有滚动条时值为0。
+    * **offsetTop/offsetLeft** 表示该元素的左上角与父容器（offsetParent对象）左上角的距离。所以，只需要将这两个值进行累加，就可以得到该元素的绝对坐标。
+    * JS中新加的 `getBoundingClientRect()`对象返回left，right top, bottom, width , height , x , y等属性
 
+
+    [JS中位置获取](http://www.ruanyifeng.com/blog/2009/09/find_element_s_position_using_javascript.html)
 
 26. **如何实现图片滚动懒加载**
-
+    [实现](https://i.jakeyu.top/2016/11/26/%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD/)
 
 27. **js 的字符串类型有哪些方法？ 正则表达式的函数怎么使用？**
-
+    正则：search replace match
 
 
 28. **深拷贝**
+    1、使用扩展运算符针对普通对象进行深拷贝  
+    2、使用Json 的parse 和stringify方法，但是正则， function不行  
+    [总结](https://xia-ao.gitbook.io/notes/js/js-deep-clone)
 
 
 29. **编写一个通用的事件监听函数**
-
+    同24。
 
 
 30. **web端cookie的设置和获取**
-
+    [详解](https://segmentfault.com/a/1190000004556040)
 
 
 31. **setTimeout和promise的执行顺序**
-
-
+    视具体情况而看，如果promise里面执行的是同步的，则按照顺序执行了，setTimeout在后面执行。  
+    可以看看这篇博文，关于JS的 [loop执行](https://www.tuicool.com/articles/MnY7N3a)
 
 32. **JavaScript 的事件流模型都有什么？**
-
-
+    事件捕获 > 事件处理 > 事件冒泡
+    [事件机制](https://xia-ao.gitbook.io/notes/js/shi-jian-ji-zhi)
 
 33. **navigator对象，location和history**
-
-
+    navigator对象包含有关浏览器的信息，history对象包含访问过的url信息， location对象包含当前URL的信息  
+    [详解](https://my.oschina.net/superkangning/blog/340196)
 
 34. **内存泄漏的原因和场景**
-
+    泄露原因：  
+    1、全局变量。 2、未及时清除定时器和绑定事件 。 3、DOM以外的引用。 4、 使用闭包带来的问题。  
+    查看内存是否泄露： Chrome的profile工具，抓包直接看到内存是否有非正常增长
+    [详细解答](https://octman.com/blog/2016-06-28-four-types-of-leaks-in-your-javascript-code-and-how-to-get-rid-of-them/)
 
 35. **DOM事件的绑定的几种方式**
-
+    1. 在DOM中使用onXXX=function(){}
+    2. 在js中对获取的DOM对象使用onXXX=function(){}
+    3. 在js中使用addEventListener(XXX, function(){}) , IE中为attachEvent
+    4. `<script for="domId" event="onXXX">fun();</script>`
+    [绑定方式](https://my.oschina.net/junn/blog/113210)
 
 36. **DOM事件中target和currentTarget的区别**
-
+    target在事件流的目标阶段；currentTarget在事件流的捕获，目标及冒泡阶段。只有当事件流处在目标阶段的时候，两个的指向才是一样的， 而当处于捕获和冒泡阶段的时候，target指向被单击的对象而currentTarget指向当前事件活动的对象（一般为父级）。  
+    currentTarget一般为事件中的this
 
 37. **typeof 和 instanceof 区别，instanceof原理**
-
+    `typeof`用来返回操作数 类型的 **字符串** 。  
+    instanceof 运算符是用来测试一个对象是否在其原型链原型构造函数的属性。其语法是`object instanceof constructor`
+    **instanceof 主要的实现原理就是只要右边变量的 prototype 在左边变量的原型链上即可，即每次取左边对象的prototype和右边对象的`__proto__`。因此，instanceof 在查找的过程中会遍历左边变量的原型链，直到找到右边变量的 prototype，如果查找失败，则会返回 false** 。  
+    [区别及原理](https://blog.csdn.net/qq_38722097/article/details/80717240)
 
 38. **js动画和css3动画比较**
-
+    简单或者一次性的动画使用css动画。  
+    复杂动画使用JS控制， 更复杂麻烦的，可以使用canvas
 
 39. **JavaScript 倒计时（setTimeout）**
 
 
 
 40. **js处理异常**
-
+    通常使用try...catch...捕获并抛出
 
 
 41. **轮播图的实现，以及轮播图组件开发，轮播10000张图片过程**
 
 
 42. **websocket的工作原理和机制。**
-
-
+    长轮询机制类似，采用的阻塞模式，需要很高的并发  
+    [WebSocket 是什么原理？为什么可以实现持久连接？](https://www.zhihu.com/question/20215561)
 
 43. **手指点击可以触控的屏幕时，是什么事件？**
+    * touchstart  当手指放在屏幕上触发。
+    * touchmove  当手指在屏幕上滑动时，连续地触发。
+    * touchend  当手指从屏幕上离开时触发。
+    * touchcancel  当系统停止跟踪时触发，系统什么时候取消，文档没有明确的说明。
 
 
 44. **什么是函数柯里化？以及说一下JS的API有哪些应用到了函数柯里化的实现？(函数柯里化一些了解，以及在函数式编程的应用，最后说了一下JS中bind函数和数组的reduce方法用到了函数柯里化。)**
-
+    柯里化是一种将使用多个参数的一个函数转换成一系列使用一个参数的函数的技术。  
+    [函数柯里化](https://github.com/mqyqingfeng/Blog/issues/42)
 
 45. **JS代码调试**
-
+    chrome的tools
 
 
 
