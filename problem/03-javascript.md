@@ -124,18 +124,22 @@
     null是一个表示"无"的对象，转为数值时为0；undefined是一个表示"无"的原始值，转为数值时为NaN
 
 3. **JSONP原理及优缺点**  
+
    答案：具体JSONP的原理可参考1，说白了就是插入一个script标签，其src指向跨域接口，返回对应的callback(data)，其中data是json格式，callback是页面已存在的function。
    **优点**：它不像XMLHttpRequest对象实现的Ajax请求那样受到同源策略的限制；它的兼容性更好，在更加古老的浏览器中都可以运行，不需要XMLHttpRequest或ActiveX的支持；并且在请求完毕后可以通过调用callback的方式回传结果。
    **缺点**：它只支持GET请求而不支持POST等其它类型的HTTP请求；它只支持跨域HTTP请求这种情况，不能解决不同域的两个页面之间如何进行JavaScript调用的问题。
 
 4. **XMLHttpRequest**
+
    答案：XmlHttp是一套可以在Javascript、VbScript、Jscript等脚本语言中通过http协议传送或从接收XML及其他数据的一套API。XmlHttp最大的用处是可以更新网页的部分内容而不需要刷新整个页面。
 [轻松掌握XMLHttpRequest对象](http://www.cnblogs.com/beniao/archive/2008/03/29/1128914.html)
 
 5. **事件委托**
+
    答案：使用事件委托技术能让你避免对特定的每个节点添加事件监听器；相反，事件监听器是被添加到它们的父元素上。事件监听器会分析从子元素冒泡上来的事件，找到是哪个子元素的事件。
 
 6. **前端模块化（AMD和CommonJS的原理及异同，seajs和requirejs的异同和用法**
+
    答案：
    [使用AMD\CommonJS\ES Harmony编写模块化的JavaScript](http://justineo.github.io/singles/writing-modular-js/)
    [RequireJS中文网](http://www.requirejs.cn/)
@@ -148,6 +152,7 @@
     答案： [cookie与Session机制区别以及Cookie SessionStorage LocalStorage异同](/HTTP/cookie与Session的区别.md)
 
 8. **Cookie**
+
    答案：8与9的知识可以参考：[参考1](http://www.cnblogs.com/shiyangxt/archive/2008/10/07/1305506.html)和[参考2](http://www.cnblogs.com/Darren_code/archive/2011/11/24/Cookie.html)
 
    常见的cookie操作包括创建cookie、添加cookie、删除cookie等，相应函数参考：
@@ -193,18 +198,23 @@
    ```
 
 9. **seaJS的用法及原理，依赖加载的原理、初始化、实现等**
+
     答案：[模块化开发之sea.js实现原理总结](http://www.lxway.com/85146452.htm)，简言之就是要解决三个问题，分别为：
     1.模块加载（插入script标签来加载模块。你在页面看不到标签是因为模块被加载完后删除了对应的script标签）；
     2.模块依赖（按依赖顺序依赖）；
     3.命名冲突（封装一层define，所有的都成为了局部变量，并通过exports暴漏出去）。
 
 10. **this问题**
+
     答案：
     [**this对象**](/JS/this对象.md)
+
 11. **JavaScript动画算法**
+
     答案：[JavaScript基于时间的动画算法](https://github.com/livoras/blog/issues/8)
 
 12. **拖拽的实现**
+
     答案：使用 JavaScript 实现拖拽的步骤：
    * 让元素捕获事件（mousedown, mousemove & mouseup）
    * 单击并不释放，触发 mousedown，标记开始拖拽，并获取元素和鼠标的位置
@@ -214,6 +224,7 @@
 
 
 12. **JavaScript原型链及JavaScript如何实现继承、类的**
+
     答案：**原型链**：就是每个构造函数都有一个原型对象，原型对象包含一个指向构造函数的指针（prototype），而实例则包含一个指向原型对象的内部指针（__proto__），通过将子构造函数的原型指向父构造函数的实例。
     参考：
     [**JS继承的实现**](https://github.com/Xia-Ao/Notes/blob/master/JS/继承.md)
@@ -221,6 +232,7 @@
     [js 基于原型的类实现详解](http://blog.csdn.net/lihongxun945/article/details/8061311)
 
 13. **闭包及闭包的用处，以及闭包可能造成的不良后果**
+
     答案：**好处**：能够实现封装和缓存等；**坏处**：就是消耗内存、不正当使用会造成内存溢出的问题。
     [**JS闭包**](https://github.com/Xia-Ao/Notes/blob/master/JS/闭包.md)
     [聊一下JS中的作用域scope和闭包closure](http://www.cnblogs.com/front-Thinking/p/4317020.html)
@@ -234,6 +246,7 @@
     和[排序算法](http://javascript.ruanyifeng.com/library/sorting.html). 还有如《五大常用算法》等。
 
 15. **事件冒泡和事件捕获**
+
     答案：W3C中定义事件的发生经历三个阶段：捕获阶段（capturing）、目标阶段（targeting）、冒泡阶段（bubbling）。
     阻止事件传播的方法：ie下：window.event.cancelBubble = true; 其他浏览器:e.stopPropagation()。
     **参考**：
@@ -242,12 +255,15 @@
 16. **浏览器检测（能力检测、怪癖检测等）**
 
 17. **JavaScript代码测试**
+
     答案：平时在测试方面做的比较少，一般用JSlint检查一些常见的错误。对于功能性的可能会使用基于karma+Jasmine测试框架来做。
 
 18. **call与apply的作用及不同**
+
     答案：作用是绑定this指针，设定函数中this的上下文环境。第二个参数不同，apply是类数组，而call是一些列参数。
 
 19. **bind的用法，以及如何实现bind的函数和需要注意的点**
+
     答案：bind的作用与call和apply相同，区别是call和apply是立即调用函数，而bind是返回了一个函数，需要调用的时候再执行。
     一个简单的bind函数实现如下：
 
@@ -262,13 +278,16 @@
     可参考：[How is bind() different from call() & apply() in Javascript?](http://stackoverflow.com/questions/15455009/how-is-bind-different-from-call-apply-in-javascript)
 
 20. **变量名提升 函数名提升**
+
     答案：通常JS引擎会在正式执行之前先进行一次预编译，在这个过程中，首先将变量声明及函数声明提升至当前作用域的顶端，然后进行接下来的处理。
 
 21. **== 与 ===**
-答案：前者隐式类型转换，后者严格对比。
-[JS中数据类型、运算符、严格相等](https://github.com/Xia-Ao/Notes/blob/master/JS/运算符.md)
+
+    答案：前者隐式类型转换，后者严格对比。
+    [JS中数据类型、运算符、严格相等](https://github.com/Xia-Ao/Notes/blob/master/JS/运算符.md)
 
 22. **"use strict"作用**
+
     答案：作用是为了规范js代码，消除一些不合理、不严谨的地方；提高效率；为以后新版本js做铺垫。
     主要限制：
     1. 全局变量显式声明；
@@ -313,7 +332,7 @@
 
 
 
-27. **JS中random的概率问题**  
+27. **JS中random的概率问题**
     参考：[淘宝前端团队FED-Math.random() 二三事](http://taobaofed.org/blog/2015/12/07/some-thing-about-random/)
 
 
