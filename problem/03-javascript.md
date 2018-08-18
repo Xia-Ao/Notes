@@ -290,16 +290,16 @@
 
     答案：作用是为了规范js代码，消除一些不合理、不严谨的地方；提高效率；为以后新版本js做铺垫。
     主要限制：
-    1. 全局变量显式声明；
-    2. 禁止使用with，不推荐使用eval；
-    3. 增强安全措施，比如禁止this关键字指向全局对象；
-    4. 禁止删除变量；
-    5. 显式报错；比如对只读属性赋值，对一个使用getter方法读取属性赋值，对禁止扩展的对象添加新属性；
-    6. 重名错误，对象不能有重名的属性，函数不能有重名的参数；
-    7. 禁止八进制表示法；
-    8. argument对象的限制；比如禁止使用arguments.callee；
-    9. 函数必须声明在顶层；
-    10. 新增保留字：implements, interface, let, package, private, protected, public, static, yield
+1. 全局变量显式声明；
+2. 禁止使用with，不推荐使用eval；
+3. 增强安全措施，比如禁止this关键字指向全局对象；
+4. 禁止删除变量；
+5. 显式报错；比如对只读属性赋值，对一个使用getter方法读取属性赋值，对禁止扩展的对象添加新属性；
+6. 重名错误，对象不能有重名的属性，函数不能有重名的参数；
+7. 禁止八进制表示法；
+8. argument对象的限制；比如禁止使用arguments.callee；
+9. 函数必须声明在顶层；
+10. 新增保留字：implements, interface, let, package, private, protected, public, static, yield
 
     [Javascript 严格模式详解](http://www.ruanyifeng.com/blog/2013/01/javascript_strict_mode.html)
 
