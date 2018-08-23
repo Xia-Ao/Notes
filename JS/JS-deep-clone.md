@@ -24,6 +24,30 @@ console.log(person1.name);  //'Kai'
 console.log(person2.name);  //'Kai'
 ```
 
+#### Object.assignq浅拷贝实现解决问题。
+```js
+let a = {  
+    age: 1  
+}  
+let b = Object.assign({}, a)  
+a.age = 2  
+console.log(b.age) // 1
+
+```
+
+#### `...`扩展运算符
+```js
+let a = {  
+    age: 1  
+}  
+let b = {...a}  
+a.age = 2  
+console.log(b.age) // 1
+
+```
+
+这种解决方案可以解决一般问题，对于只有一层的Json对象，可以满足，但是对于对象嵌套的问题，必须使用深拷贝。
+
 ### 深复制
 
 深复制想实现把对象里面属性值也给复制，当修改复制后的对象某个属性值时，原对象对应的属性值不会被修改。
@@ -92,7 +116,28 @@ console.log(person2.reg);   //Object
 
 #### [邹润阳--拥抱未来的深复制方法](http://jerryzou.com/posts/dive-into-deep-clone-in-javascript/)
 
+#### MessageChannel
+此特性在WebWorker中可用，主要用在串口通信上面，允许我们创建一个新的消息通道，并通过它的两个[`MessagePort`](https://developer.mozilla.org/zh-CN/docs/Web/API/MessagePort) 属性发送数据。
 
+
+[API](https://developer.mozilla.org/zh-CN/docs/Web/API/MessageChannel)
+
+```js
+function structuralClone(obj) {  
+    return new Promise(resolve => {  
+        const {port1, port2} = new MessageChannel();  
+        port2.onmessage = ev => resolve(ev.data);  
+        port1.postMessage(obj);  
+    });  
+}  
+var obj = {a: 1, b: {  
+    c: b  
+}}  
+// 注意该方法是异步的  
+// 可以处理 undefned 和循环引用对象  
+const clone = await structuralClone(obj);
+
+```
 
 
 
