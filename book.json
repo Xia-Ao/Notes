@@ -3,7 +3,8 @@
   "description": "有关前端知识总结以及面试题目",
   "language": "zh",
   "plugins": [
-  
+    "-highlight",
+    "highlight-pro"
   ],
   "pluginsConfig": {
     "github": {
@@ -17,6 +18,13 @@
       "theme": "white",
       "family": "sans",
       "size": 3
+    },
+    "highlight-pro": {
+      "theme": "monokai-sublime",
+      "map": {
+        "shell": "bash",
+        "sh": "bash"
+      }
     }
   }
 }
