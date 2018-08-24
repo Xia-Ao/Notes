@@ -23,7 +23,8 @@
       "theme": "monokai-sublime",
       "map": {
         "shell": "bash",
-        "sh": "bash"
+        "sh": "bash",
+        "js": "javascript"
       }
     }
   }
