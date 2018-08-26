@@ -69,14 +69,19 @@
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-1. **圣杯布局**  
-   答案：[圣杯布局](http://chen106106.iteye.com/blog/1631865) [参考资料](http://alistapart.com/article/holygrail)  
+1. **圣杯布局**
 
-2. **CSS合并方法**  
-   答案：避免使用@import引入多个css文件，可以使用CSS工具将CSS合并为一个CSS文件，例如使用Sass\Compass等。  
+   答案：[圣杯布局](http://chen106106.iteye.com/blog/1631865) [参考资料](http://alistapart.com/article/holygrail)
 
-3. **盒子模型**  
-   答案：参考HTML中第11题。  
+    将左右div放到后面，中间div放到dom前面，都设置为`float：left`,父元素设置左右margin留出位置，左右元素通过设置 `position:relative; margin-left: 负值`实现定位。与此类似的还有双飞翼布局，给中间div在加了一个同级父元素包起来，这样就不用给左右div设置 `position: relative`。
+
+2. **CSS合并方法**
+
+答案：避免使用@import引入多个css文件，可以使用CSS工具将CSS合并为一个CSS文件，例如使用Sass\Compass等。
+
+3. **盒子模型**
+
+答案：两种盒模型
 
 4. **CSS定位**  
    答案：[Position各属性值详解](http://www.cnblogs.com/fsjohnhuang/p/3967350.html)　　
