@@ -10,9 +10,9 @@
   - [1.5. String对象](/JS/String对象.md)
   - [1.6. Object对象](/JS/Object对象.md)
   - [1.7. JavaScript编程风格](/JS/Javascript编程风格.md)
-  - [1.8. 数组、字符串中查找最大重复次数最高元素的多种方法](/JS/数组、字符串中最大、重复元素查找.md)
+  - [1.8. 最大重复次数最高元素](/JS/数组、字符串中最大、重复元素查找.md)
   - [1.9. JS遍历方法汇总](/JS/遍历.md)
-  - [1.10. Javascript 严格模式详解(转载)](http://www.zyy1217.com/2017/04/20/Javascript%20%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F%E8%AF%A6%E8%A7%A3/)
+  - [1.10. JS严格模式详解(转载)](http://www.zyy1217.com/2017/04/20/Javascript%20%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F%E8%AF%A6%E8%A7%A3/)
   - [1.11. JS中数据类型、运算符、严格相等](/JS/运算符.md)
   - [1.12. **正则表达式**](/JS/正则表达式.md)
 
@@ -34,8 +34,8 @@
   - [1.25. DOM基础](/JS/DOM对象属性方法.md)
   - [1.26. DOM遍历](/JS/DOM遍历.md)
   - [1.27. 事件机制](/JS/事件机制.md)
-  - [1.28. 用Javascript获取页面元素的位置（client scroll offset等宽度）（转载）](http://www.ruanyifeng.com/blog/2009/09/find_element_s_position_using_javascript.html)
-  - [1.29. js实现一个图片懒加载插件](http://www.zyy1217.com/2017/03/20/js%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD%E6%8F%92%E4%BB%B6/) - 转载
+  - [1.28. 用JS获取页面元素的位置（转载）](http://www.ruanyifeng.com/blog/2009/09/find_element_s_position_using_javascript.html)
+  - [1.29. js实现图片懒加载插件](http://www.zyy1217.com/2017/03/20/js%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD%E6%8F%92%E4%BB%B6/) - 转载
   - [1.30. canvas绘制序列帧动画](/JS/canvas绘制序列帧.md)
 
 
