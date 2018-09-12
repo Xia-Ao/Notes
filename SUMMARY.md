@@ -2,7 +2,6 @@
 - [Introduction](README.md)
 - [目录](README.md)
 - [1. JS](/JS/README.md)</span>
-
   - [1.1. JS常用数据结构](/JS/data-structure.md)
   - [1.2. Array操作方法](/JS/Array操作方法.md)
   - [1.3. Math对象](/JS/Math对象.md)
@@ -15,7 +14,6 @@
   - [1.10. JS严格模式详解(转载)](http://www.zyy1217.com/2017/04/20/Javascript%20%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F%E8%AF%A6%E8%A7%A3/)
   - [1.11. JS中数据类型、运算符、严格相等](/JS/运算符.md)
   - [1.12. **正则表达式**](/JS/正则表达式.md)
-
 
   - [1.13. 作用域以及变量提升](/JS/作用域与变量提升.md)
   - [1.14. **this对象**](/JS/this对象.md)
@@ -38,7 +36,6 @@
   - [1.29. js实现图片懒加载插件](http://www.zyy1217.com/2017/03/20/js%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD%E6%8F%92%E4%BB%B6/) - 转载
   - [1.30. canvas绘制序列帧动画](/JS/canvas绘制序列帧.md)
 
-
   - [1.31. **前端算法题汇总**](/JS/前端算法题汇总.md)
   - [1.32. 数组排序算法总结](/JS/数组排序算法.md)
   - [1.33. 剑指offer第一部分](/JS/剑指offer-1.md)
@@ -48,8 +45,7 @@
 
   - [1.37. **前端优化**](/JS/前端优化.md)
 
-
-2. [ES6](/ES6/README.md)</span>
+- [ES6](/ES6/README.md)</span>
   - [1.2. class继承](/ES6/19、class继承.md)
   - [1、let&const变量解构赋值](/ES6/1、let&const变量解构赋值.md)
   - [2、变量解构赋值](/ES6/2、变量解构赋值.md)
