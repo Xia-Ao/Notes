@@ -1,9 +1,9 @@
 - [前端笔记](README.md)
 - [Introduction](README.md)
 - [目录](README.md)
-- <span id="js">[**1**. JS](/JS/README.md)</span>
-  1. [**1.1**. DOM基础](/JS/DOM对象属性方法.md)
-  2. [**1.2**. AJAX过程以及知识体系](/JS/AJAX使用详细介绍.md)
+1. [1. JS](/JS/README.md)</span>
+  1. [1.1. DOM基础](/JS/DOM对象属性方法.md)
+  2. [1.2. AJAX过程以及知识体系](/JS/AJAX使用详细介绍.md)
   3. [**同源策略到前端跨域**](/JS/同源策略到前端跨域.md)
   - [Array操作方法](/JS/Array操作方法.md)
   - [JavaScript编程风格](/JS/Javascript编程风格.md)
@@ -44,7 +44,7 @@
 
 
 
-- <span id="es6">[ES6](/ES6/README.md)</span>
+2. [ES6](/ES6/README.md)</span>
   - [class继承](/ES6/19、class继承.md)
   - [1、let&const变量解构赋值](/ES6/1、let&const变量解构赋值.md)
   - [2、变量解构赋值](/ES6/2、变量解构赋值.md)

@@ -26,6 +26,9 @@
         "sh": "bash",
         "js": "javascript"
       }
+    },
+    "theme-default": {
+      "showLevel": true
     }
   }
 }
