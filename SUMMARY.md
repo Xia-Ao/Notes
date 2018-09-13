@@ -81,9 +81,8 @@
    * [3.2. CSS优先级以及引入方式](/CSS/CSS优先级和引入方式.md)
    * [3.3. position不同值定位](/CSS/position.md)
    * [3.4. BFC神奇背后的原理-文摘](/CSS/BFC神奇背后的原理-文摘.md)
-   * [3.5. 区别px、em、rem](https://segmentfault.com/a/1190000005936910)
-   * [3.6. 行内元素与块级元素](/CSS/行内元素与块级元素.md)
-   * [3.7. 长度单位、字体单位以及各种高度等易混淆的区别](/CSS/长度单位、字体单位、各种高度等易混淆属性.md)
+   * [3.6. CSS属性易混淆点](/CSS/CSS元素属性易混淆点.md)
+   * [3.7. CSS单位、高度](/CSS/长度单位、字体单位、各种高度等易混淆属性.md)
 
    * [3.8. 布局知识](/CSS/布局.md)
    * [3.9. 三栏式布局](/CSS/三栏式布局.md)
@@ -94,7 +93,7 @@
    * [3.14. 清除浮动的方法](/CSS/清除浮动.md)
 
    * [3.15. scroll滚动隐藏](/CSS/滚动隐藏.md)
-   * [3.16. rem移动端适配](/CSS/rem移动端适配.md)
+   * [3.16. 移动端适配](/CSS/移动端适配.md)
    * [3.17. 纯css斜切角实现](/CSS/斜切角实现.md)
    * [3.18. transition && animation动画属性](/CSS/animation&transition.md)
    * [3.19. 强大的transform](/CSS/transform.md)

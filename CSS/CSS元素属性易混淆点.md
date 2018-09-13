@@ -1,4 +1,4 @@
-### 块级元素  VS 行内元素/内联元素
+## 块级元素  VS 行内元素/内联元素
 
 **块级元素block**
 
@@ -33,4 +33,31 @@ a , abbr , acronym , b , bdo , big , br , cite , code , dfn , em , font , i , im
 applet ,button ,del ,iframe , ins ,map ,object , script
 
 
+## css属性继承性
+#### 可继承
+font相关 color line-height text-align text-decoration、text-transform、direction
 
+#### 不可继承
+display、margin、border、padding、background、height、min-height、max-height、width、min-width、max-width、overflow、position、left、right、top、bottom、z-index、float、clear、table-layout、vertical-align、page-break-after、page-bread-before和unicode-bidi
+
+
+## CSS3新增属性汇总
+
+* 1、box-shadow（阴影效果）
+* 2、border-color（为边框设置多种颜色）
+* 3、border-image（图片边框）
+* 4、text-shadow（文本阴影）
+* 5、text-overflow（文本截断）
+* 6、word-wrap（自动换行）
+* 7、border-radius（圆角边框）
+* 8、opacity（透明度）
+* 9、box-sizing（控制盒模型的组成模式）
+* 10、resize（元素缩放）
+* 11、outline（外边框）
+* 12、background-size（指定背景图片尺寸）
+* 13、background-origin（指定背景图片从哪里开始显示）
+* 14、background-clip（指定背景图片从什么位置开始裁剪）
+* 15、background（为一个元素指定多个背景）
+* 16、hsl（通过色调、饱和度、亮度来指定颜色颜色值）
+* 17、hsla（在hsl的基础上增加透明度设置）
+* 18、rgba（基于rgb设置颜色，a设置透明度
