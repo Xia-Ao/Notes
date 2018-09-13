@@ -10,7 +10,7 @@
 
 **序号越大，优先级越高**
 
-**important > 内联 > ID > 类 > 标签 | 伪类 | 属性选择 > 伪对象 > ~~继承 > 通配符~~ ++通配符 > 继承++**
+**important > 内联 > ID > 类 > 标签 | 伪类 | 属性选择 > 伪对象 > 通配符 > 继承++**
 
 
 1. 低优先级
@@ -29,31 +29,29 @@
 
 ### 引入方式优先级
 
-**序号越大，优先级越高**  
-内联样式 &gt;   
-1. 按照引用顺序，引用在后面的会覆盖引用在前面的样式
 
-      * **嵌入样式**
-      
-        ```html
-        <head>
-         <style>
-         .content {
-             background: red;
-         }
-         </style>
-        </head>
-        ```
-      
-      * **外部样式** 外部样式分两种引用方式，一种是`link` 一种的`@import` ，后面有介绍
-      
-        ```html
-        <head>
-         <link rel="stylesheet" type="text/css" href="style.css">
-        </head>
-        ```
-2. 最高优先级
-   * **内联样式** \(例如, style="font-weight:bold"\) 总会覆盖外部样式表的任何样式 ，因此可看作是具有最高的优先级。.
+1. 嵌入样式、外部样式
+
+按照引用顺序，引用在后面的会覆盖引用在前面的样式
+  * **嵌入样式**
+    ```html
+    <head>
+     <style>
+     .content {
+         background: red;
+     }
+     </style>
+    </head>
+    ```
+  * **外部样式** 外部样式分两种引用方式，一种是`link` 一种的`@import` ，后面有介绍
+    ```html
+    <head>
+     <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    ```
+
+2. 最高优先级**内联样式**
+例如, `style="font-weight:bold"` 总会覆盖外部样式表的任何样式 ，因此可看作是具有最高的优先级。.
 
 ### HTML 中引入 CSS 的方式
 

@@ -66,7 +66,7 @@
   - [2.18. ES6编程风格](/ES6/ES6编程风格.md)
 
 -  [3. CSS](CSS/README.md)</span>
-   * [3.1. CSS选择器](/CSS/图解CSS3/README.md)
+   * [3.1. CSS选择器](/CSS/图解CSS3/CSS3-selcetor/README.md)
    * [3.2. CSS优先级以及引入方式](/CSS/CSS优先级和引入方式.md)
    * [3.3. position不同值定位](/CSS/position.md)
    * [3.4. BFC神奇背后的原理-文摘](/CSS/BFC神奇背后的原理-文摘.md)
@@ -87,6 +87,7 @@
    * [3.17. 纯css斜切角实现](/CSS/斜切角实现.md)
    * [3.18. transition && animation动画属性](/CSS/animation&transition.md)
    * [3.19. 强大的transform](/CSS/transform.md)
+   * [3.20. CSS3揭秘](/CSS/CSS-secret1.md)
 
 
 -  [4. HTML](/HTML/README.md)</span>
@@ -119,15 +120,15 @@
 
 
 
--  <span id="Node">[7. Node.JS]()</span>
+-  [7. Node.JS]()</span>
 
 
 
--  <span id="AngularJS">[8. AngularJS](Angular.js/README.md)</span>
+-  [8. AngularJS](Angular.js/README.md)</span>
    - [`$http`请求数据]($http请求数据.md)
 
 
--  <span id="Vue.js">[9. VUE.js](Vue/README.md)</span>
+-  [9. VUE.js](Vue/README.md)</span>
   - [Vue双向数据绑定原理](/Vue/data-bind.md)
   - [Vue-Router原理及实现](/Vue/vue-router.md)
 

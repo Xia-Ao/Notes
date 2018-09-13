@@ -73,7 +73,7 @@
   
   
 -  <span id="css">[CSS](CSS/README.md)</span>
-   * [CSS选择器](/CSS/图解CSS3/README.md)
+   * [CSS选择器](/CSS/图解CSS3/CSS3-selcetor/README.md)
    * [CSS优先级](/CSS/CSS优先级和引入方式.md)
    * [CSS引入方式](/CSS/CSS优先级和引入方式.md)
    * [position不同值定位](/CSS/position.md)
