@@ -66,7 +66,7 @@
   - [2.18. ES6编程风格](/ES6/ES6编程风格.md)
 
 -  [3. CSS](CSS/README.md)</span>
-   * [3.1. CSS选择器](/CSS/图解CSS3/CSS3-selcetor/README.md)
+   * [3.1. CSS选择器](/CSS/CSS3-selcetor/README.md)
    * [3.2. CSS优先级以及引入方式](/CSS/CSS优先级和引入方式.md)
    * [3.3. position不同值定位](/CSS/position.md)
    * [3.4. BFC神奇背后的原理-文摘](/CSS/BFC神奇背后的原理-文摘.md)
