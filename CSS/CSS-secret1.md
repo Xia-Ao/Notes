@@ -28,4 +28,12 @@ filter: none | blur() | brightness() | contrast() | drop-shadow() | grayscale() 
 ### 自定义复选框
 在使用表单的时候，用到单选框，复选框，如果不用插件的话，可能只能使用自带的复选框样式，使用CSS的方法解决这个问题，当 <label> 元素与复选框关联之后， 也可以起到触发开关的作用，考虑将之前input的内容隐藏掉，给label添加一个伪类样式，这样就可以实现自定义的复选框样式，这样的方法也可以适用于一个开关按钮。但是要注意一个问题，影藏input不能使用display:none,这样会它从键盘 tab 键切换焦点的队列中完全删除，使用`position：absolute, clip：reat(0,0,0,0)`隐藏。CSS揭秘 [代码地址](http://dabblet.com/gist/fa5c622180b232043891)
 
-
+### 自适应内部元素
+min-content 。这个关键字将解析为这个容器内部最大的不可断行元素的宽度（即最宽的单词、图片或具有固定宽度的盒元素）。使用以下两行简单的CSS 代码就可以把figure 设置为恰当的宽度，并让它水平居中：
+```css
+figure {
+    width: min-content;
+    margin: auto;
+}
+```
+![](../assets/secreat1.png)

@@ -50,6 +50,8 @@ Math.Attributes
 | [log\(x\)](http://www.runoob.com/jsref/jsref-log.html) | 返回数的自然对数（底为e）。 |
 | [pow\(x,y\)](http://www.runoob.com/jsref/jsref-pow.html) | 返回 x 的 y 次幂。 |
 | [sqrt\(x\)](http://www.runoob.com/jsref/jsref-sqrt.html) | 返回数的平方根。 |
+|[hypot()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/hypot)|函数返回它的所有参数的平方和的平方根
+|[trunc()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc)|将数字的小数部分去掉，只保留整数部分。
 
 
 
