@@ -50,22 +50,22 @@ a['mySymbol'] // "Hello!"   // 字符串
 
 
 ### Symbol内置的值与方法
-* `Symbol.hasInstance`
-    对象的`Symbol.hasInstance`属性，指向一个内部方法。当其他对象使用`instanceof`运算符，判断是否为该对象的实例时，会调用这个方法。
-* `Symbol.isConcatSpreadable`
-    对象的`Symbol.isConcatSpreadable`属性等于一个布尔值，表示该对象用于`Array.prototype.concat()`时，是否可以展开。
-* `Symbol.species`
-    对象的`Symbol.species`属性，指向一个构造函数。创建衍生对象时，会使用该属性
-* `Symbol.match`
-    对象的`Symbol.match`属性，指向一个函数。当执行`str.match(myObject)`时，如果该属性存在，会调用它，返回该方法的返回值。
-* `Symbol.replace`
-    对象的`Symbol.replace`属性，指向一个方法，当该对象被`String.prototype.replace`方法调用时，会返回该方法的返回值。
+* **`Symbol.hasInstance`**  
+对象的`Symbol.hasInstance`属性，指向一个内部方法。当其他对象使用`instanceof`运算符，判断是否为该对象的实例时，会调用这个方法。
+* **`Symbol.isConcatSpreadable`**  
+对象的`Symbol.isConcatSpreadable`属性等于一个布尔值，表示该对象用于`Array.prototype.concat()`时，是否可以展开。
+* **`Symbol.species`**  
+对象的`Symbol.species`属性，指向一个构造函数。创建衍生对象时，会使用该属性
+* **`Symbol.match`**  
+对象的`Symbol.match`属性，指向一个函数。当执行`str.match(myObject)`时，如果该属性存在，会调用它，返回该方法的返回值。
+* **`Symbol.replace`**  
+对象的`Symbol.replace`属性，指向一个方法，当该对象被`String.prototype.replace`方法调用时，会返回该方法的返回值。
 * Symbol.search 、 Symbol.search 同理
-* `Symbol.iterator`
-* `Symbol.toPrimitive`
-    对象的`Symbol.toPrimitive`属性，指向一个方法。该对象被转为原始类型的值时，会调用这个方法，返回该对象对应的原始类型值。
-* `Symbol.toStringTag`
-* `Symbol.unscopables`
+* **`Symbol.iterator`**
+* **`Symbol.toPrimitive`**  
+对象的`Symbol.toPrimitive`属性，指向一个方法。该对象被转为原始类型的值时，会调用这个方法，返回该对象对应的原始类型值。
+* **`Symbol.toStringTag`**
+* **`Symbol.unscopables`**
 
 
 
