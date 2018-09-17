@@ -43,8 +43,11 @@ var handler = {
   }
 };
 ```
+
 6、 `eleteProperty`方法用于拦截`delete`操作，如果这个方法抛出错误或者返回`false`，当前属性就无法被`delete`命令删除。
+
 7、 `defineProperty`方法拦截了`Object.defineProperty`操作。
+
 8、`getOwnPropertyDescriptor`方法拦截`Object.getOwnPropertyDescriptor()`，返回一个属性描述对象或者`undefined`。
 
 9、`getPrototypeOf`方法主要用来拦截获取对象原型。具体来说，拦截下面这些操作。
@@ -53,6 +56,7 @@ var handler = {
   * `Object.getPrototypeOf()`
   * `Reflect.getPrototypeOf()`
   * `instanceof`
+
 10、`ownKeys`方法用来拦截对象自身属性的读取操作
 
 ### Proxy this指向
@@ -86,6 +90,7 @@ function createWebService(baseUrl) {
 
 ## Reflect
 为操作对象定义新的API，作用有以下几个。
+
 （1） 将`Object`对象的一些明显属于语言内部的方法（比如`Object.defineProperty`），放到`Reflect`对象上。现阶段，某些方法同时在`Object`和`Reflect`对象上部署，未来的新方法将只部署在`Reflect`对象上。也就是说，从`Reflect`对象上可以拿到语言内部的方法。
 
 （2） 修改某些`Object`方法的返回结果，让其变得更合理。

@@ -62,6 +62,7 @@ function co(gen) {
 ```
 
 最关键的就是`next`方法，
+
 1. 如果执行完了，返回
 2. 将对象编程一个Promise对象
 3. 判断： 如果是promise，执行next，如果转化之后还不是promise，reject出去并提示错误。

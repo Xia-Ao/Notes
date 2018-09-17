@@ -67,6 +67,7 @@ async函数返回的Promise对象状态变化：
 * 只要一个`await`语句后面的 Promise 变为`reject`，那么整个`async`函数都会中断执行。
 
 如果要解决第三点，某个await执行reject，async中断的问题，有两种方法：
+
 1、将await放到 `try...catch`中，不管这个是否执行成功，下一个await都会执行。如果有多个await命令，可以统一放在一个`try...catch`结构中。  
 2、在 await后面的Promise对象后面跟一个catch方法，主力可能出现的错误。
 

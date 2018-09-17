@@ -238,8 +238,9 @@ jsonToMap('[[true,7],[{"foo":3},["abc"]]]')
 
 ### WeakMap
 区别：
+
 1. `WeakMap`只接受对象作为键名（`null`除外），不接受其他类型的值作为键名
-2. `WeakMap`的键名所指向的对象，不
+2. `WeakMap`的键名所指向的对象，
 3. 没有遍历操作方法，没有size属性
 4. 不支持clear方法，只有get,set,has,delete四种方法。
 
@@ -250,14 +251,6 @@ WeakMap用途
 
 
 
-### FlatMap
-FlapMap是一个将多维数组降维的方法，目前只是一个提案，浏览器还没有实现，后面肯定会实现，所以经常会问到在这个API还没有实现的情况下，怎么使用现有的方法实现数组降维。
-
-一个十分优雅的实现方法：
-```js
-const ﬂattenDeep = (arr) => 
-    Array.isArray(arr) ? arr.reduce((a, b) => [...ﬂattenDeep(a), ...ﬂattenDeep(b)], []) : [arr]
-```
 
 
 
