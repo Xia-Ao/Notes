@@ -123,23 +123,32 @@
   - [5.14. HTTPS的七个误解](http://www.ruanyifeng.com/blog/2011/02/seven_myths_about_https.html) - 阮一峰
 
 
-- [6. Brower](/Browser/README.md)</span>
+- [6. Brower](/Browser/README.md)
   - [6.1. 浏览器内核、JS 引擎、页面呈现原理](https://www.zybuluo.com/yangfch3/note/671516) - 转载
   - [6.2. 九种浏览器端缓存机制概览](http://www.zyy1217.com/2017/05/13/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%AB%AF%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/) - 转载
 
 
 
--  [7. Node.JS]()</span>
-
+-  [7. Node.JS](/Node.js/README.md)
+   - [7.1. 深入浅出NodeJS笔记](/Node.js/深入浅出Node.js.md)
 
 
 -  [8. AngularJS](Angular.js/README.md)</span>
-   - [`$http`请求数据]($http请求数据.md)
+   - [8.1. `$http`请求数据](/Angular.js/$http请求数据.md)
+   - [8.2. `$compile`](/Angular.js/$compile.md)
+   - [8.3. angularJS内置服务](/Angular.js/angular内置服务.md)
+   - [8.4. filter过滤器](/Angular.js/filter过滤器.md)
+   - [8.5. ng指令](/Angular.js/ng指令.md)
+   - [8.6. ng-click传递参数](/Angular.js/ng-click传递参数.md)
+   - [8.6. angularJS Function](/Angular.js/angular-Function.md)
+   - [8.6. Module成员对象](/Angular.js/Module对象成员.md)
 
 
 -  [9. VUE.js](Vue/README.md)</span>
-  - [Vue双向数据绑定原理](/Vue/data-bind.md)
-  - [Vue-Router原理及实现](/Vue/vue-router.md)
+  - [9.1. Vue双向数据绑定原理](/Vue/data-bind.md)
+  - [9.2. Vue-Router原理](/Vue/vue-router.md)
+  - [9.2. Vue-Router原理及实现](/Vue/vue-router.md)
+  - [9.2. Vue坑点](/Vue/Vue使用总结.md)
 
 -  [10. ReactJS](React/README.md)</span>
 
