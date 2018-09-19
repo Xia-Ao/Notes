@@ -121,6 +121,7 @@
   - [5.12. HTTP 协议入门](http://www.ruanyifeng.com/blog/2016/08/http.html) - 阮一峰
   - [5.13. HTTP/2服务器推送](http://www.ruanyifeng.com/blog/2018/03/http2_server_push.html) - 阮一峰
   - [5.14. HTTPS的七个误解](http://www.ruanyifeng.com/blog/2011/02/seven_myths_about_https.html) - 阮一峰
+  - [HTTP缓存详解](/HTTP/HTTP缓存详解.md)
 
 
 - [6. Brower](/Browser/README.md)
