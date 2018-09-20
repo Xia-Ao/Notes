@@ -143,6 +143,8 @@ Last-Modified和ETags请求的http报头一起使用，服务器首先产生Last
 
 ![](../assets/cache2.png)
 
+![](../assets/cache3.png)
+
 
 ## 缓存的注意事项
 1. 只有get请求会被缓存，post请求不会
