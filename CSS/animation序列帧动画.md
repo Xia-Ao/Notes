@@ -63,3 +63,114 @@ tags: CSS
 }
 
 ```
+
+
+## 移动端抖动的原因以及解决
+在pc端上的时候，计算的就是绝对像素，不会出现抖动的问题，但是在移动端的时候，因为有时候进行移动端适配的时候对图片大小进行了缩放，导致子啊计算position的时候，因为缩放的原因出现了小数，终端的光点都是以自然数的形式出现的，这里需要做取整处理。取整一般是三种方式：`round/ceil/floor`，自然就出现了盈亏，导致我们在看到的时候因为位置有偏差，所以发生抖动。
+
+### 方案一：单帧图片
+就是一帧对应一张图片，不使用雪碧图，这样增加了HTTP请求，不推荐
+
+### 方案二：transform：scale()
+对于不同屏幕的尺寸，计算出原图片需要适配的图片大小比例，根据这个比例设置缩放。
+```css
+.steps_anim {
+    position: absolute;
+    width: 360px;
+    height: 540px;
+    background: url(//misc.aotu.io/leeenx/sprite/m.png) 0 0 no-repeat;
+    background-size: 1800px 540px;
+    top: 50%;
+    left: 50%;
+    transform-origin: left top;
+    margin: -5.625rem 0 0 -5.625rem;
+    transform: scale(.5);
+    animation: step 1.2s steps(5) infinite;
+}
+
+@keyframes step {
+    100% {
+        background-position: -1800px;
+    }
+}
+
+/* 写断点 */
+@media screen and (width: 320px) {
+    .steps_anim {
+        transform: scale(0.4266666667);
+    }
+}
+
+@media screen and (width: 360px) {
+    .steps_anim {
+        transform: scale(0.48);
+    }
+}
+
+@media screen and (width: 414px) {
+    .steps_anim {
+        transform: scale(0.552);
+    }
+}
+```
+这种方式就是比较麻烦了，每一个尺寸都需要一个断点，聪明人一般都不这么干，改进一下，使用js计算
+
+css：
+```css
+.steps_anim {
+    position: absolute;
+    width: 360px;
+    height: 540px;
+    background: url(//misc.aotu.io/leeenx/sprite/m.png) 0 0 no-repeat;
+    background-size: 1800px 540px;
+    top: 50%;
+    left: 50%;
+    transform-origin: left top;
+    margin: -5.625rem 0 0 -5.625rem;
+    transform: scale(.5);
+    animation: step 1.2s steps(5) infinite;
+}
+
+@keyframes step {
+    100% {
+        background-position: -1800px;
+    }
+}
+```
+js:
+```js
+document.write("<style id='scaleStyleSheet'>.steps_anim {scale(.5); }</style>"); 
+function doResize() {  
+    scaleStyleSheet.innerHTML = ".steps_anim {-webkit-transform: scale(" + (document.documentElement.clientWidth / 750) + ")}"; 
+}
+window.onresize = doResize; 
+doResize(); 
+```
+
+你会发现，在一个css代码中使用的js，总归感觉是不太好的，所以，肯定还会有更好的方法，
+### 方案三：svg缩放
+我们的目的是想让img随着我们的适配进行缩放，这里就可以使用svg和img标签一样的缩放性质，缺点是不利于自动化工具的处理。
+```html
+<svg viewBox="0, 0, 360, 540" class="steps_anim">
+  <image xlink:href="//misc.aotu.io/leeenx/sprite/m.png" width="1800" height="540" />
+</svg>
+```
+
+```sass
+.steps_anim {
+    position: absolute;
+    width: 9rem;
+    height: 13.5rem;
+    top: 50%;
+    left: 50%;
+    margin: -5.625rem 0 0 -5.625rem;
+    image {
+        animation: step 1.2s steps(5) infinite;
+    }
+}
+@keyframes step {
+    100% {
+        transform: translate3d(-1800px, 0, 0);
+    }
+}
+```

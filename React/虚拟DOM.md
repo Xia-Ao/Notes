@@ -21,6 +21,7 @@ Virtual DOM 的步骤
 
 ## 参考
 
+[React虚拟DOM浅析-AlloyTeam](http://www.alloyteam   .com/2015/10/react-virtual-analysis-of-the-dom/)
 [虚拟DOM介绍](https://www.jianshu.com/p/616999666920)
 [深度剖析：如何实现一个 Virtual DOM 算法](https://github.com/livoras/blog/issues/13)
 
