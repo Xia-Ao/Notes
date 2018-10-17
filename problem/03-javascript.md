@@ -635,8 +635,15 @@
     [继承的实现以及优缺点](https://xia-ao.gitbook.io/notes/js/ji-cheng)
 
 
-12. **new 一个对象具体做了什么**
+12. **new 一个对象具体做了什么**  
     代码 `new` *`Foo`* `(...)` 执行时，会发生以下事情：
+    ```js
+    // 3个步骤
+    var s = {};
+    s.__proto__ = Super.prototype;
+    Super.call(s);
+    // 注：1.2两步，其实就是Object.create(Super.prototype);
+    ```
     1. 一个继承自 *`Foo`* `.prototype` 的新对象被创建。
     2. 使用指定的参数调用构造函数 `Foo` ，并将 [this](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 绑定到新创建的对象。`new` *Foo* 等同于 `new ` *`Foo`* `()`，也就是没有指定参数列表， *`Foo`* 不带任何参数调用的情况。
     3. 由构造函数返回的对象就是 `new` 表达式的结果。如果构造函数没有显式返回一个对象，则使用步骤1创建的对象。（一般情况下，构造函数不返回值，但是用户可以选择主动返回对象，来覆盖正常的对象创建步骤）
@@ -658,11 +665,11 @@
     }
     ```
 
-14. **变量提升**
+14. **变量提升**  
     使用var定义的变量和函数的声明会被提升到代码执行的最前面。变量提升带来了关于作用域等诸多问题  
     ES6改用let const 声明变量，不存在变量提升，
 
-15. **举例说明一个匿名函数的典型用例**
+15. **举例说明一个匿名函数的典型用例**  
     匿名函数： 没有 函数名称的函数。
     匿名函数的作用是用于闭包和避免全局变量的污染以及函数名的冲突
     ```js
@@ -681,7 +688,7 @@
     参考： [匿名函数的典型用例](https://blog.csdn.net/weixin_40387601/article/details/80424956)
 
 
-16. **指出JS的宿主对象和原生对象的区别，为什么扩展JS内置对象不是好的做法？有哪些内置对象和内置函数？**
+16. **指出JS的宿主对象和原生对象的区别，为什么扩展JS内置对象不是好的做法？有哪些内置对象和内置函数？**  
     原生对象：Object、Function、Array、String、Boolean、Number、Date、RegExp、Error、EvalError、RangeError、ReferenceError、SyntaxError、TypeError、URIError、Global
 
     内置对象：Global（全局对象）、Math
@@ -690,7 +697,7 @@
 
     详细参考： [原生、内置、宿主对象详解](https://blog.csdn.net/weixin_40387601/article/details/80431670)
 
-17. **attribute和property的区别**
+17. **attribute和property的区别**  
     attribute是特性，是HTML中的，prototype是属性，这两个不是同一个东西，并且操作，获取都不太一样，有时候值也会存在不一样的情况。  
     [attribute和property的区别](http://stylechen.com/attribute-property.html)
 
@@ -701,23 +708,23 @@
     * DOMContentLoaded绑定到document，load绑定到window
     [详细区别](https://blog.csdn.net/weixin_40387601/article/details/80500235)
 
-19. **`===` 和 `==` , `[]` === `[]`, undefined === undefined,`[]` ==` []`, undefined == undefined**
+19. **`===` 和 `==` , `[]` === `[]`, undefined === undefined,`[]` ==` []`, undefined == undefined**  
     `===`严格相等， `==`在类型不一样的情况下，会做类型转换或者隐式转换。  
     `[]` === `[]` //false
     undefined === undefined //true  
     `[]` ==` []`  //false  
     undefined == undefined //true
 
-20. **typeof能够得到哪些值**
+20. **typeof能够得到哪些值**  
     "number"、"string"、"boolean"、"object"、"function" 和 "undefined" ，"Symbol"。返回的一定是基本类型
 
 
-21. **函数的作用域是什么？js 的作用域有几种？**
+21. **函数的作用域是什么？js 的作用域有几种？**  
     JavaScript的函数作用域是指在函数内声明的所有变量在函数体内始终是可见的，可以在整个函数的范围内使用及复用，也就是说在函数体内变量声明之前就已经可用了(事实上在嵌套的作用域中也可以使用)。
     ES5具有全局作用域和块级作用域  
     [答案详解](https://blog.csdn.net/weixin_40387601/article/details/80515665)
 
-22. **JS如何实现重载和多态**
+22. **JS如何实现重载和多态**  
     **重载：**  
     重载可认为是静态的多态，静态联编，发生在编译阶段；  
     重载就是一组具有相同名字、不同参数列表的函数（方法）。  
@@ -731,7 +738,7 @@
     [如何实现](https://blog.csdn.net/weixin_40387601/article/details/80529351)
 
 
-23. **常用的数组api，字符串api**
+23. **常用的数组api，字符串api**  
     **不改变原数组**
     1. contact
     2. slice
@@ -842,7 +849,7 @@
     [总结](https://xia-ao.gitbook.io/notes/js/js-deep-clone)
 
 
-29. **编写一个通用的事件监听函数**
+29. **编写一个通用的事件监听函数**  
     同24。
 
 

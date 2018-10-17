@@ -2,7 +2,7 @@
 - [Introduction](README.md)
 - [目录](README.md)
 - [1. JS](/JS/README.md)</span>
-  - [1.1. JS常用数据结构](/JS/data-structure.md)
+  - [1.1. 数据结构-树](/JS/data-structure.md)
   - [1.2. Array操作方法](/JS/Array操作方法.md)
   - [1.3. Math对象](/JS/Math对象.md)
   - [1.4. Number对象](/JS/Number对象.md)
