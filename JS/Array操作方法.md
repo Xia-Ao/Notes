@@ -6,85 +6,99 @@ tags: JS
 
 ## Array对象
 
-[官方API文档](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/length)
+[MDN官方API文档](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/length)
 
 ### 数组属性
 
-[`constructor`](http://www.runoob.com/jsref/jsref-constructor-array.html) 返回创建数组对象的原型函数。
+* [`constructor`](http://www.runoob.com/jsref/jsref-constructor-array.html) 返回创建数组对象的原型函数。
 
-[`length`](http://www.runoob.com/jsref/jsref-length-array.html)` `设置或返回数组元素的个数。
+* [`length`](http://www.runoob.com/jsref/jsref-length-array.html)` `设置或返回数组元素的个数。
 
-[`prototype`](http://www.runoob.com/jsref/jsref-prototype-array.html)` `允许你向数组对象添加属性或方法。
+* [`prototype`](http://www.runoob.com/jsref/jsref-prototype-array.html)` `允许你向数组对象添加属性或方法。
+
+### ES6中新增Array对象方法
+* [`Array.from`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from) 设计用来将类数组转化为数组，延伸用来遍历，去重等操作。
+
+* [`Array.isArray`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray)
+```js
+// isArray 优于 instanceof
+// 鲜为人知的事实：其实 Array.prototype 也是一个数组。
+Array.isArray(Array.prototype); 
+```
+
+* [`Array.of()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/of) 方法创建一个具有可变数量参数的新数组实例，而不考虑参数的数量或类型.
+`Array.of(7) `创建一个具有单个元素 7 的数组，而 `Array(7)` 创建一个长度为7的空数组（注意：这是指一个有7个空位的数组，而不是由7个`undefined`组成的数组）。
 
 ### Array 对象属性
 
-改变自身值的方法一共有9个，分别为pop、push、reverse、shift、sort、splice、unshift，以及两个ES6新增的方法copyWithin 和 fill
+改变自身值的方法，分别为`pop`、`push`、`reverse`、`shift`、`sort`、`splice`、`unshift`，以及两个ES6新增的方法`copyWithin` 和 `fill`
 
-不会改变自身的方法一共有9个，分别为concat、join、slice、toString、toLocateString、indexOf、lastIndexOf、未标准的toSource以及ES7新增的方法includes。
+不会改变自身的方法，分别为`concat`、`join`、`slice`、`toString`、`toLocateString`、`indexOf`、`lastIndexOf`、、未标准的`toSource`以及ES7新增的方法 `includes`。
+
 
 ##### 添加修改删除等操作
 
 **浅复制** 是指当对象的被复制时，只是复制了对象的引用，指向的依然是同一个对象  
-[`concat()`](http://www.runoob.com/jsref/jsref-concat-array.html) 连接两个或更多的数组，组成一个新的数组并返回。
+* [`concat()`](http://www.runoob.com/jsref/jsref-concat-array.html) 连接两个或更多的数组，组成一个新的数组并返回。
 
-[`copyWithin( )`](http://www.runoob.com/jsref/jsref-copywithin.html)` `从数组的指定位置拷贝元素到数组的另一个指定位置中。
+* [`copyWithin( )`](http://www.runoob.com/jsref/jsref-copywithin.html)` `从数组的指定位置拷贝元素到数组的另一个指定位置中。
 
-[`slice( start, end )`](#)将数组中一部分元素**浅复制**存入新的数组对象，并且返回这个数组对象。
+* [`slice( start, end )`](#)将数组中一部分元素**浅复制**存入新的数组对象，并且返回这个数组对象。
 
-[`fill()`](#)使用一个固定值来填充数组。
+* [`fill()`](#)使用一个固定值来填充数组。
 
-[`join()`](#)` `将数组中的所有元素连接成一个字符串，并返回这个字符串。
+* [`join()`](#)` `将数组中的所有元素连接成一个字符串，并返回这个字符串。
 
-[`push()`](http://www.runoob.com/jsref/jsref-push.html) 向数组的末尾添加一个或更多元素，并返回新的长度，**改变了原数组**。
+* [`push()`](http://www.runoob.com/jsref/jsref-push.html) 向数组的末尾添加一个或更多元素，并返回新的长度，**改变了原数组**。
 
-[`unshift()`](http://www.runoob.com/jsref/jsref-unshift.html)` `向数组的开头添加一个或更多元素，并返回新的长度。**改变了原数组**
+* [`unshift()`](http://www.runoob.com/jsref/jsref-unshift.html)` `向数组的开头添加一个或更多元素，并返回新的长度。**改变了原数组**
 
-[`shift()`](http://www.runoob.com/jsref/jsref-shift.html) 删除数组第一个元素，并返回数组的第一个元素，会**改变原数组**。
+* [`shift()`](http://www.runoob.com/jsref/jsref-shift.html) 删除数组第一个元素，并返回数组的第一个元素，会**改变原数组**。
 
-[`splice()`](http://www.runoob.com/jsref/jsref-splice.html) 从数组中添加或删除元素。会**改变原数组**
+* [`splice()`](http://www.runoob.com/jsref/jsref-splice.html) 从数组中添加或删除元素。会**改变原数组**
 
-[`pop()`](#)删除数组的最后一个元素并返回删除后的元素，**改变了原数组**。
+* [`pop()`](#)删除数组的最后一个元素并返回删除后的元素，**改变了原数组**。
 
 ##### 替换数组
 
-`copyWithin(ES6)`用于数组内元素之间的替换，即替换元素和被替换元素均是数组内的元素。**改变了原数组**  
+* `copyWithin(ES6)`用于数组内元素之间的替换，即替换元素和被替换元素均是数组内的元素。**改变了原数组**  
  `arr.copyWithin(target, start[, end = this.length])`
 
-`fill(ES6)`它同样用于数组元素替换，但与copyWithin略有不同，它主要用于将数组指定区间内的元素替换为某个值。**改变了原数组**
+* `fill(ES6)`它同样用于数组元素替换，但与copyWithin略有不同，它主要用于将数组指定区间内的元素替换为某个值。**改变了原数组**
 
 ##### 查询数组
 
-[`every()`](http://www.runoob.com/jsref/jsref-every.html) 检测数值元素的每个元素是否都符合条件。返回Boolean值。
+* [`every()`](http://www.runoob.com/jsref/jsref-every.html) 检测数值元素的每个元素是否都符合条件。返回Boolean值。
 
-[`filter()`](http://www.runoob.com/jsref/jsref-filter.html) 检测数值元素，并返回符合条件所有元素的数组。
+* [`filter()`](http://www.runoob.com/jsref/jsref-filter.html) 检测数值元素，并返回符合条件所有元素的数组。
 
-[`find()`](http://www.runoob.com/jsref/jsref-find.html) 返回符合传入测试（函数）条件的数组元素。当数组中的元素在测试条件时返回 true 时, find\(\) 返回符合条件的元素，之后的值不会再调用执行函数。
+* [`find()`](http://www.runoob.com/jsref/jsref-find.html) 返回符合传入测试（函数）条件的数组元素。当数组中的元素在测试条件时返回 true 时, find\(\) 返回符合条件的元素，之后的值不会再调用执行函数。
 
-[`some()`](#)` `检测数组元素中是否有元素符合指定条件。返回布尔值
+* [`some()`](#)` `检测数组元素中是否有元素符合指定条件。返回布尔值
 
-[`findIndex()`](http://www.runoob.com/jsref/jsref-findindex.html) 返回符合传入测试（函数）条件的数组元素索引。同样，检测到第一个的时候，然后返回，不在执行后面的。
+* [`findIndex()`](http://www.runoob.com/jsref/jsref-findindex.html) 返回符合传入测试（函数）条件的数组元素索引。同样，检测到第一个的时候，然后返回，不在执行后面的。
 
-[`indexOf(item,start)`](#)搜索数组中的元素，并返回它所在的位置，如果没有，返回-1，但是不区分NaN。
+* [`indexOf(item,start)`](#)搜索数组中的元素，并返回它所在的位置，如果没有，返回-1，但是不区分NaN。
 
-[`lastIndexOf()`](#)返回一个指定的字符串值最后出现的位置，在一个字符串中的指定位置从后向前搜索。
+* [`lastIndexOf()`](#)返回一个指定的字符串值最后出现的位置，在一个字符串中的指定位置从后向前搜索。
 
 **计算转换**
 
-[`reduce()`](http://www.runoob.com/jsref/jsref-reduce.html)` `将数组元素计算为一个值（从左到右）。如遇到字符串，执行字符串拼接。
+* [`reduce()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)` `将数组元素计算为一个值（从左到右）。如遇到字符串，执行字符串拼接。
 
-[`reduceRight()`](http://www.runoob.com/jsref/jsref-reduceright.html)` `将数组元素计算为一个值（从右到左）。
+* [`reduceRight()`](http://www.runoob.com/jsref/jsref-reduceright.html)` `将数组元素计算为一个值（从右到左）。
 
-[`toString()`](http://www.runoob.com/jsref/jsref-tostring-array.html)` `把数组转换为字符串，并返回结果。
+* [`toString()`](http://www.runoob.com/jsref/jsref-tostring-array.html)` `把数组转换为字符串，并返回结果。
 
-[`toLocaleString()`](https://www.gitbook.com/book/xia-ao/notes/edit#)把数组使用头LocaleString方法转换为字符串，并返回结果。
+* [`toLocaleString()`](https://www.gitbook.com/book/xia-ao/notes/edit#)把数组使用头LocaleString方法转换为字符串，并返回结果。
 
-[`valueOf()`](http://www.runoob.com/jsref/jsref-valueof-array.html)` `返回数组对象的原始值。
+* [`valueOf()`](http://www.runoob.com/jsref/jsref-valueof-array.html)` `返回数组对象的原始值。
 
 ##### 排序
 
-[`reverse()`](#)反转数组的元素顺序，该方法返回对数组的引用，会**改变原数组**。
+* [`reverse()`](#)反转数组的元素顺序，该方法返回对数组的引用，会**改变原数组**。
 
-[`sort( )`](http://www.runoob.com/jsref/jsref-sort.html)```对数组的元素进行排序。使用数字排序，你必须通过一个函数作为参数来调用。``
+* [`sort( )`](http://www.runoob.com/jsref/jsref-sort.html)```对数组的元素进行排序。使用数字排序，你必须通过一个函数作为参数来调用。``
 
 语法：`arr.sort([comparefn])`comparefn是可选的，如果省略，数组元素将按照各自转换为字符串的Unicode\(万国码\)位点顺序排序。
 
@@ -92,7 +106,7 @@ tags: JS
 
 1、**forEach**
 
-[`forEach(function(currentValue,index,arr),thisArg)`](http://www.runoob.com/jsref/jsref-foreach.html)  数组每个元素都执行一次回调函数。
+* [`forEach(function(currentValue,index,arr),thisArg)`](http://www.runoob.com/jsref/jsref-foreach.html)  数组每个元素都执行一次回调函数。
 
 * value 当前正在被处理的元素的值，index 当前元素的数组索引，array 数组本身
 * thisArg 可选，用来当做fn函数内的this对象。
@@ -113,7 +127,7 @@ filter() 方法使用传入的函数测试所有元素，并**返回所有通过
 
 5、**map**
 
-[`map()`](#)通过指定函数处理数组的每个元素，并返回处理后的**新数组**。
+* [`map()`](#)通过指定函数处理数组的每个元素，并返回处理后的**新数组**。
 
 语法：`arr.map(fn, thisArg)`
 
@@ -133,6 +147,16 @@ reduce() 方法接收一个方法作为累加器，数组中的每个值(从左�
 * 如果 initialValue 在调用 reduce 时被提供，那么第一个 previousValue 将等于 initialValue，此时 item 等于数组中的第一个值；
 * 如果 initialValue 未被提供，那么 previousVaule 等于数组中的第一个值，item 等于数组中的第二个值。此时如果数组为空，那么将抛出 TypeError。
 * 如果数组仅有一个元素，并且没有提供 initialValue，或提供了 initialValue 但数组为空，那么fn不会被执行，数组的唯一值将被返回。
+
+reduce方法很强大，用处有很多，语法接收一个callback和initialValue（可选，填与不填规则不一样的）
+举例将二维数组展开为一维
+```js
+[[1,2],[3,4],[5,6]].reduce(
+  (acc,cur)=>{
+    return acc.concat(cur)
+  }, []);
+// [1,2,3,4,5,6]
+```
 
 7、**reduceRight**
 
@@ -292,10 +316,10 @@ Object.prototype.toString.apply(a) === '[object Array]';
    ```
 
    **注意**：  
-   1、以上去重只对数组中同一种数据类型进行比较去重，如果有不同的数据类型，要区别对待  
-   2、向 Set 加入值的时候，不会发生类型转换，Set 内部判断两个值是否不同，使用的算法叫做“Same-value-zero equality”，它类似于精确相等运算符（===），主要的区别是NaN等于自身，在 Set 内部，它认为两个NaN是相等。  
-   3、indexOf内部使用的精确相等运算符（===），`NaN===NaN 的结果是 false`  
-   4、includes内部也是使用的类似精确相等运算符（===），`NaN===NaN 的结果是 true`
+   1. 以上去重只对数组中同一种数据类型进行比较去重，如果有不同的数据类型，要区别对待  
+   2. 向 Set 加入值的时候，不会发生类型转换，Set 内部判断两个值是否不同，使用的算法叫做“Same-value-zero equality”，它类似于精确相等运算符（===），主要的区别是NaN等于自身，在 Set 内部，它认为两个NaN是相等,`NaN===NaN` 的结果是 `true`。  
+   3. indexOf内部使用的精确相等运算符（===），`NaN===NaN` 的结果是 `false`  
+   4. includes内部也是使用的类似精确相等运算符（===），`NaN===NaN` 的结果是 `true`
 
 ### 1、单数组操作
 

@@ -171,9 +171,9 @@
   - [其他问题](/problem/13-其他.md)
   - [面试](/problem/阿里校招一面.md)
 
--  <span id="Linux">[Linux](/Linux/README.md)</span>
-  - [Linux下常用命令](/Linux/Linux下常用命令.md)
-  - [SSH连接](/Linux/SSH连接.md)
+-  <span id="other">[其他](/other/README.md)</span>
+  - [Linux下常用命令](/other/Linux下常用命令.md)
+  - [SSH连接](/other/SSH连接.md)
 
 
 

@@ -837,7 +837,7 @@
 
     [JS中位置获取](http://www.ruanyifeng.com/blog/2009/09/find_element_s_position_using_javascript.html)
 
-26. **如何实现图片滚动懒加载**
+26. **如何实现图片滚动懒加载**  
     [实现](https://i.jakeyu.top/2016/11/26/%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD/)
 
 27. **js 的字符串类型有哪些方法？ 正则表达式的函数怎么使用？**
@@ -883,7 +883,7 @@
     4. `<script for="domId" event="onXXX">fun();</script>`
     [绑定方式](https://my.oschina.net/junn/blog/113210)
 
-36. **DOM事件中target和currentTarget的区别**
+36. **DOM事件中target和currentTarget的区别**  
     target在事件流的目标阶段；currentTarget在事件流的捕获，目标及冒泡阶段。只有当事件流处在目标阶段的时候，两个的指向才是一样的， 而当处于捕获和冒泡阶段的时候，target指向被单击的对象而currentTarget指向当前事件活动的对象（一般为父级）。  
     currentTarget一般为事件中的this
 
