@@ -13,6 +13,7 @@ tags: JS
 #### 1、ajax请求，浏览器线程处理过程。
 
 ![](/assets/import.png)  
+
 ![](/assets/import2.png)
 
 这个过程跨越了解一下浏览器[重绘和回流](http://www.cnblogs.com/luleixia/p/6306061.html)
