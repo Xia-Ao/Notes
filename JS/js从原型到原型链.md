@@ -254,7 +254,7 @@ Object.getPrototypeOf(a) === b;
 // a ---> b
 ```
 
-#### proto
+#### `__proto__`
 
 ES6还带来了一个属性，通过这个属性也可以直接操作原型
 
