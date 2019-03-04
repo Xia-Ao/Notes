@@ -62,7 +62,14 @@ transition： [ none | <single-transition-property> ] || <time> || <single-trans
 ### animation
 
 ```html
-animation： <animation-name> || <animation-duration> || <animation-timing-function> || <animation-delay> || <animation-iteration-count> || <single-animation-direction>|| <animation-fill-mode> 
+animation： 
+	<animation-name> || 
+	<animation-duration> || 
+	<animation-timing-function> || 
+	<animation-delay> || 
+	<animation-iteration-count> || 
+	<single-animation-direction>|| 
+	<animation-fill-mode> 
 ```
 
 注意：
@@ -115,7 +122,7 @@ animation： <animation-name> || <animation-duration> || <animation-timing-funct
 
 使用keyframes关键字定义动画名为showColor的效果，可以定义各个状态，0%-100%，0%可以用from代表，100%可以用to代表，因此上面的代码等同于下面的形式。
 
-```html
+```css
 @keyframes showColor {
     from {background-color: red}
     20% {background-color: yellow}
@@ -126,7 +133,7 @@ animation： <animation-name> || <animation-duration> || <animation-timing-funct
 
 甚至还可以把多个状态写在一行
 
-```
+```css
 @keyframes showColor {
     from {background-color: red}
     20% ,50%  {background-color: yellow}
