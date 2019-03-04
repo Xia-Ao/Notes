@@ -27,7 +27,7 @@
   - [1.22. JS实现深复制](/JS/JS-deep-clone.md)
 
   - [1.23. 节流与防抖](/JS/节流与防抖.md)
-  - [1.24. JS引擎](/JS/JS引擎.md)
+  - [1.24. JS引擎&EventLoop](/JS/JS引擎.md)
 
   - [1.25. DOM基础](/JS/DOM对象属性方法.md)
   - [1.26. DOM遍历](/JS/DOM遍历.md)
@@ -104,6 +104,7 @@
    - [4.2. `<input>`](/HTML/input.md)
    - [4.3. `<iframe>`与 `<img><map><area>`组合使用示例](/HTML/iframe与img、map、area标签配合使用.md)
    - [4.4. `<!DOCTYPE >`](/HTML/doctype.md)
+   - [4.5. HTML中属性和特性](/HTML/props&attr.md)
 
 
 - [5. HTTP](/HTTP/README.md)</span>
