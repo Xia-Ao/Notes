@@ -6,7 +6,7 @@
 
 单侧投影：就是利用box-shadow属性的五个值，其中第三个值表示模糊半径，第四个值表示内外延伸，复制向内延伸，正值向外延伸，，通过配合这四个值实现单侧投影。
 
-不规则投影：box-shadow经常和border-radius一起使用，但是border-radius会对一些伪元素或半透明的装饰不起作用，这样box-shadow也就不起作用了，这怒地这种情况，可以使用添加filter滤镜。
+不规则投影：box-shadow经常和border-radius一起使用，但是border-radius会对一些伪元素或半透明的装饰不起作用，这样box-shadow也就不起作用了，遇到地这种情况，可以使用添加filter滤镜。
 
 
 ### 染色效果
@@ -15,7 +15,9 @@
 ```
 filter: none | blur() | brightness() | contrast() | drop-shadow() | grayscale() | hue-rotate() | invert() | opacity() | saturate() | sepia() | url();
 ```
-一个典型的应用场景：使用hover属性移入移出的时候，改变图片的颜色，方案一是使用两张图片，作用不同的背景图，问题也显而易见，方案二是使用滤镜，改变图片的色调，滤镜有很多种方法，参考： [http://www.runoob.com/cssref/css3-pr-filter.html](http://www.runoob.com/cssref/css3-pr-filter.html)，CSS揭秘中一个 [例子](http://dabblet.com/gist/0dced2852818c0f555e9),使用混合模式过滤，其他模式的过程还可以在过渡过程中添加动画。
+一个典型的应用场景：使用hover属性移入移出的时候，改变图片的颜色，
+* 方案一是使用两张图片，作用不同的背景图，问题也显而易见，
+* 方案二是使用滤镜，改变图片的色调，滤镜有很多种方法，参考： [http://www.runoob.com/cssref/css3-pr-filter.html](http://www.runoob.com/cssref/css3-pr-filter.html)，CSS揭秘中一个 [例子](http://dabblet.com/gist/0dced2852818c0f555e9),使用混合模式过滤，其他模式的过程还可以在过渡过程中添加动画。
 
 ### 毛玻璃效果
 这个效果非常有用，在demo中有 [重现](https://github.com/Xia-Ao/FrontendDemo/blob/master/30-CSS/11-background/%E6%AF%9B%E7%8E%BB%E7%92%83%E6%95%88%E6%9E%9C.html) ， [线上demo](http://dabblet.com/gist/d9f243ddd7dbffa341a4)

@@ -123,7 +123,9 @@ console.log(obj.name) // Kevin
 
 在javaScripts高级程序设计中，关于原型链是这么定义的：
 
+
 ![](/assets/chain1.png)
+
 
 下面我们看一下书上实现原型链的一个例子
 
@@ -156,6 +158,7 @@ console.log(instance.getSubValue());
 关系图如下所示：
 
 ![](/assets/chain2.png)  
+
 实际上，所有的引用类型默认都继承了Object，这个继承也是通过原型链实现的。记住，所有函数的默认原型都是Object的实例，因此默认原型都会包含一个内部指针，指向Object.peototype。所以完整的关系如下所示：
 
 ![](/assets/chain3.png)

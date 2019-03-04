@@ -63,13 +63,13 @@ transition： [ none | <single-transition-property> ] || <time> || <single-trans
 
 ```html
 animation： 
-	<animation-name> || 
-	<animation-duration> || 
-	<animation-timing-function> || 
-	<animation-delay> || 
-	<animation-iteration-count> || 
-	<single-animation-direction>|| 
-	<animation-fill-mode> 
+		<animation-name> || 
+		<animation-duration> || 
+		<animation-timing-function> || 
+		<animation-delay> || 
+		<animation-iteration-count> || 
+		<single-animation-direction>|| 
+		<animation-fill-mode> 
 ```
 
 注意：
