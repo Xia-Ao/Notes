@@ -58,19 +58,18 @@ transition： [ none | <single-transition-property> ] || <time> || <single-trans
 
 因为这些局限性的存在，所以才会有animation来解决优化这些问题。
 
-ss
 
 ### animation
 
 ```html
-animation： <single-animation-name> || <time> || <single-animation-timing-function> || <time> 
-                || <single-animation-iteration-count> || <single-animation-direction> 
-                || <single-animation-fill-mode> || <single-animation-play-state>
+animation： <animation-name> || <animation-duration> || <animation-timing-function> || <animation-delay> || <animation-iteration-count> || <single-animation-direction>|| <animation-fill-mode> 
 ```
 
-注意：如果只提供一个`<time>`参数，则为 `<' animation-duration '>` 的值定义；如果提供二个`<time>`参数，则第一个为 `<' animation-duration '>`的值定义，第二个为 `<' animation-delay '>`的值定义
+注意：
+* 使用animation时，属性是有顺序的
+* 如果只提供一个`<time>`参数，则为 `<' animation-duration '>` 的值定义；如果提供二个`<time>`参数，则第一个为 `<' animation-duration '>`的值定义，第二个为 `<' animation-delay '>`的值定义
 
-具体每个属性值如下：
+具体每个属性值如下：animation属性顺序如下
 
 * **animation-name**：检索或设置对象所应用的动画名称
 * **animation-duration**：检索或设置对象动画的持续时间
