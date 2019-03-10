@@ -53,6 +53,8 @@ Node.cloneNode() 方法返回调用该方法的节点的一个副本.
 * `node`是要和otherNode比较位置的节点.
 * `otherNode`是被和node比较位置的节点.
 返回值是`otherNode`节点和`node节点的位置关系`.
+
+
 ![](../assets/compareEle.png)
 
 ### [`Node.hasChildNodes()`](https://developer.mozilla.org/zh-CN/docs/Web/API/Node/hasChildNodes)
