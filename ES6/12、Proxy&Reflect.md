@@ -2,7 +2,21 @@
 
 ## proxy
 Proxy 用于修改某些操作的默认行为，等同于在语言层面做出修改，所以属于一种“元编程”（meta programming），即对编程语言进行编程。
+
 1、用法
+
+```js
+var obj = new Proxy({}, {
+  get: function (target, key, receiver) {
+    console.log(`getting ${key}!`);
+    return Reflect.get(target, key, receiver);
+  },
+  set: function (target, key, value, receiver) {
+    console.log(`setting ${key}!`);
+    return Reflect.set(target, key, value, receiver);
+  }
+});
+```
 
 代理对象操作
 ```js
@@ -34,8 +48,8 @@ let moniter = new Proxy(obj.{
 1、get()  
 2、set()  
 3、apply()  
-4、has()  
-5、`construct`方法用于拦截`new`命令，下面是拦截对象的写法。
+4、has()  `has`方法用来拦截`HasProperty`操作，即判断对象是否具有某个属性时，这个方法会生效。典型的操作就是`in`运算符。
+5、`construct` 方法用于拦截`new`命令，下面是拦截对象的写法。
 ```javascript
 var handler = {
   construct (target, args, newTarget) {
@@ -57,7 +71,35 @@ var handler = {
   * `Reflect.getPrototypeOf()`
   * `instanceof`
 
-10、`ownKeys`方法用来拦截对象自身属性的读取操作
+10、`ownKeys`方法用来拦截对象自身属性的读取操作，具体来说拦截下面几种操作
+	- `Object.getOwnPropertyNames()`
+  - `Object.getOwnPropertySymbols()`
+  - `Object.keys()`
+  - `for...in`循环
+  
+11、`isExtensible`方法拦截`Object.isExtensible`操作。
+
+12、`setPrototypeOf`方法主要用来拦截`Object.setPrototypeOf`方法。
+
+
+### get()
+
+`get`方法用于拦截某个属性的读取操作，可以接受三个参数，依次为目标对象、属性名和 proxy 实例本身（严格地说，是操作行为所针对的对象），其中最后一个参数可选。
+
+### set()
+
+`set`方法用来拦截某个属性的赋值操作，可以接受四个参数，依次为目标对象、属性名、属性值和 Proxy 实例本身，其中最后一个参数可选。
+
+### apply()
+
+`apply`方法拦截函数的调用、`call`和`apply`操作。
+
+`apply`方法可以接受三个参数，分别是目标对象、目标对象的上下文对象（`this`）和目标对象的参数数组。
+
+```js
+
+```
+
 
 ### Proxy this指向
 Proxy 代理的情况下，目标对象内部的`this`关键字会指向 Proxy 代理。
