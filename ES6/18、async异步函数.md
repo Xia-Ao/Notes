@@ -62,7 +62,7 @@ async函数返回的Promise对象状态变化：
 
 ### await命令
 
-* `await`命令后面是一个 Promise 对象。如果不是，会被转成一个立即`resolve`的 Promise 对象。
+* `await`命令后面是一个 Promise 对象。如果不是，**会被转成一个立即`resolve`的 Promise 对象**。
 * `await`命令后面的 Promise 对象如果变为`reject`状态，则`reject`的参数会被`catch`方法的回调函数接收到。
 * 只要一个`await`语句后面的 Promise 变为`reject`，那么整个`async`函数都会中断执行。
 

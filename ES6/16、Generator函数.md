@@ -7,7 +7,7 @@ Generator 函数是 ES6 提供的一种异步编程解决方案,执行 Generator
 ```javascript
 function * foo(x, y) { ··· }
 function *foo(x, y) { ··· }
-function* foo(x, y) { ··· }
+function* foo(x, y) { ··· }			// 推荐采用这种写法
 function*foo(x, y) { ··· }
 ```
 推荐采用第三种方法。
@@ -167,7 +167,7 @@ g.return(7) // { value: 4, done: false }
 g.next() // { value: 5, done: false }
 g.next() // { value: 7, done: true }
 ```
-上面代码中，调用return之后，yield中的3 没有执行，然后去执行4 5 ， 最后之后`return(7)`,返回执行完成true
+上面代码中，调用return之后，yield中的3 没有执行，然后去执行finally中的4 5 ，先执行4， 将4的返回值给return，return传入的参数给到最后一个yield，然后next执行5， 最后之后`return(7)`,返回执行完成true
 
 ## next()、throw()、return() 的共同点
 
@@ -205,7 +205,7 @@ gen.return(2); // Object {value: 2, done: true}
 ```
 
 
-## yield表达式
+## yield*表达式
 用来在一个 Generator 函数里面执行另一个 Generator 函数。
 ```javascript
 function* bar() {

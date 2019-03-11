@@ -205,21 +205,6 @@ var y = new Rectangle(3, 4);  // 正确
 
 
 
-```javascript
-class Foo {
-}
-
-Foo.prop = 1;
-Foo.prop // 1
-```
-
-```javascript
-class Foo {
-}
-
-Foo.prop = 1;
-Foo.prop // 1
-```
 
 
 
@@ -299,7 +284,7 @@ class ColorPoint extends Point {
 
 ### super关键字
 
-`super`这个关键字，既可以当作函数使用，也可以当作对象使用，使用super的时候，必须显式指定是作为函数、还是作为对象使用，否则会报错。
+`super`这个关键字，既可以当作函数使用，也可以当作对象使用。
 
 使用`super`的时候，必须显式指定是作为函数、还是作为对象使用，否则会报错。
 

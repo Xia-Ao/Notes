@@ -56,13 +56,14 @@
   - [2.9. Symbol对象](/ES6/10、Symbol.md)
   - [2.10. Map & Set 结构](/ES6/11、Set&Map.md)
   - [2.11. Proxy&Reflect](/ES6/12、Proxy%26Reflect.md)
-  - [2.12. Module模块](/ES6/Module.md)
+  - [2.12. Symbol](/ES6/symbol.md)
   - [2.13. Generator函数](/ES6/16、Generator函数.md)
   - [2.14. Generator异步操作](/ES6/17、Generator异步操作.md)
   - [2.15. async异步函数](/ES6/18、async异步函数.md)
   - [2.16. class继承](/ES6/19、class继承.md)
   - [2.17. Decorator装饰器](/ES6/20、Decorator装饰器.md)
-  - [2.18. ES6编程风格](/ES6/ES6编程风格.md)
+  - [2.18. ES6编程风格](/ES6/21、ES6编程风格.md)
+  - [2.19. ES6Module加载](/ES6/22、Module.md)
 
 -  [3. CSS](CSS/README.md)</span>
    * [3.1. CSS选择器](/CSS/CSS3-selcetor/README.md)
