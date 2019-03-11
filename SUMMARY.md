@@ -53,6 +53,7 @@
   - [2.5. 数组扩展](/ES6/5、数组扩展.md)
   - [2.6. 函数扩展](/ES6/6、函数扩展.md)
   - [2.7. 对象扩展](/ES6/7、对象扩展.md)
+  - [2.8. 正则扩展](/ES6/8、正则扩展.md)
   - [2.9. Symbol对象](/ES6/10、Symbol.md)
   - [2.10. Map & Set 结构](/ES6/11、Set&Map.md)
   - [2.11. Proxy&Reflect](/ES6/12、Proxy%26Reflect.md)
