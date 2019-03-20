@@ -126,6 +126,29 @@ ES6在类里面不提供私有属性，因此通过变通方法 模拟实现，�
 ### this指向
 类的**方法内部中this默认指向类的实例**。如果将类的方法提出来单独使用，则this指向改方法运行所在的环境。
 
+```js
+class Promise {
+  constructor (context) {
+    this.state = 'pending';
+    this.data = null;
+    this.resolvedCallback = [];
+    this.rejectedCallback = [];
+
+    this.resolve = (value) => {
+      // 注意this指向， 指向实例，在类中使用没有任何问题，但是如果不是在类中使用，this指向运行时在的环境，一般是undefined
+      // 一般使用箭头函数，指定this指向为函数定义时所在的环境
+      // 函数里面的this通过箭头函数指定到定义时this的指向，此时this为实例
+      if (this.state === 'pending') {
+        this.state = 'resolved';
+        this.data = value;
+        // resolve执行
+        this.resolvedCallback.forEach((fn) => fn(value))
+      }
+    };
+	}
+}
+```
+
 
 ### Class的get set方法
 在"类"的内部可以使用`get`和`set`关键字，对某个属性设置存值函数和取值函数，拦截该属性的存取行为。
@@ -206,25 +229,7 @@ var y = new Rectangle(3, 4);  // 正确
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <hr/>
-
-
-
-
 
 
 
