@@ -21,7 +21,7 @@
       "size": 3
     },
     "highlight-pro": {
-      "theme": "dark",
+      "theme": "vs2015",
       "map": {
         "shell": "bash",
         "sh": "bash",
