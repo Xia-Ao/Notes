@@ -1,7 +1,5 @@
 一个进击的小前端的在前端之路上的笔记，原谅用这么俗气的名字，不想有多少影响力，只为对自己有用。
 
-## [Introduction](README.md)
-
 ## [目录](README.md)
 - <span id='language'>[语言]()</span>
   - [JS](/Language/JS/README.md)
