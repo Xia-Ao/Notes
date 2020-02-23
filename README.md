@@ -1,11 +1,8 @@
 一个进击的小前端的在前端之路上的笔记，原谅用这么俗气的名字，不想有多少影响力，只为对自己有用。
 
-- [Introduction](README.md)
-- 分类：[JS](#js)、[ES6](#es6)、[CSS](#css)、[HTML](#html)、[node](#node)、[HTTP](#http)、[Browser](#browser)、[Java](#java)
--  [AngularJS](#AngularJS)、[VUE.js](#Vue.js)
-- [目录](README.md)
+## [Introduction](README.md)
 
-
+## [目录](README.md)
 - <span id='language'>[语言]()</span>
   - [JS](/Language/JS/README.md)
     - [DOM基础](/Language/JS/DOM对象属性方法.md)
@@ -71,7 +68,7 @@
     - [`<input>`](/Language/HTML/input.md)
     - [`<iframe>`与 `<img><map><area>`组合使用示例](/Language/HTML/iframe与img、map、area标签配合使用.md)
     - [`<!DOCTYPE >`](/Language/HTML/doctype.md)
-- [ES6](/ES6/README.md)
+- <span id="es6">[ES6](/ES6/README.md)</span>
   - [class继承](/ES6/19、class继承.md)
   - [1、let&const变量解构赋值](/ES6/1、let&const变量解构赋值.md)
   - [2、变量解构赋值](/ES6/2、变量解构赋值.md)
@@ -139,7 +136,7 @@
     - [浏览器内核、JS 引擎、页面呈现原理及其优化](https://www.zybuluo.com/yangfch3/note/671516) - 转载
     - [九种浏览器端缓存机制概览](http://www.zyy1217.com/2017/05/13/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%AB%AF%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/) - 转载
 - <span id='interview'>[前端面试](/Interview/README.md)</span>
- - [xxx]()
+  - [xxx]()
 
 
 
