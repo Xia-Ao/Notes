@@ -4,8 +4,6 @@
   "language": "zh",
   "author": "xiaao",
   "plugins": [
-    "-highlight",
-    "highlight-pro"
   ],
   "pluginsConfig": {
     "github": {
@@ -20,14 +18,7 @@
       "family": "sans",
       "size": 3
     },
-    "highlight-pro": {
-      "theme": "vs2015",
-      "map": {
-        "shell": "bash",
-        "sh": "bash",
-        "js": "javascript"
-      }
-    },
+   
     "theme-default": {
       "showLevel": true
     }
