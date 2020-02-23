@@ -2,6 +2,7 @@
   "title": "前端知识体系",
   "description": "有关前端知识总结以及面试题目",
   "language": "zh",
+  "author": "xiaao",
   "plugins": [
     "-highlight",
     "highlight-pro"
@@ -15,12 +16,12 @@
       "label": "编辑本页"
     },
     "fontsettings": {
-      "theme": "night",
+      "theme": "white",
       "family": "sans",
       "size": 3
     },
     "highlight-pro": {
-      "theme": "monokai-sublime",
+      "theme": "default",
       "map": {
         "shell": "bash",
         "sh": "bash",
