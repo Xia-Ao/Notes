@@ -1,7 +1,7 @@
 - [Introduction](README.md)
 - <span id='language'>[语言]()</span>
   - [JS](/Language/JS/README.md)
-    - [DOM基础](/Language/JS/DOM对象属性方法.md)
+    - [DOM对象节点介绍](/Language/JS/DOM对象节点介绍.md)
     - [AJAX过程以及知识体系](/Language/JS/AJAX使用详细介绍.md)
     - [**同源策略到前端跨域**](/Language/JS/同源策略到前端跨域.md)
     - [Array操作方法](/Language/JS/Array操作方法.md)
