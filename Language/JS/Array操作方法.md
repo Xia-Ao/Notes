@@ -4,11 +4,9 @@ date: 2017-10-05 20:05:40
 tags: JS
 ---
 
-## Array对象
+# Array对象
 
-[MDN官方API文档](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/length)
-
-### 数组属性
+### Array属性
 
 * [`constructor`](http://www.runoob.com/jsref/jsref-constructor-array.html) 返回创建数组对象的原型函数。
 
@@ -16,27 +14,71 @@ tags: JS
 
 * [`prototype`](http://www.runoob.com/jsref/jsref-prototype-array.html)` `允许你向数组对象添加属性或方法。
 
-### ES6中新增Array对象方法
-* [`Array.from`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from) 设计用来将类数组转化为数组，延伸用来遍历，去重等操作。
+###  数组新增方法
+#### ES2019中
+- [Array.flat(depth)](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) 数组扁平化。 depth指定要提取嵌套数组的结构深度，默认值为 1。返回一个新的数组。
 
-* [`Array.isArray`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray)
+#### ES2015中新增
+##### [`Array.of()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/of)
+
+`Array.of`用于将参数依次转化为数组中的一项，然后返回这个新数组，而不管这个参数是数字还是其它，它基本上与Array构造器功能一致，唯一的区别就在单个数字参数的处理上.
+
+`Array.of(7) `创建一个具有单个元素 7 的数组，而 `Array(7)` 创建一个长度为7的空数组（注意：这是指一个有7个空位的数组，而不是由7个`undefined`组成的数组）。
+```js
+Array.of(7); // [7]
+Array(7); // [undefined × 7] length = 7
+```
+
+##### [`Array.from`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from)
+
+只要一个对象有迭代器，Array.from就能把它变成一个数组（当然，是返回新的数组，不改变原对象）。  
+
+语法：`Array.from(arrayLike[, processingFn[, thisArg]])` 
+
+Array.from拥有3个形参，第一个为类似数组的对象，必选。第二个为加工函数，新生成的数组会经过该函数的加工再返回。第三个为this作用域，表示加工函数执行时this的值。后两个参数都是可选的。 
+
+**注意**:一旦使用加工函数，必须明确指定返回值，否则将隐式返回undefined，最终生成的数组也会变成一个只包含若干个undefined元素的空数组。
+
+
+
+#### [Array.isArray()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray)
+判断是否是一个数组
+
 ```js
 // isArray 优于 instanceof
 // 鲜为人知的事实：其实 Array.prototype 也是一个数组。
 Array.isArray(Array.prototype); 
 ```
+判定一个对象是数组的五种方法，前四种都不保险，如果将某个对象的对象的`__proto__`属性为`Array.prototype`，便导致了该对象继承了Array对象，前四种方法就会判定为true.
 
-* [`Array.of()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/of) 方法创建一个具有可变数量参数的新数组实例，而不考虑参数的数量或类型.
-`Array.of(7) `创建一个具有单个元素 7 的数组，而 `Array(7)` 创建一个长度为7的空数组（注意：这是指一个有7个空位的数组，而不是由7个`undefined`组成的数组）。
+```js
+var a = [];
+// 1.基于instanceof
+a instanceof Array;
+// 2.基于constructor
+a.constructor === Array;
+// 3.基于Object.prototype.isPrototypeOf
+Array.prototype.isPrototypeOf(a);
+// 4.基于getPrototypeOf
+Object.getPrototypeOf(a) === Array.prototype;
+// 5.基于Object.prototype.toString
+Object.prototype.toString.apply(a) === '[object Array]';
+```
 
-### Array 对象属性
+所以严格意义上判定一个对象是否是数组，推荐使用第五种方法，再说到`Array.isArray()`，实际上就是推荐使用的第五种toString方法。
+
+#### [`copyWithin()`](http://www.runoob.com/jsref/jsref-copywithin.html)
+从数组的指定位置浅拷贝元素到数组的另一个指定位置中。会改变愿数组，但是不会改变数组长度
+
+
+### Array 方法
 
 改变自身值的方法，分别为`pop`、`push`、`reverse`、`shift`、`sort`、`splice`、`unshift`，以及两个ES6新增的方法`copyWithin` 和 `fill`
 
-不会改变自身的方法，分别为`concat`、`join`、`slice`、`toString`、`toLocateString`、`indexOf`、`lastIndexOf`、、未标准的`toSource`以及ES7新增的方法 `includes`。
+不会改变自身的方法，分别为`concat`、`join`、`slice`、`toString`、`toLocateString`、`indexOf`、`lastIndexOf`、未标准的`toSource`以及ES7新增的方法 `includes`。
 
 
-##### 添加修改删除等操作
+#### 添加修改删除等操作
 
 **浅复制** 是指当对象的被复制时，只是复制了对象的引用，指向的依然是同一个对象  
 * [`concat()`](http://www.runoob.com/jsref/jsref-concat-array.html) 连接两个或更多的数组，组成一个新的数组并返回。
@@ -59,14 +101,14 @@ Array.isArray(Array.prototype);
 
 * [`pop()`](#)删除数组的最后一个元素并返回删除后的元素，**改变了原数组**。
 
-##### 替换数组
+#### 替换数组
 
 * `copyWithin(ES6)`用于数组内元素之间的替换，即替换元素和被替换元素均是数组内的元素。**改变了原数组**  
  `arr.copyWithin(target, start[, end = this.length])`
 
 * `fill(ES6)`它同样用于数组元素替换，但与copyWithin略有不同，它主要用于将数组指定区间内的元素替换为某个值。**改变了原数组**
 
-##### 查询数组
+#### 查询数组
 
 * [`every()`](http://www.runoob.com/jsref/jsref-every.html) 检测数值元素的每个元素是否都符合条件。返回Boolean值。
 
@@ -82,7 +124,7 @@ Array.isArray(Array.prototype);
 
 * [`lastIndexOf()`](#)返回一个指定的字符串值最后出现的位置，在一个字符串中的指定位置从后向前搜索。
 
-**计算转换**
+#### 其他
 
 * [`reduce()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)` `将数组元素计算为一个值（从左到右）。如遇到字符串，执行字符串拼接。
 
@@ -94,7 +136,7 @@ Array.isArray(Array.prototype);
 
 * [`valueOf()`](http://www.runoob.com/jsref/jsref-valueof-array.html)` `返回数组对象的原始值。
 
-##### 排序
+#### 排序
 
 * [`reverse()`](#)反转数组的元素顺序，该方法返回对数组的引用，会**改变原数组**。
 
@@ -102,7 +144,8 @@ Array.isArray(Array.prototype);
 
 语法：`arr.sort([comparefn])`comparefn是可选的，如果省略，数组元素将按照各自转换为字符串的Unicode\(万国码\)位点顺序排序。
 
-##### 遍历方法12个
+
+### 数组的遍历
 
 1、**forEach**
 
@@ -184,54 +227,6 @@ findIndex() 方法也基于ECMAScript 2015（ES6）规范，它返回数组中�
 
 12、**Symbol.iterator(ES6)**
 
-###小结：
-1. Array.prototype本身就是一个数组，并且它的长度为0。
-2. 所有插入元素的方法, 比如 push、unshift，一律返回数组新的长度；
-3. 所有删除元素的方法，比如 pop、shift、splice 一律返回删除的元素，或者返回删除的多个元素组成的数组；
-4. 部分遍历方法，比如 forEach、every、some、filter、map、find、findIndex，它们都包含function(value,index,array){} 和 thisArg 这样两个形参。
-5. Array.prototype 的所有方法均具有鸭式辨型这种神奇的特性。它们不止可以用来处理数组对象，还可以处理类数组对象。
-
-
-
-
-#### Array.of （构造函数）
-
-`Array.of`用于将参数依次转化为数组中的一项，然后返回这个新数组，而不管这个参数是数字还是其它，它基本上与Array构造器功能一致，唯一的区别就在单个数字参数的处理上.
-
-```js
-Array.of(8.0); // [8]
-Array(8.0); // [undefined × 8]
-```
-
-#### Array.from （构造函数）
-
-
-只要一个对象有迭代器，Array.from就能把它变成一个数组（当然，是返回新的数组，不改变原对象）。  
-语法：`Array.from(arrayLike[, processingFn[, thisArg]])`  
-Array.from拥有3个形参，第一个为类似数组的对象，必选。第二个为加工函数，新生成的数组会经过该函数的加工再返回。第三个为this作用域，表示加工函数执行时this的值。后两个参数都是可选的。  
-**注意**:一旦使用加工函数，必须明确指定返回值，否则将隐式返回undefined，最终生成的数组也会变成一个只包含若干个undefined元素的空数组。
-
-#### Array.isArray\(\)
-
-判定一个对象是数组的五种方法，前四种都不保险，如果将某个对象的对象的`__proto__`属性为`Array.prototype`，便导致了该对象继承了Array对象，前四种方法就会判定为true.
-
-```js
-var a = [];
-// 1.基于instanceof
-a instanceof Array;
-// 2.基于constructor
-a.constructor === Array;
-// 3.基于Object.prototype.isPrototypeOf
-Array.prototype.isPrototypeOf(a);
-// 4.基于getPrototypeOf
-Object.getPrototypeOf(a) === Array.prototype;
-// 5.基于Object.prototype.toString
-Object.prototype.toString.apply(a) === '[object Array]';
-```
-
-所以严格意义上判定一个对象是否是数组，推荐使用第五种方法，再说到`Array.isArray()`，实际上就是推荐使用的第五种toString方法。
-
-典型问题：
 
 ### 数组去重
 
@@ -253,7 +248,7 @@ Object.prototype.toString.apply(a) === '[object Array]';
 
    // [0, 2, 3, 4, 6]
    ```
-时间复杂度：O(n^2)
+    时间复杂度：O(n^2)
 
   
 2. 使用IndexOf或者includes检查是否重复，其实跟第一种方法比较就是将第二层循环使用了IndexOf这种有遍历接口的API操作，这个操作的本质是不是跟第一种方法一样使用循环遍历，这个就是要看源码了。
@@ -276,9 +271,7 @@ Object.prototype.toString.apply(a) === '[object Array]';
 
    // [0, 2, 3, 4, 6]
    ```
-  时间复杂度：
-
-
+   时间复杂度：O(n^2)
    
 
 3. 先用`sort`排序，或者已知数组是有序的，后比较相邻两个是否相等。
@@ -299,7 +292,7 @@ Object.prototype.toString.apply(a) === '[object Array]';
 
    // [0, 2, 3, 4, 6]
    ```
-时间复杂度：有序数组O(n)
+   时间复杂度：有序数组O(2n)
 
 
 
@@ -321,8 +314,35 @@ Object.prototype.toString.apply(a) === '[object Array]';
    3. indexOf内部使用的精确相等运算符（===），`NaN===NaN` 的结果是 `false`  
    4. includes内部也是使用的类似精确相等运算符（===），`NaN===NaN` 的结果是 `true`
 
-### 1、单数组操作
+### 扩展运算符
+`...` 可以将一个数组转化为单个参数。
+- 不用再通过`apply`方法将数组转化为函数参数
+- 可以实现数组的复制（一层）
+- 合并数组
+- 解构赋值
 
-### 2、数组遍历方法
 
-### 3、多数组操作
+### 数组的空位
+详见ES6中数组的介绍
+
+### sort排序的稳定性
+何为稳定性：
+
+假设有一个姓和名的列表，要求按照“姓氏为主要关键字，名字为次要关键字”进行排序。开发者可能会先按名字排序，再按姓氏进行排序。如果排序算法是稳定的，这样就可以达到“先姓氏，后名字”的排序效果。如果是不稳定的，就不行。
+
+常见的排序算法之中，插入排序、合并排序、冒泡排序等都是稳定的，堆排序、快速排序等是不稳定的。不稳定排序的主要缺点是，多重排序时可能会产生问题。
+
+早先的 ECMAScript 没有规定，`Array.prototype.sort()`的默认排序算法是否稳定，留给浏览器自己决定，这导致某些实现是不稳定的。ES2019 明确规定，`Array.prototype.sort()`的默认排序算法必须稳定。这个规定已经做到了，现在 JavaScript 各个主要实现的默认排序算法都是稳定的。
+
+### 小结：
+1. Array.prototype本身就是一个数组，并且它的长度为0。
+2. 所有插入元素的方法, 比如 push、unshift，一律返回数组新的长度；
+3. 所有删除元素的方法，比如 pop、shift、splice 一律返回删除的元素，或者返回删除的多个元素组成的数组；
+4. 部分遍历方法，比如 forEach、every、some、filter、map、find、findIndex，它们都包含function(value,index,array){} 和 thisArg 这样两个形参。
+5. Array.prototype 的所有方法均具有鸭式辨型这种神奇的特性。它们不止可以用来处理数组对象，还可以处理类数组对象。
+
+
+参考：
+
+- [官方API](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)
+- [ES6数组](https://es6.ruanyifeng.com/#docs/array)
