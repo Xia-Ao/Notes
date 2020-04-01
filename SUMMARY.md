@@ -112,20 +112,18 @@
 - <span id='test'>[测试](/Test/README.md)</span>
 - <span id='computer'>[计算机技术](/Computer/README.md)</span>
   - [计算机网络](/Computer/Network/README.md)
+    - [TCP数据传输](/Computer/Network/TCP数据传输.md)
     - [TCP和UDP的区别](/Computer/Network/TCP和UDP.md)
-    - [TCP三次握手的过程](/Computer/Network/TCP三次握手与四次分手.md)
-    - [cookie与Session机制区别以及Cookie SessionStorage LocalStorage异同](/Computer/Network/cookie与Session的区别.md)
-    - [从点击到呈现 — 详解一次HTTP请求（转载）](http://www.zyy1217.com/2017/03/01/%E4%BB%8E%E7%82%B9%E5%87%BB%E5%88%B0%E5%91%88%E7%8E%B0%20%E2%80%94%20%E8%AF%A6%E8%A7%A3%E4%B8%80%E6%AC%A1HTTP%E8%AF%B7%E6%B1%82/)
-  关于互联网协议，还可以详细了解阮一峰老师的互联网协议入门，里面详细讲到网络传输。
-    - [互联网协议入门（一）](http://www.ruanyifeng.com/blog/2012/05/internet_protocol_suite_part_i.html) - 阮一峰
-    - [互联网协议入门（二）](http://www.ruanyifeng.com/blog/2012/06/internet_protocol_suite_part_ii.html)- 阮一峰
-    - [DNS原理入门](http://www.ruanyifeng.com/blog/2016/06/dns.html) - 阮一峰 
-    - [《HTTP权威指南》之缓存详解](http://www.zyy1217.com/2017/05/14/Computer/Network%E7%BC%93%E5%AD%98%E8%AF%A6%E8%A7%A3/) - 转载
-    - [status状态码](/Computer/Network/status状态码.md) 
-    - [http协议以及https原理及SSL加密过程](/Computer/Network/Computer/Network--https.md)
-    - [HTTP 协议入门](http://www.ruanyifeng.com/blog/2016/08/Computer/Network.html) - 阮一峰
-    - [HTTP/2服务器推送](http://www.ruanyifeng.com/blog/2018/03/Computer/Network2_server_push.html) - 阮一峰
+    - [HTTP协议概述](/Computer/Network/HTTP协议概述.md)
+    - [HTTP缓存详解](/Computer/Network/HTTP缓存详解.md)
+    - [HTTPS以及SSL建立过程](/Computer/Network/Computer/Network/HTTPS.md)
     - [HTTPS的七个误解（译文）](http://www.ruanyifeng.com/blog/2011/02/seven_myths_about_https.html) - 阮一峰
+    - [cookie与Session机制区别以及Cookie SessionStorage LocalStorage异同](/Computer/Network/cookie与Session的区别.md)
+    - [HTTP状态码Status](/Computer/Network/status状态码.md) 
+    - [DNS原理入门](http://www.ruanyifeng.com/blog/2016/06/dns.html) - 阮一峰 
+    - [网络攻击与防御](/Computer/Network/网络攻击与防御.md)
+    - [HTTP转发与重定向](/Computer/Network/HTTP转发与重定向.md)
+    - [登录认证设计](/Computer/Network/登录认证.md)
   - [操作系统](/Computer/OpSystem/README.md)
   - [Linux](/Computer/Linux/README.md)
   - [浏览器](/Computer/Browser/README.md)
@@ -133,75 +131,3 @@
     - [九种浏览器端缓存机制概览](http://www.zyy1217.com/2017/05/13/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%AB%AF%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/) - 转载
 - <span id='interview'>[前端面试](/Interview/README.md)</span>
   - [xxx]()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
