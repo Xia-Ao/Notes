@@ -6,7 +6,7 @@ tags: JS
 
 ## 树
 
-![](../assets/tree.png)
+![](/assets/tree.png)
 
 基础的就不说了，可以参考JavaScript数据结构与算法。
 
@@ -16,26 +16,26 @@ tags: JS
 #### 中序遍历
 
 
-![](../assets/tree2.png)
+![](/assets/tree2.png)
 
-![](../assets/tree3.png)
+![](/assets/tree3.png)
 
 
 #### 先序遍历
 
 
-![](../assets/tree4.png)
+![](/assets/tree4.png)
 
 
-![](../assets/tree5.png)
+![](/assets/tree5.png)
 
-![](../assets/tree6.png)
+![](/assets/tree6.png)
 
 #### 后序遍历
 
 
-![](../assets/tree7.png)
+![](/assets/tree7.png)
 
 
-![](../assets/tree8.png)
+![](/assets/tree8.png)
 
