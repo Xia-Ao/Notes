@@ -100,9 +100,6 @@ TCP协议当然也是这样的，下面我们从这张整体的图上来看下�
 
 
 参考来源：
-
-[http://www.cnblogs.com/wujing-hubei/p/5699773.html](http://www.cnblogs.com/wujing-hubei/p/5699773.html)
-
-[通俗大白话来理解TCP协议的三次握手和四次分手](https://github.com/jawil/blog/issues/14)
-
-[TCP四次分手中，主动关闭方最后为什么要等待2MSL之后才关闭连接？](https://www.zhihu.com/question/36930631)
+- [http://www.cnblogs.com/wujing-hubei/p/5699773.html](http://www.cnblogs.com/wujing-hubei/p/5699773.html)
+- [通俗大白话来理解TCP协议的三次握手和四次分手](https://github.com/jawil/blog/issues/14)
+- [TCP四次分手中，主动关闭方最后为什么要等待2MSL之后才关闭连接？](https://www.zhihu.com/question/36930631)
