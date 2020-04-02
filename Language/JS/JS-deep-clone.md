@@ -3,8 +3,8 @@ title: JS实现深度复制.md
 date: 2018-03-05 12:05:40
 tags: JS
 ---
+# JS实现深度复制
 
-JS深复制是在阿里一面的过程中遇到的，以前都不知道，所以当时一脸懵逼，回来赶紧google，发现邹大大以前写过关于深复制的实现，这里参考他的文章：[深入剖析 JavaScript 的深复制](http://jerryzou.com/posts/dive-into-deep-clone-in-javascript/)
 
 ## 浅复制
 
@@ -24,7 +24,7 @@ console.log(person1.name);  //'Kai'
 console.log(person2.name);  //'Kai'
 ```
 
-#### Object.assignq浅拷贝实现解决问题。
+#### Object.assign浅拷贝实现解决问题。
 ```js
 let a = {  
     age: 1  
@@ -53,13 +53,13 @@ console.log(b.age) // 1
 深复制想实现把对象里面属性值也给复制，当修改复制后的对象某个属性值时，原对象对应的属性值不会被修改。
 
 ### 实现方法
-
+有以下几种
 1. JSON的全局对象`parse`和`stringify`方法。
 2. 遍历实现深度复制
 3. jQuery的`$.clone()` 和 `$.extend()`方法。
 4. Underscored的`_.clone()`
 5. lodash的`_.clone()` / `_.cloneDeep()`
-6. 邹润阳建议的拥抱未来的深复制方法，直接定义在prototype上面。
+6. 邹润阳建议的深复制方法，直接定义在prototype上面。
 
 #### JSON的全局对象`parse`和`stringify`方法。
 
@@ -86,7 +86,7 @@ console.log(person1.name);  //'Jack'
 console.log(person2.name);  //'Kai'
 ```
 
-上面这种方法好处是非常简单易用,，对于**Number, String,Obejct**等来说基本实现。但是坏处也显而易见,对于**正则表达式类型、函数类型等无法进行深拷贝(而且会直接丢失相应的值)**。还有一点不好的地方是它会抛弃对象的constructor，也就是深复制之后，无论这个对象原本的构造函数是什么，在深复制之后都会变成Object。
+上面这种方法好处是非常简单易用，对于`Number`, `String`,`Obejct`等来说基本实现。但是坏处也显而易见,对于**正则表达式类型、函数类型等**无法进行深拷贝(而且会直接丢失相应的值)。还有一点不好的地方是它会抛弃对象的constructor，也就是深复制之后，无论这个对象原本的构造函数是什么，在深复制之后都会变成`Object`。
 
 
 
@@ -111,8 +111,8 @@ console.log(person2.reg);   //Object
 
 ```
 
-#### 遍历实现深复制
-通过遍历到对象的每一层，实现深度复制。
+#### 递归遍历实现深复制
+通过遍历到对象的每一层，实现深度复制。推荐使用
 ```js
 function deepClone(obj, c) {
     let newObj = c || {}
@@ -161,3 +161,5 @@ const clone = await structuralClone(obj);
 
 
 
+参考
+- [深入剖析 JavaScript 的深复制](http://jerryzou.com/posts/dive-into-deep-clone-in-javascript/)
