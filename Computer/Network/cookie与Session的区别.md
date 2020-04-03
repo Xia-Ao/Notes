@@ -85,7 +85,7 @@ Cookie 是小甜饼的意思。顾名思义，cookie 确实非常小，它的大
 
 localStorage 是 HTML5 标准中新加入的技术，它并不是什么划时代的新东西。早在 IE 6 时代，就有一个叫 userData 的东西用于本地存储，而当时考虑到浏览器兼容性，更通用的方案是使用 Flash。而如今，localStorage 被大多数浏览器所支持，如果你的网站需要支持 IE6+，那以 userData 作为你的 polyfill 的方案是种不错的选择。
 
-| 特性 | Chrome | Firefox \(Gecko\) | Internet Explorer | Opera | Safari \(WebKit\) |
+| 特性 | Chrome | Firefox (Gecko) | Internet Explorer | Opera | Safari (WebKit) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | localStorage | 4 | 3.5 | 8 | 10.50 | 4 |
 | sessionStorage | 5 | 2 | 8 | 10.50 | 4 |

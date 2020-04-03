@@ -5,7 +5,7 @@
 - [TCP和UDP的区别](/Computer/Network/TCP和UDP.md)
 - [HTTP协议概述](/Computer/Network/HTTP协议概述.md)
 - [HTTP缓存详解](/Computer/Network/HTTP缓存详解.md)
-- [HTTPS以及SSL建立过程](/Computer/Network/Computer/Network/HTTPS.md)
+- [HTTPS以及SSL建立过程](/Computer/Network/HTTPS.md)
 - [HTTPS的七个误解（译文）](http://www.ruanyifeng.com/blog/2011/02/seven_myths_about_https.html) - 阮一峰
 - [cookie与Session机制区别以及Cookie SessionStorage LocalStorage异同](/Computer/Network/cookie与Session的区别.md)
 - [HTTP状态码Status](/Computer/Network/status状态码.md) 
