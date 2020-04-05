@@ -3,6 +3,7 @@ title: Promise.md
 date: 2018-02-05 20:09:45
 tags: JS
 ---
+# Promise
 
 关Promise
 的使用，在[《JavaScript Promise迷你书（中文版）》](http://liubin.org/promises-book/#what-is-promise)这本书里面讲解的非常的详细，这边就不在重复，下面只列出来一些比较重要的点和一些比较忽略的地方。
@@ -87,7 +88,8 @@ const p2 = new Promise(function (resolve, reject) {
 
 对于这种情况，promise的解决方案是：这时`p1`的状态就会传递给`p2`，也就是说，`p1`的状态决定了`p2`的状态。如果`p1`的状态是`pending`，那么`p2`的回调函数就会等待`p1`的状态改变；如果`p1`的状态已经是`resolved`或者`rejected`，那么`p2`的回调函数将会立刻执行。阮老师Promise对象里面有关于这种情况的一个例子。
 
-#### **调用**`resolve`**或**`reject`**并不会终结 Promise 的参数函数的执行。**
+#### promise结束状态
+调用`resolve`或`reject`并不会终结 Promise 的参数函数的执行。
 
 ```js
 new Promise((resolve, reject) => {
@@ -120,7 +122,7 @@ chain的执行流程，如果用一张图来描述一下的话，像下面的图
 这个流程来进行处理。  
 ![](/assets/promise-taska-rejected-flow.png)
 
-### Promise.prototype.finally\(\)
+### finally()
 
 `finally`方法用于指定不管 Promise 对象最后状态如何，都会执行的操作。
 
@@ -133,7 +135,7 @@ promise
 
 `finally`方法里面的操作，应该是与状态无关的，不依赖于 Promise 的执行结果。
 
-### Promise.all\(\)
+### Promise.all()
 
 `Promise.all`方法用于将多个 Promise 实例，包装成一个新的 Promise 实例。
 
@@ -160,7 +162,7 @@ Iterator 接口，且返回的每个成员都是 Promise 实例。）
 >
 > 2、如果其中的某一个promise实例`p1或p2或p3`没有自己的`catch`方法，就会调用`Promise.all()`的`catch`方法。
 
-### Promise.race\(\)
+### Promise.race()
 
 `Promise.race`方法同样是将多个 Promise 实例，包装成一个新的 Promise 实例。
 
@@ -174,7 +176,7 @@ Promise 实例的返回值，就传递给`p`的回调函数。
 > 有时候设定了一个时间限制，如果规定时间内`p1 p2
 > p3`都没有改变状态，那p的状态变成`reject`
 
-### Promise.resolve\(\)
+### Promise.resolve()
 
 `Promise.resolve`方法可以将现有对象转为 Promise 对象。
 
@@ -200,7 +202,8 @@ Promise 对象，状态为`resolved`。
 `Promise.resolve`方法允许调用时不带参数，直接返回一个`resolved`状态的
 Promise 对象。
 
-### 2.6. 专栏: 每次调用then都会返回一个新创建的promise对象 {#then-return-new-promise}
+### promise的返回
+专栏: 每次调用then都会返回一个新创建的promise对象 {#then-return-new-promise}
 
 从代码上乍一看，`aPromise.then(...).catch(...)`像是针对最初的`aPromise`对象进行了一连串的方法链调用。
 

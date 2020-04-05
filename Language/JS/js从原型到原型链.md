@@ -33,15 +33,37 @@ person1.sysName();  //"Nicholas"
 ```
 ## 原型
 
-### `prototype`
+### 构造函数
+通俗一点理解，生成对象的基础，并描述对象的基本结构的函数。
 
-函数的 prototype 属性指向了一个对象，这个对象正是调用该构造函数而创建的**实例**的原型，也就是这个例子中的 person1 和 person2 的原型。
+与普通函数典型区别
+- 需要使用`new`关键字生成对象实例才可以使用。
+- 构造函数内`this`指向生成的对象实例。
+- 命令上一般使用首字母大写。
+
+示例：
+```js
+var Person = function() {
+    this.name = 'aoao';
+};
+//两种写法相同。
+function Person() {
+    this.name = 'aoao';
+}
+```
+我们用到的`Array`,`String`等内置对象都是构造函数。
+
+### `prototype` 原型对象
+
+构造函数的 `prototype` 属性指向了一个对象，这个对象正是调用该构造函数而创建的**实例的原型**，也称为**原型对象**。关系如下：
 
 ![](/assets/prototype1.png)
 
 ### `__proto__`
 
-这是每一个JavaScript对象(除了 null )都具有的一个属性，叫`__proto__`，这个属性会指向该对象的原型。
+每一个JavaScript实例对象（object）都具有的一个私有属性，叫`__proto__`，这个属性会指向该对象的原型对象（prototype）。关系图如下：
+
+![](/assets/prototype2.png)
 
 为了证明这一点,我们测试：
 
@@ -53,34 +75,50 @@ var person = new Person();
 console.log(person.__proto__ === Person.prototype); // true
 ```
 
-于是我们更新下关系图：
 
-![](/assets/prototype2.png)
-
-既然实例对象和构造函数都可以指向原型，那么原型是否有属性指向构造函数或者实例呢？
+既然实例对象和构造函数都可以指向原型，那么原型对象是否有属性指向构造函数或者实例呢?
 
 ### `constructor`
 
-指向实例倒是没有，因为一个构造函数可以生成多个实例，但是原型指向构造函数倒是有的，这就要讲到第三个属性：`constructor`，每个原型都有一个 `constructor` 属性指向关联的构造函数。
-
-为了验证这一点，我们可以尝试：
-
-```js
-function Person() {
-
-}
-console.log(Person === Person.prototype.constructor); // true
-```
+指向实例倒是没有，因为一个构造函数可以生成多个实例，但是原型对象指向构造函数倒是有的，`constructor`属性，每个原型都有一个 `constructor` 属性指向关联的构造函数。
 
 此时我们更新关系图：
 
 ![](/assets/prototype3.png)
 
-### 实例与原型
+为了验证这一点，我们可以尝试：
 
-我们在读取对象属性的时候，要注意搜索顺序，
+```js
+function Person() {
+}
+console.log(Person === Person.prototype.constructor); // true
+```
+
+### 原型的原型
+原型对象是从哪里来的，我们通过`__proto__`属性一直向上查找，发现来源于`Object`的原型对象.
+
+```js
+person.__proto__.__proto__ === Object.prototype     // true
+console.log(Object.prototype.__proto__)             // null
+console.log(person.__proto__.__proto__.__proto__)   // null
+```
+
+实际上原型对象就是通过 `Object` 构造函数生成的，而`Object`的原型对象的原型是`null`，说明已经到了最后，得出一个结论，**所有的原型对象都是来自于 `Object`的原型**，所以我们再更新下关系图：
+
+![](/assets/prototype5.png)
+
+我们将这种通过`prototype`属性将构造函数链接起来的链路称之为**原型链**，后面会有介绍。
+
+### 对象属性查找
+
+我们在读取实例对象属性的时候，要注意搜索顺序，在《高程》这样介绍：
 
 ![](/assets/proto.png)
+
+归纳一下查找顺利就是：
+1. 先在实例对象上查看
+2. 再在原型对象上查找
+3. 一直往上查找，没有的话返回`undefined`.
 
 ```js
 function Person() {
@@ -103,27 +141,11 @@ console.log(person2.name) // Nicholas
 person1.sysName();  //"Mack"
 ```
 
-### 原型的原型
-
-在前面，我们已经讲了原型也是一个对象，既然是对象，我们就可以用最原始的方式创建它，那就是：
-
-```
-var obj = new Object();
-obj.name = 'Kevin'
-console.log(obj.name) // Kevin
-```
-
-其实原型对象就是通过 Object 构造函数生成的，结合之前所讲，实例的 \_\_proto\_\_ 指向构造函数的 prototype ，所以我们再更新下关系图：
-
-![](/assets/prototype5.png)
-
 ## 原型链
 
-在 ECMAScript 中，每个由构造器创建的对象拥有一个指向构造器 prototype 属性值的 隐式引用（implicit reference），这个引用称之为 原型（prototype）。进一步，每个原型可以拥有指向自己原型的 隐式引用（即该原型的原型），如此下去，这就是所谓的 原型链（prototype chain）  
-可以在浏览器控制台下一直打印自己的原型，返回的都是一样的。
+在 ECMAScript 中，每个由构造器创建的对象拥有一个指向构造器 `prototype` 属性值的 隐式引用（implicit reference），这个引用称之为 原型（`prototype`）。进一步，每个原型可以拥有指向自己原型的 隐式引用（即该原型的原型），如此下去，这就是所谓的 原型链（prototype chain）  
 
 在javaScripts高级程序设计中，关于原型链是这么定义的：
-
 
 ![](/assets/chain1.png)
 
@@ -159,7 +181,7 @@ console.log(instance.getSubValue());
 - `SubType`
 
 每个类型分别有一个属性和一个方法。
-- `SubType` 继承了 `SuperType` ，而继承是通过创建 `SuperType` 的实例，并将该实例赋给`SubType.prototype` 实现的。实现的本质是重写原型对象，代之以一个新类型的实例。
+- `SubType`继承了 `SuperType` ，而继承是通过创建 `SuperType` 的实例，并将该实例赋给`SubType.prototype` 实现的。实现的本质是重写原型对象，代之以一个新类型的实例。
 - 换句话说，原来存在于 `SuperType` 的实例中的所有属性和方法，现在也存在于 `SubType.prototype` 中了。
 - 在确立了继承关系之后，我们给 `SubType.prototype` 添加了一个方法，这样就在继承了 `SuperType` 的属性和方法的基础上又添加了一个新方法。
 

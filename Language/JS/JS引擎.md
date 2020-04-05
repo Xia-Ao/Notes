@@ -53,7 +53,7 @@ node中的Event loop和浏览器中的不相同，
 Node 的 Event loop 分为 6 个阶段，它们会按照顺序反复运行
 
 
-![](../assets/EventLoop.png)
+![](/assets/EventLoop.png)
 
 
-![](../assets/loop1.png)
+![](/assets/loop1.png)
