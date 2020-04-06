@@ -80,14 +80,11 @@ transform的功能是在是太强大了，不知道该怎么说，自己也不�
 </div>
 </body>
 </html>
-
 ```
 
 参考文章：
 
-[CSS3 Transform](https://www.w3cplus.com/content/css3-transform)
-
-[菜鸟教程API-2D](http://www.runoob.com/css3/css3-2dtransforms.html)
-
-[菜鸟教程API-3D](http://www.runoob.com/css3/css3-3dtransforms.html)
+- [CSS3 Transform](https://www.w3cplus.com/content/css3-transform)
+- [菜鸟教程API-2D](http://www.runoob.com/css3/css3-2dtransforms.html)
+- [菜鸟教程API-3D](http://www.runoob.com/css3/css3-3dtransforms.html)
 

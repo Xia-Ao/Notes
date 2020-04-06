@@ -1,6 +1,8 @@
 一个进击的小前端的在前端之路上的笔记，目录大纲也换过几次，从一开始的按照语言分类，到按照技术类型分类，最后按照前端需要具备的知识体系分类，也是一个学习和成长过程。
 
+电子书[在线查看](https://xia-ao.gitbook.io/notes)
 
+个人工程（可公开）：
 - [嗷嗷图床](https://img.xiaao.xin)
 - [嗷嗷发布系统](https://wukong.xiaao.xin)
 
@@ -9,72 +11,81 @@
 
 - <span id='language'>[语言]()</span>
   - [JS](/Language/JS/README.md)
+    <!-- JS基础 -->
     - [DOM对象节点介绍](/Language/JS/DOM对象节点介绍.md)
-    - [Number对象](/Language/JS/Number对象.md)
+    - [DOM树遍历](/Language/JS/DOM遍历.md)
     - [String对象](/Language/JS/String对象.md)
     - [Array操作方法](/Language/JS/Array操作方法.md)
-    - [数组排序算法总结](/Language/JS/数组排序算法.md)
-    <!-- - [Object对象](/Language/JS/Object对象.md) -->
-    - [Math对象](/Language/JS/Math对象.md)
-    - [JavaScript编程风格](/Language/JS/Javascript编程风格.md)
-    - [JS常用数据结构](/Language/JS/data-structure.md)
+    - [JS数据结构之神奇的树](/Language/JS/data-structure.md)
+    - [JS中数据类型、运算符以及容易挖坑的坑位](/Language/JS/运算符.md)
+    - [JS数据结构之神奇的树](/Language/JS/data-structure.md)
     - [JS中数据类型、运算符、严格相等](/Language/JS/运算符.md)
+    - [遍历方法汇总以及适用对象](/Language/JS/JS遍历.md)
+
+    <!-- JS高级内容 -->
     - [this对象](/Language/JS/this对象.md)
-    - [Promise](/Language/JS/Promise.md)
-    - [正则表达式](/Language/JS/正则表达式.md)
-    - [递归](/Language/JS/递归.md)
+    - [作用域以及变量提升](/Language/JS/作用域与变量提升.md)
+    - [JS递归](/Language/JS/递归.md)
     - [JavaScript原型到原型链](/Language/JS/js从原型到原型链.md)
     - [JS继承的实现](/Language/JS/继承.md)
     - [JS闭包](/Language/JS/闭包.md)
-    - [AJAX过程以及知识体系](/Language/JS/AJAX使用详细介绍.md)
-    - [同源策略到前端跨域](/Language/JS/同源策略到前端跨域.md)
     - [JS实现深复制](/Language/JS/JS-deep-clone.md)
-    - [一些常用的JS方法](/Language/JS/一些常用的JS方法.md)
-    - [作用域以及变量提升](/Language/JS/作用域与变量提升.md)
-    - [Javascript 严格模式详解(转载)](http://www.zyy1217.com/2017/04/20/Javascript%20%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F%E8%AF%A6%E8%A7%A3/)
+    - [Promise](/Language/JS/Promise.md)
+    - [正则表达式](/Language/JS/正则表达式.md)
+    - [AJAX过程以及知识体系](/Language/JS/AJAX使用详细介绍.md)
+    - [同源策略到前端跨域解决方案](/Language/JS/同源策略到前端跨域.md)
+    - [Javascript 严格模式详解(转载)](https://www.ruanyifeng.com/blog/2013/01/javascript_strict_mode.html)
+    - [JS的EventLoop](/Language/JS/JS-EventLoop.md)
+
+    <!-- JS应用场景 -->
     - [数组、字符串中查找最大重复次数最高元素的多种方法](/Language/JS/数组、字符串中最大、重复元素查找.md)
-    - [日期格式化](/Language/JS/日期格式化.md)
-    - [DOM遍历](/Language/JS/DOM遍历.md)
     - [用Javascript获取页面元素的位置（client scroll offset等宽度）（转载）](http://www.ruanyifeng.com/blog/2009/09/find_element_s_position_using_javascript.html)
-    - [遍历方法汇总以及适用对象](/Language/JS/遍历.md)
-    - [JS引擎](/Language/JS/JS引擎.md)
-    - [前端算法面试题汇总](http://www.zyy1217.com/2017/04/26/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/) - 转载
-    - [js实现一个图片懒加载插件](http://www.zyy1217.com/2017/03/20/js%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD%E6%8F%92%E4%BB%B6/) - 转载
-    - [**前端优化**](/Language/JS/前端优化.md)
-    - [**前端算法题汇总**](/Language/JS/前端算法题汇总.md)
-    - [剑指offer第一部分](/Language/JS/剑指offer-1.md)
-    - [事件机制](/Language/JS/事件机制.md)
-    - [canvas绘制序列帧动画](/Language/JS/canvas绘制序列帧.md)
-  - [TS](/Language/TS/README.md)  
+    - [js实现一个图片懒加载插件](图片懒加载实现.md)
+    - [前端性能优化](/Language/JS/前端性能优化.md)
+    - [JS事件流机制](/Language/JS/JS事件流机制.md)
+    - [JS节流与防抖](/Language/JS/节流与防抖.md)
+    - [JS设计模式](/Language/JS/JS设计模式.md)
+  - [TS](/Language/TS/README.md)
+    - [泛型](/Language/TS/泛型.md)
+    - [枚举](/Language/TS/枚举.md)
+    - [声明合并](/Language/TS/声明合并.md)
+    - [类型推断]
+    - [模块](/Language/TS/模块.md)
+    - [命名空间]
+    <!-- 实战 -->
+    - [声明文件](/Language/TS/声明文件.md)
+    - [项目配置](/Language/TS/项目配置.md)
   - [CSS](/Language/CSS/README.md)
-    - [CSS选择器](/Language/CSS/图解CSS3/CSS3-selcetor/README.md)
-    - [CSS优先级](/Language/CSS/CSS优先级和引入方式.md)
-    - [CSS引入方式](/Language/CSS/CSS优先级和引入方式.md)
+    - [CSS选择器速查表](/Language/CSS/CSS-selector.md)
+    - [CSS选择器详细](/Language/CSS/图解CSS3/CSS3-selcetor/README.md)
+    - [CSS引入方式以及优先级计算](/Language/CSS/CSS引入方式以及优先级计算.md)
     - [position不同值定位](/Language/CSS/position.md)
+    - [行内元素与块级元素](/Language/CSS/CSS元素属性易混淆点.md)
     - [BFC神奇背后的原理-文摘](/Language/CSS/BFC神奇背后的原理-文摘.md)
-    - [区别px、em、rem](https://segmentfault.com/a/1190000005936910)
-    - [前端优化---回流 （reflow）与 重绘（repaint）](https://segmentfault.com/a/1190000002629708) -转载
+    - [回流reflow与重绘repaint](/Language/CSS/reflow&repaint.md）
     - [transition && animation动画属性](/Language/CSS/animation&transition.md)
     - [强大的transform](/Language/CSS/transform.md)
     - [布局知识](/Language/CSS/布局.md)
-    - [三栏式布局](/Language/CSS/三栏式布局.md)
     - [flex布局](/Language/CSS/flex布局.md)
+    - [三栏式布局](/Language/CSS/三栏式布局.md)
     - [垂直居中](/Language/CSS/垂直居中.md)
     - [水平居中的方法（margin/text-algin区别）](/Language/CSS/水平居中.md)
-    - [行内元素与块级元素](/Language/CSS/CSS元素属性易混淆点.md)
     - [长度单位、字体单位以及各种高度等易混淆的区别](/Language/CSS/长度单位、字体单位、各种高度等易混淆属性.md)
     - [清除浮动的方法](/Language/CSS/清除浮动.md)
-    - [scroll滚动隐藏](/Language/CSS/滚动隐藏.md)
-    - [rem移动端适配](/Language/CSS/移动端适配.md)
-    - [纯css斜切角实现](/Language/CSS/斜切角实现.md)
+    <!-- - [scroll滚动隐藏](/Language/CSS/滚动隐藏.md) -->
+    - [移动端适配方案](/Language/CSS/移动端适配.md)
+    - [纯CSS斜切角实现](/Language/CSS/斜切角实现.md)
+    - [CSS揭秘](/Language/CSS/CSS揭秘.md)
+    - [背景图片轮播](/Language/CSS/背景图片轮播.md)
+    - [浏览器CSS兼容](/Language/CSS/浏览器CSS兼容.md)
+    - [CSS绘制序列帧动画](/Language/CSS/CSS绘制序列帧动画.md)
+    - [transform实现一个多面体](/Language/CSS/transform实现一个多面体.md)
   - [HTML](/Language/HTML/README.md)
-    - [`<meta>`](https://segmentfault.com/a/1190000004279791)- 转载
-    - [`<input>`](/Language/HTML/input.md)
-    - [`<iframe>`与 `<img><map><area>`组合使用示例](/Language/HTML/iframe与img、map、area标签配合使用.md)
-    - [`<!DOCTYPE >`](/Language/HTML/doctype.md)
+    - [`<meta>`标签](https://segmentfault.com/a/1190000004279791)- 转载
+    - [`<!DOCTYPE>`](/Language/HTML/doctype.md)
 
 - <span id="es6">[ES6](/ES6/README.md)</span>
-  - [class继承](/ES6/19、class继承.md)
+  <!-- - [class继承](/ES6/19、class继承.md)
   - [1、let&const变量解构赋值](/ES6/1、let&const变量解构赋值.md)
   - [2、变量解构赋值](/ES6/2、变量解构赋值.md)
   - [3、字符串的扩展](/ES6/3、字符串的扩展.md)
@@ -88,7 +99,7 @@
   - [symbol对象](/ES6/symbol.md)
   - [16、Generator函数](/ES6/16、Generator函数.md)
   - [17、Generator异步操作](/ES6/17、Generator异步操作.md)
-  - [16、Generator函数](/ES6/18、async异步函数.md)
+  - [16、Generator函数](/ES6/18、async异步函数.md) -->
 
 - <span id='nodejs'>[Node.js](/Node.js/README.md)</span>
   - [xxx]()
@@ -163,7 +174,12 @@
     - [webkit解析CSS过程详解](/Computer/Browser/webkit解析CSS.md)
 
 - <span id='interview'>[前端面试](/Interview/README.md)</span>
-  - [xxx]()
+  - [算法](/Interview/README.md)
+    - [剑指Offer - 1](/Interview/algorithm/剑指offer-1.md)
+    - [经典算法-贪心算法](/Interview/algorithm/经典算法-贪心.md)
+    - [经典算法-动态规划](/Interview/algorithm/经典算法-动态规划.md)
+    - [排序算法](/Interview/algorithm/数组排序算法.md)
+    - [前端算法题汇总](/Interview/algorithm/前端算法题汇总.md)
 
 
 

@@ -4,7 +4,7 @@
 
 * 总是独占一行，表现为另起一行开始，而且其后的元素也必须另起一行显示;
 
-* 宽度\(width\)、高度\(height\)、内边距\(padding\)和外边距\(margin\)都可控制;
+* 宽度(width)、高度(height)、内边距(padding)和外边距(margin)都可控制;
 
 * 会忽略vertical-align属性。
 
@@ -12,7 +12,7 @@
 
 * 和相邻的内联元素在同一行;
 
-* 宽度\(width\)、高度\(height\)、内边距的top/bottom\(padding-top/padding-bottom\)和外边距的top/bottom\(margin-top/margin-bottom\)都不可改变，就是里面文字或图片的大小;
+* 宽度(width)、高度(height)、内边距的top/bottom(padding-top/padding-bottom)和外边距的top/bottom(margin-top/margin-bottom)都不可改变，就是里面文字或图片的大小;
 
 * 内联元素一旦浮动，就会自动变为块级元素，并且拥有块级元素的所有属性
 
