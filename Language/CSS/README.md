@@ -10,8 +10,8 @@
 - [CSS引入方式以及优先级计算](/Language/CSS/CSS引入方式以及优先级计算.md)
 - [position不同值定位](/Language/CSS/position.md)
 - [行内元素与块级元素](/Language/CSS/CSS元素属性易混淆点.md)
-- [BFC神奇背后的原理-文摘](/Language/CSS/BFC神奇背后的原理-文摘.md)
-- [回流reflow与重绘repaint](/Language/CSS/reflow&repaint.md）
+- [BFC神奇背后的原理-文摘](/Language/CSS/BFC神奇背后的原理.md)
+- [回流reflow与重绘repaint](/Language/CSS/回流和重绘.md)
 - [transition && animation动画属性](/Language/CSS/animation&transition.md)
 - [强大的transform](/Language/CSS/transform.md)
 - [布局知识](/Language/CSS/布局.md)
