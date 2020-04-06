@@ -36,7 +36,16 @@
     - [JS事件流机制](/Language/JS/JS事件流机制.md)
     - [JS节流与防抖](/Language/JS/节流与防抖.md)
     - [JS设计模式](/Language/JS/JS设计模式.md)
-  - [TS](/Language/TS/README.md)  
+  - [TS](/Language/TS/README.md)
+    - [泛型](/Language/TS/泛型.md)
+    - [枚举](/Language/TS/枚举.md)
+    - [声明合并](/Language/TS/声明合并.md)
+    - [类型推断]
+    - [模块](/Language/TS/模块.md)
+    - [命名空间]
+    <!-- 实战 -->
+    - [声明文件](/Language/TS/声明文件.md)
+    - [项目配置](/Language/TS/项目配置.md)
   - [CSS](/Language/CSS/README.md)
     - [CSS选择器](/Language/CSS/图解CSS3/CSS3-selcetor/README.md)
     - [CSS优先级](/Language/CSS/CSS优先级和引入方式.md)
