@@ -4,46 +4,53 @@ date: 2018-03-25 22:24:40
 tags: JS
 ---
 
-### 遍历方法
+# JS遍历方法
 
-#### 1、for循环
+## for遍历方法
 
+### for循环
 语法：
 
 ```js
-for(let i=0; i&lt;length; i++){ 代码}
+for(let i=0; i < length; i++){ 代码}
 ```
 
 说明：因为String对象具有length属性，所以可以直接使用String.length进行遍历
 
-适用对象：**Array，String**，obj没有length，不可以使用for循环
+适用对象：
+- Array
+- String
 
-#### 2、for in
+### for in
 
 语法：
-
 ```js
 for( let index in对象){ 在此执行代码}
 ```
+说明：`for in` 遍历的是key值
 
-说明：for in 遍历的是key值
+使用对象：
+- Array 
+- String  
+- Object
 
-使用对象：**Array String  Object**
-
-#### 3、[for of](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of)
-
+### [for of](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of)
 语法：
-
 ```js
 for(let value of 对象){ 在此执行代码}
 ```
-
 说明：for of遍历的value值
-只要具有遍历器接口**Iterator**，都可以使用for of 遍历，比如**NodeList Set Map Array String 类数组**
+只要具有遍历器接口**Iterator**，都可以使用for of 遍历。
 
-使用对象：**Array String  **
+使用对象：
+- Array
+- String
+- NodeList
+- Set
+- Map
+- 类数组
 
-##### for in 与for of 区别
+#### for in 与for of 区别
 
 1. 推荐在循环对象属性的时候，使用`for...in`,在遍历数组的时候的时候使用`for...of`。
 2.  `for...in`循环出的是key，`for...of`循环出的是value
@@ -58,31 +65,31 @@ for(var key in arr){
 }
 // 1 2 3 jack
 ```
+## Array遍历
 
+- 普通循环
+- for in
+- for of
+- forEach
+- map
+- from
+- filter
+- some
+- every
 
-#### 4、forEach 
+以及其他数组遍历方法。
 
-语法：
+## String遍历
+- 普通for循环
+- for in
+- for of
+- 一种变换的方法，使用split将字符串切割为字符串数组，再对数组进行遍历。
 
-```js
-array.forEach(function(currentValue, index, arr), thisArg)
-```
-
-说明：arr当前元素所属的数组对象。
-
-使用对象：**Array** 只有array对象有
-
-#### 其他数组遍历、map from filter some every等
-再加上forEach，这些都是针对于**Array**进行遍历的，
-
-### String遍历
-一种变换的方法，使用split将字符串切割为字符串数组，再对数组进行遍历。
-
-### Object遍历
+## Object遍历
 
 除了前面写到的`for in`遍历Object对象，还有以下几种方法对Object进行遍历
 
-#### 2、[Object.keys](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
+### [Object.keys](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
 
 
 语法：
@@ -95,7 +102,7 @@ console.log(Object.getOwnPropertyNames(obj).sort()); // ["0", "1", "2"]
 ```
 说明：Object.keys返回一个由key值组成的**可枚举属性的字符串数组**，再对数组进行遍历既可以遍历Object
 
-#### 3、[Object.getOwnPropertyNames](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames)
+### [Object.getOwnPropertyNames](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames)
 
 语法：
 
@@ -106,7 +113,7 @@ Object.getOwnPropertyNames(obj)  //在给定对象上找到的属性对应的字
 说明：返回一个**数组**，该数组对元素是 obj自身拥有的**枚举或不可枚举属性名称字符串**
 
 
-#### 4、[Object.values()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/values)
+### [Object.values()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/values)
 
 语法：
 
@@ -119,7 +126,7 @@ console.log(Object.values(an_obj)); // ['b', 'c', 'a']
 
 说明：Object.values()返回一个**数组**，其元素是在对象上找到的**可枚举属性值**。属性的顺序与通过手动循环对象的属性值所给出的顺序相同。
 
-#### 5、Object.entries()
+### Object.entries()
 
 语法：
 
@@ -135,4 +142,5 @@ console.log(Object.entries(obj)); // [ ['foo', 'bar'], ['baz', 42] ]
 
 
 
-参考：[JavaScript如何遍历Object](https://huixisheng.github.io/object-loop/)
+## 参考：
+- [JavaScript如何遍历Object](https://huixisheng.github.io/object-loop/)

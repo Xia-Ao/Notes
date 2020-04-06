@@ -5,7 +5,6 @@ tags: JS
 ---
 # JS实现深度复制
 
-
 ## 浅复制
 
 复制的是存在栈内存里面的引用指针，并不是存放在堆内存中的内容，当对一个对象下面的属性值进行修改时，所有的都会变化。
@@ -161,5 +160,5 @@ const clone = await structuralClone(obj);
 
 
 
-参考
+## 参考
 - [深入剖析 JavaScript 的深复制](http://jerryzou.com/posts/dive-into-deep-clone-in-javascript/)

@@ -5,31 +5,46 @@ tags: JS
 ---
 
 # DOM遍历
+DOM树由文档中的所有节点（元素节点、文本节点、注释节点等）所构成的一个树结构。
 
 DOM的遍历分为先序遍历，中序遍历， 后序遍历，是三种不同的顺序的遍历方法
 
-三种方法的区别以及原理请参考：
+- **先序**：考察到一个节点后，即刻输出该节点的值，并继续遍历其左右子树。(根左右)
+- **中序**： 考察到一个节点后，将其暂存，遍历完左子树后，再输出该节点的值，然后遍历右子树。(左根右)
+- **后序**： 考察到一个节点后，将其暂存，遍历完左右子树后，再输出该节点的值。(左右根)
 
-[https://www.jianshu.com/p/456af5480cee](https://www.jianshu.com/p/456af5480cee)
+这里只说一下用来遍历的方法：这篇[博文](http://www.cnblogs.com/tracylin/p/5220867.html)写了五种先序遍历的方法
 
-[http://blog.csdn.net/u013468917/article/details/69556547](http://blog.csdn.net/u013468917/article/details/69556547)
+1. 使用DOM1中的基础接口，递归遍历DOM树
+2. 使用DOM1的基础接口，迭代遍历DOM树
+3. 使用DOM扩展的Element Traversal API，递归遍历DOM树
+4. 使用NodeIterator
+5. 使用TreeWalker
 
-**先序：**考察到一个节点后，即刻输出该节点的值，并继续遍历其左右子树。\(根左右\)
+优先使用DOM中提供的两个专门用来遍历的方法。这两个方法在《JavaScript高程》中有详细的介绍：可以参考第12章12.3
 
-**中序：**考察到一个节点后，将其暂存，遍历完左子树后，再输出该节点的值，然后遍历右子树。\(左根右\)
+## 使用DOM扩展的Element Traversal API，递归遍历DOM树
 
-**后序：**考察到一个节点后，将其暂存，遍历完左右子树后，再输出该节点的值。\(左右根\)
-
-这里只说一下用来遍历的方法：这篇[博文](http://www.cnblogs.com/tracylin/p/5220867.html)写了五种先序遍历的方法，优先使用DOM中提供的两个专门用来遍历的方法。
-
-这两个方法在《JavaScript高程》中有详细的介绍：可以参考第12章12.3
+```js
+/**
+ * 使用DOM扩展的Traversal API提供的新的接口先序遍历DOM树
+ * @param node 根节点
+ */
+function traversalUsingTraversalAPI(node){
+    if(node && node.nodeType === 1){
+        console.log(node.tagName);
+    }
+    var i = 0,len = node.childElementCount, child = node.firstElementChild;
+    for(; i < len ; i++){
+        traversalUsingTraversalAPI(child);
+        child = child.nextElementSibling;
+    }
+}
+```
 
 ## NodeIterator
 
-
 ![](/assets/traversal1.png)
-
-
 
 ```js
 /**
@@ -70,26 +85,9 @@ function traversalUsingTreeWalker(node){
 }
 ```
 
-## 使用DOM扩展的Element Traversal API，递归遍历DOM树
-
-```js
-/**
- * 使用DOM扩展的Traversal API提供的新的接口先序遍历DOM树
- * @param node 根节点
- */
-function traversalUsingTraversalAPI(node){
-    if(node && node.nodeType === 1){
-        console.log(node.tagName);
-    }
-    var i = 0,len = node.childElementCount, child = node.firstElementChild;
-    for(; i < len ; i++){
-        traversalUsingTraversalAPI(child);
-        child = child.nextElementSibling;
-    }
-}
-```
 
 
 
 
-
+## 参考
+- [DOM遍历5种方法](http://www.cnblogs.com/tracylin/p/5220867.html)

@@ -1,8 +1,12 @@
 ---
-title: JS事件.md
+title: JS事件流.md
 date: 2018-03-20 20:11:40
 tags: JS
 ---
+
+# JS事件流机制
+
+## 事件流
 
 ### 事件流
 
@@ -112,21 +116,17 @@ let EventUtil = {
 
 说到 这里，就又可以看到事件委托技术的优势，如果事件追踪的越少，越容易移除。
 
-
+## 易混淆事件区分
 
 ### mouse事件
 
-**mouseover与mouseenter**
+- **mouseover与mouseenter**
+  - mouseover：不论鼠标指针穿过被选元素或其子元素，都会触发 mouseover 事件。
+  - mouseenter：只有在鼠标指针穿过被选元素时，才会触发 mouseenter 事件。
 
-不论鼠标指针穿过被选元素或其子元素，都会触发 mouseover 事件。
-
-只有在鼠标指针穿过被选元素时，才会触发 mouseenter 事件。
-
-**mouseout与mouseleave**
-
-不论鼠标指针离开被选元素还是任何子元素，都会触发 mouseout 事件。
-
-只有在鼠标指针离开被选元素时，才会触发 mouseleave 事件。
+- **mouseout与mouseleave**
+  - mouseout：不论鼠标指针离开被选元素还是任何子元素，都会触发 mouseout 事件。
+  - mouseleave：只有在鼠标指针离开被选元素时，才会触发 mouseleave 事件。
 
 
 
