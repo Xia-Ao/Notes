@@ -16,7 +16,6 @@ tags: JS
 - [JS数据结构之神奇的树](/Language/JS/data-structure.md)
 - [JS中数据类型、运算符、严格相等](/Language/JS/运算符.md)
 - [遍历方法汇总以及适用对象](/Language/JS/JS遍历.md)
-
 <!-- JS高级内容 -->
 - [this对象](/Language/JS/this对象.md)
 - [作用域以及变量提升](/Language/JS/作用域与变量提升.md)
@@ -31,7 +30,6 @@ tags: JS
 - [同源策略到前端跨域解决方案](/Language/JS/同源策略到前端跨域.md)
 - [Javascript 严格模式详解(转载)](https://www.ruanyifeng.com/blog/2013/01/javascript_strict_mode.html)
 - [JS的EventLoop](/Language/JS/JS-EventLoop.md)
-
 <!-- JS应用场景 -->
 - [数组、字符串中查找最大重复次数最高元素的多种方法](/Language/JS/数组、字符串中最大、重复元素查找.md)
 - [用Javascript获取页面元素的位置（client scroll offset等宽度）（转载）](http://www.ruanyifeng.com/blog/2009/09/find_element_s_position_using_javascript.html)
