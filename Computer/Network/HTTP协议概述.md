@@ -74,3 +74,4 @@ HTTP连接最显著的特点是**客户端发送的每次请求都需要服务�
 
 参考：
 - [HTTP协议概述](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Overview)
+- [99%的人都理解错了 HTTP 中 GET 与 POST 的区别](https://learnku.com/articles/25881)
