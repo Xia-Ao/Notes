@@ -228,7 +228,7 @@ function reloadApp(
 
 这里我们看到一次更新websocket对应发送的内容
 
-![websocket](http://h0.hucdn.com/open201944/b5fc9cd0223f4490_1844x1044.png)
+![websocket](http://h0.beicdn.com/open201944/b5fc9cd0223f4490_1844x1044.png)
 
 
 ##### 第四步：webpack 接收到最新 hash 值验证并请求模块代码
@@ -280,17 +280,17 @@ var check = function check() {
 
 由于没有在源码中定位到对应方法的定义，直接在devtools下找的编译后的代码
 
-![](http://h0.hucdn.com/open201944/f59ea6a3ee1afba3_1506x1426.png)
+![](http://h0.beicdn.com/open201944/f59ea6a3ee1afba3_1506x1426.png)
 
 下面是从服务端获取变化文件
 
 `hotDownloadManifest`获取的文件变化名称
 
-![](http://h0.hucdn.com/open201944/3036fa98fba3f1bc_1744x824.png)
+![](http://h0.beicdn.com/open201944/3036fa98fba3f1bc_1744x824.png)
 
 hmrDownloadUpdateHandlers将上面的文件名称拼接，生成一个script标签，插入到dom中，然后发起请求，获取到对应的js代码块，然后将新的代码块返回给 HMR runtime，进行模块热更新。
 
-![](http://h0.hucdn.com/open201944/3c3e0b5f4a8f1a29_1898x1476.png)
+![](http://h0.beicdn.com/open201944/3c3e0b5f4a8f1a29_1898x1476.png)
 
 
 > 还记得 HMR 的工作原理图解 中的问题 3 吗？为什么更新模块的代码不直接在第三步通过 websocket 发送到浏览器端，而是通过 jsonp 来获取呢？我的理解是，功能块的解耦，各个模块各司其职，dev-server/client 只负责消息的传递而不负责新模块的获取，而这些工作应该有 HMR runtime 来完成，HMR runtime 才应该是获取新代码的地方。再就是因为不使用 webpack-dev-server 的前提，使用 webpack-hot-middleware 和 webpack 配合也可以完成模块热更新流程，在使用 webpack-hot-middleware 中有件有意思的事，它没有使用 websocket，而是使用的长轮询。综上所述，HMR 的工作流中，不应该把新模块代码放在 websocket 消息中。
