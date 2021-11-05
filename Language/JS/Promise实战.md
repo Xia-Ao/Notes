@@ -209,7 +209,6 @@ function reqController() {
 ```
 
 
-
 ## Promise 错误捕获
 
 下面这段代码会如何输出：
