@@ -179,7 +179,34 @@ const p = apis.reduce((promise,api) => promise.then(fetch(api)),Promise.resolve(
 
 
 ## Promise 并发缓存
-场景：现有一批相同的并发请求，希望只查询一次SQL。
+场景：在node端处理请求，现有一批相同的并发请求，希望只查询一次SQL。其他的都走缓存。
+
+```js
+const querySql = new Promise((resolve, reject) => {
+    // 异步查询结果
+    setTimeOut(() => {
+        resolve('sql res');
+    }, 500);
+});
+
+const cache = null;
+const promiseCache = null;
+function reqController() {
+    if(cache) return cache;
+    if(promiseCache) return promiseCache;
+    querySql().then((res) => {
+        event.once('req1',res);
+    });
+    promiseCache = new Promise((resolve, reject) => {
+        event.on('req1', (res) => {
+            resolve(res);
+            cache = res;
+            console.log('promise执行结束', res);
+        });
+    });
+    return promiseCache
+}
+```
 
 
 
