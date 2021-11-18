@@ -14,7 +14,7 @@
     - [this对象](/Language/JS/this对象.md)
     - [作用域以及变量提升](/Language/JS/作用域与变量提升.md)
     - [JS递归](/Language/JS/递归.md)
-    - [JavaScript原型到原型链](/Language/JS/js从原型到原型链.md)
+    - [JS原型到原型链](/Language/JS/JS原型到原型链.md)
     - [JS继承的实现](/Language/JS/继承.md)
     - [JS闭包](/Language/JS/闭包.md)
     - [JS实现深复制](/Language/JS/JS-deep-clone.md)
