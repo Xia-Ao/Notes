@@ -1,0 +1,310 @@
+
+### 坑点
+
+#### null与undefined区别
+
+javaScript设计者最初是这样设计的：
+`null`是一个表示"无"的对象，转为数值时为`0`；`undefined`是一个表示"无"的原始值，转为数值时为`NaN`。
+
+后来在使用的过程中这样区分:
+- `null`表示"没有对象"，即该处不应该有值。典型用法是：
+  - 作为函数的参数，表示该函数的参数不是对象。  
+  - 作为对象原型链的终点。
+- `undefined`表示"缺少值"，就是此处应该有一个值，但是还没有定义。典型用法是：
+  - 变量被声明了，但没有赋值时，就等于`undefined`
+  - 调用函数时，应该提供的参数没有提供，该参数等于`undefined`。  
+  - 对象没有赋值的属性，该属性的值为`undefined`。  
+  - 函数没有返回值时，默认返回`undefined`。
+
+```js
+typeof null        // object (因为一些以前的原因而不是'null')
+typeof undefined   // "undefined"
+null === undefined // false
+null  == undefined // true
+null === null // true
+undefined === undefined// true
+!null  //true
+!undefined  //true
+isNaN(1 + null) // false    null转化为Number时为0
+isNaN(1 + undefined) // true  undefined转化为Number时为NaN
+1+null  //1
+1+undefined  //NaN
+
+//但是要记住，null能转化为Number进行计算
+null == 0  //false
+undefined == 0 // false
+```
+
+#### null与Object
+
+```js
+null==Object  //false
+null===Object  //false
+```
+
+#### 空数组`[]`与空对象`{}`
+
+```js
+[]==[]    //false
+[]==![]  //true
+[]==false  //true
+[]==0       //true
+[]===0      //false
+
+![]  //false
+!{}  //false
+```
+
+## 运算符
+
+### `===` vs `==`
+
+- `===`两个被比较的值在比较前都不进行隐式转换
+- `==`在比较前将两个被比较的值转换为相同类型。在转换后（等式的一边或两边都可能被转换），最终的比较方式等同于全等操作符`===`的比较方式。
+
+`==`运算符不同类型之间的比较
+
+![](/assets/==.png)
+
+
+#### `Object.is(A,B)` 与 `==` `===` 区别
+
+区分和严格相等`===`之间的区别
+
+```js
+Object.is(-0 , +0)  //false
+-0 === +0  //true
+
+Object.is(NaN , NaN)  //true
+NaN === NaN  //false
+
+[1,2] == '1,2'   //true
+[1,2] === '1,2'  //false
+```
+
+三个判断是否相等之间的示例，从左到右为 `==` 、`===`、 `Object.is(A,B)` 
+
+![](/assets/===.png)
+
+### `+ -`操作符
+
+在加法的过程中，首先把等号左右两边进行了求原值ToPrimitive()操作，然后如果两个原值只要有一个是String类型，就把两个原值都进行转化字符串ToString()操作，进行字符串拼接；否则把两个原值都进行转化数字ToNumber()操作，进行数字相加。
+
+```js
++[]  //0
++[0] //0
++{}  //NaN
+
+[] + []  // ""
+// PreferredType是Number，则先调用valueOf()再调用toString()。 []==>[]==>""
+
+{} + {}  //"[object Object][object Object]"
+//{} PreferredType是Number，则先调用valueOf()再调用toString() {}==>{}==>"[object Object]"
+
+[] + {}  //  "[object Object]"
+//[]==>[] ==>""
+//{} PreferredType是Number，则先调用valueOf()再调用toString() {}==>{}==>"[object Object]"
+// 然后字符串拼接
+
+{} + []  // 0
+// 原因在于{}在前，被当成{};直接执行了，变成了 +[],[]的原值是"",+[]需要进行toNumber转换变成了0 ，最后结果为0
+
+++[[ ]][+[ ]]+[+[ ]]
+//这个就有意思了，一开始对[][]理解错了，以为是二维数组，二维数组是name[i][j],这个才是对二维数组的调用，[][]是对前面那个一维数组的调用，数组名就是第一个[].
+
+/*
+拆分：
+>> ++[[]][+[]]   +  [+[]]  很明显 我们知道+[]的结果是0
+>> ++[[]][0]  +   [0]   这里我们就看到是对数组[[]]的第0位进行操作，即[]
+>> ++[]    +  [0]
+>> ([]+1)  +  [0]
+>> (''+1)  +  [0]
+>> '1'     +  [0]
+>>'10'
+*/
+```
+
+下列表达式输出什么
+
+```js
+console.log(1 + "2" + "2");
+console.log(1 + +"2" + "2");
+console.log(1 + -"1" + "2");
+console.log(+"1" + "1" + "2");
+console.log( "A" - "B" + "2");
+console.log( "A" - "B" + 2);
+```
+
+```js
+'122'
+'32'
+'02'
+'112'
+'NaN2'
+NaN
+```
+
+运算过程注意一下几点：
+
+- **多个数字和数字字符串混合运算时，跟操作数的位置有关**
+    ```js
+    console.log(2 + 1 + '3'); // '33'
+    console.log('3' + 2 + 1); //'321'
+    ```
+- **数字字符串之前存在数字中的正负号(+/-)时，会被转换成数字，同样，可以在数字前添加`''`，将数字转为字符串**
+    ```js
+    console.log(typeof '3'); // string
+    console.log(typeof +'3'); //number
+    console.log(typeof 3); // number
+    console.log(typeof (''+3)); //string
+    ```
+- **对于运算结果不能转换成数字的，将返回 `NaN`**
+    ```js
+    consol.log('a' * 'sd'); //NaN
+    console.log('A' - 'B'); // NaN
+    ```
+
+### `&&` 与 `||`
+注意返回结果
+
+- `A && B` 与运算，会做boolean转换，当A为false时返回A的结果，当A为true时返回B的结果，
+- `A||` 或运算，当A为true时返回A的结果，当A为false时返回B的结果。
+
+### `instanceof`
+
+这里有一篇[博文](https://www.ibm.com/developerworks/cn/web/1306_jiangjj_jsinstanceof/index.html)，详细介绍的instanceof运算符的历史由来以及定义
+
+`instanceof` 运算符通常用来判断一个实例是否属于某种类型，使用方法为`foo instanceof Foo`返回一个`Boolean`值,因为这个原因，更多的时候在继承关系中，用来判断**实例是否属于一个父类型**。
+
+`instanceof`如何实现这样的功能，语言规范里面有详细的介绍，这里截取js表达的方式
+
+```js
+function instance_of(L, R) {//L 表示左表达式，R 表示右表达式
+     var O = R.prototype;// 取 R 的显示原型
+     L = L.__proto__;// 取 L 的隐式原型
+     while (true) {
+         if (L === null)
+             return false;
+         if (O === L)// 这里重点：当 O 严格等于 L 时，返回 true 
+             return true;
+         L = L.__proto__;
+     }
+ }
+```
+
+由规范得到，`instanceof`将前面表达式的`__proto__`与后面的表达式的`prototype`进行严格相等`===`比较
+- 如果相等返回true，
+- 如果不相等，则继续循环获取前面表达式的`__proto__`，直到 `Object.__proto__===null`为止返回false。
+
+![](/assets/prototype.jpg)
+
+```js
+console.log(Object instanceof Object);//true 
+console.log(Function instanceof Function);//true 
+console.log(Number instanceof Number);//false 
+console.log(String instanceof String);//false 
+
+console.log(Function instanceof Object);//true 
+
+console.log(Foo instanceof Function);//true 
+console.log(Foo instanceof Foo);//false
+```
+
+### `typeof` vs `Object.prototype.toString.call()` 判断类型
+
+**`typeof`**
+
+- `typeof`运算符，判断数据类型，对于基本类型，返回基本类型，对于引用类型的，不管哪一种引用类型，都返回`'object'`
+- `typeof` 除了`null` 返回`'object'`，和函数返回`'function'`，其他都能正确返回，凡是引用类型返回都是`'object'`。  
+  
+插话：
+`typeof`对null为什么返回Object,因为在 JS 的最初版本中，使用的是 32 位系统，为了性能考虑使用低位存储了变量的类型信息，000 开头代表是对象，然而 null 表示为全零，所以将它错误的判断为 object 。虽然现在的内部类型判断代码已经改变了，但是对于这个 Bug 却是一直流传下来。
+
+**`Object.prototype.toString.call()`**
+
+返回一个类似 `[Object Type]`的字符串
+
+### delete
+`delete`用于删除某个对象的属性，`delete` 操作符会从某个对象上移除指定属性。和释放内存无关。
+- 如果删除属性的该对象原型链上有同名属性，delete只会删除自身属性，删除之后，对象会使用原型链上的属性。
+- 任何用`let`或`const`声明的属性不能够从它被声明的作用域中删除
+- 使用`var`声明的属性不能从全局作用域中或者函数作用域中删除
+- 不可设置的属性不能被删除
+
+#### delete与splice区别
+以数组对象为例:
+1. `delete`只能删除指定数组元素的对象，数组的大小不改变，删除后位置空余，显示`undefined`，或者其他填充值。`splice`指定删除数组元素对象，数组大小发生变化。
+2. `delete`每次只能删除一个，`splice`一次可以删除一个或多个。
+
+
+### `new`做了什么
+```js
+// 正常创建一个对象
+function Super() {};
+var s = new Super();
+```
+new在上述过程中的操作科分为三步
+```js
+var s = {};
+s.__proto__ = Super.prototype;
+Super.call(s);
+// 其中，第一步和第二步可以理解为Object.create(Super.prototype)
+```
+
+### 重点关注，有可能你就踩坑了
+#### Numbe中ToNumber隐式方法
+
+```js
+Number('')  // 0
+Number('a123')  //NaN
+```
+
+| input     | result                                     |
+|:----------:|:-------------------------------------------|
+| null      | +0                                         |
+| undefined | NaN                                        |
+| Boolean   | +0 / 1                                     |
+| Number    | 不转换                                      |
+| String    |                                            |
+| Symbol    | 报错                                       |
+| Object    | ToNumber(ToPrimitive( input , Number)) |
+
+#### `ToPrimitive()`隐式装箱
+
+关于隐式转换参考这篇文章：[js隐式装箱-ToPrimitive](https://sinaad.github.io/xfe/2016/04/15/ToPrimitive/)
+
+默认用法：
+```js
+ToPrimitive(input [,PreferredType])，（ToPrimitive方法可被修改）
+```
+- 如果是Date对象求原值，则PreferredType是String，其他均为Number。
+- PreferredType是String，则先调用toString()，结果不是原始值的话再调用valueOf()，还不是原始值的话则抛出错误；
+- PreferredType是Number，则先调用valueOf()再调用toString()。
+- 总结来讲就是：如果是对`Date`对象做隐式转化，先调用`toString`, 如果不是原始值的话，调用`valueOf()`，还不是原始值的话则抛出错误; 对其他对象做隐式转化的话，则先调用`valueOf()`再调用`toString()`。
+
+
+#### 为什么0.1+ 0.2 != 0.3
+在JS中,采用的是双精度版本（64位），十进制的数都是使用二进制表示的，0.1在二进制中表示为
+```js
+0.1 = 2^-4 * 1.10011(0011)  // (0011) 表示循环
+```
+所以0.1表示的二进制与0.2表示的二进制相加，在转化为十进制就变成了`0.30000000000000004`。
+
+解决方案：`parseFloat((0.1 + 0.2).toFixed(10))`
+
+
+#### 给基本类型数据添加属性，不报错，但取值时是undefined
+
+```js
+var a = 10;
+a.pro = 10;
+console.log(a.pro + a);  //undefined
+var s = 'hello';
+s.pro = 'world';
+console.log(s.pro + s);  //'undefinedhello'
+```
+a.pro和s.pro都为undefined。给基本类型数据加属性不报错，但是引用的话返回undefined，10+undefined返回NaN，而undefined和string相加时转变成了字符串。
+
+
+
+
