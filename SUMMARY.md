@@ -10,12 +10,12 @@
     - [JS数据结构之神奇的树](/Language/JS/data-structure.md)
     - [遍历方法汇总以及适用对象](/Language/JS/JS遍历.md) -->
     <!-- JS基础知识和常用点 -->
+    - [JS原型到原型链](/Language/JS/JS原型到原型链.md)
+    - [JS继承的实现](/Language/JS/继承.md)
     - [JS中数据类型、运算符以及容易挖坑的坑位](/Language/JS/运算符.md)
     - [this对象](/Language/JS/this对象.md)
     - [作用域以及变量提升](/Language/JS/作用域与变量提升.md)
     - [JS递归](/Language/JS/递归.md)
-    - [JS原型到原型链](/Language/JS/JS原型到原型链.md)
-    - [JS继承的实现](/Language/JS/继承.md)
     - [JS闭包](/Language/JS/闭包.md)
     - [JS实现深复制](/Language/JS/JS-deep-clone.md)
     - [Promise基本概念](/Language/JS/Promise.md)
