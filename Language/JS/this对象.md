@@ -1,59 +1,52 @@
----
-title: this对象.md
-date: 2018-02-05 20:09:40
-tags: JS
----
 # this对象
-this对象在JS中比较灵活，在不同的场景中使用 this的指向也不一样。
 
 ## this指向
+函数的调用方式决定了 this 的值（运行时绑定）
 
-### 纯粹的函数调用与作为对象方法的调用
-
+### 通常情况下
 this的指向在函数定义的时候是确定不了的，只有函数执行的时候才能确定this到底指向谁，**实际上this的最终指向的是那个调用它的对象**。这句话并不完全对，但是大多数时候可以用这种方法去判断this指向。
 
-- 一般情况下，this指向全局对象window，因为是全局window调用
+一般情况下，this指向全局对象window，因为是全局window调用.
 
-    这里的`a()`是由`window.a()`调用的，所以`this`指向`window`
+这里的`a()`是由`window.a()`调用的，所以`this`指向`window`
 
-    ```js
-    function a(){
-        var user = "追梦子";
-        console.log(this.user); //undefined
-        console.log(this); //Window
+```js
+function a(){
+  var user = "Nike";
+  console.log(this.user); //undefined
+  console.log(this); //Window
+}
+a();
+```
+
+通过其他对象调用，this指向调用对象
+
+```js
+var o = {
+  user: "Nike",
+  fn: function(){
+      console.log(this.user);
+  }
+}
+o.fn(); // Nike
+// 这里 `fn()`中的this由对象o调用，则this指向对象o。
+```
+
+
+如有多层对象，this指向它上一级的对象。
+```js
+var o = {
+  a:10,
+  b:{
+    a:12,
+    fn:function(){
+        console.log(this.a);
     }
-    a();
-    ```
-
-- 通过其他对象调用，this指向调用对象
-
-    ```js
-    var o = {
-        user:"追梦子",
-        fn:function(){
-            console.log(this.user);  //追梦子
-        }
-    }
-    o.fn();
-    ```
-    这里 `fn()`中的this由对象o调用，则this指向对象o。
-
-- 如有多层对象，this指向它上一级的对象。
-    ```js
-    var o = {
-        a:10,
-        b:{
-            // a:12,
-            fn:function(){
-                console.log(this.a); //undefined
-            }
-        }
-    }
-    o.b.fn();
-    ```
-
-    此时this指向上一级队形b而不是指向对象o。
-
+  }
+}
+o.b.fn(); // 12
+// 此时this指向上一级队形b而不是指向对象o。
+```
 #### 结论
 总结起来三种情况：
 
@@ -61,7 +54,7 @@ this的指向在函数定义的时候是确定不了的，只有函数执行的�
 2. 如果一个函数中有this，这个函数有被上一级的对象所调用，那么this指向的就是上一级的对象。
 3. 如果一个函数中有this，这个函数中包含多个对象，尽管这个函数是被最外层的对象所调用，this指向的也只是它上一级的对象
 
-一个特殊的例子
+一个容易错的例子
 
 ```js
 var o = {
@@ -77,23 +70,26 @@ var o = {
 var j = o.b.fn;
 j();
 ```
-
 这里的this并没有指向对象b，而是window，因为最后的调用是`window.j()。`
 
 ### 构造函数中的this
 
 ```js
 function Fn(){
-    this.user = "追梦子";
+    this.user = "Nike";
 }
 var a = new Fn();
-console.log(a.user); //追梦子
+console.log(a.user); //Nike
 ```
 
 这里这里之所以对象a可以点出函数Fn里面的user是因为new关键字可以改变this的指向，将这个this指向对象a，为什么我说a是对象，因为用了**new关键字就是创建一个对象实例**，我们这里用变量a创建了一个Fn的实例（相当于复制了一份Fn到对象a里面），此时仅仅只是创建，并没有执行，而调用这个函数Fn的是对象a，那么this指向的自然是对象a，那么为什么对象a中会有user，因为你已经复制了一份Fn函数到对象a中，用了new关键字就等同于复制了一份。
 
 为什么this会指向a？首先new关键字会创建一个空的对象，然后会自动调用一个函数apply方法，将this指向这个空对象，这样的话函数内部的this就会被这个空的对象替代
 
+
+### 箭头函数
+
+### class中
 ### 使用apply() call() bind() 改变this指向
 说到this，肯定会使用bind，call，apply来改变this指向，尤其是函数调用的使用，经常使用call和apply。
 
@@ -126,7 +122,7 @@ call 方法比 apply 快的原因是 call 方法的参数格式正是内部方�
 ```js
 function fn()  
 {  
-    this.user = '追梦子';  
+    this.user = 'Nike';  
     return {};  
     //或者 
     //return function(){};
@@ -138,12 +134,12 @@ console.log(a.user); //undefined
 ```js
 function fn()  
 {  
-    this.user = '追梦子';  
+    this.user = 'Nike';  
     return 1;
     //或者undefined 
 }
 var a = new fn;  
-console.log(a.user); //追梦子
+console.log(a.user); //Nike
 ```
 
 又一个特殊的情况 `return null`
@@ -151,11 +147,11 @@ console.log(a.user); //追梦子
 ```js
 function fn()  
 {  
-    this.user = '追梦子';  
+    this.user = 'Nike';  
     return null;
 }
 var a = new fn;  
-console.log(a.user); //追梦子
+console.log(a.user); //Nike
 ```
 
 null也是对象，但是在这里this还是指向那个函数的实例，因为null比较特殊。
@@ -166,5 +162,6 @@ null也是对象，但是在这里this还是指向那个函数的实例，因为
 
 
 参考：
-- 阮一峰[《Javascript的this用法》](http://www.ruanyifeng.com/blog/archives.html)
-- 追梦子《[彻底理解js中this的指向，不必硬背](http://www.cnblogs.com/pssp/p/5216085.html)》
+- [this](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this)
+- [Javascript的this用法](http://www.ruanyifeng.com/blog/archives.html)- 阮一峰
+- [彻底理解js中this的指向，不必硬背](http://www.cnblogs.com/pssp/p/5216085.html)
