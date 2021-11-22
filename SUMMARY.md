@@ -12,10 +12,11 @@
     <!-- JS基础知识和常用点 -->
     - [JS原型到原型链](/Language/JS/JS原型到原型链.md)
     - [JS继承的实现](/Language/JS/继承.md)
+    - [this对象](/Language/JS/this对象.md)
+    - [ES5实现原生/ES6方法](/Language/JS/this对象.md)
     - [Promise基本概念](/Language/JS/Promise.md)
     - [Promise实战](/Language/JS/Promise实战.md)
     - [JS中数据类型、运算符以及容易挖坑的坑位](/Language/JS/运算符.md)
-    - [this对象](/Language/JS/this对象.md)
     - [作用域以及变量提升](/Language/JS/作用域与变量提升.md)
     - [JS递归](/Language/JS/递归.md)
     - [JS闭包](/Language/JS/闭包.md)
