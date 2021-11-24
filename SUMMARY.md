@@ -3,13 +3,15 @@
 - <span id='language'>[语言]()</span>
   - [JS](/Language/JS/README.md)
     <!-- JS基础了解 文件保留，目录中移除 -->
-    <!-- - [DOM对象节点介绍](/Language/JS/DOM对象节点介绍.md)
+    - [DOM对象节点介绍](/Language/JS/DOM对象节点介绍.md)
     - [DOM树遍历](/Language/JS/DOM遍历.md)
     - [String对象](/Language/JS/String对象.md)
     - [Array操作方法](/Language/JS/Array操作方法.md)
     - [JS数据结构之神奇的树](/Language/JS/data-structure.md)
-    - [遍历方法汇总以及适用对象](/Language/JS/JS遍历.md) -->
-    <!-- - [作用域以及变量提升](/Language/JS/作用域与变量提升.md) -->
+    - [遍历方法汇总以及适用对象](/Language/JS/JS遍历.md)
+    - [作用域以及变量提升](/Language/JS/作用域与变量提升.md)
+    - [JS闭包](/Language/JS/闭包.md)
+    - [JS递归](/Language/JS/递归.md)
     <!-- JS基础知识和常用点 -->
     - [JS原型到原型链](/Language/JS/JS原型到原型链.md)
     - [JS继承的实现](/Language/JS/继承.md)
@@ -19,8 +21,6 @@
     - [Promise实战](/Language/JS/Promise实战.md)
     - [JS的EventLoop](/Language/JS/JS-EventLoop.md)
     - [JS中数据类型、运算符以及容易挖坑的坑位](/Language/JS/运算符.md)
-    - [JS递归](/Language/JS/递归.md)
-    - [JS闭包](/Language/JS/闭包.md)
     - [JS实现深复制](/Language/JS/JS-deep-clone.md)
     - [正则表达式](/Language/JS/正则表达式.md)
     - [AJAX过程以及知识体系](/Language/JS/AJAX使用详细介绍.md)
