@@ -14,6 +14,7 @@
     - [JS递归](/Language/JS/递归.md)
     - [AJAX过程以及知识体系](/Language/JS/AJAX使用详细介绍.md)
     - [正则表达式](/Language/JS/正则表达式.md)
+    - [JS数据类型](/Language/JS/数据类型.md)
     <!-- JS基础知识和常用点 -->
     - [JS原型到原型链](/Language/JS/JS原型到原型链.md)
     - [JS继承的实现](/Language/JS/继承.md)
@@ -22,7 +23,7 @@
     - [Promise基本概念](/Language/JS/Promise.md)
     - [Promise实战](/Language/JS/Promise实战.md)
     - [JS的EventLoop](/Language/JS/JS-EventLoop.md)
-    - [JS中数据类型、运算符以及容易挖坑的坑位](/Language/JS/运算符.md)
+    - [JS易混淆运算符以及容易挖坑的坑位](/Language/JS/运算符.md)
     - [JS实现深复制](/Language/JS/JS-deep-clone.md)
     - [同源策略到前端跨域解决方案](/Language/JS/同源策略到前端跨域.md)
     - [JS节流与防抖](/Language/JS/节流与防抖.md)
