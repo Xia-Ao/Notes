@@ -80,7 +80,7 @@ console.log(person2.reg);   // Object
 
 #### 递归遍历实现深复制
 
-通过遍历到对象的每一层，实现深度复制。推荐使用
+通过遍历到对象的每一层，实现深度复制，对引用类型中的function，reg，Date特殊处理。推荐使用
 
 ```js
 function deepClone(obj, c) {
@@ -88,50 +88,27 @@ function deepClone(obj, c) {
   for (let i in obj) {
     // 引用类型拷贝
     if (obj[i] instanceof Object) {
-        
-      newObj[i] = obj[i].constructor === Array ? [] : {};
-      deepClone(obj[i], newObj[i])
+      if (obj[i] instanceof Function) {
+        // function
+        newObj[i] = function () {
+          return obj[i].call(this, ...arguments);
+        }
+      } else if (obj[i] instanceof RegExp) {
+        // reg
+        newObj[i] = new RegExp(obj[i]);
+      } else if (obj[i] instanceof Date) {
+        // Date
+        newObj[i] = new Date(obj[i]);
+      } else {
+        // 普通对象和数组
+        newObj[i] = obj[i] instanceof Array ? [] : {};
+        deepClone(obj[i], newObj[i]);
+      }
     } else {
       // 普通类型拷贝
-      newObj[i] = obj[i]
+      newObj[i] = obj[i];
     }
   }
   return newObj;
 }
 ```
-
-#### jQuery Underscored lodash第三方插件实现
-
-现在不做介绍，以后用的的时候再补充进来
-
-#### [邹润阳--拥抱未来的深复制方法](http://jerryzou.com/posts/dive-into-deep-clone-in-javascript/)
-
-#### MessageChannel
-此特性在WebWorker中可用，主要用在串口通信上面，允许我们创建一个新的消息通道，并通过它的两个[`MessagePort`](https://developer.mozilla.org/zh-CN/docs/Web/API/MessagePort) 属性发送数据。
-
-
-[API](https://developer.mozilla.org/zh-CN/docs/Web/API/MessageChannel)
-
-```js
-function structuralClone(obj) {  
-    return new Promise(resolve => {  
-        const {port1, port2} = new MessageChannel();  
-        port2.onmessage = ev => resolve(ev.data);  
-        port1.postMessage(obj);  
-    });  
-}  
-var obj = {a: 1, b: {  
-    c: b  
-}}  
-// 注意该方法是异步的  
-// 可以处理 undefned 和循环引用对象  
-const clone = await structuralClone(obj);
-
-```
-
-
-
-
-
-## 参考
-- [深入剖析 JavaScript 的深复制](http://jerryzou.com/posts/dive-into-deep-clone-in-javascript/)

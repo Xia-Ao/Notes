@@ -24,10 +24,10 @@
     - [JS的EventLoop](/Language/JS/JS-EventLoop.md)
     - [JS容易出现误区的运算符](/Language/JS/运算符.md)
     - [JS容易出现误区的操作符](/Language/JS/操作符.md)
-    - [JS实现深复制](/Language/JS/JS-deep-clone.md)
+    - [JS深拷贝](/Language/JS/JS-deep-clone.md)
     - [同源策略到前端跨域解决方案](/Language/JS/同源策略到前端跨域.md)
     - [JS节流与防抖](/Language/JS/节流与防抖.md)
-    - [ES5实现原生/ES6方法](/Language/JS/this对象.md)
+    - [ES5实现原生/ES6方法](/Language/JS/ES5实现原生方法.md)
     - [JS事件流和事件委托](/Language/JS/JS事件流机制.md)
     <!-- JS应用场景 -->
     - [数组、字符串中查找最大重复次数最高元素的多种方法](/Language/JS/数组、字符串中最大、重复元素查找.md)
