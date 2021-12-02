@@ -15,6 +15,7 @@
     - [AJAX过程以及知识体系](/Language/JS/AJAX使用详细介绍.md)
     - [正则表达式](/Language/JS/正则表达式.md)
     - [JS数据类型](/Language/JS/数据类型.md)
+    - [JS事件流和事件委托](/Language/JS/JS事件流机制.md)
     <!-- JS基础知识和常用点 -->
     - [JS原型到原型链](/Language/JS/JS原型到原型链.md)
     - [JS继承的实现](/Language/JS/继承.md)
@@ -28,7 +29,6 @@
     - [同源策略到前端跨域解决方案](/Language/JS/同源策略到前端跨域.md)
     - [JS节流与防抖](/Language/JS/节流与防抖.md)
     - [ES5实现原生/ES6方法](/Language/JS/ES5实现原生方法.md)
-    - [JS事件流和事件委托](/Language/JS/JS事件流机制.md)
     <!-- JS应用场景 -->
     - [数组、字符串中查找最大重复次数最高元素的多种方法](/Language/JS/数组、字符串中最大、重复元素查找.md)
     <!-- - [前端性能优化](/Language/JS/前端性能优化.md) -->
