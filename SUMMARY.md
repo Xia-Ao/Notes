@@ -30,64 +30,30 @@
     - [JS节流与防抖](/Language/JS/节流与防抖.md)
     - [ES5实现原生/ES6方法](/Language/JS/ES5实现原生方法.md)
     <!-- JS应用场景 -->
-    - [数组、字符串中查找最大重复次数最高元素的多种方法](/Language/JS/数组、字符串中最大、重复元素查找.md)
+    <!-- - [数组、字符串中查找最大重复次数最高元素的多种方法](/Language/JS/数组、字符串中最大、重复元素查找.md) -->
     <!-- - [前端性能优化](/Language/JS/前端性能优化.md) -->
     <!-- - [JS设计模式](/Language/JS/JS设计模式.md) -->
   - [TS](/Language/TS/README.md)
-    - [泛型](/Language/TS/泛型.md)
-    - [枚举](/Language/TS/枚举.md)
-    - [声明合并](/Language/TS/声明合并.md)
-    - [类型推断]
-    - [模块](/Language/TS/模块.md)
-    - [命名空间]
     <!-- 实战 -->
     - [声明文件](/Language/TS/声明文件.md)
     - [项目配置](/Language/TS/项目配置.md)
   - [CSS](/Language/CSS/README.md)
-    - [CSS选择器速查表](/Language/CSS/CSS-selector.md)
-    - [CSS选择器详细](/Language/CSS/图解CSS3/CSS3-selcetor/README.md)
+    <!-- - [CSS选择器速查表](/Language/CSS/CSS-selector.md) -->
     - [CSS引入方式以及优先级计算](/Language/CSS/CSS引入方式以及优先级计算.md)
-    - [position不同值定位](/Language/CSS/position.md)
-    - [行内元素与块级元素](/Language/CSS/CSS元素属性易混淆点.md)
     - [BFC神奇背后的原理-文摘](/Language/CSS/BFC神奇背后的原理.md)
     - [回流reflow与重绘repaint](/Language/CSS/回流和重绘.md)
-    - [transition && animation动画属性](/Language/CSS/animation&transition.md)
-    - [强大的transform](/Language/CSS/transform.md)
-    - [布局知识](/Language/CSS/布局.md)
-    - [flex布局](/Language/CSS/flex布局.md)
     - [三栏式布局](/Language/CSS/三栏式布局.md)
     - [垂直居中](/Language/CSS/垂直居中.md)
-    - [水平居中的方法（margin/text-algin区别）](/Language/CSS/水平居中.md)
-    - [长度单位、字体单位以及各种高度等易混淆的区别](/Language/CSS/长度单位、字体单位、各种高度等易混淆属性.md)
     - [清除浮动的方法](/Language/CSS/清除浮动.md)
-    <!-- - [scroll滚动隐藏](/Language/CSS/滚动隐藏.md) -->
     - [移动端适配方案](/Language/CSS/移动端适配.md)
     - [纯CSS斜切角实现](/Language/CSS/斜切角实现.md)
     - [CSS揭秘](/Language/CSS/CSS揭秘.md)
     - [背景图片轮播](/Language/CSS/背景图片轮播.md)
-    - [浏览器CSS兼容](/Language/CSS/浏览器CSS兼容.md)
     - [CSS绘制序列帧动画](/Language/CSS/CSS绘制序列帧动画.md)
     - [transform实现一个多面体](/Language/CSS/transform实现一个多面体.md)
   - [HTML](/Language/HTML/README.md)
-    - [`<meta>`标签](https://segmentfault.com/a/1190000004279791)- 转载
-    - [`<!DOCTYPE>`](/Language/HTML/doctype.md)
 
 - <span id="es6">[ES6](/ES6/README.md)</span>
-  <!-- - [class继承](/ES6/19、class继承.md) -->
-  <!-- - [1、let&const变量解构赋值](/ES6/1、let&const变量解构赋值.md) -->
-  <!-- - [2、变量解构赋值](/ES6/2、变量解构赋值.md) -->
-  <!-- - [3、字符串的扩展](/ES6/3、字符串的扩展.md) -->
-  <!-- - [4、数值扩展](/ES6/4、数值扩展.md) -->
-  <!-- - [5、数组扩展](/ES6/5、数组扩展.md) -->
-  <!-- - [6、函数扩展](/ES6/6、函数扩展.md) -->
-  <!-- - [7、对象扩展](/ES6/7、对象扩展.md) -->
-  <!-- - [9、数据结构](/ES6/9、数据结构.md) -->
-  <!-- - [10、Proxy&Reflect](/ES6/12、Proxy%26Reflect.md) -->
-  <!-- - [Module模块](/ES6/22、Module.md) -->
-  <!-- - [symbol对象](/ES6/symbol.md) -->
-  <!-- - [16、Generator函数](/ES6/16、Generator函数.md) -->
-  <!-- - [17、Generator异步操作](/ES6/17、Generator异步操作.md) -->
-  <!-- - [16、Generator函数](/ES6/18、async异步函数.md) -->
 
 - <span id='nodejs'>[Node.js](/Node.js/README.md)</span>
   - [xxx]()
