@@ -1,6 +1,7 @@
 # Promise 实战 以及常用场景
 
 ## 手写Promise
+
 一开始不知道如何上手，深入想一想Promise的原理就知道， Promise的状态有三种，Pending、 resolve、 reject 实现这三个状态就好，然后Promise原型上有一个then方法，其他方法先不管。
 
 ```js
@@ -118,6 +119,7 @@ module.exports = Promise;
 ```
 
 调用实例
+
 ```js
 let promise = new Promise(function (resolve, reject) {
     if (true) {
@@ -155,10 +157,8 @@ promise.then(function (data) {
 // 444    
 ```
 
-
-
-
 ## Promise 实现串行
+
 要求： 有一组异步请求 `apis = [ url1, url2, url3, ...]`, 用Promise的方式实现串行调用。
 
 这个场景和`tapable`的 异步串行 类似，使用方式就是`p.then().then()...`， 核心是在`thenable`里面返回一个新的`promise`，这样就能一直执行。
@@ -173,19 +173,50 @@ p.then(res1).then(res2)...
 ```
 
 通过reduce实现
+
 ```js
 const p = apis.reduce((promise,api) => promise.then(fetch(api)),Promise.resolve())
 ```
 
-
 ## Promise 并发缓存
-场景：现有一批相同的并发请求，希望只查询一次SQL。
 
+场景：现有一批相同的并发查询请求，希望只查询一次SQL，期间的请求走缓存，使用promise怎么实现。
+
+## promise 并发排队
+
+场景：有多个图片资源的url，已经存储在数组`urls`中，而且已经有一个函数`loadImg`，输入一个`url`链接，返回一个 `Promise`，该`Promise`在图片下载完成的时候`resolve`，下载失败则`reject`。任意时刻，同时下载的链接数量不可以超过3个,使用最快的速度将图片下载完毕。
+
+```js
+const urls = [
+  'https://img01.yzcdn.cn/upload_files/2021/11/30/Fqu72DfPGmYyqRzMWwQDtYVWz2iG.png',
+  'https://img01.yzcdn.cn/upload_files/2021/11/30/FvDLcro_xAmCWbVH4porfft6zonI.png',
+  'https://img01.yzcdn.cn/upload_files/2021/11/30/FnM-mP1mfIggWWFAKJNusWm1mlKz.png',
+  'https://img01.yzcdn.cn/upload_files/2021/11/23/FixGtb4CeBbW_3k6GLfP0hVhgRfp.png',
+  'https://img01.yzcdn.cn/upload_files/2021/11/23/Fm9oZBZJgdn2LI2COk5Ry7hhcMhV.png',
+  'https://img01.yzcdn.cn/upload_files/2021/11/23/Fvh0GfzNePBlKjGXB7onoJqekRN_.png',
+  'https://img01.yzcdn.cn/upload_files/2021/11/23/Fosi97bMcPb2SfxnoN8di72U7G8b.png',
+  'https://img01.yzcdn.cn/upload_files/2021/11/17/FpxGbdBBzOpa8uuQlGCo0-Ggo44K.png',
+  'https://img01.yzcdn.cn/upload_files/2021/11/17/FihbkMX1X3Q1YMFHyykZWd7X0T4k.png',
+  ];
+
+function loadImg(url) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () =>{
+      console.log('图片load完成')
+      resolve();
+    };
+    img.error = reject;
+    img.src = url;
+  });
+} 
+```
 
 
 ## Promise 错误捕获
 
 下面这段代码会如何输出：
+
 ```js
 const promise = new Promise(function (resolve, reject) {
   resolve('ok');
@@ -193,6 +224,7 @@ const promise = new Promise(function (resolve, reject) {
 });
 promise.then(function (value) { console.log(value) });
 ```
+
 在`resolve`之后,`promise`的状态已经结束了，因为错误在`setTimeout`，属于下一次的事件循环，所以这里会被抛出，不会被`promise`吃掉。因此输出结果是
 
 ```js
