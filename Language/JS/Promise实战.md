@@ -212,6 +212,46 @@ function loadImg(url) {
 } 
 ```
 
+实现如下， 关键点在于使用了`Promise.race()`检测哪一个最先执行完，执行完饭回一个promise，使用链式调用将剩下的串起来
+
+```js
+function limitLoad(urls, handler, limit) {
+  // 对数组做一个拷贝
+  const sequence = [].concat(urls)
+  let promises = [];
+
+  // 首先并发请求到最大数
+  promises = sequence.splice(0, limit).map((url, index) => {
+    // 这里返回的 index 是任务在 promises 的脚标，
+    //用于在 Promise.race 之后找到完成的任务脚标
+    return handler(url).then(() => {
+      return index
+    });
+  });
+
+  // 循环检查
+  (function loop() {
+    let p = Promise.race(promises);
+    for (let i = 0; i < sequence.length; i++) {
+      // promise 链式调用串起来
+      p = p.then((res) => {
+        promises[res] = handler(sequence[i]).then(() => {
+          return res
+        });
+        return Promise.race(promises)
+      })
+    }
+  })()
+}
+limitLoad(urls, loadImg, 3)
+```
+
+因此，基于这种场景（排队并发）,我们可以设计一个通用的方法。
+https://blog.51cto.com/u_15283585/2955466
+
+```js
+
+```
 
 ## Promise 错误捕获
 
