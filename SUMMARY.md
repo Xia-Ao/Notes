@@ -21,6 +21,7 @@
     - [JS继承的实现](/Language/JS/继承.md)
     - [this对象](/Language/JS/this对象.md)
     - [Promise基本概念](/Language/JS/Promise.md)
+    - [Promise实现](/Language/JS/Promise实现.md)
     - [Promise实战](/Language/JS/Promise实战.md)
     - [JS的EventLoop](/Language/JS/JS-EventLoop.md)
     - [JS容易出现误区的运算符](/Language/JS/运算符.md)
