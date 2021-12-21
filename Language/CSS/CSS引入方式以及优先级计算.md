@@ -16,7 +16,6 @@
 
 **important > 内联 > ID > 类 > （标签 = 伪类 = 属性选择） > 伪对象 > 通配符 > 继承**
 
-
 1. 低优先级
    * **类型选择器**（type selectors）（例如, `h1`）
    * **伪元素**（pseudo-elements）（例如, `::before`）
