@@ -3,7 +3,7 @@
 - <span id='language'>[语言]()</span>
   - [JS](/Language/JS/README.md)
     <!-- JS基础了解 文件保留，目录中移除 -->
-    - [DOM对象节点介绍](/Language/JS/DOM对象节点介绍.md)
+    <!-- - [DOM对象节点介绍](/Language/JS/DOM对象节点介绍.md)
     - [DOM树遍历](/Language/JS/DOM遍历.md)
     - [String对象](/Language/JS/String对象.md)
     - [Array操作方法](/Language/JS/Array操作方法.md)
@@ -15,7 +15,7 @@
     - [AJAX过程以及知识体系](/Language/JS/AJAX使用详细介绍.md)
     - [正则表达式](/Language/JS/正则表达式.md)
     - [JS数据类型](/Language/JS/数据类型.md)
-    - [JS事件流和事件委托](/Language/JS/JS事件流机制.md)
+    - [JS事件流和事件委托](/Language/JS/JS事件流机制.md) -->
     <!-- JS基础知识和常用点 -->
     - [JS原型到原型链](/Language/JS/JS原型到原型链.md)
     - [JS继承的实现](/Language/JS/继承.md)

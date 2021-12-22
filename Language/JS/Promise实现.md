@@ -6,7 +6,7 @@
 
 过程中为了简写，使用了ES6的 箭头函数。可以全部替换为ES5函数定义。
 
-```js
+```javascript
 const PENDING = 'pending';
 const FULFILLED = 'fulfilled';
 const REJECTED = 'rejected';
