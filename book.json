@@ -29,7 +29,7 @@
       }
     },
     "theme-default": {
-      "showLevel": true
+      "showLevel": false
     }
   }
 }

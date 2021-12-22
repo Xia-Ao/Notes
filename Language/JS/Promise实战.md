@@ -116,8 +116,7 @@ function limitLoad(urls, handler, limit) {
 limitLoad(urls, loadImg, 3)
 ```
 
-因此，基于这种场景（排队并发）,我们可以设计一个通用的方法。
-https://blog.51cto.com/u_15283585/2955466
+因此，基于这种场景（排队并发）,我们可以设计一个通用的方法。https://blog.51cto.com/u_15283585/2955466
 
 ```js
 
@@ -164,7 +163,6 @@ Promise.resolve().then(() => {
     console.log(6);
 })
 ```
-
 
 ## 参考
 

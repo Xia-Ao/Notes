@@ -22,7 +22,6 @@ function Promise(executor) {
   this.rejectedCallbacks = [];
 
   function resolve(value) {
-    // console.log('resolve--', value)
     if (that.status === PENDING) {
       that.status = FULFILLED;
       that.data = value;
@@ -32,7 +31,6 @@ function Promise(executor) {
   }
 
   function reject(reason) {
-    // console.log('reject--', reason)
     if (that.status === PENDING) {
       that.status = REJECTED;
       that.data = reason;
@@ -104,7 +102,6 @@ function resolvePromise(promise, x, resolve, reject) {
  * @returns 
  */
 Promise.prototype.then = function (onFulfilled, onRejected) {
-  // console.log('then---', onRejected && onRejected.toString())
   // 校验 参数
   const realOnFulfilled = typeof onFulfilled === 'function' ? onFulfilled : value => value;
   const realOnRejected = typeof onRejected === 'function' ? onRejected : reason => { throw reason };
@@ -157,7 +154,6 @@ Promise.prototype.then = function (onFulfilled, onRejected) {
       that.resolvedCallbacks.push(() => {
         setTimeout(() => {
           try {
-            // console.log('onFulfilled', onFulfilled && onFulfilled.toString());
             if (typeof onFulfilled !== 'function') {
               resolve(that.data);
             } else {
@@ -172,7 +168,6 @@ Promise.prototype.then = function (onFulfilled, onRejected) {
       that.rejectedCallbacks.push(() => {
         setTimeout(() => {
           try {
-            // console.log('onRejected', onRejected && onRejected.toString());
             if (typeof onRejected !== 'function') {
               reject(that.data);
             } else {
