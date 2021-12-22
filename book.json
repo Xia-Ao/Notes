@@ -4,20 +4,32 @@
   "language": "zh",
   "author": "xiaao",
   "plugins": [
-    "-highlight"
+    "-highlight",
+    "prism",
+    "prism-themes",
+    "highlight-pro"
   ],
   "pluginsConfig": {
     "github": {
       "url": "https://github.com/Xia-Ao"
     },
-    "editlink": {
-      "base": "https://www.gitbook.com/book/xia-ao/notes/contentgi",
-      "label": "编辑本页"
-    },
     "fontsettings": {
       "theme": "white",
       "family": "sans",
       "size": 3
+    },
+    "highlight-pro": {
+      "theme": "vs2015",
+      "map": {
+        "shell": "bash",
+        "sh": "bash",
+        "js": "javascript"
+      }
+    },
+    "prism": {
+      "css": [
+        "prism-themes/themes/prism-base16-ateliersulphurpool.light.css"
+      ]
     },
     "theme-default": {
       "showLevel": false
