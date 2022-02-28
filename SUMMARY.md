@@ -27,7 +27,6 @@
     - [JS容易出现误区的运算符](/Language/JS/运算符.md)
     - [JS容易出现误区的操作符](/Language/JS/操作符.md)
     - [JS深拷贝](/Language/JS/JS-deep-clone.md)
-    - [同源策略到前端跨域解决方案](/Language/JS/同源策略到前端跨域.md)
     - [JS节流与防抖](/Language/JS/节流与防抖.md)
     - [ES5实现原生/ES6方法](/Language/JS/ES5实现原生方法.md)
     <!-- JS应用场景 -->
@@ -105,6 +104,7 @@
 
 - <span id='computer'>[计算机技术](/Computer/README.md)</span>
   - [计算机网络](/Computer/Network/README.md)
+    - [同源策略到前端跨域解决方案](/Computer/Network/同源策略到前端跨域.md)
     - [TCP数据传输](/Computer/Network/TCP数据传输.md)
     - [TCP和UDP的区别](/Computer/Network/TCP和UDP.md)
     - [HTTP协议概述](/Computer/Network/HTTP协议概述.md)
