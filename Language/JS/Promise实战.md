@@ -82,7 +82,7 @@ function loadImg(url) {
 } 
 ```
 
-实现如下， 关键点在于使用了`Promise.race()`检测哪一个最先执行完，执行完饭回一个promise，使用链式调用将剩下的串起来
+实现如下， 关键点在于使用了`Promise.race()`检测哪一个最先执行完，执行完返回一个promise，使用链式调用将剩下的串起来
 
 ```js
 function limitLoad(urls, handler, limit) {
@@ -116,7 +116,7 @@ function limitLoad(urls, handler, limit) {
 limitLoad(urls, loadImg, 3)
 ```
 
-因此，基于这种场景（排队并发）,我们可以设计一个通用的方法。https://blog.51cto.com/u_15283585/2955466
+因此，基于这种场景（排队并发）,我们可以设计一个通用的方法。[参考](https://blog.51cto.com/u_15283585/2955466)
 
 ```js
 

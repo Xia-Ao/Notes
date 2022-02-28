@@ -87,6 +87,10 @@ function promise3() {
 
 Promise.resolve().then(() => {
     console.log(0);
+    setTimeout(() => {
+      console.log('setTimeout');
+
+    })
     return Promise.resolve(4);
 }).then((res) => {
     console.log(res)
@@ -94,6 +98,9 @@ Promise.resolve().then(() => {
 
 Promise.resolve().then(() => {
     console.log(1);
+    setTimeout(() => {
+      console.log('setTimeout2');
+    },0)
 }).then(() => {
     console.log(2);
 }).then(() => {
