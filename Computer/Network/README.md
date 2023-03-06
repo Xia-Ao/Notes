@@ -13,3 +13,5 @@
 - [网络攻击与防御](/Computer/Network/网络攻击与防御.md)
 - [HTTP转发与重定向](/Computer/Network/HTTP转发与重定向.md)
 - [登录认证设计](/Computer/Network/登录认证.md)
+- [队头堵塞](https://zhuanlan.zhihu.com/p/330300133)
+- [H3](http://www.alloyteam.com/2020/05/14385/)
