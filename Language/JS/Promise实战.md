@@ -10,7 +10,7 @@
 const p = Promise.resolve();
 apis.forEach(api => {
     p = p.then(fetch(api));
-}});
+});
 
 p.then(res1).then(res2)...
 ```

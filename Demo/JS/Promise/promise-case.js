@@ -1,17 +1,17 @@
 /**
  * 并发排队
  */
-const urls = [
-  'https://img01.yzcdn.cn/upload_files/2021/11/30/Fqu72DfPGmYyqRzMWwQDtYVWz2iG.png',
-  'https://img01.yzcdn.cn/upload_files/2021/11/30/FvDLcro_xAmCWbVH4porfft6zonI.png',
-  'https://img01.yzcdn.cn/upload_files/2021/11/30/FnM-mP1mfIggWWFAKJNusWm1mlKz.png',
-  'https://img01.yzcdn.cn/upload_files/2021/11/23/FixGtb4CeBbW_3k6GLfP0hVhgRfp.png',
-  'https://img01.yzcdn.cn/upload_files/2021/11/23/Fm9oZBZJgdn2LI2COk5Ry7hhcMhV.png',
-  'https://img01.yzcdn.cn/upload_files/2021/11/23/Fvh0GfzNePBlKjGXB7onoJqekRN_.png',
-  'https://img01.yzcdn.cn/upload_files/2021/11/23/Fosi97bMcPb2SfxnoN8di72U7G8b.png',
-  'https://img01.yzcdn.cn/upload_files/2021/11/17/FpxGbdBBzOpa8uuQlGCo0-Ggo44K.png',
-  'https://img01.yzcdn.cn/upload_files/2021/11/17/FihbkMX1X3Q1YMFHyykZWd7X0T4k.png',
-];
+// const urls = [
+//   'https://img01.yzcdn.cn/upload_files/2021/11/30/Fqu72DfPGmYyqRzMWwQDtYVWz2iG.png',
+//   'https://img01.yzcdn.cn/upload_files/2021/11/30/FvDLcro_xAmCWbVH4porfft6zonI.png',
+//   'https://img01.yzcdn.cn/upload_files/2021/11/30/FnM-mP1mfIggWWFAKJNusWm1mlKz.png',
+//   'https://img01.yzcdn.cn/upload_files/2021/11/23/FixGtb4CeBbW_3k6GLfP0hVhgRfp.png',
+//   'https://img01.yzcdn.cn/upload_files/2021/11/23/Fm9oZBZJgdn2LI2COk5Ry7hhcMhV.png',
+//   'https://img01.yzcdn.cn/upload_files/2021/11/23/Fvh0GfzNePBlKjGXB7onoJqekRN_.png',
+//   'https://img01.yzcdn.cn/upload_files/2021/11/23/Fosi97bMcPb2SfxnoN8di72U7G8b.png',
+//   'https://img01.yzcdn.cn/upload_files/2021/11/17/FpxGbdBBzOpa8uuQlGCo0-Ggo44K.png',
+//   'https://img01.yzcdn.cn/upload_files/2021/11/17/FihbkMX1X3Q1YMFHyykZWd7X0T4k.png',
+// ];
 
 function loadImg(url) {
   return new Promise((resolve, reject) => {
@@ -25,49 +25,52 @@ function loadImg(url) {
   });
 }
 
-const urls = [1000, 2000, 1200, 500, 300, 700, 1300,];
+const urls = [1000, 5000, 1200, 500, 300, 700, 1300];
 function load(time) {
   return new Promise((resolve, reject) => {
+    console.log('等待执行', time)
     setTimeout(() => {
-      console.log('time执行', time)
-      resolve();
+      resolve(`${time}done`);
+      console.log('执行完成--', time)
     }, time);
   })
 }
 
 function limitLoad(urls, handler, limit) {
-  // 对数组做一个拷贝
-  const sequence = [].concat(urls)
+  const seq = [...urls];
   let promises = [];
+  const resList = [];
 
-  // 首先并发请求到最大数
-  promises = sequence.splice(0, limit).map((url, index) => {
-    // 这里返回的 index 是任务在 promises 的脚标，
-    //用于在 Promise.race 之后找到完成的任务脚标
-    return handler(url).then(() => {
+  // 初始化limit个任务
+  promises = seq.splice(0, limit).map((url, index) => {
+    return handler(url).then((res) => {
+      resList[index] = res;
       return index
     });
-  });
+  })
 
-  // 循环塞
-  (function loop() {
-    let p = Promise.race(promises);
-    for (let i = 0; i < sequence.length; i++) {
-      p = p.then((res) => {
-        promises[res] = handler(sequence[i]).then(() => {
-          console.log('---', res)
-          return res
-        });
-        return Promise.race(promises)
+  // 循环执行剩下的
+  return seq.reduce((last, url, i) => {
+    return last.then((doneIndex) => {
+      promises[doneIndex] = handler(url).then((res) => {
+        resList[i + 3] = res;
+        return doneIndex
       })
-    }
-  })()
+      if (i === seq.length - 1) {
+        return Promise.all(promises).then(() => resList);
+      }
+      return Promise.race(promises)
+    })
+  }, Promise.race(promises))
+
 }
-limitLoad(urls, load, 3);
+limitLoad(urls, load, 3).then((res) => {
+  console.log('res--', res);
+})
 
 
 
-/**Î
+/**
  * 并发缓存
  */
 const sqlResult = 'sql result';
@@ -88,8 +91,8 @@ function SQL() {
   return cachePromise;
 }
 
-for (let i = 0; i < 10; i++) {
-  SQL().then((res) => {
-    console.log(res);
-  });
-}
+// for (let i = 0; i < 10; i++) {
+//   SQL().then((res) => {
+//     console.log(res);
+//   });
+// }
